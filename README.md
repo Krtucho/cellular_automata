@@ -6,10 +6,10 @@ Autor: Carlos Carret MIranda @Krtucho
 - No todos los tumores son cancerosos; los tumores benignos no se propagan a otras partes del cuerpo y no son una amenaza para la vida.
 - Sin embargo, los tumores malignos pueden invadir los tejidos cercanos y diseminarse a otras partes del cuerpo a través del sistema sanguíneo y linfático
 
-## Que herramienta nos propusimos a desarrollar para ayudar a la lucha contra el cancer?
-Simulacion del crecimiento de un tumor en organos del cuerpo humano surgiendo en el tejido epitelial, conocidos como carcinomas.
+## ¿Qué herramienta nos propusimos desarrollar para ayudar a la lucha contra el cáncer?
+Simulación del crecimiento de un tumor en órganos del cuerpo humano, surgiendo en el tejido epitelial, conocidos como carcinomas.
 
-## Automata Celular
+## Autómata Celular
 - Un autómata celular es un modelo matemático para un sistema dinámico que evoluciona en pasos discretos. 
 - Consiste en una cuadrícula regular de celdas, cada una en uno de un número finito de estados. 
 - Cada celda se actualiza en función de un conjunto de reglas fijas que determinan su nuevo estado en términos del estado actual de la celda y los estados de las celdas vecinas. 
@@ -38,7 +38,7 @@ Simulacion del crecimiento de un tumor en organos del cuerpo humano surgiendo en
 - Empleo de matrices, grafos, estructuras similares.
 - Empleo de estructuras que manejen busquedas rapidas como diccionarios o tablas de hash.
 
-![Visualización de las células y las conexiones entre las mismas](json.png "Visualización de las células y las conexiones entre las mismas")
+![Ejemplo archivo .json con configuraciones](json.png "Ejemplo archivo .json con configuraciones")
 
 #### Simulacion
 -Se lleva a cabo la implementacion de un motor eficiente que nos permita simular cualquier tumor que se origine en el tejido epitelial de cualquier organo.
@@ -61,9 +61,9 @@ Unity
 
 Marching Cubes - https://people.eecs.berkeley.edu/~jrs/meshpapers/LorensenCline.pdf
 
-#Visualización de las células y las conexiones entre las mismas
+#Renderizacion del tumor
 
-![Visualización de las células y las conexiones entre las mismas](graphs.gif "Visualización de las células y las conexiones entre las mismas")
+![Renderizacion del tumor](tumor.gif "Renderizacion del tumor")
 
 ## Cuanto hemos avanzado hasta el momento?
 - Carga y utilizacion de parametros para la simulacion.
@@ -74,7 +74,7 @@ Marching Cubes - https://people.eecs.berkeley.edu/~jrs/meshpapers/LorensenCline.
 ## Cual sera nuestro enfoque en las siguientes etapas?
 Mejorar todo lo anterior y ademas:
 - Leer mucha informacion medica.
-- Implementar cambios entre estados siguiendo 
+- Implementar cambios entre estados siguiendo los detalles encontrados en la literatura.
 - En un futuro agregar Inteligencia Artificial y tecnicas de Machine Learning para obtener mejores aproximaciones a la realidad.
 # Roadmap (Hoja de Ruta)
 ```mermaid
