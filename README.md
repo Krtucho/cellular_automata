@@ -16,7 +16,7 @@ Simulación del crecimiento de un tumor en órganos del cuerpo humano, surgiendo
 - Los autómatas celulares son utilizados para modelar sistemas naturales que pueden ser descritos como una colección masiva de objetos simples que interactúan localmente unos con otros. 
 - Son utilizados en diversas áreas como la física, la biología teórica y el modelado de microestructuras.
 
-## Beneficioes del uso de un autómata celular para simular el crecimiento de un tumor en pacientes con cáncer:
+## Beneficios del uso de un autómata celular para simular el crecimiento de un tumor en pacientes con cáncer:
 
 - Modelado del crecimiento tumoral: Un autómata celular puede ser utilizado para simular la expansión y proliferación de células cancerosas en un entorno virtual. Cada célula en el autómata celular representa una célula cancerosa y se actualiza en función de reglas específicas que determinan su comportamiento y crecimiento. Esto puede ayudar a comprender mejor cómo se desarrolla y se propaga el tumor en diferentes escenarios.
  - Evaluación de tratamientos: Al simular el crecimiento del tumor con un autómata celular, es posible evaluar diferentes estrategias de tratamiento y su efectividad en la reducción o control del tumor. Por ejemplo, se pueden simular diferentes terapias, como la quimioterapia o la radioterapia, y observar cómo afectan el crecimiento y la propagación del tumor en el modelo.
