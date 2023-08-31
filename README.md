@@ -62,7 +62,7 @@ Unity
 
 Marching Cubes - https://people.eecs.berkeley.edu/~jrs/meshpapers/LorensenCline.pdf
 
-#Renderización del tumor.
+# Renderización del tumor.
 
 ![Renderización del tumor.](tumor.gif "Renderización del tumor.")
 
