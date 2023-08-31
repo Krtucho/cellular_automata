@@ -1,5 +1,9 @@
 # ¿Qué es el cáncer?
 
+#Visualización de las células y las conexiones entre las mismas
+
+![Visualización de las células y las conexiones entre las mismas](graphs.gif "Visualización de las células y las conexiones entre las mismas")
+
 # Automata Celular para la simulacion del crecimiento de un tumor en 3D
 
 # Roadmap (Hoja de Ruta)
