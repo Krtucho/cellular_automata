@@ -24,30 +24,31 @@ Simulación del crecimiento de un tumor en órganos del cuerpo humano, surgiendo
  - Investigación de resistencia a los tratamientos: Los autómatas celulares también pueden ayudar a investigar y comprender la resistencia a los tratamientos del cáncer. Al simular la evolución del tumor en presencia de tratamientos específicos, es posible identificar las características y los mecanismos que pueden llevar a la resistencia, lo que podría guiar el desarrollo de enfoques terapéuticos más efectivos.
 
 ## Problemas
-### Como manejar grandes cantidades de celulas y sus conexiones?
-### Como simular un proceso tan costoso y con tantos parametros?
-### Como representar estas celulas y sus conexiones para analizarlas?
-### Como representar la estructura del tumor?
+### ¿Cómo manejar grandes cantidades de células y sus conexiones?
+### ¿Cómo simular un proceso tan costoso y con tantos parámetros?
+### ¿Cómo representar estas células y sus conexiones para analizarlas?
+### ¿Cómo representar la estructura del tumor?
 
-## Si, son muchos problemas.
+## Sí, son muchos problemas.
 
-### Dando solucion a los problemas
-#### Manejar mucha informacion.
-- Uso de archivos .json para manejar la informacion y los parametros a asignar.
-- Uso de lenguajes de programacion rapidos y eficientes como C# para el manejo de memoria y guardado de gran cantidad de informacion en memoria o disco.
+### Dando solución a los problemas
+
+#### Manejar mucha información.
+- Uso de archivos .json para manejar la información y los parámetros a asignar.
+- Uso de lenguajes de programación rápidos y eficientes como C# para el manejo de memoria y guardado de gran cantidad de información en memoria o disco.
 - Empleo de matrices, grafos, estructuras similares.
-- Empleo de estructuras que manejen busquedas rapidas como diccionarios o tablas de hash.
+- Empleo de estructuras que manejen búsquedas rápidas como diccionarios o tablas de hash.
 
-![Ejemplo archivo .json con configuraciones](json.png "Ejemplo archivo .json con configuraciones")
+![Ejemplo de archivo .json con configuraciones](json.png "Ejemplo de archivo .json con configuraciones")
 
-#### Simulacion
--Se lleva a cabo la implementacion de un motor eficiente que nos permita simular cualquier tumor que se origine en el tejido epitelial de cualquier organo.
-- Para esto se lleva a cabo el analisis region por region del organo que se este analizando.
-- El rendimiento, la velocidad y el alcance dependeran de los recursos con los que cuente el ordenador en el que se este ejecutando la simulacion.
+#### Simulación
+- Se lleva a cabo la implementación de un motor eficiente que nos permita simular cualquier tumor que se origine en el tejido epitelial de cualquier órgano.
+- Para esto se lleva a cabo el análisis región por región del órgano que se esté analizando.
+- El rendimiento, la velocidad y el alcance dependerán de los recursos con los que cuente el ordenador en el que se esté ejecutando la simulación.
 
-#### Visualizar estructura de organos, tejidos, celular y conexiones.
+#### Visualizar estructura de órganos, tejidos, células y conexiones.
 
-Python y Streamlit. Se utilizan librerias para trabajar con grafos y representarlos en 3D, gravis, networkx.
+Python y Streamlit. Se utilizan librerías para trabajar con grafos y representarlos en 3D, gravis, networkx.
 
 #Visualización de las células y las conexiones entre las mismas
 
@@ -57,25 +58,28 @@ Python y Streamlit. Se utilizan librerias para trabajar con grafos y representar
 #### Representacion del tumor
 Unity
 - Se implementa un algoritmo para representar cada cara exterior del tumor. 
-- Tener en cuenta que al disponer de tantos vertices se dificulta la representacion del tumor, asi que una forma eficiente de representar esto es mediante alguns tecnicas para el modelado en 3D.
+- Tener en cuenta que al disponer de tantos vértices se dificulta la representación del tumor, así que una forma eficiente de representar esto es mediante algunas técnicas para el modelado en 3D.
 
 Marching Cubes - https://people.eecs.berkeley.edu/~jrs/meshpapers/LorensenCline.pdf
 
-#Renderizacion del tumor
+#Renderización del tumor.
 
-![Renderizacion del tumor](tumor.gif "Renderizacion del tumor")
+![Renderización del tumor.](tumor.gif "Renderización del tumor.")
 
-## Cuanto hemos avanzado hasta el momento?
-- Carga y utilizacion de parametros para la simulacion.
-- Visualizacion y Analisis del grafo de celulas con sus conexiones.
-- Visualizacion del tamanno que tomara el tumor a lo largo de la simulacion.
+## ¿Cuánto hemos avanzado hasta el momento?
+- Carga y utilización de parámetros para la simulación. 
+- Tenemos implementado el motor para simular el crecimiento de un tumor en órganos de pequeña extensión.
+- Visualización y análisis del grafo de células con sus conexiones. 
+- Visualización del tamaño que tomará el tumor a lo largo de la simulación.
 
 
-## Cual sera nuestro enfoque en las siguientes etapas?
-Mejorar todo lo anterior y ademas:
-- Leer mucha informacion medica.
+## ¿Cuál será nuestro enfoque en las siguientes etapas? 
+Mejorar todo lo anterior y además: 
+- Leer mucha información médica. 
 - Implementar cambios entre estados siguiendo los detalles encontrados en la literatura.
-- En un futuro agregar Inteligencia Artificial y tecnicas de Machine Learning para obtener mejores aproximaciones a la realidad.
+- Implementar algoritmos eficientes para procesar grandes cantidades de células y sus conexiones, estamos hablando de millones de ambas. 
+- En un futuro, agregar Inteligencia Artificial y técnicas de Machine Learning para obtener mejores aproximaciones a la realidad.
+
 # Roadmap (Hoja de Ruta)
 ```mermaid
 graph LR;
