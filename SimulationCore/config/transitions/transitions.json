@@ -1,0 +1,24 @@
+{
+    "transitions":[
+        {
+            "id":0,
+            "fromState":0,
+            "toState":1
+        },
+        {
+            "id":1,
+            "fromState":0,
+            "toState":3
+        },
+        {
+            "id":2,
+            "fromState":1,
+            "toState":3
+        },
+        {
+            "id":3,
+            "fromState":2,
+            "toState":3
+        }
+    ]
+}

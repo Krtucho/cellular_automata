@@ -1,0 +1,9 @@
+{
+    "probabilities":[
+        {
+            "id":0,
+            "transitions":0,
+            "TOL":0.01
+        }
+    ]
+}

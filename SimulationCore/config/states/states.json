@@ -1,0 +1,28 @@
+{
+  "states":[
+      {
+          "id":0,
+          "name":"Lumen",
+          "cellType":"None",
+          "organRegion":"Lumen"
+      },
+      {
+          "id":1,
+          "name":"Epit",
+          "cellType":"Normal Cell",
+          "organRegion":"Epit"
+      },
+      {
+          "id":2,
+          "name":"Stroma",
+          "cellType":"None",
+          "organRegion":"Stroma"
+      },
+      {
+          "id":3,
+          "name":"Epit",
+          "cellType":"Tumor Cell",
+          "organRegion":"Epit"
+      }
+  ]
+}

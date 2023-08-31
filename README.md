@@ -1,17 +1,24 @@
+# ¿Qué es el cáncer?
+
 # Automata Celular para la simulacion del crecimiento de un tumor en 3D
 
 # Roadmap (Hoja de Ruta)
 ```mermaid
 graph LR;
+    Teoria-->Partes_De_Organo-->Tejidos;
     here[(Estamos aqui)]
     here_sim[(Estamos aqui)]
     here_vis[(Estamos aqui)]
+    Automata_Celular-->Teoria;
     Automata_Celular-->Manejo_Representación_Estructura;
     Automata_Celular-->Simulación_del_proceso;
     Automata_Celular--> Representación_y_Visualización;
     Manejo_Representación_Estructura-->Red_de_mundo_pequeño;
+    Red_de_mundo_pequeño-->Visualizar_red_de_mp;
+    Visualizar_red_de_mp-->Python_Libreria_Para_Grafos;
     Red_de_mundo_pequeño-->here;
     here--> Órgano;
+    Organo-->Regiones_Del_organo;
     Organo-->Celula;
     Celula-->Region_de_Celulas_con_Posiciones;
     Region_de_Celulas_con_Posiciones-->Manejador_de_Regiones;
@@ -28,7 +35,7 @@ graph LR;
     Busqueda_de_motor_grafico --> Unity;
 ```
 ## Descripcion
-El proyecto se divide en 3 ramas principales. La rama de la estructura de nuestro automata celular, la rama de la simulacion del proceso en general del crecimiento del automata y por ultimo la rama referente a todo el proceso de visualizacion del proceso, la parte grafica.
+El proyecto se divide en 3 ramas principales. La rama de la estructura de nuestro automata celular, la rama de la simulacion del proceso en general del crecimiento del automata y por ultimo la rama referente a todo el proceso de visualizacion del proceso, la parte grafica. Se agrega una rama referente a toda la teoria detras de nuestro modelo.
 
 Si se sigue la trayectoria de cada una de las 3 ramas se podra notar que se encuentra un indicador de donde se esta investigando actualmente (representado con el texto Estamos aqui).
 ### Manejo - Representación - Estructura
