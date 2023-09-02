@@ -1,5 +1,5 @@
 # Automata Celular para la simulacion del crecimiento de un tumor en 3D
-Autor: Carlos Carret MIranda @Krtucho
+Autor: Carlos Carret Miranda [@Krtucho](https://github.com/Krtucho)
 ## ¿Qué es el cáncer?
 - Es una enfermedad que se caracteriza por el crecimiento descontrolado de células anormales en el cuerpo.
 - Estas células pueden formar una masa llamada tumor.
@@ -137,5 +137,5 @@ Destacar que se prevee que el proyecto se encuentre en constantes cambios. Asi q
 
 ## Agradecimientos:
 - A mi tutor Reynaldo.
-- A los creadores de semejante genialidad: https://github.com/dionisio35/CausalFlow/ @lauolivia y @dionisio35
-- A la creadora de la implementacion del algoritmo de Marching Cubes: https://github.com/omarvision/how-todo-marching-cubes @omarvision
+- A los creadores de semejante genialidad: https://github.com/dionisio35/CausalFlow/ [@lauolivia](https://github.com/lauolivia) y [@dionisio35](https://github.com/dionisio35)
+- A la creadora de la implementacion del algoritmo de Marching Cubes: https://github.com/omarvision/how-todo-marching-cubes [@omarvision](https://github.com/omarvision)
