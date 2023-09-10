@@ -1,0 +1,17 @@
+TY  - JOUR
+AU  - Cirne, Marcos Vinicius Mussel
+AU  - Pedrini, Hélio
+PY  - 2013
+DA  - 2013/09/01
+TI  - Marching cubes technique for volumetric visualization accelerated with graphics processing units
+JO  - Journal of the Brazilian Computer Society
+SP  - 223
+EP  - 233
+VL  - 19
+IS  - 3
+AB  - Volume visualization has numerous applications that benefit different knowledge domains, such as biology, medicine, meteorology, oceanography, geology, among others. With the continuous advances of technology, it has been possible to achieve considerable rendering rates and a high degree of realism. Visualization tools have currently assisted users with the visual analysis of complex and large datasets. Marching cubes is one of the most widely used real-time volume rendering methods. This paper describes a methodology for speeding up the marching cubes algorithm on a graphics processing unit and discusses a number of ways to improve its performance by means of auxiliary spatial data structures. Experiments conducted with use of several volumetric datasets demonstrate the effectiveness of the developed method.
+SN  - 1678-4804
+UR  - https://doi.org/10.1007/s13173-012-0097-z
+DO  - 10.1007/s13173-012-0097-z
+ID  - Cirne2013
+ER  - 
