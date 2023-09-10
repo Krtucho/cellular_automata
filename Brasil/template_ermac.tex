@@ -168,7 +168,7 @@ The neighborhood of the vertex $v \in V(G)$ is defined based on the neighborhood
 
 In the presented study, a soft tissue is defined as a set of cells that exhibit two types of connections: between nearby neighboring cells and between distant cells. To represent these types of connections, a cellular automaton model based on a graph network is used. In their work[31], Duncan J. Watts and Steven H. Strogatz showed that there are many biological, technological, and social networks that lie between regular and random networks, which have traditionally been used to model different types of dynamic systems.
 
-Let $v$ be a vertex of the graph that has $k_v$ edges connecting it to $k_v$ vertices. The value between the actual number of edges $K_v$ that exist between these $k_v$ vertices and the maximum number of possible edges\footnote{El n\'umero m\'aximo de aristas posibles se alcanza cuando los $k_v$ vecinos del v\'ertice $v$ pertenecen a un clique. Un clique en un grafo no dirigido es un conjunto de v\'ertices tal que para todo par de v\'ertices, existe una arista que los conecta.} $k_v(k_v-1)/2$ e is the clustering coefficient of vertex $v$ and is determined as~\cite{Darien Tesis}:
+Let $v$ be a vertex of the graph that has $k_v$ edges connecting it to $k_v$ vertices. The value between the actual number of edges $K_v$ that exist between these $k_v$ vertices and the maximum number of possible edges\footnote{The maximum number of possible edges is reached when the neighbors, denoted as $k_v$ of vertex $v$ belong to a clique. In an undirected graph, a clique is a set of vertices such that every pair of vertices is connected by an edge. https://www.baeldung.com/cs/graphs-max-number-of-edges} $k_v(k_v-1)/2$ e is the clustering coefficient of vertex $v$ and is determined as~\cite{Darien Tesis}:
 \begin{align}
 C_v = \displaystyle\frac{2K_v}{k_v(k_v-1)}. \label{eq-clustering}
 \end{align}
@@ -184,44 +184,44 @@ Therefore, it is hypothesized that a living tissue possesses a high clustering c
 \\
 \textbf{Marching Cubes}
 
-La técnica de Marching Cubes es un algoritmo de gráficos por computadora que se usa para extraer una malla poligonal de una isosuperficie de un campo escalar discreto tridimensional, como lo son los datos de imágenes de tomografías computarizadas y resonancias magnéticas ~\cite{7}. En el contexto de nuestro proyecto, se utiliza para la representación tridimensional de los tumores, proporcionando una visualización detallada y precisa.
+The Marching Cubes technique is a computer graphics algorithm used to extract a polygonal mesh of an isosurface from a three-dimensional discrete scalar field, such computed tomography (CT) scans and magnetic resonance imaging (MRI) data ~\cite{7}. In the context of this project, it is used for the three-dimensional representation of tumors, providing detailed and accurate visualization.
 
-Este algoritmo trabaja procesando las celdas de los datos de volumen (también conocidas como vóxeles), verificando la intersección entre sus respectivas aristas y la isosuperficie. Los valores de cada vértice de las celdas se comparan con un valor isosuperficial dado, y estos vértices se clasifican como "dentro" o "fuera" de la isosuperficie. Una vez definido el tipo de intersección, se realiza una aproximación de la isosuperficie contenida en la celda construyendo triángulos ~\cite{6}.
+This algorithm works by processing the cells of volume data (also known as voxels), checking the intersection between their respective edges and the isosurface. The values of each vertex of the cells are compared with a given isosurface value, and these vertices are classified as "inside" or "outside" the isosurface. Once the type of intersection is determined, an approximation of the isosurface contained in the cell is constructed by building triangles ~\cite{6}.
 
-La visualización resultante puede proporcionar una comprensión valiosa de cómo se desarrolla y se propaga el cáncer. Al visualizar el crecimiento del tumor en tres dimensiones, los médicos y científicos pueden obtener una mejor comprensión de la evolución del tumor y cómo puede afectar a los tejidos circundantes. Esta información puede ser esencial para el desarrollo de terapias y tratamientos efectivos para el cáncer 
+The resulting visualization can provide valuable insights into how cancer develops and spreads. By visualizing tumor growth in three dimensions, doctors and scientists can gain a better understanding of tumor evolution and how it may impact surrounding tissues. This information can be essential for the development of effective cancer therapies and treatments.
 
-En resumen, la técnica de Marching Cubes es una herramienta potente para la visualización tridimensional de datos médicos. En el contexto de la investigación del cáncer, puede proporcionar una representación detallada y precisa del crecimiento de los tumores, lo que puede contribuir significativamente a nuestra comprensión de esta enfermedad y al desarrollo de terapias y tratamientos efectivos.
-
-Debido a que es muy costoso representar y aplicar el algoritmo de Marching Cubes para modelos tan realistas que contengan millones de celulas en este trabajo se lleva a cabo la implementacion de un escalado del modelo que permite reducir el tamano de las dimensiones de nuestro modelo original de automata celular. Para hacer semejante reduccion se procede de la siguiente forma:
+Due to the high computational cost of representing and applying the Marching Cubes algorithm to realistic models containing millions of cells, this work implements a model scaling technique that reduces the length of the dimensions of the original cellular automaton model. The reduction process is as follows:
 \begin{itemize}
-    \item Se agrupan las celulas por cuadrantes de dimension proporcionada por el usuario.
-    \item Se buscan los estados de todas las celulas pertenecientes al cuadrante.
-    \item El cuadrante adoptara el estado que mas se repita entre las celulas que pertenezcan al mismo.
-    \item Luego de hacer esto por varios cuadrantes, cada uno reducira su tamano desde $(n x m x l)$ a $(1 x 1 x 1)$, siendo $n \leq S_{x} ,m \leq S_{y},l \leq S_{z}$. 
+    \item Cells are grouped into quadrants of dimensions provided by the user.
+    \item The states of all cells belonging to the quadrant are examined.
+    \item The quadrant adopts the state that is most repeated among the cells in it.
+    \item fter performing this process for several quadrants, each quadrant reduces its size from $(n x m x l)$ to $(1 x 1 x 1)$, where $n \leq S_{x} ,m \leq S_{y},l \leq S_{z}$. 
 \end{itemize}
-\\
+
+In summary, the Marching Cubes technique is a powerful tool for the three-dimensional visualization of medical data. In the context of cancer research, it can provide a detailed and accurate representation of tumor growth, which can significantly contribute to our understanding of this disease and the development of effective therapies and treatments.\\
+
 \textbf{Configuraciones y Parametros de la simulacion}
 
-Algunos de los parametros y configuraciones que se pueden modificar son:
+me of the parameters and configurations that can be modified are:
 \begin{itemize}
-    \item S_{x}$ - Dimension del espacio declarado en el eje de las x.
-    \item S_{y}$ - Dimension del espacio declarado en el eje de las y.
-    \item S_{z}$ - Dimension del espacio declarado en el eje de las z.
+    \item S_{x}$ - Dimension of the space declared on the x-axis.
+    \item S_{y}$ - Dimension of the space declared on the y-axis.
+    \item S_{z}$ - Dimension of the space declared on the z-axis.
     ~\cite{Tesis de Darien}
-Los rangos de valores de las componentes espaciales de los vértices del grafo son los siguientes: $0 \leq x \leq S_{x}$, $0 \leq y \leq S_{y}$ y $0 \leq z \leq S_{z}$.
+The ranges of values for the spatial components of the graph vertices are as follows: $0 \leq x \leq S_{x}$, $0 \leq y \leq S_{y}$ y $0 \leq z \leq S_{z}$.
 
-    \item p - Probabilidad de reconexi´on del modelo Watts-Strogatz.
-    \item $P_0^a$, $P_0^v$ - Poblaciones iniciales de las etapas avascular y vascular respectivamente.
+    \item p - Probability of reconnection in the Watts-Strogatz model
+    \item $P_0^a$, $P_0^v$ - Initial populations of the avascular and vascular stages respectively.
     ~\cite{Tesis de Darien}
-    \item Parametros correspondientes a la cantidad de estados que pueden tener las celdas del automata y descripciones de los mismos.
-    \item Parametros de posibles transiciones entre los estados del automata.
-    \item Parametros de probabilidades para que ocurran las transiciones entre los estados.
-    Al incluir parametros para el calculo de ciertas probabilidades, se puede tener en cuenta el calculo de la probabilidad de la interaccion de las celulas tumorales con el sistema inmune, como se hace en ~\cite{2}.
-    \item Parametros correspondientes con la forma de los organos donde se desarrollara la simulacion.
-    \item Parametros para describir el esquema de los organos donde se llevara a cabo la simulacion. De esta forma podemos tener en cuenta las caracteristicas de cada organo por separado y realizar una simulacion mas realista.
+    \item Parameters corresponding to the number of states that the automaton cells can have and their descriptions.
+    \item Parameters for possible transitions between the states of the automaton.
+    \item Parameters for the probabilities of the transitions between states.
+    When including parameters for the calculation of certain probabilities, one can take into account the calculation of the probability of interaction between tumor cells and the immune system.~\cite{2}.
+    \item Parameters corresponding to the shape of the organs where the simulation will take place.
+    \item Parameters to describe the schema of the organs where the simulation will be performed. This allows for the consideration of the characteristics of each organ separately and enables a more realistic simulation.
 \end{itemize}
 
-Existen muchos otros parametros que son configurables.\\
+There are many other configurable parameters.\\
 
 \section*{Seleção de trabalhos}
 
@@ -262,12 +262,12 @@ c) Nas citações diretas, especificar no texto o ano de publicação e a(s) pá
 
 \section*{Conclusões}
 
-El crecimiento de un tumor puede ser visualizado en 3D utilizando la técnica de Marching Cubes. Se utiliza ampliamente para visualizaciones médicas, como imágenes de tomografía computarizada (TC) y resonancia magnética (RM). Además, el algoritmo de Marching Cubes puede reducir el tiempo de cálculo utilizado para el muestreo en la reconstrucción 3D. Sin embargo, uno de los problemas principales de Marching Cubes es la presencia de voxels no utilizados que pueden generarse durante el análisis de las coordenadas y los valores de intensidad de las imágenes 2D. Estos voxels no utilizados pueden afectar la suavidad de la superficie 3D ncbi.nlm.nih.gov.
+The growth of a tumor can be visualized in 3D using the Marching Cubes technique. It is widely used for medical visualizations, such as computed tomography (CT) and magnetic resonance imaging (MRI) images. Additionally, the Marching Cubes algorithm can reduce the computational time used for sampling in 3D reconstruction. However, one of the main issues with Marching Cubes is the presence of unused voxels that can be generated during the analysis of the coordinates and intensity values of 2D images. These unused voxels can affect the smoothness of the 3D surface.~\cite{8}
 
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.9\textwidth]{tumor.jpg}
-  \caption{Texto de la leyenda}
+  \caption{An example of simulating tumor growth in 3D at early stages.}
 \end{figure}
 
 La creación de una herramienta para simular el crecimiento de un tumor con un autómata celular en cualquier órgano del cuerpo humano es un avance significativo en el campo de la modelación y simulación de sistemas biológicos. Esta herramienta proporciona un enfoque innovador y flexible para estudiar el crecimiento de los tumores, lo cual tiene importantes implicaciones tanto en la investigación básica como en la clínica.
