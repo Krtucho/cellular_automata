@@ -52,6 +52,8 @@
 \hypersetup{colorlinks,citecolor=black,filecolor=black,linkcolor=black,urlcolor=black} %setup de hyperref
 \bibliographystyle{unsrt}
 \bibliographystyle{abntex2-alf}
+\usepackage{etoolbox}
+\patchcmd{\thebibliography}{\section*{\refname}}{}{}{}
 
 \begin{document}
 
@@ -254,6 +256,7 @@ Os autores podem apresentar os agradecimentos a pessoas e instituições. Esta s
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section*{Referências}
+\label{Nada}
 \begin{flushleft}
 
 \begin{thebibliography}{99}
