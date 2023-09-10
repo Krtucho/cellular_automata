@@ -55,17 +55,17 @@
 
 \begin{document}
 
-\centering{{\Large{\bf Herramienta para la simulacion del crecimiento de tumores en diversas regiones del cuerpo humano en 3 dimensiones.}}
+\centering{{\Large{\bf Tool for simulating tumor growth in various regions of the human body in three dimensions.}}
 
 \begin{flushright}{\it
 \vspace*{5mm}
 Carlos Carret Miranda\\
-Universidad de la Habana\\
+University of Havana\\
 carlos.carret@estudiantes.matcom.uh.cu
 
 \vspace*{5mm}
 \underline{ Reinaldo Rodríguez Ramos}\\
-Departamento de Matem\'aticas, Facultad de Matem\'aticas y Computaci\'on, Universidad de La Habana, Cuba y PPG-MCCT, Universidade Federal Fluminense, Volta Redonda, Rio de Janeiro, Brazil.\\
+Department of Mathematics, Faculty of Mathematics and Computer Science, University of Havana, Cuba, and PPG-MCCT, Federal Fluminense University, Volta Redonda, Rio de Janeiro, Brazil.\\
 reinaldo@matcom.uh.cu and reinaldorr@id.uff.br
 
 \vspace*{5mm}
@@ -100,7 +100,7 @@ pantersrb@id.uff.br
 
 \section*{Introdução}
 
-The challenge of representing biological phenomena mathematically, physically, and computationally requires interdisciplinary synergy among experts in these fields. This collaboration enriches the traditional experimental method used in biological sciences by implementing mathematical models, which serve as tools to formulate and test hypotheses, guide experimental research, and refine the model based on the obtained results.~\cite{Darien}
+The challenge of representing biological phenomena mathematically, physically, and computationally requires interdisciplinary synergy among experts in these fields. This collaboration enriches the traditional experimental method used in biological sciences by implementing mathematical models, which serve as tools to formulate and test hypotheses, guide experimental research, and refine the model based on the obtained results.~\cite{7}
 
 Cancer is a disease that affects a large number of living organisms and is characterized by the presence of a group of abnormal cells that grow uncontrollably, disregarding the normal rules of cell division. It particularly affects humans, where its occurrence and development pose a threat to life. The malignancy of cancer varies and depends on factors such as the growth rate of cancer cells, their ability to spread to other tissues, and the possibility of recurrence after surgical removal.
 
@@ -108,21 +108,21 @@ The purpose of this type of research is to achieve a deeper understanding of bio
 
 In the case of this project, a cellular automaton and a small-world network are used to model the interactions between cells, providing a more accurate representation of tumor growth. The parameters and configurations can be loaded from external files, offering great flexibility in adapting the simulation to the specific needs of each case.
 
-The technique of Marching Cubes~\cite{paper de Marching Cubes} is used for 3D rendering, providing a detailed and precise visualization of tumors. This visualization can provide valuable insight into how cancer develops and spreads, which can be essential for the development of effective therapies and treatments. By visualizing tumor growth in three dimensions, doctors and scientists can gain a better understanding of tumor evolution and how it may affect surrounding tissues. This information can be crucial for the development of effective therapies and treatments for cancer.
+The technique of Marching Cubes~\cite{5} is used for 3D rendering, providing a detailed and precise visualization of tumors. This visualization can provide valuable insight into how cancer develops and spreads, which can be essential for the development of effective therapies and treatments. By visualizing tumor growth in three dimensions, doctors and scientists can gain a better understanding of tumor evolution and how it may affect surrounding tissues. This information can be crucial for the development of effective therapies and treatments for cancer.
 
 
 \section*{Submissão}
 
 \textbf{Cellular Automaton}
 
-In this section, the cellular automaton model presented in this work is conceived. It begins by formally defining a cellular automaton~\cite{5}.
+In this section, the cellular automaton model presented in this work is conceived. It begins by formally defining a cellular automaton~\cite{7}.
 
-A cellular automaton is a tuple $(\mathcal{L}; \mathcal{N}; \mathcal{E}; \mathcal{R})$ composed of the following representative elements:
+A cellular automaton is a tuple $(\mathcal{L}; \mathcal{N}; \mathcal{E}; \mathcal{R})$ composed of the following representative elements~\cite{2}:
 \begin{itemize}
 \item [$\mathcal{L}$:] t is a potentially infinite set of cells.
 \item [$\mathcal{N}$:] $\mathcal{L} \times \mathcal{L} \rightarrow \lbrace 0,1 \rbrace$ is a neighborhood function, which can be seen as a relation, usually reflexive and symmetric, between cells. This function shows which pairs of cells are neighbors, that is, the geometry of the cellular organization.
 \item [$\mathcal{E}$:] It is a set of states. Each cell in the set $\mathcal{L}$ is assigned an associated state at each time step.
-\item [$\mathcal{R}$:] $\mathcal{E}^{|\mathcal{N}(v)|} \rightarrow \mathcal{E}$ is a locally defined transition function. This function is the core of the dynamics of a cellular automaton and is commonly expressed through rules that define the state of the cell in the next time step based on the state of the neighboring cells. The set containing the state of the neighboring cells is obtained through the function $\mathcal{N}(v)$, wich is defined below ~\ref{1}.
+\item [$\mathcal{R}$:] $\mathcal{E}^{|\mathcal{N}(v)|} \rightarrow \mathcal{E}$ is a locally defined transition function. This function is the core of the dynamics of a cellular automaton and is commonly expressed through rules that define the state of the cell in the next time step based on the state of the neighboring cells. The set containing the state of the neighboring cells is obtained through the function $\mathcal{N}(v)$, wich is defined below.
 \end{itemize}
 
 The sets $A^n(G)$ and $A^d(G)$ group the edges of the graph that correspond to immediate and distant connections, respectively. These sets have the following properties:
@@ -166,27 +166,27 @@ The neighborhood of the vertex $v \in V(G)$ is defined based on the neighborhood
 \\
 \textbf{Set of cells: Watts-Strogatz model}
 
-In the presented study, a soft tissue is defined as a set of cells that exhibit two types of connections: between nearby neighboring cells and between distant cells. To represent these types of connections, a cellular automaton model based on a graph network is used. In their work[31], Duncan J. Watts and Steven H. Strogatz showed that there are many biological, technological, and social networks that lie between regular and random networks, which have traditionally been used to model different types of dynamic systems.
+In the presented study, a soft tissue is defined as a set of cells that exhibit two types of connections: between nearby neighboring cells and between distant cells. To represent these types of connections, a cellular automaton model based on a graph network is used. In their work~\cite{9}, Duncan J. Watts and Steven H. Strogatz showed that there are many biological, technological, and social networks that lie between regular and random networks, which have traditionally been used to model different types of dynamic systems.
 
-Let $v$ be a vertex of the graph that has $k_v$ edges connecting it to $k_v$ vertices. The value between the actual number of edges $K_v$ that exist between these $k_v$ vertices and the maximum number of possible edges\footnote{The maximum number of possible edges is reached when the neighbors, denoted as $k_v$ of vertex $v$ belong to a clique. In an undirected graph, a clique is a set of vertices such that every pair of vertices is connected by an edge. https://www.baeldung.com/cs/graphs-max-number-of-edges} $k_v(k_v-1)/2$ e is the clustering coefficient of vertex $v$ and is determined as~\cite{Darien Tesis}:
+Let $v$ be a vertex of the graph that has $k_v$ edges connecting it to $k_v$ vertices. The value between the actual number of edges $K_v$ that exist between these $k_v$ vertices and the maximum number of possible edges\footnote{The maximum number of possible edges is reached when the neighbors, denoted as $k_v$ of vertex $v$ belong to a clique. In an undirected graph, a clique is a set of vertices such that every pair of vertices is connected by an edge. https://www.baeldung.com/cs/graphs-max-number-of-edges} $k_v(k_v-1)/2$ e is the clustering coefficient of vertex $v$ and is determined as~\cite{7}:
 \begin{align}
 C_v = \displaystyle\frac{2K_v}{k_v(k_v-1)}. \label{eq-clustering}
 \end{align}
 
-The global clustering coefficient of the graph $C_G$ is the average of all individual clustering coefficients $C_v$, that is~\cite{Darien Tesis}:
+The global clustering coefficient of the graph $C_G$ is the average of all individual clustering coefficients $C_v$, that is~\cite{7}:
 \begin{align}
 C_G = \displaystyle\frac{1}{|V(G)|}\sum _{v=1} ^{|V(G)|} C_v. \label{eq-global-clustering}
 \end{align}
 
 The average path length is the mean of the distances between every pair of vertices belonging to the graph and is denoted as $\ell_G$. Due to the existence of numerous distant connections through the circulatory system, the average path length in the network of cells is relatively small.
 
-Therefore, it is hypothesized that a living tissue possesses a high clustering coefficient and a small average path length. These characteristics are characteristic of small-world networks, and they are used to represent living tissue. To generate small-world networks with these characteristics, the Watts and Strogatz model is used~\cite{31}. This model starts with a graph with $q$ vertices, each connected to $k$ immediate neighbors, and then randomly rewires each edge of the graph with a probability $p$, introducing edges that connect distant vertices.\\
+Therefore, it is hypothesized that a living tissue possesses a high clustering coefficient and a small average path length. These characteristics are characteristic of small-world networks, and they are used to represent living tissue. To generate small-world networks with these characteristics, the Watts and Strogatz model is used~\cite{9}. This model starts with a graph with $q$ vertices, each connected to $k$ immediate neighbors, and then randomly rewires each edge of the graph with a probability $p$, introducing edges that connect distant vertices.\\
 \\
 \textbf{Marching Cubes}
 
-The Marching Cubes technique is a computer graphics algorithm used to extract a polygonal mesh of an isosurface from a three-dimensional discrete scalar field, such computed tomography (CT) scans and magnetic resonance imaging (MRI) data ~\cite{7}. In the context of this project, it is used for the three-dimensional representation of tumors, providing detailed and accurate visualization.
+The Marching Cubes technique is a computer graphics algorithm used to extract a polygonal mesh of an isosurface from a three-dimensional discrete scalar field, such computed tomography (CT) scans and magnetic resonance imaging (MRI) data ~\cite{5}. In the context of this project, it is used for the three-dimensional representation of tumors, providing detailed and accurate visualization.
 
-This algorithm works by processing the cells of volume data (also known as voxels), checking the intersection between their respective edges and the isosurface. The values of each vertex of the cells are compared with a given isosurface value, and these vertices are classified as "inside" or "outside" the isosurface. Once the type of intersection is determined, an approximation of the isosurface contained in the cell is constructed by building triangles ~\cite{6}.
+This algorithm works by processing the cells of volume data (also known as voxels), checking the intersection between their respective edges and the isosurface. The values of each vertex of the cells are compared with a given isosurface value, and these vertices are classified as "inside" or "outside" the isosurface. Once the type of intersection is determined, an approximation of the isosurface contained in the cell is constructed by building triangles ~\cite{1}.
 
 The resulting visualization can provide valuable insights into how cancer develops and spreads. By visualizing tumor growth in three dimensions, doctors and scientists can gain a better understanding of tumor evolution and how it may impact surrounding tissues. This information can be essential for the development of effective cancer therapies and treatments.
 
@@ -200,15 +200,16 @@ Due to the high computational cost of representing and applying the Marching Cub
 
 In summary, the Marching Cubes technique is a powerful tool for the three-dimensional visualization of medical data. In the context of cancer research, it can provide a detailed and accurate representation of tumor growth, which can significantly contribute to our understanding of this disease and the development of effective therapies and treatments.\\
 
-\textbf{Configuraciones y Parametros de la simulacion}
+\textbf{Configuration and Parameters of the simulation.}
 
-me of the parameters and configurations that can be modified are:
+Some of the parameters and configurations that can be modified are:
 \begin{itemize}
     \item S_{x}$ - Dimension of the space declared on the x-axis.
     \item S_{y}$ - Dimension of the space declared on the y-axis.
     \item S_{z}$ - Dimension of the space declared on the z-axis.
     ~\cite{Tesis de Darien}
-The ranges of values for the spatial components of the graph vertices are as follows: $0 \leq x \leq S_{x}$, $0 \leq y \leq S_{y}$ y $0 \leq z \leq S_{z}$.
+    
+    The ranges of values for the spatial components of the graph vertices are as follows: $0 \leq x \leq S_{x}$, $0 \leq y \leq S_{y}$ y $0 \leq z \leq S_{z}$.
 
     \item p - Probability of reconnection in the Watts-Strogatz model
     \item $P_0^a$, $P_0^v$ - Initial populations of the avascular and vascular stages respectively.
@@ -216,48 +217,13 @@ The ranges of values for the spatial components of the graph vertices are as fol
     \item Parameters corresponding to the number of states that the automaton cells can have and their descriptions.
     \item Parameters for possible transitions between the states of the automaton.
     \item Parameters for the probabilities of the transitions between states.
-    When including parameters for the calculation of certain probabilities, one can take into account the calculation of the probability of interaction between tumor cells and the immune system.~\cite{2}.
+    
+    When including parameters for the calculation of certain probabilities, one can take into account the calculation of the probability of interaction between tumor cells and the immune system.~\cite{6}.
     \item Parameters corresponding to the shape of the organs where the simulation will take place.
     \item Parameters to describe the schema of the organs where the simulation will be performed. This allows for the consideration of the characteristics of each organ separately and enables a more realistic simulation.
 \end{itemize}
 
 There are many other configurable parameters.\\
-
-\section*{Seleção de trabalhos}
-
-Os trabalhos submetidos, dentro do prazo estabelecido, serão enviados aos revisores do Comitê Científico. Com base nos pareceres do comitê, o trabalho poderá ser (1) aceito plenamente, (2) aceito sob a condição de que correções menores sejam feitas em curto prazo ou (3) rejeitado.
-
-
-\section*{Citações}
-Devem seguir as normas da ABNT NBR 10520. Nas citações, as chamadas pelo sobrenome do autor devem ser em letras maiúsculas e minúsculas e, quando estiverem entre parênteses, devem ser em letras maiúsculas.
-
-Exemplos:
-
-A ironia seria assim uma forma implícita de heterogeneidade mostrada, conforme a classificação proposta por Authier-Reiriz (1982).
-
-\vskip 0.2cm
-``Apesar das aparências, a desconstrução do logocentrismo não é uma psicanálise da filosofia [...]'' (DERRIDA, 1967, p. 293).
-
-\vskip 0.2cm
-a) As citações diretas, no texto, com mais de três linhas, devem ser destacadas com recuo de 4 cm da margem esquerda, espaço entre linhas simples e sem aspas, em fonte Times New Roman, tamanho 10.
-
-\begin{quoting}
-A teleconferência permite ao indivíduo participar de um encontro nacional ou regional sem a necessidade de deixar seu local de origem. Tipos comuns de teleconferência incluem o uso da televisão, telefone, e computador. Através de áudio-conferência, utilizando a companhia local de telefone, um sinal de áudio pode ser emitido em um salão de qualquer dimensão. (NICHOLS, 1993, p. 181).
-\end{quoting}
-
-\vskip 0.2cm
-b) As citações diretas, no texto, de até três linhas, devem ser escritas entre ``aspas'' duplas e incorporadas ao texto.
-Exemplos:
-Barbour (1971, p. 35) descreve: ``O estudo da morfologia dos terrenos [...] ativos [...]''
-
-\vskip 0.2cm
-``Não se mova, faça de conta que está morta.'' (CLARAC; BONNIN, 1985, p. 72).
-
-\vskip 0.2cm
-Segundo Sá (1995, p. 27): ``[...] por meio da mesma `arte de conversação' que abrange tão extensa e significativa parte da nossa existência cotidiana [...]''
-
-\vskip 0.2cm
-c) Nas citações diretas, especificar no texto o ano de publicação e a(s) página(s) da fonte consultada. Estes dados devem ser colocados entre parênteses e separados por vírgula. Nas citações indiretas, a indicação da(s) página(s) consultada(s) é opcional, mas o ano de publicação da obra é obrigatório e deve estar entre parênteses.
 
 
 \section*{Conclusões}
@@ -270,13 +236,13 @@ The growth of a tumor can be visualized in 3D using the Marching Cubes technique
   \caption{An example of simulating tumor growth in 3D at early stages.}
 \end{figure}
 
-La creación de una herramienta para simular el crecimiento de un tumor con un autómata celular en cualquier órgano del cuerpo humano es un avance significativo en el campo de la modelación y simulación de sistemas biológicos. Esta herramienta proporciona un enfoque innovador y flexible para estudiar el crecimiento de los tumores, lo cual tiene importantes implicaciones tanto en la investigación básica como en la clínica.
+The creation of a tool to simulate tumor growth using cellular automaton in any organ of the human body is a significant advancement in the field of modeling and simulation of biological systems. This tool provides an innovative and flexible approach to studying tumor growth, which has important implications in both basic research and clinical applications.
 
-La capacidad de cargar configuraciones específicas y ajustar, agregar o eliminar parámetros que influyen en el realismo de la simulación permite adaptar el modelo a diferentes escenarios y condiciones. Esto hace que la herramienta sea altamente versátil y aplicable a una amplia gama de situaciones y tipos de tumores.
+The ability to load specific configurations and adjust, add, or remove parameters that influence the realism of the simulation allows for the adaptation of the model to different scenarios and conditions. This makes the tool highly versatile and applicable to a wide range of situations and types of tumors.
 
-El uso de autómatas celulares para simular el crecimiento del tumor proporciona una representación detallada y dinámica del proceso. Los autómatas celulares son especialmente adecuados para este tipo de modelado, ya que permiten representar de forma precisa y realista la interacción entre las células y su entorno, así como los cambios que ocurren en el tiempo.
+The use of cellular automaton in tumor growth simulation allows for the accurate representation of the interaction between cells and their environment, as well as the temporal changes that occur. This modeling approach provides a detailed understanding of tumor growth dynamics and can be used to investigate various scenarios and conditions~\cite{2}.
 
-Finalmente, la visualización en 3D del crecimiento de un tumor utilizando la técnica de Marching Cubes puede proporcionar una herramienta valiosa para los profesionales de la salud para entender mejor la dinámica del crecimiento del tumor y desarrollar estrategias de tratamiento más efectivas.
+Finally, the 3D visualization of tumor growth using the Marching Cubes technique can provide a valuable tool for healthcare professionals to better understand the dynamics of tumor growth and develop more effective treatment strategies.
 
 \section*{Agradecimentos}
 
@@ -288,38 +254,35 @@ Os autores podem apresentar os agradecimentos a pessoas e instituições. Esta s
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section*{Referências}
-{\color{red} A bibliografia deverá seguir o padrão da ABNT NBR 6023, separadas entre si por uma linha em branco, estar em \textbf{ordem alfabética pelo sobrenome do primeiro autor}, se necessário, usando-se, ainda, ordem cronológica, para trabalhos de um mesmo autor. Trabalhos dos mesmos autores, publicados no mesmo ano, devem ser listados utilizando-se a ordem alfabética do título do trabalho. Basicamente, as referências devem conter as iniciais dos nomes dos autores, sendo escrito, por extenso, apenas o último sobrenome. Seguem alguns exemplos:}
-
-
 \begin{flushleft}
 
 \begin{thebibliography}{99}
-\bibitem{1} Guinot, V. Modelling using stochastic, finite state cellular automata: rule inference from continuum models. \textit{Applied Mathematical Modelling}, 26(6).
+
+\bibitem{1} Cirne, M. A.; Pedrini, H. Marching cubes technique for volumetric visualization accelerated with graphics processing units. Journal of the Brazilian Computer Society, vol. 19, pages 223-233, 2013. Available at: https://journal-bcs.springeropen.com/articles/10.1007/s13173-012-0097-z. Accessed on [insert date].
 
 \vskip 0.2cm
-\bibitem{2} Ruanxiaogang, H. A simple cellular automaton model for tumor-immunity system. In \textit{Robotics, Intelligent Systems and Signal Processing, 2003. Proceedings. 2003 IEEE International Conference on}, 2.
+\bibitem{2} Deutsch, A.; Maini, P.; Dormann, S. Cellular Automaton Modeling of Biological Pattern Formation: Characterization, Applications, and Analysis. \textit{Modeling and Simulation in Science, Engineering and Technology}. Birkhauser Boston, 2007.
 
 \vskip 0.2cm
-\bibitem{3} Deutsch, A.; Maini, P.; Dormann, S. Cellular Automaton Modeling of Biological Pattern Formation: Characterization, Applications, and Analysis. \textit{Modeling and Simulation in Science, Engineering and Technology}. Birkhauser Boston, 2007.
+\bibitem{3} Guinot, V. Modelling using stochastic, finite state cellular automata: rule inference from continuum models. \textit{Applied Mathematical Modelling}, 26(6).
 
 \vskip 0.2cm
 \bibitem{4} Kansal, A.; Torquato, S. Simulated brain tumor growth dynamics using a three-dimensional cellular automaton. \textit{Journal of Theoretical Biology}.
 
 \vskip 0.2cm
-\bibitem{5} Viera Barredo, D. Universidad de La Habana, Facultad de Matemática y Computación. Departamento de Matemática. Asesores: Reinaldo Rodríguez Ramos, Rubén Interián, Ariel Ramírez Torres, Rocío Rodríguez Sánchez. June, 2019.
+\bibitem{5} LORENSEN, W. E.; CLINE, H. E. Marching cubes: A high-resolution 3D surface construction algorithm. ACM SIGGRAPH Computer Graphics, vol. 21, no. 4, pp. 163-169, 1987. Available at: https://people.eecs.berkeley.edu/~jrs/meshpapers/LorensenCline.pdf. Accessed on [insert date].
 
 \vskip 0.2cm
-\bibitem{6} Cirne, M. A.; Pedrini, H. Marching cubes technique for volumetric visualization accelerated with graphics processing units. Journal of the Brazilian Computer Society, vol. 19, pages 223-233, 2013. Available at: https://journal-bcs.springeropen.com/articles/10.1007/s13173-012-0097-z. Accessed on [insert date].
+\bibitem{6} Ruanxiaogang, H. A simple cellular automaton model for tumor-immunity system. In \textit{Robotics, Intelligent Systems and Signal Processing, 2003. Proceedings. 2003 IEEE International Conference on}, 2.
 
 \vskip 0.2cm
-\bibitem{7} Lorensen, W. E.; Cline, H. E. Marching cubes: A high resolution 3D surface construction algorithm. ACM SIGGRAPH Computer Graphics, vol. 21, no. 4, pp. 163-169, Aug. 1987. Available at: https://en.wikipedia.org/wiki/Marching$\_$cubes. Accessed on [insert date].
+\bibitem{7} Viera Barredo, D. Universidad de La Habana, Facultad de Matemática y Computación. Departamento de Matemática. Asesores: Reinaldo Rodríguez Ramos, Rubén Interián, Ariel Ramírez Torres, Rocío Rodríguez Sánchez. June, 2019.
 
 \vskip 0.2cm
 \bibitem{8} Visutsak, P. Marching Cubes and Histogram Pyramids for 3D Medical Visualization. Journal of Imaging, vol. 6, 2020. Available at: https://ncbi.nlm.nih.gov/pmc/articles/PMC8321043 and https://api.semanticscholar.org/CorpusID:225446991. Accessed on [insert date].
 
 \vskip 0.2cm
-\bibitem{31} Watts, D. J. \& Strogatz, S. H. Collective dynamics of small-world networks. \textit{Nature}, 393:440–442, 1998.
-
+\bibitem{9} Watts, D. J. \& Strogatz, S. H. Collective dynamics of small-world networks. \textit{Nature}, 393:440–442, 1998.
 
 \end{thebibliography}
 
