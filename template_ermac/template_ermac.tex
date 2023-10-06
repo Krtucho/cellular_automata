@@ -93,7 +93,7 @@ pantersrb@id.uff.br
 
 
 {\small{ %PALAVRAS-CHAVE
-\noindent{\bf{Keywords:}} Scientific Computing, Numerical Methods, and Applications. Cellular Automaton. Marching Cubes. 3D. Cancer.\textcolor{red}{3) Antes aqui estaba la palabra tumor}
+\noindent{\bf{Keywords:}} Scientific Computing, Numerical Methods, and Applications. Cellular Automaton. Marching Cubes. 3D. Cancer.
 }}
 }
 
@@ -106,12 +106,11 @@ The challenge of representing biological phenomena mathematically, physically, a
 
 Cancer is a disease that affects a large number of living organisms and is characterized by the presence of a group of abnormal cells that grow uncontrollably, disregarding the normal rules of cell division. It particularly affects humans, where its occurrence and development pose a threat to life. The malignancy of cancer varies and depends on factors such as the growth rate of cancer cells, their ability to spread to other tissues, and the possibility of recurrence after surgical removal.~\cite{7} 
 
-The purpose of this type of research is to achieve a deeper understanding of biological processes through an iterative cycle of theory and experimentation. Additionally, mathematical models can be used to assist in the conception and design of therapeutic strategies, providing a more precise and personalized insight into the treatment of each patient.~\cite{7} \textcolor{red}{4) Antes aqui no habia referencia}
+The purpose of this type of research is to achieve a deeper understanding of biological processes through an iterative cycle of theory and experimentation. Additionally, mathematical models can be used to assist in the conception and design of therapeutic strategies, providing a more precise and personalized insight into the treatment of each patient.~\cite{7}
 
 In the case of this project, a cellular automaton and a small-world network are used to model the interactions between cells, providing a more accurate representation of tumor growth. The parameters and configurations can be loaded from external files, offering great flexibility in adapting the simulation to the specific needs of each case. The work being conducted is a part of a larger thesis project that is currently in progress. The project aims to simulate tumor growth in small organs and involves loading and utilizing parameters for the simulation. The graph of cells with their connections is visualized and analyzed, along with the visualization of the tumor size throughout the simulation. The focus of the next stages is to improve the existing implementation and incorporate changes based on details found in medical literature. Additionally, efficient algorithms will be implemented to process large amounts of cells and their connections. In the future, the project aims to incorporate Artificial Intelligence and Machine Learning techniques to achieve better approximations to reality.
 
-The technique of Marching Cubes~\cite{5} is used for 3D rendering, providing a detailed and precise visualization of tumors. This visualization can provide valuable insight into how cancer develops and spreads, which can be essential for the development of effective therapies and treatments. By visualizing tumor growth in three dimensions, doctors and scientists can gain a better understanding of tumor evolution and how it may affect surrounding tissues. This information can be crucial for the development of effective therapies and treatments for cancer.\ref{fig:tumor}\textcolor{red}{6) Antes no estaba citada la figura 1}
-
+The technique of Marching Cubes~\cite{5} is used for 3D rendering, providing a detailed and precise visualization of tumors. This visualization can provide valuable insight into how cancer develops and spreads, which can be essential for the development of effective therapies and treatments. By visualizing tumor growth in three dimensions, doctors and scientists can gain a better understanding of tumor evolution and how it may affect surrounding tissues. This information can be crucial for the development of effective therapies and treatments for cancer.\ref{fig:tumor}
 
 \section*{Submission}
 
@@ -124,7 +123,7 @@ A cellular automaton is a tuple $(\mathcal{L}; \mathcal{N}; \mathcal{E}; \mathca
 \item [$\mathcal{L}$:] t is a potentially infinite set of cells.
 \item [$\mathcal{N}$:] $\mathcal{L} \times \mathcal{L} \rightarrow \lbrace 0,1 \rbrace$ is a neighborhood function, which can be seen as a relation, usually reflexive and symmetric, between cells. This function shows which pairs of cells are neighbors, that is, the geometry of the cellular organization.
 \item [$\mathcal{E}$:] It is a set of states. Each cell in the set $\mathcal{L}$ is assigned an associated state at each time step.
-\item [$\mathcal{R}$:] $\mathcal{E}^{|\mathcal{N}(v)|} \rightarrow \mathcal{E}$ is a locally defined transition function. This function is the core of the dynamics of a cellular automaton and is commonly expressed through rules that define the state of the cell in the next time step based on the state of the neighboring cells. The set containing the state of the neighboring cells is obtained through the function $\mathcal{N}(v)$, w\textcolor{red}{5)h}ich is defined below.
+\item [$\mathcal{R}$:] $\mathcal{E}^{|\mathcal{N}(v)|} \rightarrow \mathcal{E}$ is a locally defined transition function. This function is the core of the dynamics of a cellular automaton and is commonly expressed through rules that define the state of the cell in the next time step based on the state of the neighboring cells. The set containing the state of the neighboring cells is obtained through the function $\mathcal{N}(v)$, which is defined below.
 \end{itemize}
 
 The sets $A^n(G)$ and $A^d(G)$ group the edges of the graph that correspond to immediate and distant connections, respectively. These sets have the following properties:
@@ -186,7 +185,7 @@ Therefore, it is hypothesized that a living tissue possesses a high clustering c
 \\
 \textbf{Marching Cubes}
 
-The Marching Cubes technique is a computer graphics algorithm used to extract a polygonal mesh of an isosurface from a three-dimensional discrete scalar field, such computed tomography (CT) scans and magnetic resonance imaging (MRI) data ~\cite{5}. In the context of this project, it is used for the three-dimensional representation of tumors, providing detailed and accurate visualization.\ref{fig:tumor}\textcolor{red}{6) Antes no estaba citada la figura 1}
+The Marching Cubes technique is a computer graphics algorithm used to extract a polygonal mesh of an isosurface from a three-dimensional discrete scalar field, such computed tomography (CT) scans and magnetic resonance imaging (MRI) data ~\cite{5}. In the context of this project, it is used for the three-dimensional representation of tumors, providing detailed and accurate visualization.\ref{fig:tumor}
 
 This algorithm works by processing the cells of volume data (also known as voxels), checking the intersection between their respective edges and the isosurface. The values of each vertex of the cells are compared with a given isosurface value, and these vertices are classified as "inside" or "outside" the isosurface. Once the type of intersection is determined, an approximation of the isosurface contained in the cell is constructed by building triangles ~\cite{1}.
 
@@ -197,7 +196,7 @@ Due to the high computational cost of representing and applying the Marching Cub
     \item Cells are grouped into quadrants of dimensions provided by the user.
     \item The states of all cells belonging to the quadrant are examined.
     \item The quadrant adopts the state that is most repeated among the cells in it.
-    \item \textcolor{red}{5)A}fter performing this process for several quadrants, each quadrant reduces its size from $(n x m x l)$ to $(1 x 1 x 1)$, where $n \leq S_{x} ,m \leq S_{y},l \leq S_{z}$. 
+    \item After performing this process for several quadrants, each quadrant reduces its size from $(n x m x l)$ to $(1 x 1 x 1)$, where $n \leq S_{x} ,m \leq S_{y},l \leq S_{z}$. 
 \end{itemize}
 
 In summary, the Marching Cubes technique is a powerful tool for the three-dimensional visualization of medical data. In the context of cancer research, it can provide a detailed and accurate representation of tumor growth, which can significantly contribute to our understanding of this disease and the development of effective therapies and treatments.\\
@@ -233,7 +232,7 @@ The growth of a tumor can be visualized in 3D using the Marching Cubes technique
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.9\textwidth]{tumor.jpg}
-  \caption{An example of simulating tumor growth in 3D at early stages. \textcolor{red}{2) Codigo Desarrollado en Unity.}}
+  \caption{An example of simulating tumor growth in 3D at early stages.The code was developed in Unity}
   \label{fig:tumor}
 \end{figure}
 
@@ -249,7 +248,7 @@ How much progress has been made so far?
     \item The engine to simulate the growth of a tumor in small organs has been implemented.
     \item The cell graph with its connections has been visualized and analyzed.
     \item The size that the tumor will take during the simulation has been visualized.
-    \item \textcolor{red}{2) El codigo para renderizar la forma que tendra el tumor ha sido implementado.} \ref{fig:tumor}\textcolor{red}{6) Antes no estaba citada la figura 1}
+    \item The code to render the shape the tumor will have has been implemented.\ref{fig:tumor}
 \end{itemize}
 
 What will be the focus in the next stages? 
@@ -264,16 +263,16 @@ Finally, the 3D visualization of tumor growth using the Marching Cubes technique
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\textcolor{red}{1)}
-\section*{\textcolor{red}{Appendix}}
 
-\textcolor{red}{Como herramienta para desarrollar este trabajo se utilizaron las siguientes herramientas:
+\section*{Appendix}
+
+The following tools were used to develop this work:
 \begin{itemize}
-    \item En la parte de la generacion de la simulacion C# en su version de .net7.0.
-    \item En la parte visual para visualizar las celulas y sus conexiones en determinadas regiones Python en su version 3.11 con Streamlit y otras dependencias.
-    \item En la parte visual para renderizar el tumor Unity en su version 2021.3.28f1.
+    \item  For the generation of the simulation, C\# in its .net7.0 version.
+    \item For the visual part to visualize the cells and their connections in certain regions, Python in its 3.11 version with Streamlit and other dependencies.
+    \item For the visual part to render the tumor, Unity in its 2021.3.28f1 version.
 \end{itemize}
-}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -297,13 +296,13 @@ Finally, the 3D visualization of tumor growth using the Marching Cubes technique
 \bibitem{4} Kansal, A.; Torquato, S. Simulated brain tumor growth dynamics using a three-dimensional cellular automaton. \textit{Journal of Theoretical Biology}, 203:367–382, 2000.
 
 \vskip 0.2cm
-\bibitem{5} \textcolor{red}{7) Lorensen, W. E.; Cline}, H. E. Marching cubes: A high-resolution 3D surface construction algorithm. ACM SIGGRAPH Computer Graphics, vol. 21, no. 4, pp. 163-169, 1987. Available at: https://people.eecs.berkeley.edu/~jrs/meshpapers/LorensenCline.pdf.
+\bibitem{5} Lorensen, W. E.; Cline, H. E. Marching cubes: A high-resolution 3D surface construction algorithm. ACM SIGGRAPH Computer Graphics, vol. 21, no. 4, pp. 163-169, 1987. Available at: https://people.eecs.berkeley.edu/~jrs/meshpapers/LorensenCline.pdf.
 
 \vskip 0.2cm
 \bibitem{6} Ruanxiaogang, H. A simple cellular automaton model for tumor-immunity system. In \textit{Robotics, Intelligent Systems and Signal Processing, 2003. Proceedings. 2003 IEEE International Conference on}, 2.
 
 \vskip 0.2cm
-\bibitem{7} Viera Barredo, D. Universidad de La Habana, Facultad de Matemática y Computación. Departamento de Matemática. \textcolor{red}{8) Autómata celular estocástico en redes complejas para el estudio de la invasión, migración y metástasis del cáncer. }Asesores: Reinaldo Rodríguez Ramos, Rubén Interián, Ariel Ramírez Torres, Rocío Rodríguez Sánchez. Undergraduate thesis. June, 2019.
+\bibitem{7} Viera Barredo, D. Universidad de La Habana, Facultad de Matemática y Computación. Departamento de Matemática. Autómata celular estocástico en redes complejas para el estudio de la invasión, migración y metástasis del cáncer. Asesores: Reinaldo Rodríguez Ramos, Rubén Interián, Ariel Ramírez Torres, Rocío Rodríguez Sánchez. Undergraduate thesis. June, 2019.
 
 \vskip 0.2cm
 \bibitem{8} Visutsak, P. Marching Cubes and Histogram Pyramids for 3D Medical Visualization. Journal of Imaging, vol. 6, 2020. Available at: https://ncbi.nlm.nih.gov/pmc/articles/PMC8321043 and https://api.semanticscholar.org/CorpusID:225446991.
