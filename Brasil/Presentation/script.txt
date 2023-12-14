@@ -1,0 +1,64 @@
+Hello everyone. It's a pleasure for me to be hear today en este evento de ciencia.
+Im glad to show you all this big project that we were working for a long time calling:
+Tool for simulating tumor growth in various regions of the human body in
+three dimensions.
+
+This work have been developed by 
+Carlos Carret Miranda
+Reinaldo Rodriguez Ramos
+Panters Rodriguez
+
+The work being conducted is a part of a larger thesis project that is currently in progress. The project aims to simulate tumor growth in small organs and involves loading and utilizing parameters for the simulation. The graph of cells with their connections is visualized and analyzed, along with the visualization of the tumor size throughout the simulation. The focus of the next stages is to improve the existing implementation and incorporate changes based on details found in medical literature.
+
+Summary
+The Cellular automaton help us handling these big structures and how those changes over the time.
+The small-world network technique help us a lot to recreate a realistic structure.
+We were look for many techniques and we found that Marching Cubes is a good and eficiente 3D technique and widely used.
+
+Preliminaries
+-Cancer is a disease that affects a large number of living organisms and is characterized by the presence of a group of abnormal cells that grow uncontrollably. - Yeah, cancer is so bad
+-The challenge of mathematically, physically, and computationally representing biological phenomena requires interdisciplinary synergy.
+-The purpose of this type of research is to achieve a deeper understanding of biological processes through an iterative cycle of theory and experimentation.- We need to search and read in the literature to compare results and see if we are moving in the right way.
+
+Cellular Automaton
+Ok...Let's see the definition of cellular automaton:
+
+Set of cells: Watts-Strogatz model
+pdf...full
+
+Marching Cubes
+ we'll need
+some function that takes in a point in 3d space and gives out a single value
+then if we have some region of space that we're particularly interested in we
+could use that function to sample points at regular intervals inside of it.The goal of the marching cubes algorithm is to construct the surface of that shape from triangles
+so that we can display it as a mesh. To think about how this works we can
+simplify the problem to just a single cube. There are eight corner points each
+of which can be either inside or outside of the shape, which gives us 2 to the
+power 8, or 256 different configurations.
+For example with just one point inside
+the shape we get a single triangle over here. If the point above it is also
+inside the shape we get a little rectangle made from two triangles and so
+on. As you can see some of the configurations get pretty wild but
+thankfully there are only 14 unique cases, the rest are just symmetries of
+those but still figuring them all out is a tremendous headache that I did not want
+to undertake so I took the easy way out and downloaded a triangulation table
+like this from the internet.
+
+Configuration parameters
+-pdf
+
+Conclusions
+-The growth of a tumor can be visualized in 3D using the Marching Cubes technique. It is widely
+used for medical visualizations, such as computed tomography (CT) and magnetic resonance imaging
+(MRI) images. Additionally, the Marching Cubes algorithm can reduce the computational time used for
+sampling in 3D reconstruction. However, one of the main issues with Marching Cubes is the presence
+of unused voxels that can be generated during the analysis of the coordinates and intensity values of 2D
+images. These unused voxels can affect the smoothness of the 3D surface
+-The creation of a tool to simulate tumor growth using cellular automaton in any organ of the human
+body is a significant advancement in the field of modeling and simulation of biological systems. This tool
+provides an innovative and flexible approach to studying tumor growth, which has important implications
+in both basic research and clinical applications.
+-The ability to load specific configurations and adjust, add, or remove parameters that influence the
+realism of the simulation allows for the adaptation of the model to different scenarios and conditions.
+This makes the tool highly versatile and applicable to a wide range of situations and types of tumors.
+

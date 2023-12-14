@@ -120,7 +120,7 @@ El propósito de este tipo de investigación es alcanzar un entendimiento más p
 
 En el caso de este proyecto, se emplea un autómatas celular y una red de mundo pequeño para modelar las interacciones entre las células, lo que proporciona una representación más precisa del crecimiento tumoral. Los parámetros y configuraciones pueden ser cargados desde archivos externos, ofreciendo una gran flexibilidad en la adaptación de la simulación a las necesidades específicas de cada caso. El trabajo que se está realizando es parte de un proyecto de tesis más grande que actualmente está en progreso. El proyecto tiene como objetivo simular el crecimiento de tumores en órganos pequeños e involucra la carga y utilización de parámetros para la simulación. El gráfico de las células con sus conexiones se visualiza y analiza, junto con la visualización del tamaño del tumor a lo largo de la simulación. El enfoque de las próximas etapas es mejorar la implementación existente e incorporar cambios basados en detalles encontrados en la literatura médica. Además, se implementarán algoritmos eficientes para procesar grandes cantidades de células y sus conexiones. En el futuro, el proyecto pretende incorporar técnicas de Inteligencia Artificial y Aprendizaje Automático para lograr mejores aproximaciones a la realidad.
 
-La técnica de Marching Cubes~\cite{5} se utiliza para la renderización en 3D, proporcionando una visualización detallada y precisa de los tumores.La visualización resultante puede proporcionar una comprensión valiosa de cómo se desarrolla y se propaga el cáncer, lo que puede ser esencial para el desarrollo de terapias y tratamientos efectivos. Al visualizar el crecimiento del tumor en tres dimensiones, los médicos y científicos pueden obtener una mejor comprensión de la evolución del tumor y cómo puede afectar a los tejidos circundantes. Esta información puede ser esencial para el desarrollo de terapias y tratamientos efectivos para el cáncer\ref{fig:tumor}.
+La técnica de Marching Cubes~\cite{5} se utiliza para la renderización en 3D, proporcionando una visualización detallada y precisa de los tumores.La visualización resultante puede proporcionar una comprensión valiosa de cómo se desarrolla y se propaga el cáncer, lo que puede ser esencial para el desarrollo de terapias y tratamientos efectivos. Al visualizar el crecimiento del tumor en tres dimensiones, los médicos y científicos pueden obtener una mejor comprensión de la evolución del tumor y cómo puede afectar a los tejidos circundantes. Esta información puede ser esencial para el desarrollo de terapias y tratamientos efectivos para el cáncer (Ver en Anexo \ref{fig:tumor}).
 
 \section*{Desarollo}
 
@@ -178,7 +178,7 @@ Se define a partir de la funci\'on de vecindad $\mathcal{N}(v,w)$ la vecindad de
 \\
 \textbf{Conjunto de c\'elulas: modelo Watts-Strogatz}
 
-En el estudio presentado, se define un tejido blando como un conjunto de células que presenta dos tipos de conexiones: entre células vecinas cercanas y entre células distantes. Para representar estos tipos de conexiones, se utiliza un modelo de autómatas celulares basado en una red de grafos. En~\cite{9}, Duncan J. Watts Y Steven H. Strogatz mostraron que existen muchas redes biol´ogicas, tecnol´ogicas y sociales que yacen entre las redes regulares y las aleatorias que tradicionalmente han sido utilizadas para modelar distintos tipos de sistemas din´amicos.
+En el estudio presentado, se define un tejido blando como un conjunto de células que presenta dos tipos de conexiones: entre células vecinas cercanas y entre células distantes. Para representar estos tipos de conexiones, se utiliza un modelo de autómatas celulares basado en una red de grafos. En~\cite{9}, Duncan J. Watts Y Steven H. Strogatz mostraron que existen muchas redes biol´ogicas, tecnol´ogicas y sociales que yacen entre las redes regulares y las aleatorias que tradicionalmente han sido utilizadas para modelar distintos tipos de sistemas din\'amicos.
 
 Sea $v$ un v\'ertice del grafo que posee $k_v$ aristas que lo conectan a $k_v$ v\'ertices. El valor entre el n\'umero de aristas $K_v$ que existen en realidad entre estos $k_v$ v\'ertices y el n\'umero m\'aximo de aristas posibles\footnote{El n\'umero m\'aximo de aristas posibles se alcanza cuando los $k_v$ vecinos del v\'ertice $v$ pertenecen a un clique. Un clique en un grafo no dirigido es un conjunto de v\'ertices tal que para todo par de v\'ertices, existe una arista que los conecta.} $k_v(k_v-1)/2$ es el coeficiente de agrupamiento del v\'ertice $v$ y se determina como~\cite{7}:
 \begin{align}
@@ -196,9 +196,9 @@ Por tanto, se hipotetiza que un tejido vivo posee un alto coeficiente de agrupam
 \\
 \textbf{Marching Cubes}
 
-La técnica de Marching Cubes es un algoritmo de gráficos por computadora que se usa para extraer una malla poligonal de una isosuperficie de un campo escalar discreto tridimensional, como lo son los datos de imágenes de tomografías computarizadas (CT) y resonancias magnéticas (MRI) ~\cite{5}. En el contexto de este proyecto, se utiliza para la representación tridimensional de los tumores, proporcionando una visualización detallada y precisa.\ref{fig:tumor}
+La técnica de Marching Cubes es un algoritmo de gráficos por computadora que se usa para extraer una malla poligonal de una isosuperficie de un campo escalar discreto tridimensional, como lo son los datos de imágenes de tomografías computarizadas (CT) y resonancias magnéticas (MRI) ~\cite{5}. En el contexto de este proyecto, se utiliza para la representación tridimensional de los tumores, proporcionando una visualización detallada y precisa.Ver en Anexo \ref{fig:tumor}
 
-Este algoritmo trabaja procesando las celdas de los datos de volumen (también conocidas como vóxeles), verificando la intersección entre sus respectivas aristas y la isosuperficie. Los valores de cada vértice de las celdas se comparan con un valor isosuperficial dado, y estos vértices se clasifican como "dentro" o "fuera" de la isosuperficie. Una vez definido el tipo de intersección, se realiza una aproximación de la isosuperficie contenida en la celda construyendo triángulos~\cite{1}.
+Este algoritmo trabaja procesando las celdas de los datos de volumen (también conocidas como vóxeles), verificando la intersección entre sus respectivas aristas y la isosuperficie. Los valores de cada vértice de las celdas se comparan con un valor isosuperficial dado, y estos vértices se clasifican como "dentro"  o  "fuera" de la isosuperficie. Una vez definido el tipo de intersección, se realiza una aproximación de la isosuperficie contenida en la celda construyendo triángulos~\cite{1}.
 
 La visualización resultante puede proporcionar una comprensión valiosa de cómo se desarrolla y se propaga el cáncer. Al visualizar el crecimiento del tumor en tres dimensiones, los médicos y científicos pueden obtener una mejor comprensión de la evolución del tumor y cómo puede afectar a los tejidos circundantes. Esta información puede ser esencial para el desarrollo de terapias y tratamientos efectivos para el cáncer.
 
@@ -230,7 +230,7 @@ Algunos de los par\'ametros y configuraciones que se pueden modificar son:
     \item Par\'ametros de probabilidades para que ocurran las transiciones entre los estados.
     
     Al incluir par\'ametros para el c\'alculo de ciertas probabilidades, se puede tener en cuenta el c\'alculo de la probabilidad de la interacci\'on de las c\'elulas tumorales con el sistema inmune, como se hace en~\cite{6}.
-    \item Par\'ametros correspondientes con la forma de los \'organos donde se desarrollara la simulaci\'on.\ref{fig:organ_config}
+    \item Par\'ametros correspondientes con la forma de los \'organos donde se desarrollara la simulaci\'on. Ver en Anexo \ref{fig:organ_config}
     \item Par\'ametros para describir el esquema de los \'organos donde se llevar\'a a cabo la simulaci\'on. De esta forma podemos tener en cuenta las caracter\'isticas de cada \'organo por separado y realizar una simulaci\'on m\'as realista.
 \end{itemize}
 
@@ -239,8 +239,8 @@ Existen muchos otros par\'ametros que son configurables.\\
 \textbf{Manejo de la informaci\'on y detalles de la simulaci\'on.}
 Para manejar de manera eficiente la informaci\'on se hace uso de diferentes t\'ecnicas y herramientas:
 \begin{itemize}
-    \item Uso de archivos .json para manejar la información y los parámetros a asignar.\ref{fig:json}
-    \item Uso de lenguajes de programación rápidos y eficientes como C# para el manejo de memoria y guardado de gran cantidad de información en memoria o disco.
+    \item Uso de archivos .json para manejar la información y los parámetros a asignar. Ver en Anexo \ref{fig:json}
+    \item Uso de lenguajes de programación rápidos y eficientes como C\# para el manejo de memoria y guardado de gran cantidad de información en memoria o disco.
     \item Empleo de matrices, grafos y estructuras similares.
     \item Empleo de estructuras que manejen búsquedas rápidas como diccionarios o tablas de hash.
 \end{itemize}
@@ -250,17 +250,21 @@ En cuanto a la simulaci\'on se destacan los siguientes aspectos:
     \item Se lleva a cabo la implementación de un motor eficiente que nos permita simular cualquier tumor que se origine en el tejido epitelial de cualquier órgano.
     \item Para trabajar con grandes cantidades de datos se realiza el análisis región por región del órgano que se esté analizando.
     \item El rendimiento, la velocidad y el alcance dependerán de los recursos con los que cuente el ordenador en el que se esté ejecutando la simulación.
+\end{itemize}\\
+\\
+\textbf{Herramientas computacionales utilizadas}
+
+Para desarrollar este trabajo se utilizaron las siguientes herramientas:
+\begin{itemize}
+    \item En la parte de la generaci\'on de la simulaci\'on, C\# en su versi\'on de .net7.0.
+    \item En la parte visual para visualizar las c\'elulas y sus conexiones en determinadas regiones Python en su versi\'on 3.11 con Streamlit y otras dependencias.
+    \item En la parte visual para renderizar el tumor, Unity en su versi\'on 2021.3.28f1.
 \end{itemize}
 \section*{Conclusiones}
 
 El crecimiento de un tumor puede ser visualizado en 3D utilizando la técnica de Marching Cubes. Se utiliza ampliamente para visualizaciones médicas, como imágenes de tomografía computarizada (TC) y resonancia magnética (RM). Además, el algoritmo de Marching Cubes puede reducir el tiempo de cálculo utilizado para el muestreo en la reconstrucción 3D. Sin embargo, uno de los problemas principales de Marching Cubes es la presencia de voxels no utilizados que pueden generarse durante el análisis de las coordenadas y los valores de intensidad de las imágenes 2D. Estos voxels no utilizados pueden afectar la suavidad de la superficie 3D~\cite{8}.
 
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=0.9\textwidth]{tumor.jpg}
-  \caption{Ejemplo de la simulaci\'on del crecimiento de un tumor en 3D en etapas tempranas. El c\'odigo fue desarrollado en Unity.}
-  \label{fig:tumor}
-\end{figure}
+Ver resultados en anexo \ref{fig:tumor}.
 
 La creación de una herramienta para simular el crecimiento de un tumor con un autómata celular en cualquier órgano del cuerpo humano es un avance significativo en el campo de la modelación y simulación de sistemas biológicos. Esta herramienta proporciona un enfoque innovador y flexible para estudiar el crecimiento de los tumores, lo cual tiene importantes implicaciones tanto en la investigación básica como en la clínica.
 
@@ -272,9 +276,9 @@ El uso de autómatas celulares para simular el crecimiento del tumor proporciona
 \begin{itemize}
     \item Se ha implementado la carga y uso de parámetros para la simulación.
     \item Se ha implementado el motor para simular el crecimiento de un tumor en órganos pequeños. 
-    \item Se ha visualizado y analizado el gráfico de células con sus conexiones.\ref{fig:3d_graph}
+    \item Se ha visualizado y analizado el gráfico de células con sus conexiones. Ver en Anexo \ref{fig:3d_graph}
     \item Se ha visualizado el tamaño que tomará el tumor durante la simulación.
-    \item Se ha implementado el código para renderizar la forma que tendrá el tumor.\ref{fig:tumor}
+    \item Se ha implementado el código para renderizar la forma que tendrá el tumor. Ver en \ref{fig:tumor}
 \end{itemize}
 
 ¿Cuál será el enfoque en las próximas etapas? 
@@ -304,14 +308,6 @@ Luego de obtener varios resultados en el presente estudio se sugieren varias rec
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section*{Ap\'endices}
-
-Para desarrollar este trabajo se utilizaron las siguientes herramientas:
-\begin{itemize}
-    \item En la parte de la generaci\'on de la simulaci\'on, C\# en su versi\'on de .net7.0.
-    \item En la parte visual para visualizar las c\'elulas y sus conexiones en determinadas regiones Python en su versi\'on 3.11 con Streamlit y otras dependencias.
-    \item En la parte visual para renderizar el tumor, Unity en su versi\'on 2021.3.28f1.
-\end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -358,6 +354,13 @@ Para desarrollar este trabajo se utilizaron las siguientes herramientas:
 
 \newpage
 \section*{Anexos}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.9\textwidth]{tumor.jpg}
+  \caption{Ejemplo de la simulaci\'on del crecimiento de un tumor en 3D en etapas tempranas. El c\'odigo fue desarrollado en Unity.}
+  \label{fig:tumor}
+\end{figure}
 
 \begin{figure}[h]
   \centering
