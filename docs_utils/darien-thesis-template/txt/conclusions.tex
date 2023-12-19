@@ -1,0 +1,46 @@
+\chapter{Conclusiones}
+En el presente trabajo se desarroll\'o un modelo para la reproducci\'on de los comportamientos m\'as agresivos que evidencia el c\'ancer basado en la utilizaci\'on de los aut\'omatas celulares como medio de representaci\'on, que como se mostr\'o en la secci\'on~\ref{sec-results} puede producir un amplio espectro de estos comportamientos utilizando distintos grupos de par\'ametros. Las reglas en conjunto con el procedimiento de actualizaci\'on fueron concebidos rigurosamente y constituyen un nuevo enfoque para la modelaci\'on mediante aut\'omatas celulares de fen\'omenos complejos existentes en las ciencias biol\'ogicas, qu\'imicas y f\'isicas. Estos componentes capturan los pasos claves en el crecimiento, invasi\'on, migraci\'on y met\'astasis del c\'ancer que de acuerdo a la bibliograf\'ia consultada no han sido descritos en ning\'un modelo previo de forma integral, modelando estos comportamientos macrosc\'opicos a partir de par\'ametros mayoritariamente microsc\'opicos. Una revisi\'on de los objetivos planteados en la secci\'on introductoria permite verificar si se alcanzaron satisfactoriamente:
+
+\begin{itemize}
+\item Se defini\'o el conjunto de c\'elulas y la funci\'on de vecindad del aut\'omata a partir de una red compleja de mundo peque\~no generada mediante el modelo Watts-Strogatz.
+
+\item Se estableci\'o un conjunto de estados para las c\'elulas del aut\'omata que permiti\'o representar diversas poblaciones celulares relevantes al modelo, entre las que se encuentran distintos tipos de c\'elulas normales y cancer\'igenas.
+
+\item Se defini\'o una funci\'on de transici\'on y un procedimiento de actualizaci\'on que describen satisfactoriamente el desarrollo tumoral avascular y vascular, la invasi\'on, migraci\'on y met\'astasis de c\'elulas cancer\'igenas, y la latencia y crecimiento de una micromet\'astasis. 
+
+\item Se establecieron comparaciones entre los resultados obtenidos y datos y evidencias experimentales existentes en la literatura mostrando que el modelo se comporta de forma realista.
+
+\item Se comprob\'o que el modelo reproduce un amplio rango de comportamientos ante distintos valores del conjunto de par\'ametros.
+
+\item Se obtuvieron visualizaciones de los todos los procesos representados por el aut\'omata celular.
+\end{itemize}
+
+El modelo constituye una herramienta para determinar \emph{in silico} varias magnitudes del comportamiento de la enfermedad que no han sido determinadas especialmente por la dificultad o incapacidad de realizar estas mediciones de forma experimental. Un ejemplo de esto son las poblaciones de c\'elulas migratorias presentes en las regiones adyacentes al tumor o la cantidad de las mismas que viajan en el torrente sangu\'ineo. Por tanto proporciona un medio de comparaci\'on para distintos tipos de modelos basados en otros enfoques. A pesar de su relativa simplicidad logra representar el ciclo vital del c\'ancer y se puede suponer que los resultados para los que no existen datos experimentales est\'an dentro de un rango realista. Esto se alcanza utilizando diversas t\'ecnicas, tales como:
+
+\begin{itemize}
+\item La representaci\'on de un tejido vivo mediante una red de mundo peque\~no construida con el modelo Watts-Strogatz.
+
+\item La reproducci\'on de un proceso de crecimiento donde la morfolog\'ia macrosc\'opica se alcanza a trav\'es de interacciones microsc\'opicas.
+
+\item La interacci\'on entre criterios de selecci\'on de las reglas se basan solamente en la configuraci\'on de la vecindad local y probabilidades de transici\'on basadas en la informaci\'on proveniente de un modelo continuo. 
+
+\item Un procedimiento de actualizaci\'on h\'ibrido que incorpora poblaciones de c\'elulas as\'incronas y s\'incronas.
+\item La representaci\'on de la migraci\'on utilizando el intercambio de estados y movimiento dirigido.
+
+\item La propuesta de una escala de la simulaci\'on computacional que incorpora aspectos espaciales y temporales.
+\end{itemize}
+
+Uno de los objetivos planteados durante la concepci\'on del modelo era de profundizar en la propuesta de~\cite{guinot} para explorar las capacidades que pueden brindar los aut\'omatas celulares si se permite la incorporaci\'on de nueva informaci\'on en forma de argumentos a las probabilidades de transici\'on. Este mecanismo posibilita su reutilizaci\'on pues puede acoplarse a distintos modelos continuos, basados por ejemplo en la mec\'anica de medios continuos~\cite{ruben}. A medida que mejores descripciones matem\'aticas de los comportamientos que desarrolla el c\'ancer sean incorporados al modelo de aut\'omatas propuesto en el presente manuscrito mejores ser\'an los resultados. Las hip\'otesis fueron planteadas de forma tal que pueden reutilizarse en otros modelos derivados, y permiten la introducci\'on o reemplazo por otras nuevas. El c\'ancer es una enfermedad extremadamente compleja que presenta una infinidad de indicadores que definen su comportamiento: la presencia de mutaciones gen\'eticas, subpoblaciones de un mismo tumor que presentan distintas cantidades de estas mutaciones, interacciones diferentes con distintas prote\'inas y factores del entorno donde crecen, morfolog\'ias, respuestas ante el estr\'es mec\'anico, entre muchas m\'as. Por tanto existe un enorme potencial para la creaci\'on de estos modelos derivados.
+
+A diferencia de otros trabajos de la literatura como~\cite{kansal,kansal3} que son elaborados espec\'ificamente para reproducir y predecir las din\'amicas de tumores s\'olidos cultivados \emph{in vitro}, el presente modelo se enfoca en reproducir el ciclo vital de la enfermedad en el propio organismo incluyendo dos localizaciones dentro de los \'organos y encontrando representaciones adecuadas para mecanismos que condicionan la enfermedad, como las variaciones de concentraciones de nutrientes. Un aspecto a destacar es la poca o nula dependencia de las reglas del aut\'omata de las dimensiones espaciales, haciendo de su conversi\'on a tres dimensiones un procedimiento muy sencillo. Esta opci\'on fue probada inicialmente pero se desech\'o finalmente por la gran capacidad de c\'omputo requerida. 
+
+Se debe resaltar que como herramienta generadora de hip\'otesis el modelo logra su cometido proponiendo varias suposiciones que pueden guiar a profesionales de la salud e investigadores cl\'inicos a realizar experimentos para su confirmaci\'on, ayudando a comprender mejor el c\'ancer. Estas hip\'otesis son:
+
+\begin{itemize}
+\item Dos tumores con id\'entica capacidad para generar c\'elulas migratorias en base a sus marcadores gen\'eticos y con la misma velocidad de migraci\'on, uno presentando un crecimiento r\'apido y el otro un crecimiento lento, se cumplir\'a que el tumor de crecimiento lento presentar\'ia una migraci\'on muy superior al de crecimiento r\'apido.
+
+\item La forma irregular de algunos tumores en algunos casos pueden ser interpretadas como met\'astasis que crecen de forma pr\'oxima tanto en tumores secundarios como en primarios. Este an\'alisis sugiere que una combinaci\'on de este factor con las tensiones ejercidas por medios adyacentes son los causantes de la morfolog\'ia tumoral. 
+
+\item La eliminaci\'on de una subpoblaci\'on dentro de un tumor puede corresponderse con un conjunto de c\'elulas cancer\'igenas d\'ebilmente establecidas como es una micromet\'astasis latente~\cite{robins}. 
+\end{itemize}
+

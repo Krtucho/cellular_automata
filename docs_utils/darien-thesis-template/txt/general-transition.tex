@@ -1,0 +1,86 @@
+\section{Funci\'on de transici\'on general}
+\label{subsec-function}
+La din\'amica de un aut\'omata se representa mediante una regla de transici\'on definida localmente, donde el estado futuro de una c\'elula se infiere de su estado actual y su vecindad. La funci\'on es espacialmente homog\'enea, lo que significa que no depende de la posici\'on espacial de la c\'elula, pero puede ser extendida para incluir dependencias temporales o espaciales~\cite{book}. En cuanto a la naturaleza de la regla, esta puede ser determinista o estoc\'astica. Si el modelo es determinista la aplicaci\'on de la regla a una c\'elula devuelve un \'unico estado en el siguiente instante de tiempo. En cambio, si el modelo es estoc\'astico la aplicaci\'on de la regla a una c\'elula est\'a condicionada por el valor de una variable aleatoria. Esta variable aleatoria determina la probabilidad de la transici\'on en funci\'on del estado anterior de la c\'elula y su vecindad~\cite{book}.
+
+Se mencion\'o en la secci\'on introductoria las ventajas de los aut\'omatas celulares para razonar en t\'erminos de individuos, por lo que est\'an mejor ajustados al problema de modelar poblaciones. Sin embargo, el enfoque tradicional en las distintas ramas de la ciencia es utilizar modelos basados en variables continuas, lo que provoca que la inferencia de la funci\'on de transici\'on de estos modelos continuos sea un paso importante a resolver. Comenzamos con las definiciones de configuraci\'on global, configuraci\'on local, funci\'on de transici\'on global y funci\'on de transici\'on local:
+
+\begin{definition}
+\label{def-global-conf}
+Una configuraci\'on global del aut\'omata $S(n)$~\cite{book} es un vector que contiene los valores de estado de todas las c\'elulas del conjunto $V(G)$ en el instante de tiempo $n$:
+\begin{subequations}
+\begin{equation}
+S(n)=\left(s(v_1,n),s(v_2,n),\ldots,s(v_{|V(G)|},n)\right), \label{eq-global-conf}
+\end{equation}
+\begin{equation}
+S(n)=\left(s(v_i,n)_{v_i \in V(G)}\right). \label{eq-global-conf-2}
+\end{equation}
+\end{subequations}
+El espacio que contiene todas las posibles configuraciones globales del aut\'omata se denota con la letra $\mathcal{S}$ y se define como $\mathcal{S}=\mathcal{E}^{|V(G)|}$. Luego una configuraci\'on global toma uno de los valores posibles del espacio $\mathcal{S}$, o sea $S(n) \in \mathcal{S}$.
+\end{definition}
+
+\begin{definition}
+\label{def-local-conf}
+Una configuraci\'on local del aut\'omata $S(v,n)$~\cite{book} es un vector que contiene los valores de estado de un subconjunto ordenado de c\'elulas del conjunto $V(G)$ en el instante de tiempo $n$.
+\begin{equation}
+S(v,n)=\left(s(v,n),s(w_1,n),\ldots,s(w_{|\mathcal{N}(v)|},n)\right), \label{eq-local-conf}
+\end{equation}
+\end{definition}
+
+En el presente trabajo el subconjunto ordenado de c\'elulas est\'a conformado por un v\'ertice focal $v$ y su vecindad $\mathcal{N}(v)$, es decir:
+\begin{equation}
+S(v,n)=\left(s(v,n),s(w_i,n)_{w_i \in \mathcal{N}(v)}\right). \label{eq-local-conf-2}
+\end{equation}
+
+Sin embargo, resulta necesario poder distinguir en una configuraci\'on local los v\'ertices que pertenecen a la vecindad inmediata~(\ref{eq-neighbourhoods}) de los que pertenecen a la vecindad distante~(\ref{eq-neighbourhoods-2}), as\'i como los v\'ertices de cada uno de los \'organos de la red. La implementaci\'on del aut\'omata debe tener en cuenta estas consideraciones.
+
+\begin{definition}
+\label{def-local-func}
+La funci\'on $\mathcal{R}(S(v,n))$~\cite{book} que recibe una configuraci\'on local $S(v,n)$ centrada en un v\'ertice focal $v$ en el instante de tiempo $n$ y devuelve el estado del v\'ertice $v$ en el siguiente instante de tiempo $n+1$ se denomina funci\'on de transici\'on local. 
+\begin{subequations}
+\begin{equation}
+\boxed{\mathcal{R}:\mathcal{E}^{|\mathcal{N}|} \rightarrow \mathcal{E}}~, \label{eq-local-func}
+\end{equation}
+\begin{equation}
+\boxed{\mathcal{R}(S(v,n)) = \left\lbrace
+	\begin{array}{lc}
+		e_1& \textit{con probabilidad } \rho(S(v,n) \rightarrow e_1)\\
+		e_2& \textit{con probabilidad } \rho(S(v,n) \rightarrow e_2)\\
+		\vdots & \ldots\\
+		e_{|\mathcal{E}|}& \textit{con probabilidad } \rho(S(v,n) \rightarrow e_{|\mathcal{E}|})
+	\end{array}
+\right.}~, \label{eq-local-func-2}
+\end{equation}
+\end{subequations}
+donde $e_i \in \mathcal{E},~\forall i \in \lbrace 1,2,\ldots,|\mathcal{E}| \rbrace$, $S(v,n) \in \mathcal{E}^{|\mathcal{N}|}$ y $\rho(S(v,n) \rightarrow e_i)$ es una probabilidad de transici\'on que expresa la posibilidad de llegar al estado elemental $e_i$ a partir de la configuraci\'on local $S(v,n)$. Esta probabilidad de transici\'on satisface las siguientes condiciones:
+\begin{subequations}
+\begin{equation}
+\rho:\mathcal{E}^{|\mathcal{N}|} \times \mathcal{E} \rightarrow [0,1], \label{eq-w} 
+\end{equation}
+\begin{equation}
+\sum_{i=1}^{|\mathcal{E}|}\rho(S(v,n) \rightarrow e_i) = 1. \label{eq-w-sum}
+\end{equation}
+\end{subequations}
+\end{definition}
+
+En un aut\'omata celular estoc\'astico la funci\'on de transici\'on local sigue una distribuci\'on de probabilidad que determina la probabilidad de que cambie el estado actual de una c\'elula de acuerdo a la configuraci\'on de su vecindad. Luego el estado de una c\'elula $v$ en el instante de tiempo $n+1$ se determina a partir de su estado en el instante de tiempo $n$, mediante la aplicaci\'on de la funci\'on de transici\'on local correspondiente.
+\begin{equation}
+s(v,n+1) = \mathcal{R}(S(v,n)). \label{eq-local-func-3}
+\end{equation}
+
+\begin{definition}
+\label{def-global-func}
+La din\'amica del sistema se define mediante una funci\'on de transici\'on global $\mathcal{R}_g(S(n))$~\cite{book} que recibe una configuraci\'on global del aut\'omata $S(n)$ en el instante de tiempo $n$ y se basa en la aplicaci\'on de la funci\'on de transici\'on local $\mathcal{R}(S(v,n))$ a todas las c\'elulas del aut\'omata para obtener la configuraci\'on global en el siguiente instante de tiempo $n+1$.
+\begin{subequations}
+\begin{equation}
+\mathcal{R}_g:\mathcal{S} \rightarrow \mathcal{S}, \label{eq-global-func}
+\end{equation}
+\begin{equation}
+\mathcal{R}_g(S(n)) = \mathcal{R}(S(v,n)) \quad \forall v \in V(G). \label{eq-global-func-2}
+\end{equation}
+\end{subequations}
+\end{definition}
+
+Luego la evoluci\'on del aut\'omata hacia una configuraci\'on global en el instante de tiempo $n+1$ se determina a partir de la configuraci\'on global en el instante de tiempo $n$, mediante la aplicaci\'on de la funci\'on de transici\'on global.
+\begin{equation}
+S(n+1) = \mathcal{R}_g(S(n)). \label{eq-global-func-3}
+\end{equation}

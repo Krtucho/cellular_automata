@@ -1,0 +1,53 @@
+\BOOKMARK [0][-]{chapter.1}{Introducci\363n}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Antecedentes}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.2}{Motivaci\363n}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.3}{Objetivos y contribuciones}{chapter.1}% 4
+\BOOKMARK [0][-]{chapter.2}{Bases biol\363gicas del c\341ncer}{}% 5
+\BOOKMARK [1][-]{section.2.1}{La c\351lula cancer\355gena}{chapter.2}% 6
+\BOOKMARK [1][-]{section.2.2}{Inmortalidad replicativa}{chapter.2}% 7
+\BOOKMARK [1][-]{section.2.3}{Oncogenes}{chapter.2}% 8
+\BOOKMARK [1][-]{section.2.4}{Genes supresores de tumores}{chapter.2}% 9
+\BOOKMARK [1][-]{section.2.5}{Apoptosis}{chapter.2}% 10
+\BOOKMARK [1][-]{section.2.6}{Angiog\351nesis}{chapter.2}% 11
+\BOOKMARK [1][-]{section.2.7}{Met\341stasis}{chapter.2}% 12
+\BOOKMARK [1][-]{section.2.8}{Evoluci\363n macrosc\363pica del c\341ncer}{chapter.2}% 13
+\BOOKMARK [0][-]{chapter.3}{Definici\363n del modelo}{}% 14
+\BOOKMARK [1][-]{section.3.1}{Hip\363tesis del modelo}{chapter.3}% 15
+\BOOKMARK [1][-]{section.3.2}{Funci\363n de vecindad}{chapter.3}% 16
+\BOOKMARK [1][-]{section.3.3}{Conjunto de c\351lulas: modelo Watts-Strogatz}{chapter.3}% 17
+\BOOKMARK [2][-]{subsection.3.3.1}{Implementaci\363n del modelo Watts-Strogatz}{section.3.3}% 18
+\BOOKMARK [2][-]{subsection.3.3.2}{Propiedades del grafo resultante del modelo Watts-Strogatz}{section.3.3}% 19
+\BOOKMARK [1][-]{section.3.4}{Conjunto de estados}{chapter.3}% 20
+\BOOKMARK [1][-]{section.3.5}{Funci\363n de transici\363n general}{chapter.3}% 21
+\BOOKMARK [2][-]{subsection.3.5.1}{Reglas de la conservaci\363n del estado de las c\351lulas normales y tumorales}{section.3.5}% 22
+\BOOKMARK [2][-]{subsection.3.5.2}{Reglas del crecimiento tumoral}{section.3.5}% 23
+\BOOKMARK [3][-]{subsubsection.3.5.2.1}{Proceso de inferencia de la regla}{subsection.3.5.2}% 24
+\BOOKMARK [3][-]{subsubsection.3.5.2.2}{Inclusi\363n de nuevas hip\363tesis}{subsection.3.5.2}% 25
+\BOOKMARK [3][-]{subsubsection.3.5.2.3}{Probabilidades de transici\363n particulares}{subsection.3.5.2}% 26
+\BOOKMARK [2][-]{subsection.3.5.3}{Regla del surgimiento de c\351lulas migratorias}{section.3.5}% 27
+\BOOKMARK [2][-]{subsection.3.5.4}{Reglas de la migraci\363n}{section.3.5}% 28
+\BOOKMARK [2][-]{subsection.3.5.5}{Regla de la met\341stasis}{section.3.5}% 29
+\BOOKMARK [2][-]{subsection.3.5.6}{Reglas del crecimiento de una micromet\341stasis}{section.3.5}% 30
+\BOOKMARK [2][-]{subsection.3.5.7}{Reglas de la dormancia de una micromet\341stasis}{section.3.5}% 31
+\BOOKMARK [0][-]{chapter.4}{Par\341metros relacionados con la simulaci\363n computacional}{}% 32
+\BOOKMARK [1][-]{section.4.1}{Par\341metros de la construcci\363n de la red y de la ley de crecimiento log\355stico}{chapter.4}% 33
+\BOOKMARK [1][-]{section.4.2}{Par\341metros de la asignaci\363n de estados iniciales y de los vectores de nutrientes}{chapter.4}% 34
+\BOOKMARK [1][-]{section.4.3}{Par\341metros del modelo relacionados con la migraci\363n, invasi\363n y met\341stasis}{chapter.4}% 35
+\BOOKMARK [1][-]{section.4.4}{Escala de la simulaci\363n}{chapter.4}% 36
+\BOOKMARK [0][-]{chapter.5}{Resultados computacionales}{}% 37
+\BOOKMARK [1][-]{section.5.1}{Crecimiento avascular}{chapter.5}% 38
+\BOOKMARK [1][-]{section.5.2}{Crecimiento vascular}{chapter.5}% 39
+\BOOKMARK [1][-]{section.5.3}{Validaci\363n del crecimiento tumoral}{chapter.5}% 40
+\BOOKMARK [1][-]{section.5.4}{Aparici\363n de c\351lulas migratorias}{chapter.5}% 41
+\BOOKMARK [1][-]{section.5.5}{Migraci\363n}{chapter.5}% 42
+\BOOKMARK [1][-]{section.5.6}{Discusi\363n de la migraci\363n}{chapter.5}% 43
+\BOOKMARK [1][-]{section.5.7}{Met\341stasis}{chapter.5}% 44
+\BOOKMARK [1][-]{section.5.8}{Discusi\363n de la met\341stasis}{chapter.5}% 45
+\BOOKMARK [0][-]{chapter.6}{Conclusiones}{}% 46
+\BOOKMARK [0][-]{chapter.7}{Recomendaciones}{}% 47
+\BOOKMARK [0][-]{chapter.8}{Ap\351ndices}{}% 48
+\BOOKMARK [1][-]{section.8.1}{Ap\351ndice A: Soluci\363n de la ecuaci\363n de crecimiento log\355stico sujeta a las condiciones iniciales}{chapter.8}% 49
+\BOOKMARK [1][-]{section.8.2}{Ap\351ndice B: Derivaci\363n de la funci\363n P\(t\) para su utilizaci\363n como funci\363n de probabilidad}{chapter.8}% 50
+\BOOKMARK [1][-]{section.8.3}{Ap\351ndice C: Derivaci\363n de la funci\363n P'\(t\) para la b\372squeda de sus puntos estacionarios}{chapter.8}% 51
+\BOOKMARK [1][-]{section.8.4}{Ap\351ndice D: Diversos tipos de epitelios del organismo}{chapter.8}% 52
+\BOOKMARK [1][-]{section.8.5}{Ap\351ndice E: Simulaci\363n del ciclo vital del c\341ncer para un tumor primario con un alto potencial metast\341sico en el interior de un ducto mamario}{chapter.8}% 53

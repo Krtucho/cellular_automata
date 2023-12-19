@@ -1,0 +1,163 @@
+\subsection{Reglas del crecimiento de una micromet\'astasis}
+\label{subsec-micrometastasis}
+En la secci\'on~\ref{subsec-celldiv} se expuso una caracterizaci\'on de los distintos tipos de tumores que se presentan en el modelo, que concluy\'o con la definici\'on de la regla para el crecimiento de los tumores primarios y de los secundarios durante la etapa vascular. En la presente secci\'on se definen el conjunto de reglas que determinan el crecimiento de las micromet\'astasis, es decir, los tumores secundarios en etapa avascular. En la caracterizaci\'on antes mencionada se describieron las micromet\'astasis como conjuntos formados por c\'elulas que culminaron el proceso de acumulaci\'on de mutaciones por lo que comienzan a desarrollar la angiog\'enesis desde un primer momento y como consecuencia pueden expandirse hacia todos los tejidos sanos. No obstante, durante esta etapa de su desarrollo son vulnerables ya que la colonizaci\'on satisfactoria est\'a sujeta a dos factores vitales en los que se apoya la teor\'ia de la semilla y el sustrato expuesta en la secci\'on~\ref{subsec-meta}. El nuevo entorno de crecimiento puede ser muy diferente a la localizaci\'on donde el c\'ancer se origin\'o y puede ser capaz o no de responder a los intentos de las c\'elulas cancer\'igenas de modificarlo para asegurar su proliferaci\'on. Una micromet\'astasis puede permanecer largos per\'iodos de tiempo en esta forma, siendo capaz de crecer solamente hasta la poblaci\'on permitida por la difusi\'on de nutrientes y es solo cuando logra promover la suficiente angiog\'enesis que cambia su condici\'on de micromet\'astasis a la de un tumor en etapa vascular. Este per\'iodo de tiempo se conoce como dormancia o latencia y el mecanismo que lo reproduce se explicar\'a en la secci\'on~\ref{subsec-dormancy} que aparece posteriormente. El procedimiento propuesto es similar al mostrado en la secci\'on~\ref{subsec-celldiv} referente al crecimiento de tumores, y adopta la hip\'otesis XVII sobre el sesgo direccional del crecimiento tumoral basada en la variaci\'on de la concentraci\'on de nutrientes, mientras que redefine la hip\'otesis XV sobre la competencia entre tumores por expandirse a una posici\'on para adaptarla a las competencias entre micromet\'astasis.
+
+\begin{itemize}
+\item [{XXIII.}] \textbf{Situaciones de competencia entre micromet\'astasis}: \emph{En las situaciones de competencia de varias micromet\'astasis por expandirse a una misma posici\'on se asume que el valor de la probabilidad de transici\'on se corresponde con la micromet\'astasis con mayor probabilidad de expansi\'on en ese momento.} \label{XXIII}
+\end{itemize}
+
+Se plantea una extensi\'on de la probabilidad de transici\'on expuesta en~\ref{def-local-func} de forma que reciba los argumentos requeridos en la definici\'on de la regla an\'aloga a la mostrada en~\ref{prop-newlocal-func-2-1}. 
+
+\begin{definition}
+\label{prop-newlocal-func-5}
+Sea una extensi\'on de la funci\'on de transici\'on local definida en~\ref{def-local-func} que incluye una probabilidad de transici\'on alternativa que depende de nuevos argumentos:
+\begin{equation}
+s(v,n+1) = \mathcal{R}(S(v,n)) = e_i~~\textit{con probabilidad } \rho(v,\tau(v,n,N_{mic},L_{mic}) \rightarrow e_i), \label{eq-newlocal-func-5}
+\end{equation}
+donde $\tau(v,n,N_{mic},L_{mic})$ es una funci\'on que devuelve un conjunto compuesto por tuplas correspondientes con cada micromet\'astasis que intenta expandirse hacia $v$ en el instante de tiempo $n$ que contienen el tiempo transcurrido relativo al surgimiento de dicha micromet\'astasis y el conjunto de c\'elulas que lo conforman. 
+\end{definition}
+
+El conjunto $N_{mic}$ contiene la informaci\'on correspondiente con los instantes de tiempo en que surgieron las micromet\'astasis contenidas en la simulaci\'on. El conjunto $L_{mic}$ contiene la informaci\'on correspondiente con los conjuntos de c\'elulas que conforman las micromet\'astasis contenidas en la simulaci\'on. La funci\'on $\tau(v,n,N_{mic},L_{mic})$ se define de forma an\'aloga a la funci\'on $\tau(v,n,N_{tum},L_{tum})$. En el algoritmo~\ref{alg-L-c-1} se muestra la implementaci\'on de la funci\'on $\tau(v,n,N_{mic},L_{mic})$ a modo de definici\'on donde $N^n(v)$ es la funci\'on de vecindad inmediata definida en~\ref{def-neighbourhoods}, la funci\'on $tumor(w)$ devuelve el identificador \'unico asociado a la micromet\'astasis a la que pertenece $w$ y la funci\'on $s(w,n)$ es el estado de la c\'elula $w$ en el instante de tiempo $n$ definida en~\ref{def-cellstatus}. 
+
+\begin{algorithm}[!ht]
+\caption{Definici\'on de la funci\'on $\tau(v,n,N_{mic},L_{mic})$.} \label{alg-L-c-1}
+\KwData{$v, n, N_{mic}, L_{mic}$}
+\KwResult{$L$}
+$L = \lbrace \rbrace$\;
+\For{$w \in N^n(v)$}{
+	\If{$s(w,n)=5$}{
+		$l = L_{mic}[tumor(w)]$\;
+		$n_r = n - N_{mic}[tumor(w)]$\;
+		$L = L \cup \lbrace \langle n_r, l \rangle \rbrace$\;}}
+\Return $L$\;
+\end{algorithm}
+
+Se define el conjunto de reglas para el crecimiento de las micromet\'astasis tomando en cuenta la nueva probabilidad de transici\'on alternativa~(\ref{eq-newlocal-func-5}) como:
+\begin{equation}
+s(v,n+1)=\mathcal{R}(S(v,n))=\left\lbrace
+	\begin{array}{ll}
+		\zeta_{50}(v,\tau(v,n,N_{mic},L_{mic}))& \textit{si } s(v,n)=0~\wedge~\mathcal{N}_5^n(S(v,n)) > 0~\wedge\\
+								       & \mathcal{N}_3^n(S(v,n))=0 \\
+		\zeta_{51}(v,\tau(v,n,N_{mic},L_{mic}))& \textit{si } s(v,n)=1~\wedge~\mathcal{N}_5^n(S(v,n)) > 0~\wedge\\
+								       & \mathcal{N}_3^n(S(v,n))=0 \\
+		\zeta_{52}(v,\tau(v,n,N_{mic},L_{mic}))& \textit{si } s(v,n)=2~\wedge~\mathcal{N}_5^n(S(v,n)) > 0~\wedge\\
+								       & \mathcal{N}_3^n(S(v,n))=0  
+	\end{array}
+\right., \label{eq-celldiv-5}
+\end{equation}
+donde la distribuci\'on de probabilidad de las variables aleatorias $\zeta_{50}(v,\tau(v,n,N_{mic},L_{mic}))$, $\zeta_{51}$ $(v,\tau(v,n,N_{mic},L_{mic}))$ y $\zeta_{52}(v,\tau(v,n,N_{mic},L_{mic}))$ quedar\'ian como:
+\begin{subequations}
+\begin{multline}
+P(\zeta_{50}(v,\tau(v,n,N_{mic},L_{mic}))=0) = P(\zeta_{51}(v,\tau(v,n,N_{mic},L_{mic}))=1) = \\P(\zeta_{52}(v,\tau(v,n,N_{mic},L_{mic}))=2) = 1 - \rho_5(v,\tau(v,n,N_{mic},L_{mic}) \rightarrow 5),
+\end{multline}
+\begin{multline}
+P(\zeta_{50}(v,\tau(v,n,N_{mic},L_{mic}))=5) = P(\zeta_{51}(v,\tau(v,n,N_{mic},L_{mic}))=5) = \\P(\zeta_{52}(v,\tau(v,n,N_{mic},L_{mic}))=5) = \rho_5(v,\tau(v,n,N_{mic},L_{mic}) \rightarrow 5).
+\end{multline}
+\end{subequations}
+
+De las expresiones anteriores se infiere que la probabilidad de que una c\'elula normal sea desplazada por una c\'elula cancer\'igena perteneciente a una micromet\'astasis tiene el valor correspondiente con la evaluaci\'on de la probabilidad de transici\'on $\rho_5(v,\tau(v,n,N_{mic},L_{mic}) \rightarrow 5)$, mientras que la probabilidad de que permanezca en el estado original es $1-\rho_5(v,\tau(v,n,N_{mic},L_{mic}) \rightarrow 5)$. Estas reglas reproducen la expansi\'on de la micromet\'astasis hacia los distintos tipos de tejidos sanos que se representan en el aut\'omata, que como se puede observar, poseen las mismas probabilidades independientemente del tipo de tejido. Los criterios de selecci\'on se definen utilizando la funci\'on $\mathcal{N}_{\mathcal{E'}}^n(S(v,n))$ planteada en~\ref{def-near-neighbours} y representan la situaci\'on donde la c\'elula $v$ posee en su vecindad inmediata c\'elulas pertenecientes a una o varias micromet\'astasis mediante la condici\'on $\mathcal{N}_5^n(S(v,n)) > 0$. Siguiendo las interpretaciones biol\'ogicas de las hip\'otesis XVII y XXIII sobre el sesgo direccional del crecimiento tumoral y las situaciones de competencia entre micromet\'astasis respectivamente, una micromet\'astasis no deber\'ia expandirse hacia un tumor de mayor desarrollo que obtiene la mayor\'ia de los nutrientes del entorno, por lo que se a\~nade la condici\'on $\mathcal{N}_3^n(S(v,n))=0$ a las reglas. De esta forma la selecci\'on de las reglas para el crecimiento tumoral y para el crecimiento de las micromet\'astasis puede hacerse de forma inequ\'ivoca y priorizando a los tumores en etapa vascular. Seg\'un la hip\'otesis XXIII la expresi\'on para el c\'alculo de la probabilidad de transici\'on $\rho_5(v,\tau(v,n,N_{mic},L_{mic}) \rightarrow 5)$ quedar\'ia como:
+\begin{equation}
+\rho_5(v,\tau(v,n,N_{mic},L_{mic}) \rightarrow 5) = max[\rho_5(v,n_1,l_1 \rightarrow 5),\rho_5(v,n_2,l_2 \rightarrow 5),\ldots, \rho_5(v,n_m,l_m \rightarrow 5)], 
+\end{equation}
+donde $n_i$ y $l_i$ son los valores de la tupla $\langle n_i, l_i \rangle \in \tau(v,n,N_{mic},L_{mic})$ con $i \in \lbrace 1,2,\ldots,m \rbrace$ y $m=|\tau(v,n,N_{mic},L_{mic})|$ correspondiente con la i-\'esima micromet\'astasis que se intenta expandir hacia $v$. La probabilidad espec\'ifica a cada una de estas micromet\'astasis se plantea utilizando la probabilidad general del crecimiento tumoral~(\ref{eq-generaldivrule}), las hip\'otesis XVII y XVIII sobre el sesgo direccional y la velocidad de expansi\'on tumoral, y las funciones $\beta_{tum}(v,l)$ y $\gamma_{tum}(v,N(v,l))$ definidas en~\ref{def-beta} y~\ref{def-velocity-function} como:
+\begin{equation}
+\rho_5(v,n_i,l_i \rightarrow 5) = \left\lbrace
+	\begin{array}{ll}
+		\gamma_{tum}(v,N(v,l_i))\,\beta_{tum}(v,l_i)\,\rho_a(n_i \Delta t)& \textit{si } n_i \leq n_a \\
+		0& \textit{si } n_i > n_a
+	\end{array}
+\right.. \label{eq-rho-5}
+\end{equation}
+
+Si se escribe en t\'erminos de la funci\'on tipo Heaviside definida en~\ref{def-heaviside} la expresi\'on anterior quedar\'ia como:
+\begin{equation}
+\rho_5(v,n_i,l_i \rightarrow 5) = H(n) \gamma_{tum}(v,N(v,l_i)) \beta_{tum}(v,l_i) \rho_a(n_i \Delta t). \label{eq-rho-51}
+\end{equation}
+
+De la expresiones~(\ref{eq-rho-5}) y~(\ref{eq-rho-51}) se infiere que una micromet\'astasis no crece m\'as all\'a de la poblaci\'on m\'axima permitida por la difusi\'on de nutrientes. En la secci\'on~\ref{subsec-dormancy} que aparece a continuaci\'on se define el mecanismo para representar la dormancia de una micromet\'astasis y de c\'omo abandona esa condici\'on para convertirse en un tumor en etapa vascular.
+
+\subsection{Reglas de la dormancia de una micromet\'astasis}
+\label{subsec-dormancy}
+Una micromet\'astasis se forma cuando una o varias c\'elulas emergen del sistema circulatorio en un punto de extravasaci\'on y proceden a colonizar esa localizaci\'on. La teor\'ia de la semilla y el sustrato estipula que la nueva localizaci\'on puede ser muy distinta al entorno donde se origin\'o el c\'ancer obstaculizando su progresi\'on. Dependiendo del \'organo destino pueden darse tres situaciones distintas. En primer lugar, el entorno puede ser similar con el tejido donde se origin\'o el c\'ancer, en el mejor de los escenarios se corresponde con el mismo \'organo original. En este caso el per\'iodo de dormancia termina relativamente r\'apido. La segunda situaci\'on se corresponde con un entorno medianamente hostil donde la dormancia se extiende durante un per\'iodo de tiempo prolongado, hasta que la micromet\'astasis culmine el proceso de colonizaci\'on. El tercer caso se corresponde con los \'organos donde una micromet\'astasis no puede sobrevivir porque posee profundas diferencias con el entorno donde se origin\'o. En el presente modelo solo se reproducen las primeras dos situaciones ya que el \'organo secundario constituye un destino preferencial de la met\'astasis, hecho por el que se asume que posee un entorno similar o medianamente hostil comparado con el \'organo primario. Adem\'as, como se plante\'o en las secciones~\ref{subsec-meta} y~\ref{subsec-micrometastasis} durante la colonizaci\'on una micromet\'astasis est\'a en constante peligro de ser eliminada por el sistema inmunitario independientemente del \'organo donde est\'e localizada.
+
+Del an\'alisis anterior se infiere que el desarrollo de una micromet\'astasis est\'a sujeta a dos posibles par\'ametros del modelo: una probabilidad de supervivencia $\xi_{mic} \in [0,1]$ y una probabilidad de colonizaci\'on $\psi_{mic} \in [0,1]$. En cada instante de tiempo se determina la supervivencia de la micromet\'astasis en base al par\'ametro $\xi_{mic}$ y si su supervivencia es evaluada como positiva se determina si la micromet\'astasis puede abandonar la dormancia y convertirse en un tumor que coloniz\'o satisfactoriamente la localizaci\'on y no est\'a sujeto a la probabilidad de supervivencia. Finalmente se reproduce su crecimiento mediante la regla declarada en la secci\'on~\ref{subsec-micrometastasis}. La representaci\'on del proceso descrito se logra mediante la inclusi\'on de los par\'ametros $\xi_{mic0}$, $\psi_{mic0}$, $\xi_{mic1}$ y $\psi_{mic1}$ correspondientes con cada localizaci\'on del tejido representado al procedimiento de actualizaci\'on del aut\'omata celular mediante la adici\'on de dos nuevos m\'etodos que se encargan de probar la supervivencia de la micromet\'astasis as\'i como su colonizaci\'on satisfactoria y posterior conversi\'on a un tumor secundario, como se muestra en los algoritmos~\ref{alg-update-5},~\ref{alg-update-5-1} y~\ref{alg-update-5-2}. Las c\'elulas que conforman la micromet\'astasis fallida o exitosa son actualizadas mediante el uso de la regla que se define a continuaci\'on. Se plantea una extensi\'on de la probabilidad de transici\'on expuesta en~\ref{def-local-func} de forma que reciba los argumentos requeridos en la definici\'on de la regla para la actualizaci\'on de las c\'elulas pertenecientes a una micromet\'astasis. 
+
+\begin{algorithm}[!ht]
+\caption{Implementaci\'on del procedimiento de actualizaci\'on del aut\'omata celular incorporando los par\'ametros $\xi_{mic0}$, $\psi_{mic0}$, $\xi_{mic0}$ y $\psi_{mic0}$ y los conjuntos $L_{mic}$ y $N_{mic}$.} \label{alg-update-5}
+\KwData{$C_{mig}^A(G),\,C_{sc}^A(G),\,C_{tum}^S(G),\,C^S(G),\,S(n),\,\mu_{mig},\,\xi_{sc},\,\xi_{mic0},\,$ $\psi_{mic0},\,\xi_{mic1},\,$ $\psi_{mic1},\,N_{tum},\,L_{mic},\,N_{mic},\,n$}
+$Update$-$Migratory$-$Cells$-$In$-$Bloodstream(C_{sc}^A(G),\,\xi_{sc})$\;
+$Update$-$Migratory$-$Cells(G,\,C_{mig}^A(G),S(n),\,\mu_{mig})$\;
+$Update$-$Tumor$-$Migratory$-$Cells(G,\,S(n),\,C_{tum}^S(G),\,C_{sc}^A(G),\,N_{tum},\,n)$\;
+$Check$-$Micrometastasis$-$Survival(L_{mic},\,S(n),\,\xi_{mic0},\,\xi_{mic1})$\;
+$Check$-$Micrometastasis$-$Colonization(L_{mic},\,N_{mic},\,S(n),\,\psi_{mic0},\,\psi_{mic1},\,n)$\;
+$Update$-$Synchronous$-$Cells(G,\,C^S(G),S(n))$\;
+\end{algorithm}
+
+\begin{algorithm}[!ht]
+\caption{Implementaci\'on del m\'etodo $Check$-$Micrometastasis$-$Survival(L_{mic},$ $S(n),\,\xi_{mic0},\,\xi_{mic1})$ utilizado en el procedimiento de actualizaci\'on del aut\'omata celular y que verifica la supervivencia de las micromet\'astasis en el nuevo entorno a colonizar.} \label{alg-update-5-1}
+\KwData{$L_{mic},\,S(n),\,\xi_{mic0},\,\xi_{mic1}$}
+\For{$l \in L_{mic}$}{
+	$\xi = Get$-$Organ$-$Probabilities(l, \xi_{mic0}, \xi_{mic1})$\;
+	$r = Random(0,1)$\;
+	\For{$v \in l$}{
+		$Apply$-$Local$-$Transition$-$Function$-$Met$-$Sur(v,\,S(n),\,G,\,r,\,\xi)$\;}}
+\end{algorithm}
+
+\begin{algorithm}[!ht]
+\caption{Implementaci\'on del m\'etodo $Check$-$Micrometastasis$-$Colonization(L_{mic},$ $N_{mic},\,S(n),\,\psi_{mic0},\,\psi_{mic1},\,n)$ utilizado en el procedimiento de actualizaci\'on del aut\'omata celular y que verifica la colonizaci\'on satisfactoria del entorno por parte de las micromet\'astasis.} \label{alg-update-5-2}
+\KwData{$L_{mic},\,N_{mic},\,S(n),\,\psi_{mic0},\,\psi_{mic1},\,n$}
+\For{$l \in L_{mic}$}{
+	$\psi = Get$-$Organ$-$Probabilities(l, \psi_{mic0}, \psi_{mic1})$\;
+	$n_r = n - N_{mic}[tumor(l)]$\;
+	$r = Random(0,1)$\;
+	\For{$v \in l$}{		
+		$Apply$-$Local$-$Transition$-$Function$-$Met$-$Col(v,\,S(n),\,G,\,r,\,n_r,\,\psi)$\;}}
+\end{algorithm} 
+
+\begin{definition}
+\label{prop-newlocal-func-6}
+Sea una extensi\'on de la funci\'on de transici\'on local definida en~\ref{def-local-func} que incluye una probabilidad de transici\'on alternativa que depende de nuevos argumentos:
+\begin{equation}
+s(v,n) = \mathcal{R}(S(v,n)) = e_i~~\textit{con probabilidad } \rho(n_r,r \rightarrow e_i), \label{eq-newlocal-func-6}
+\end{equation}
+donde $n_r$ es un valor entero y $r$ es un valor real.
+\end{definition}
+
+Se define el conjunto de reglas para la actualizaci\'on de las c\'elulas pertenecientes a una micromet\'astasis tomando en cuenta la nueva probabilidad de transici\'on alternativa~(\ref{eq-newlocal-func-6}) como:
+\begin{equation}
+s(v,n)=\mathcal{R}(S(v,n))=\zeta_{5}(n_r,r)~~\textit{si } s(v,n)=5, \label{eq-celldiv-6}
+\end{equation}
+donde la distribuci\'on de probabilidad de la variable aleatoria $\zeta_{5}(n_r,r) \in \lbrace 2,3,5 \rbrace$ es:
+\begin{subequations}
+\begin{equation}
+P(\zeta_{5}(n_r,r)=2) = \rho_5(n_r,r \rightarrow 2),
+\end{equation}
+\begin{equation}
+P(\zeta_{5}(n_r,r)=3) = \rho_5(n_r,r \rightarrow 3),
+\end{equation}
+\begin{equation}
+P(\zeta_{5}(n_r,r)=5) = 1 - max[\rho_5(n_r,r \rightarrow 2),\rho_5(n_r,r \rightarrow 3)].
+\end{equation}
+\end{subequations}
+
+Las probabilidades de transici\'on $\rho_5(n_r,r \rightarrow 2)$ y $\rho_5(n_r,r \rightarrow 3)$ deciden en base a los par\'ametros pasados como argumentos de las funciones $Apply$-$Local$-$Transition$-$Function$-$Met$-$Sur$ y $Apply$-$Local$-$Transition$-$Function$-$Met$-$Col$ si una micromet\'astasis se transforma satisfactoriamente en un tumor o es eliminada de la simulaci\'on, quedando como:
+\begin{subequations}
+\begin{equation}
+\rho_5(n_r,r \rightarrow 2) = \left\lbrace
+	\begin{array}{ll}
+		1& \textit{si } r \leq 1 - \xi \\
+		0& \textit{si } r > 1 - \xi
+	\end{array}
+\right., \label{eq-rho-5-sur}
+\end{equation}
+\begin{equation}
+\rho_5(n_r,r \rightarrow 3) = \left\lbrace
+	\begin{array}{ll}
+		1& \textit{si } n_r \geq n_a \wedge r \leq \psi \\
+		0& \textit{si } n_r < n_a
+	\end{array}
+\right.. \label{eq-rho-5-col}
+\end{equation}
+\end{subequations}
+
+Como se puede apreciar en las expresiones~\ref{eq-rho-5-sur} y~\ref{eq-rho-5-col} los valores de $n_r$, $r$, $\xi$ y $\psi$ son los mismos para todas las c\'elulas de una misma micromet\'astasis ya que se determinan a priori en los algoritmos de actualizaci\'on correspondientes, logrando que todas cambien al mismo estado final. Habiendo culminado el proceso de concepci\'on del conjunto de reglas, en la secci\'on~\ref{sec-validation} se exponen los procedimientos que se llevan a cabo para determinar los par\'ametros del modelo de aut\'omatas celulares que se presenta en este manuscrito. 

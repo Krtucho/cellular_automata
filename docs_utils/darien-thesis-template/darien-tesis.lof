@@ -1,0 +1,156 @@
+\select@language {spanish}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Proceso de acumulaci\'on de mutaciones que provocan la aparici\'on del c\'ancer}}{18}{figure.2.1}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Proceso de degradaci\'on de los tel\'omeros de una c\'elula}}{19}{figure.2.2}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Representaci\'on de las distintas mutaciones que sufren las c\'elulas cancer\'igenas que modifican su respuesta ante la presencia o no de factores de crecimiento, en comparaci\'on con las c\'elulas sanas}}{20}{figure.2.3}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Representaci\'on del proceso de apoptosis en una c\'elula sana y una cancer\'igena ante la aparici\'on de un error en el c\'odigo gen\'etico}}{22}{figure.2.4}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Distribuci\'on del tejido epitelial, la membrana basal y el tejido de sost\'en subyacente}}{26}{figure.2.5}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Evoluci\'on de un tumor durante la etapa avascular}}{27}{figure.2.6}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Evoluci\'on de un tumor durante la etapa vascular}}{27}{figure.2.7}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Visualizaci\'on del sistema circulatorio en el organismo y de la circulaci\'on interna de un tejido}}{31}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Representaci\'on de las posibles interacciones entre c\'elulas cancer\'igenas y normales}}{31}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Proceso de reconexi\'on aleatoria del modelo Wattz-Strogatz}}{34}{figure.3.3}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Disposici\'on espacial de los v\'ertices del grafo}}{34}{figure.3.4}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Configuraciones de vecindad obtenidas mediante la variaci\'on de $R$}}{35}{figure.3.5}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Detalles de la disposici\'on de las aristas inmediatas y reconectadas en el grafo}}{37}{figure.3.6}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Distribuci\'on de las capas de tejidos en distintos \'organos}}{40}{figure.3.7}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Ciclo vital del c\'ancer representado por el modelo}}{46}{figure.3.8}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Representaci\'on de las distintas velocidades de expansi\'on representadas en el modelo seg\'un la configuraci\'on de vecindad utilizada}}{52}{figure.3.9}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Descripci\'on de las distintas rutas de la met\'astasis del c\'ancer}}{70}{figure.3.10}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Transformaci\'on de la representaci\'on de un tumor en tres dimensiones a dos dimensiones}}{81}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Distribuciones de probabilidad de las funciones $\rho _a(n\Delta t)$ y $\rho _v(n\Delta t)$ que describen el crecimiento tumoral para distintos par\'ametros}}{82}{figure.4.2}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Etapa avascular $P_0^a = 1$, $K_a = 2$.$5 \times 10^3$}}}{82}{figure.4.2}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Etapa vascular $P_0^v = 2$.$5 \times 10^3$, $K_v = 6$.$3 \times 10^5$}}}{82}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Diagramas mostrando los esquemas de asignaci\'on de los estados iniciales}}{83}{figure.4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Diagramas mostrando los esquemas de asignaci\'on de los estados iniciales con ejemplos de asignaci\'on de regiones y vectores de concentraci\'on de nutrientes}}{85}{figure.4.4}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Distribuciones de probabilidad de la funci\'on $\rho _2(n_i \rightarrow 4)$ que describe la aparici\'on de c\'elulas migratorias para distintos par\'ametros}}{87}{figure.4.5}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$K_{mig}=3$.$2 \times 10^{5}$}}}{87}{figure.4.5}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$K_{mig}=2$.$1 \times 10^{5}$}}}{87}{figure.4.5}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$K_{mig}=1$.$6 \times 10^{5}$}}}{87}{figure.4.5}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {$K_{mig}=1$.$3 \times 10^{5}$}}}{87}{figure.4.5}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Distribuciones de probabilidad de la funci\'on $\rho _4(\mu (v,n) \rightarrow 2)$ que describe la muerte de c\'elulas migratorias en su avance por el estroma para distintos par\'ametros}}{88}{figure.4.6}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$\mu _{max}=150$}}}{88}{figure.4.6}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$\mu _{max}=300$}}}{88}{figure.4.6}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Representaci\'on de distintas escalas del aut\'omata celular}}{89}{figure.4.7}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Escala $1:1$}}}{89}{figure.4.7}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Escala $1:2$}}}{89}{figure.4.7}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Escala $1:3$}}}{89}{figure.4.7}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Poblaci\'on y radios de un carcinoma ductal infiltrante de crecimiento r\'apido con $\rho _{max}^a=1$ durante la etapa avascular}}{93}{figure.5.1}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Crecimiento m\'inimo $K_a=6$.$944 \times 10^1$}}}{93}{figure.5.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Crecimiento promedio $K_a=2$.$222 \times 10^2$}}}{93}{figure.5.1}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Crecimiento m\'aximo $K_a=4$.$938 \times 10^2$}}}{93}{figure.5.1}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Poblaci\'on y radios de un carcinoma ductal infiltrante de crecimiento lento con $\rho _{max}^a=0$.$1$ durante la etapa avascular}}{94}{figure.5.2}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Crecimiento m\'inimo $K_a=6$.$944 \times 10^1$}}}{94}{figure.5.2}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Crecimiento promedio $K_a=2$.$222 \times 10^2$}}}{94}{figure.5.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Crecimiento m\'aximo $K_a=4$.$938 \times 10^2$}}}{94}{figure.5.2}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Visualizaciones de una simulaci\'on del aut\'omata celular de un carcinoma ductal infiltrante de crecimiento r\'apido durante la etapa avascular}}{95}{figure.5.3}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Generaci\'on 0}}}{95}{figure.5.3}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Generaci\'on 4}}}{95}{figure.5.3}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Generaci\'on 8}}}{95}{figure.5.3}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Generaci\'on 12}}}{95}{figure.5.3}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Generaci\'on 16}}}{95}{figure.5.3}
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {Generaci\'on 20}}}{95}{figure.5.3}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Poblaci\'on y radios de un carcinoma ductal infiltrante de crecimiento r\'apido con $\rho _{max}^v=1$ durante la etapa vascular}}{96}{figure.5.4}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Crecimiento m\'inimo $K_v=2$.$778 \times 10^4$}}}{96}{figure.5.4}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Crecimiento promedio $K_v=5$.$556 \times 10^4$}}}{96}{figure.5.4}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Crecimiento m\'aximo $K_v=1$.$111 \times 10^5$}}}{96}{figure.5.4}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Poblaci\'on y radios de un carcinoma ductal infiltrante de crecimiento lento con $\rho _{max}^v=0$.$1$ durante la etapa vascular}}{97}{figure.5.5}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Crecimiento m\'inimo $K_v=2$.$778 \times 10^4$}}}{97}{figure.5.5}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Crecimiento promedio $K_v=5$.$556 \times 10^4$}}}{97}{figure.5.5}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Crecimiento m\'aximo $K_v=1$.$111 \times 10^5$}}}{97}{figure.5.5}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Visualizaciones de una simulaci\'on del aut\'omata celular de un carcinoma ductal infiltrante de crecimiento r\'apido durante la etapa vascular}}{99}{figure.5.6}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Generaci\'on 0}}}{99}{figure.5.6}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Generaci\'on 40}}}{99}{figure.5.6}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Generaci\'on 80}}}{99}{figure.5.6}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Generaci\'on 120}}}{99}{figure.5.6}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Generaci\'on 160}}}{99}{figure.5.6}
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {Generaci\'on 200}}}{99}{figure.5.6}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Comparaci\'on entre los radios de carcinomas ductales infiltrantes obtenidos de observaciones cl\'inicas y del modelo}}{101}{figure.5.7}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Etapa avascular $r_a \approx 0$.$5mm$}}}{101}{figure.5.7}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Etapa avascular $r_a \approx 0$.$75mm$}}}{101}{figure.5.7}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Etapa avascular $r_a \approx 1$.$0mm$}}}{101}{figure.5.7}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Etapa vascular $r_v \approx 10mm$}}}{101}{figure.5.7}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Etapa vascular $r_v \approx 15mm$}}}{101}{figure.5.7}
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {Etapa vascular $r_v \approx 20mm$}}}{101}{figure.5.7}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Gr\'aficas de la producci\'on y cantidades activas de c\'elulas migratorias de un carcinoma ductal infiltrante con una alta tasa de producci\'on y aparici\'on temprana}}{103}{figure.5.8}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Producci\'on de c\'elulas migratorias}}}{103}{figure.5.8}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Cantidad de c\'elulas migratorias activas}}}{103}{figure.5.8}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Visualizaciones de una simulaci\'on del aut\'omata celular donde se aprecia la aparici\'on de c\'elulas migratorias de un carcinoma ductal infiltrante con alta tasa de producci\'on y aparici\'on temprana}}{103}{figure.5.9}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Generaci\'on 23}}}{103}{figure.5.9}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Generaci\'on 82}}}{103}{figure.5.9}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Generaci\'on 141}}}{103}{figure.5.9}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Generaci\'on 200}}}{103}{figure.5.9}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Generaci\'on 259}}}{103}{figure.5.9}
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {Generaci\'on 318}}}{103}{figure.5.9}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Gr\'aficas de la aparici\'on y cantidades activas de c\'elulas migratorias de un carcinoma ductal infiltrante con una baja tasa de producci\'on y aparici\'on tard\'ia}}{104}{figure.5.10}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Producci\'on de c\'elulas migratorias}}}{104}{figure.5.10}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Cantidad de c\'elulas migratorias activas}}}{104}{figure.5.10}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Visualizaciones de una simulaci\'on del aut\'omata celular donde se aprecia la aparici\'on de c\'elulas migratorias de un carcinoma ductal infiltrante con una baja tasa de producci\'on y aparici\'on tard\'ia}}{104}{figure.5.11}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Generaci\'on 99}}}{104}{figure.5.11}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Generaci\'on 143}}}{104}{figure.5.11}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Generaci\'on 187}}}{104}{figure.5.11}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Generaci\'on 231}}}{104}{figure.5.11}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Generaci\'on 275}}}{104}{figure.5.11}
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {Generaci\'on 319}}}{104}{figure.5.11}
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Gr\'aficas de la cantidad de desplazamientos llevados a cabo por c\'elulas migratorias}}{105}{figure.5.12}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$\mu _{max}=100$}}}{105}{figure.5.12}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$\mu _{max}=55$}}}{105}{figure.5.12}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$\mu _{max}=10$}}}{105}{figure.5.12}
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Visualizaciones de simulaciones del aut\'omata celular de un carcinoma ductal infiltrante donde se aprecian distintas distancias m\'aximas de la migraci\'on}}{106}{figure.5.13}
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Comparaci\'on entre las visualizaciones del modelo del presente manuscrito y de una imagen microsc\'opica de un glioblastoma multiforme}}{106}{figure.5.14}
+\contentsline {figure}{\numberline {5.15}{\ignorespaces Gr\'aficas de la aparici\'on y cantidades activas de c\'elulas migratorias de un carcinoma ductal infiltrante de crecimiento lento con una alta tasa de producci\'on y aparici\'on temprana}}{108}{figure.5.15}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Producci\'on de c\'elulas migratorias}}}{108}{figure.5.15}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Cantidad de c\'elulas migratorias activas}}}{108}{figure.5.15}
+\contentsline {figure}{\numberline {5.16}{\ignorespaces Visualizaciones de simulaciones del aut\'omata celular de un carcinoma ductal infiltrante de crecimiento lento con una alta tasa de producci\'on y aparici\'on temprana}}{108}{figure.5.16}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Generaci\'on 300}}}{108}{figure.5.16}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Generaci\'on 400}}}{108}{figure.5.16}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Generaci\'on 500}}}{108}{figure.5.16}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Generaci\'on 600}}}{108}{figure.5.16}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Generaci\'on 700}}}{108}{figure.5.16}
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {Generaci\'on 800}}}{108}{figure.5.16}
+\contentsline {figure}{\numberline {5.17}{\ignorespaces Comparaci\'on de dos visualizaciones del aut\'omata correspondientes con los casos extremos mostrados del surgimiento de c\'elulas migratorias}}{109}{figure.5.17}
+\contentsline {figure}{\numberline {5.18}{\ignorespaces Distribuci\'on de la concentraci\'on de c\'elulas migratorias en base a la distancia desde la frontera tumoral}}{110}{figure.5.18}
+\contentsline {figure}{\numberline {5.19}{\ignorespaces Gr\'aficas de la intravasaci\'on de c\'elulas migratorias}}{112}{figure.5.19}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Alto potencial metast\'asico}}}{112}{figure.5.19}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Bajo potencial metast\'asico}}}{112}{figure.5.19}
+\contentsline {figure}{\numberline {5.20}{\ignorespaces Cantidad de met\'astasis exitosas y fallidas de carcinomas ductales infiltrantes con alto potencial metast\'asico}}{113}{figure.5.20}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Met\'astasis exitosas y fallidas en huesos}}}{113}{figure.5.20}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Met\'astasis exitosas y fallidas en pulmones}}}{113}{figure.5.20}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Met\'astasis exitosas y fallidas en h\'igado}}}{113}{figure.5.20}
+\contentsline {figure}{\numberline {5.21}{\ignorespaces Cantidad de met\'astasis exitosas y fallidas de carcinomas ductales infiltrantes con bajo potencial metast\'asico}}{114}{figure.5.21}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Met\'astasis exitosas y fallidas en huesos}}}{114}{figure.5.21}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Met\'astasis exitosas y fallidas en pulmones}}}{114}{figure.5.21}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Met\'astasis exitosas y fallidas en h\'igado}}}{114}{figure.5.21}
+\contentsline {figure}{\numberline {5.22}{\ignorespaces Visualizaciones de una simulaci\'on del aut\'omata celular del ciclo vital del c\'ancer donde el tumor primario posee un alto potencial metast\'asico}}{116}{figure.5.22}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Generaci\'on 125}}}{116}{figure.5.22}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Generaci\'on 150}}}{116}{figure.5.22}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Generaci\'on 175}}}{116}{figure.5.22}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Generaci\'on 200}}}{116}{figure.5.22}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Generaci\'on 225}}}{116}{figure.5.22}
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {Generaci\'on 250}}}{116}{figure.5.22}
+\contentsline {subfigure}{\numberline {(g)}{\ignorespaces {Generaci\'on 275}}}{116}{figure.5.22}
+\contentsline {subfigure}{\numberline {(h)}{\ignorespaces {Generaci\'on 300}}}{116}{figure.5.22}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Diagramas mostrando los distintos tipos de epitelios del organismo}}{130}{figure.8.1}
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Ap\'endice E: visualizaciones de la simulaci\'on del aut\'omata celular durante la etapa avascular}}{131}{figure.8.2}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Generaci\'on 0}}}{131}{figure.8.2}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Generaci\'on 4}}}{131}{figure.8.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Generaci\'on 8}}}{131}{figure.8.2}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Generaci\'on 12}}}{131}{figure.8.2}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Generaci\'on 16}}}{131}{figure.8.2}
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {Generaci\'on 20}}}{131}{figure.8.2}
+\contentsline {figure}{\numberline {8.3}{\ignorespaces Ap\'endice E: visualizaciones de la simulaci\'on del aut\'omata celular durante la etapa vascular}}{132}{figure.8.3}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Generaci\'on 99}}}{132}{figure.8.3}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Generaci\'on 132}}}{132}{figure.8.3}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Generaci\'on 165}}}{132}{figure.8.3}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Generaci\'on 198}}}{132}{figure.8.3}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Generaci\'on 231}}}{132}{figure.8.3}
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {Generaci\'on 264}}}{132}{figure.8.3}
+\contentsline {subfigure}{\numberline {(g)}{\ignorespaces {Generaci\'on 297}}}{132}{figure.8.3}
+\contentsline {subfigure}{\numberline {(h)}{\ignorespaces {Generaci\'on 321}}}{132}{figure.8.3}

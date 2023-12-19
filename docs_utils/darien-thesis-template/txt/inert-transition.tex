@@ -1,0 +1,41 @@
+\subsection{Reglas de la conservaci\'on del estado de las c\'elulas normales y tumorales}
+\label{subsec-inert}
+El primer conjunto de reglas est\'a relacionado con el comportamiento de las c\'elulas normales y tumorales definidas en el conjunto de estados del aut\'omata. Como se expuso en la hip\'otesis V sobre la invarianza de las c\'elulas normales, estas se mantienen est\'aticas en el transcurso del tiempo. Esto quiere decir que, salvo que exista la presencia de c\'elulas cancer\'igenas en la vecindad de alguna c\'elula normal, las c\'elulas normales del aut\'omata mantienen el estado inicial que se les fue asignado al preparar el modelo para su ejecuci\'on. Seg\'un la hip\'otesis IX sobre el proceso de crecimiento simple se establece que una posici\'on ocupada por una c\'elula tumoral permanece ocupada por esta los restantes instantes de tiempo. Para precisar la funci\'on de transici\'on local de este comportamiento se debe definir una nueva funci\'on $\mathcal{N}_{\mathcal{E'}}^n(S(v,n))$.
+
+\begin{definition}
+\label{def-near-neighbours}
+La funci\'on $\mathcal{N}_{\mathcal{E'}}^n(S(v,n))$, que recibe una configuraci\'on local $S(v,n)$ en el instante de tiempo $n$ centrada en una c\'elula $v$, devuelve la cantidad de c\'elulas presentes en la vecindad inmediata $\mathcal{N}^{n}(v)$ de dicha configuraci\'on local cuyos estados est\'en contenidos en el subconjunto de estados $\mathcal{E'} = \lbrace e_1, e_2, \ldots , e_{|\mathcal{E'}|}\rbrace \subseteq \mathcal{E}$.
+\begin{equation}
+\mathcal{N}_{\mathcal{E'}}^n(S(v,n)) = \sum_{\substack{{s(w_i,n) \in S(v,n)}\\{w_i \in \mathcal{N}^{n}(v)}\\{V_{w_i}(G)=V_v(G)}}} \left[\delta(s(w_i,n),e_1) + \delta(s(w_i,n),e_2) + \ldots + \delta(s(w_i,n),e_{|\mathcal{E'}|}) \right], \label{eq-near-neighbours}
+\end{equation}
+donde se puede apreciar que solo se tienen en cuenta las c\'elulas vecinas inmediatas que pertenecen a la misma localizaci\'on que la c\'elula $v$. 
+\end{definition}
+
+\begin{definition}
+\label{def-delta}
+La funci\'on $\delta(s(w,n),e)$ devuelve el valor $1$ si la c\'elula $w$ posee el estado $e$, $0$ en caso contrario. Formalmente se define como:
+\begin{equation}
+\delta(s(w,n),e)=\left\lbrace
+	\begin{array}{ll}
+		1& \textit{si } s(w,n)=e \\
+		0& \textit{en caso contrario}
+	\end{array}
+\right.. 
+\end{equation}
+\end{definition}
+
+En el caso que el conjunto $\mathcal{E'}$ aparezca en el sub\'indice de la funci\'on $\mathcal{N}_{\mathcal{E'}}^n(S(v,n))$ representado por un solo estado se asume que $\mathcal{E'}$ contiene a ese \'unico estado. Finalmente, la funci\'on de transici\'on local se define a continuaci\'on:
+\begin{equation}
+s(v,n+1)=\mathcal{R}(S(v,n))=\left\lbrace
+	\begin{array}{ll}
+		0& \textit{si } s(v,n)=0~\wedge~\mathcal{N}_3^n(S(v,n))=0~\wedge~\mathcal{N}_5^n(S(v,n))=0 \\
+		1& \textit{si } s(v,n)=1~\wedge~\mathcal{N}_3^n(S(v,n))=0~\wedge~\mathcal{N}_5^n(S(v,n))=0 \\
+		2& \textit{si } s(v,n)=2~\wedge~\mathcal{N}_3^n(S(v,n))=0~\wedge~\mathcal{N}_5^n(S(v,n))=0 \\
+		3& \textit{si } s(v,n)=3 
+	\end{array}
+\right.. \label{eq-inert}
+\end{equation}
+
+Estas reglas expresan que si el v\'ertice $v$ elegido para su actualizaci\'on es una c\'elula normal en el instante de tiempo $n$, representado por la condici\'on $s(v,n)=e$ en el criterio de selecci\'on de la regla, donde $e \in \lbrace 0,1,2 \rbrace$, y no est\'a en presencia de alguna c\'elula cancer\'igena que pueda desplazarla de su posici\'on, representado por la condici\'on $\mathcal{N}_3^n(S(v,n))=0~\wedge~\mathcal{N}_5^n(S(v,n))=0$, esta c\'elula mantiene su estado en el instante de tiempo $n+1$. Una c\'elula tumoral mantiene su estado indefinidamente dado por la condici\'on $s(v,n)=3$. En secciones posteriores se expondr\'a los mecanismos que provocan la aparici\'on de c\'elulas que presentan los dem\'as estados cancerosos.
+
+La funci\'on $\mathcal{N}_{\mathcal{E'}}^n(S(v,n))$~(\ref{eq-near-neighbours}) solo toma en cuenta las c\'elulas vecinas inmediatas de la c\'elula $v$ que pertenezcan a la misma localizaci\'on que $v$ como se aprecia en la condici\'on $V_{w_i}(G)=V_v(G)$ de la sumatoria. Esta consideraci\'on est\'a presente en todas las reglas de transici\'on del aut\'omata ya que las interacciones entre c\'elulas inmediatas est\'an limitadas al interior de cada localizaci\'on, mientras que la interacci\'on entre localizaciones ocurre a trav\'es de las conexiones entre c\'elulas distantes. Esto se deriva de la adopci\'on de la hip\'otesis XI sobre las v\'ias de la met\'astasis donde se expresa que las \'unicas v\'ias consideradas son las hem\'aticas y linf\'aticas, dejando sin examinar las v\'ias intrator\'acicas, es decir, que la expansi\'on del tumor pueda penetrar de forma directa los \'organos cercanos. De esta afirmaci\'on se infiere que todas las c\'elulas pertenecientes a un tumor cualquiera de la simulaci\'on pertenecen a una misma localizaci\'on.

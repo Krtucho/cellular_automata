@@ -1,0 +1,411 @@
+
+Debido a que el objetivo del modelo es reproducir el ciclo vital de un carcinoma, se asume que el tumor primario no debe ser eliminado por el sistema inmunitario mientras que las met\'astasis en su etapa avascular, representadas mediante el estado 5 del conjunto $\mathcal{E}$ correspondiente con una micromet\'astasis, s\'i pueden ser eliminadas por el sistema inmunitario. Cuando una micromet\'astasis logra avanzar a la etapa vascular los estados de sus c\'elulas conformantes cambian al estado 3, correspondiente con el de un tumor desarrollado que no posee diferencias con su hom\'ologo primario. Cuando se utilice la palabra tumor de ahora en adelante se considera que nos referimos al tumor primario o a un tumor secundario en etapa vascular. En las secciones correspondientes con la divisi\'on celular se define la regla que representa el crecimiento del tumor primario y de los tumores secundarios en etapa vascular. El crecimiento de los tumores secundarios en etapa avascular, o micromet\'astasis, se expondr\'a en secciones posteriores. En la figura~\ref{fig-tumor-progresion} se muestra el ciclo vital del c\'ancer representado en este modelo. 
+
+\begin{figure}[h!]
+\begin{center}
+\scalebox{0.65}{\includegraphics{img/fig-tumor-progresion.png}}
+\end{center}
+\caption[Ciclo vital del c\'ancer representado por el modelo]{Ciclo vital del c\'ancer representado por el modelo. Como se puede apreciar la \'unica diferencia existente en el modelo entre un tumor primario y uno secundario es su comportamiento durante la etapa avascular, ya que se asume que el tumor primario siempre sobrevive y se desarrolla de forma satisfactoria en su entorno, mientras que una micromet\'astasis puede fallar en colonizar su nuevo entorno o ser destruida por el sistema inmunitario.}
+\label{fig-tumor-progresion}
+\end{figure}
+
+El proceso de vascularizaci\'on del tumor es un elemento distintivo de su desarrollo ya que cuando este se aproxima a la m\'axima poblaci\'on permitida por la difusi\'on de nutrientes, la velocidad de crecimiento se ralentiza. El nuevo suministro de nutrientes proveniente de la neovasculatura es la que permite que el tumor contin\'ue y acelere su crecimiento. Como se mostr\'o en la hip\'otesis IX, el modelo asume que la din\'amica del tumor sigue la funci\'on de crecimiento log\'istico de Verhulst, la cual se presenta a continuaci\'on:
+\begin{equation}
+\left\lbrace
+	\begin{array}{l}		
+		\displaystyle\frac{dP}{dt} = rP(1-\displaystyle\frac{P}{K})\\
+		P(t=0)=P_0
+	\end{array}
+\right., \label{eq-verhulst}
+\end{equation}
+donde se expresa que la variaci\'on de la poblaci\'on respecto al tiempo depende de un ritmo de crecimiento $r$, la poblaci\'on $P$ en ese instante de tiempo y un valor $K$ que representa la capacidad de carga, es decir, la cantidad de individuos de la poblaci\'on que puede sostener el entorno. Pero la ecuaci\'on por s\'i sola no describe la din\'amica que se expuso anteriormente por lo que es necesario realizar una interpretaci\'on adicional. La angiog\'enesis se puede traducir como un aumento de la capacidad de carga $K$ del entorno, as\'i como un incremento en el ritmo de crecimiento $r$ debido a que la neovasculatura representa un m\'etodo de suministro m\'as eficiente que la difusi\'on de nutrientes. Por tanto la din\'amica global del crecimiento se compone de dos ecuaciones: una para la etapa avascular con un ritmo de crecimiento $r_a$ y capacidad de carga $K_a$, y una para la etapa vascular con un ritmo de crecimiento $r_v$ y capacidad de carga $K_v$, donde se asume que $r_a < r_v$ y $K_a < K_v$. De esta forma se logra que la proliferaci\'on del tumor sea mayor en la etapa vascular. La utilizaci\'on de la ecuaci\'on de crecimiento log\'istico es factible por la consideraci\'on de las hip\'otesis VI, VII y VIII como parte del modelo.
+
+En las reglas sobre el comportamiento inerte de las c\'elulas normales del aut\'omata~(\ref{eq-inert}) se especific\'o que dichas c\'elulas no cambian de estado salvo que se encuentren en presencia de una c\'elula cancer\'igena. Esto significa que la regla para la divisi\'on celular se puede definir a partir de esta condici\'on, es decir, las c\'elulas normales tienen una probabilidad de ser desplazadas de su posici\'on si se encuentran pr\'oximas a una o varias c\'elulas cancer\'igenas, en t\'erminos de la funci\'on~(\ref{eq-near-neighbours}) $\mathcal{N}_3^n(S(v,n)) > 0$. Por tanto las reglas se definen como aparece a continuaci\'on:
+\begin{equation}
+s(v,n+1)=\mathcal{R}(S(v,n))=\left\lbrace
+	\begin{array}{lc}
+		\zeta_0(S(v,n))& \textit{si } s(v,n)=0~\wedge~\mathcal{N}_3^n(S(v,n)) > 0 \\
+		\zeta_1(S(v,n))& \textit{si } s(v,n)=1~\wedge~\mathcal{N}_3^n(S(v,n)) > 0 \\
+		\zeta_2(S(v,n))& \textit{si } s(v,n)=2~\wedge~\mathcal{N}_3^n(S(v,n)) > 0 
+	\end{array}
+\right., \label{eq-celldiv}
+\end{equation}
+donde $\zeta_i(S(v,n)) \in \lbrace i,3 \rbrace$ con $i \in \lbrace 0,1,2 \rbrace$ son variables aleatorias con la siguiente distribuci\'on de probabilidad:
+\begin{subequations}
+\begin{equation}
+P(\zeta_i(S(v,n))=i) = 1 - \rho(S(v,n) \rightarrow 3),
+\end{equation}
+\begin{equation}
+P(\zeta_i(S(v,n))=3) = \rho(S(v,n) \rightarrow 3).
+\end{equation}
+\end{subequations}
+
+De las expresiones anteriores se infiere que la probabilidad de que una c\'elula normal sea desplazada por una c\'elula cancer\'igena tiene el valor correspondiente con la evaluaci\'on de la funci\'on $\rho(S(v,n) \rightarrow 3)$, mientras que la probabilidad de que permanezca en el estado original es $1-\rho(S(v,n) \rightarrow 3)$. Como el tumor siempre se expande hacia posiciones vecinas ocupadas por c\'elulas normales se puede asegurar que la masa tumoral posee una forma compacta donde cada c\'elula cancer\'igena posee en su vecindad a otras c\'elulas cancer\'igenas, en concordancia con lo expresado en la hip\'otesis XI sobre la adhesi\'on celular. Esta probabilidad de transici\'on, seg\'un la concepci\'on cl\'asica de un aut\'omata celular, debe definirse de forma tal que utilice solamente la informaci\'on de la configuraci\'on local para estimar el valor resultante. En el contexto del presente modelo es necesario que la probabilidad incorpore la informaci\'on relacionada con el modelo de crecimiento log\'istico.
+
+\subsubsection{Divisi\'on celular: proceso de inferencia de la regla}
+La concepci\'on cl\'asica de un aut\'omata celular plantea que la funci\'on de transici\'on local solo puede recibir como argumento la configuraci\'on local de la c\'elula $v$ elegida para su actualizaci\'on\cite{book}. Esto representa una limitaci\'on del modelo cl\'asico ya que no permite reproducir un n\'umero de procesos biol\'ogicos, tecnol\'ogicos y sociales en los que las posibles transiciones dependen de informaci\'on adicional. Entre los posibles ejemplos se encuentra la modelaci\'on de procesos de crecimiento en los que el n\'umero total de individuos y el potencial de reproducci\'on de la especie constituyen factores que influyen positiva o negativamente en la din\'amica poblacional, y como consecuencia en su probabilidad de crecimiento. Ante esta problem\'atica la idea de varios investigadores ha sido proponer extensiones del modelo de aut\'omatas celulares para incluir informaci\'on adicional de alguna forma en la funci\'on de transici\'on local\cite{guinot,ruben,ruanxiaoca,ruanxiaodiff}. 
+
+En~\cite{guinot} se expone una metodolog\'ia para la inferencia de reglas estoc\'asticas para un aut\'omata celular a partir de modelos continuos. Aunque esta metodolog\'ia est\'a orientada hacia la declaraci\'on de funciones de transici\'on que no reciben informaci\'on alguna de la configuraci\'on local, nos presenta nociones que pueden ser utilizadas para extender la concepci\'on cl\'asica. En el presente modelo se combina la probabilidad de transici\'on con las diferentes configuraciones locales que pueden darse, es decir, el criterio de selecci\'on de la regla que se debe aplicar en cada caso depende del estado de la configuraci\'on local, mientras que la probabilidad de transici\'on depende de la expresi\'on que se infiere del modelo continuo. La adopci\'on de estas ideas es especialmente favorable ya que la funci\'on de transici\'on local y el criterio de selecci\'on de la regla a aplicar se mantienen de acuerdo a la definici\'on cl\'asica, y solo se modifica la probabilidad de transici\'on. Los nuevos argumentos de la probabilidad de transici\'on constituyen dependencias heterog\'eneas de la funci\'on de transici\'on que no est\'an concebidas en la concepci\'on cl\'asica de los aut\'omatas celulares. Se comienza especificando una probabilidad de transici\'on alternativa que reciba la informaci\'on pertinente al modelo continuo\cite{guinot}.
+
+\begin{proposition}
+\label{prop-newlocal-func}
+La funci\'on de transici\'on local definida en~\ref{def-local-func} se extiende mediante la inclusi\'on de una probabilidad de transici\'on alternativa que depende de nuevos argumentos:
+\begin{equation}
+s(v,n+1) = \mathcal{R}(S(v,n)) = e_i~~\textit{con probabilidad } \rho(n,l(v,L_n) \rightarrow e_i), \label{eq-newlocal-func}
+\end{equation}
+donde $l(v,L_n)$ es el conjunto de los individuos de la poblaci\'on en ese instante de tiempo que intentan expandirse hacia $v$. Esta nueva probabilidad de transici\'on satisface la siguiente condici\'on:
+\begin{equation}
+\rho:\mathbb{N} \times L_n \rightarrow [0,1]. \label{eq-neww} 
+\end{equation}
+\end{proposition}
+
+En el marco de nuestro modelo $l(v,L_n)$ es una funci\'on que devuelve el conjunto de c\'elulas correspondientes con la poblaci\'on del tumor que se est\'a expandiendo hacia la posici\'on del v\'ertice $v$ y su definici\'on incluye detalles de la implementaci\'on del aut\'omata. Durante la ejecuci\'on del mismo debe estar disponible la informaci\'on referente a los conjuntos de c\'elulas que componen cada tumor existente en el instante de tiempo actual. El conjunto de todos los tumores existentes en la simulaci\'on se denota por $L_n$, y su utilizaci\'on se pudo apreciar en las expresiones~(\ref{eq-newlocal-func},\ref{eq-neww}). Para referirse al conjunto $L_n$ puede utilizarse los t\'erminos conjunto de tumores o conjunto de conjuntos de c\'elulas tumorales y seg\'un lo planteado en la secci\'on anterior, solo contiene al tumor primario y a los tumores secundarios en etapa vascular. Por el momento asumimos que solo existe un tumor expandi\'endose hacia el v\'ertice $v$, pero esta cuesti\'on ser\'a abordada m\'as adelante en la secci\'on~\ref{subsubsec-ref}. Definimos $l(v,L_n)$ tomando en cuenta la asunci\'on anterior como:
+
+\begin{definition}
+\label{def-l}
+La funci\'on $l(v,L_n)$ devuelve el conjunto de c\'elulas correspondientes con el tumor que se expande hacia la posici\'on de $v$, es decir:
+\begin{equation}
+l(v,L_n) = l~|~l \in L_n~\wedge~\exists w \in l : (w \in \mathcal{N}^n(v)~\wedge~o(w)=o(v)), \label{eq-l}
+\end{equation}
+donde $v$ es una c\'elula, $L_n=\lbrace l_1,l_2,\ldots,l_{|L_n|} \rbrace$ es el conjunto de todos los conjuntos de c\'elulas correspondientes con los tumores existentes en el aut\'omata celular en el instante de tiempo $n$ y la condici\'on $o(w)=o(v)$ expresa que solo se tienen en cuenta los tumores del \'organo al que pertenece $v$. 
+\end{definition}
+
+Se reescribe la regla para la divisi\'on celular~(\ref{eq-celldiv}) tomando en cuenta la nueva probabilidad de transici\'on alternativa propuesta en~(\ref{prop-newlocal-func}) como:
+\begin{equation}
+s(v,n+1)=\mathcal{R}(S(v,n))=\left\lbrace
+	\begin{array}{lc}
+		\zeta_0(n,l(v,L_n))& \textit{si } s(v,n)=0~\wedge~\mathcal{N}_3^n(S(v,n)) > 0 \\
+		\zeta_1(n,l(v,L_n))& \textit{si } s(v,n)=1~\wedge~\mathcal{N}_3^n(S(v,n)) > 0 \\
+		\zeta_2(n,l(v,L_n))& \textit{si } s(v,n)=2~\wedge~\mathcal{N}_3^n(S(v,n)) > 0 
+	\end{array}
+\right., \label{eq-celldiv-2}
+\end{equation}
+donde la distribuci\'on de probabilidad de las variables aleatorias $\zeta_i(n,l(v,L_n)) \in \lbrace i,3 \rbrace$ con $i \in \lbrace 0,1,2 \rbrace$ quedar\'ia como:
+\begin{subequations}
+\begin{equation}
+P(\zeta_i(n,l(v,L_n))=i) = 1 - \rho(n,l(v,L_n)) \rightarrow 3),
+\end{equation}
+\begin{equation}
+P(\zeta_i(n,l(v,L_n))=3) = \rho(n,l(v,L_n)) \rightarrow 3).
+\end{equation}
+\end{subequations}
+
+El c\'alculo de la probabilidad de transici\'on $\rho(n,l(v,L_n) \rightarrow 3)$ se define a partir de la ecuaci\'on de crecimiento log\'istico de Verhulst. Primero se debe escribir la ecuaci\'on de crecimiento de forma tal que podamos expresar la variaci\'on de la poblaci\'on desde un instante de tiempo $n$ hacia el instante $n+1$. Para valores peque\~nos de $\Delta t$, la derivada de la ecuaci\'on de crecimiento se puede determinar de forma aproximada como: 
+\begin{subequations}
+\begin{equation}
+\frac{dP(t)}{dt} \approx \frac{P(t+\Delta t) - P(t)}{\Delta t},
+\end{equation}
+\begin{equation}
+P'(t) \approx \frac{P(t+\Delta t) - P(t)}{\Delta t},
+\end{equation}
+\begin{equation}
+\Delta t P'(t) \approx P(t+\Delta t) - P(t),
+\end{equation}
+\begin{equation}
+P(t+\Delta t) - P(t) \approx \Delta t P'(t),
+\end{equation}
+\end{subequations}
+luego si tomamos el tiempo $t$ como una variable discreta, y hacemos $t=n\Delta t$, obtenemos:
+\begin{subequations}
+\begin{equation}
+P(n\Delta +\Delta t) - P(n\Delta t) \approx \Delta t P'(n\Delta t),
+\end{equation}
+\begin{equation}
+P((n+1)\Delta t) - P(n\Delta t) \approx \Delta t P'(n\Delta t). \label{eq-delta}
+\end{equation}
+\end{subequations}
+
+La expresi\'on~(\ref{eq-delta}) se interpreta como la variaci\'on de la poblaci\'on del tumor entre los instantes de tiempo $n$ y $n+1$ como se puede apreciar en la parte izquierda $P((n+1)\Delta t) - P(n\Delta t)$. El $\Delta t$ es el tiempo que transcurre en el modelo continuo entre los instantes de tiempo $n$ y $n+1$ del aut\'omata celular, pero en~\cite{guinot} se demostr\'o que la reproducci\'on del modelo continuo en el aut\'omata celular es independiente del valor que se elija para $\Delta t$. Se infiere de~(\ref{eq-delta}) que la probabilidad de transici\'on $\rho(n,l(v,L_n))$ se calcula mediante $P'(t)$. A partir de~(\ref{eq-verhulst}) sujeta a la condici\'on inicial se obtiene(ver ap\'endice~\ref{app-a} para el proceso de resoluci\'on):
+\begin{equation}
+P(t) = \frac{P_0 K}{P_0 + (K-P_0)e^{-rt}},
+\end{equation} 
+cuya derivada $P'(t)$ finalmente tiene la forma(ver ap\'endice~\ref{app-b} para el proceso de derivaci\'on):
+\begin{equation}
+P'(t) = \frac{P_0 K r e^{rt}(K-P_0)}{(P_0 e^{rt} - P_0 + K)^2}. \label{eq-prob}
+\end{equation}
+
+Con el uso de la expresi\'on~(\ref{eq-prob}) surge un problema. Se expuso anteriormente que la probabilidad de transici\'on $\rho(n,l(v,L_n) \rightarrow 3) \in [0,1]$, hecho que no ocurre con la funci\'on $P'(t)$, por lo que es necesario llevar a cabo un proceso de normalizaci\'on. Con este objetivo derivamos la funci\'on $P'(t)$ para buscar los puntos estacionarios(ver ap\'endice~\ref{app-c} para el proceso de derivaci\'on), obteni\'endose: 
+\begin{equation}
+P''(t) = \frac{P_0 K r^2 e^{rt} (P_0-K)(P_0 e^{rt} + P_0 - K)}{(P_0 e^{rt} - P_0 + K)^3},
+\end{equation}
+donde se infiere que $P'(t)$ posee un m\'aximo cuando:
+\begin{equation}
+t = \frac{1}{r} ln\frac{K-P_0}{P_0}, 
+\end{equation}
+evaluando $P'(t)$ en este valor de $t$ obtenemos la probabilidad m\'axima de crecimiento:
+\begin{equation}
+P'\left(t = \frac{1}{r} ln\frac{K-P_0}{P_0}\right) = \frac{Kr}{4},
+\end{equation}
+luego utilizamos este valor para acotar a la funci\'on $P'(t)$ en el intervalo [0,1]:
+\begin{equation}
+\displaystyle\frac{P'(t)}{P'(t = \frac{1}{r} ln\frac{K-P_0}{P_0})} = \displaystyle\frac{4 P_0 K r e^{rt}(K-P_0)}{Kr(P_0 e^{rt} - P_0 + K)^2} \in [0,1].
+\end{equation}
+
+Seg\'un la hip\'otesis II el desarrollo de la poblaci\'on tumoral se divide en dos etapas, cada una con sus valores propios del ritmo de crecimiento $r$ y capacidad de carga $K$. Luego resulta l\'ogico plantear que ambas etapas poseen tambi\'en sus valores propios de poblaci\'on inicial $P_0$, donde la poblaci\'on inicial de la etapa vascular es la poblaci\'on final de la etapa avascular, es decir, $K_a = P_0^v$. Finalmente, las probabilidades de transici\'on para cada etapa, con $t=n\Delta t$, quedan como:
+\begin{subequations}
+\begin{equation}
+\rho_a(n\Delta t) = \displaystyle\frac{4P_0^a K_a r_a e^{r_a n\Delta t}(K_a-P_0^a)}{K_a r_a(P_0^a e^{r_a n\Delta t} - P_0^a + K_a)^2},
+\label{eq-pa}
+\end{equation}
+\begin{equation}
+\rho_v(n\Delta t) = \displaystyle\frac{4P_0^v K_v r_v e^{r_v n\Delta t}(K_v-P_0^v)}{K_v r_v(P_0^v e^{r_v n\Delta t} - P_0^v + K_v)^2}.
+\label{eq-pv}
+\end{equation}
+\end{subequations}
+
+En este punto, utilizando las expresiones~(\ref{eq-pa},~\ref{eq-pv}), estamos en condiciones de escribir finalmente la probabilidad de transici\'on $\rho(n,l(v,L_n) \rightarrow 3)$ como:
+\begin{equation}
+\rho(n,l(v,L_n) \rightarrow 3) = \left\lbrace
+	\begin{array}{lc}
+		\rho_a(n\Delta t)& \textit{si } |l(v,L_n)| \leq P_0^v \\
+		\rho_v(n\Delta t)& \textit{si } |l(v,L_n)| > P_0^v
+	\end{array}
+\right.. \label{eq-generaldivrule}
+\end{equation}
+
+La expresi\'on~(\ref{eq-generaldivrule}) se conoce como probabilidad de transici\'on general de la divisi\'on celular y se utiliza como base para la definici\'on de las probabilidades particulares para el desplazamiento de cada tipo de c\'elula normal del aut\'omata. En las secciones siguiente se exponen las hip\'otesis del modelo que se relacionan con el crecimiento del tumor hacia distintos tipos de tejidos, los factores que influyen en el proceso de la divisi\'on celular y la particularizaci\'on de la probabilidad general de la divisi\'on celular.
+
+\subsubsection{Divisi\'on celular: inclusi\'on de nuevas hip\'otesis}
+\label{subsubsec-ref}
+El uso de la probabilidad de transici\'on~(\ref{eq-generaldivrule}) en esta forma tiene dos inconvenientes. El primero es que solo tiene en cuenta la poblaci\'on de un tumor expandi\'endose hacia la posici\'on del v\'ertice $v$. En varias circunstancias se pueden dar situaciones donde dos o varios tumores compiten por expandirse hacia una misma posici\'on, es decir, que una c\'elula normal posea en su vecindad inmediata varias c\'elulas cancer\'igenas pertenecientes a distintos tumores cuyas descendencias intentan ocupar la posici\'on de la c\'elula normal. Esta competencia tiene que ser reflejada de alguna forma en la regla para la divisi\'on celular. El segundo es que la probabilidad de transici\'on est\'a expresada solamente en funci\'on de $\rho_a(n\Delta t)$ y $\rho_v(n\Delta t)$ y no incorpora la influencia de otros factores que influyen en el crecimiento tumoral. Un ejemplo de estos factores es la direcci\'on del crecimiento tumoral. Se ha mostrado en varias investigaciones que el tumor tiende a crecer en direcci\'on de donde provienen los nutrientes\cite{kansal3} lo que constituye un sesgo en la direcci\'on de la expansi\'on. Este \'ultimo hecho representa, adem\'as, un factor importante en la direcci\'on de la migraci\'on de las c\'elulas cancer\'igenas durante la cascada metast\'asica\cite{kansal3}. La regla general de la divisi\'on celular no toma en cuenta estos factores, por lo que es necesaria su inclusi\'on. Comenzamos planteando las siguientes hip\'otesis del modelo:
+
+\begin{itemize}
+\item [\textbf{XVI.}] \emph{En las situaciones de competencia de varios tumores por expandirse a una misma posici\'on se asume que el valor de la probabilidad de transici\'on se corresponde con el tumor con mayor probabilidad de expansi\'on en ese momento. }
+\item [\textbf{XVII.}] \emph{En los tejidos la concentraci\'on de nutrientes aumenta a medida que nos aproximamos a los tejidos de sost\'en y la vasculatura del organismo. Este hecho se representa mediante uno o varios vectores en los \'organos del conjunto de c\'elulas del aut\'omata que indica las direcciones en que aumenta la concentraci\'on de los nutrientes.}
+\item [\textbf{XVIII.}] \emph{Se asume que la probabilidad de que ocurra la divisi\'on de c\'elulas tumorales se ve afectada por la concentraci\'on de los nutrientes. Este hecho constituye un sesgo en la direcci\'on del crecimiento del tumor, que se traduce en la tendencia a expandirse hacia la mayor concentraci\'on.}
+\end{itemize}
+
+Debe aclararse que la hip\'otesis XVI tiene su fundamento biol\'ogico en que las cercan\'ias de una neoplasia con cierto grado de desarrollo la concentraci\'on de nutrientes es menor que en un tejido sano pues la masa tumoral consume una parte importante de los mismos. Luego un tumor con un desarrollo inferior, en especial uno que posee un bajo grado de vascularizaci\'on, no tiende expandirse hacia un tumor mayor que acapara la mayor parte de la difusi\'on de nutrientes del entorno. Esta suposici\'on se refuerza con la hip\'otesis XVIII y con la naturaleza oportunista y autorregulada del crecimiento tumoral. La hip\'otesis XVIII permite explicar la expansi\'on del tumor en las distintas capas de tejidos que conforman los \'organos. Los tumores s\'olidos tienden a penetrar el estroma a pesar de que poseen una mayor densidad en busca de estos nutrientes, raz\'on por la que apenas crecen hacia el lumen del \'organo aunque presente una densidad nula. Con el objetivo de representar estas nuevas hip\'otesis del modelo es necesario extender la definici\'on de la probabilidad de transici\'on~(\ref{def-local-func}) como se muestra a continuaci\'on:
+
+\begin{proposition}
+\label{prop-newlocal-func-2}
+La funci\'on de transici\'on local definida en~\ref{def-local-func} se extiende mediante la inclusi\'on de una probabilidad de transici\'on alternativa que depende de nuevos argumentos:
+\begin{equation}
+s(v,n+1) = \mathcal{R}(S(v,n)) = e_i~~\textit{con probabilidad } \rho(v,n,L(v,L_n) \rightarrow e_i), \label{eq-newlocal-func-2}
+\end{equation}
+donde $v$ es el individuo focal de la configuraci\'on local donde se aplica la regla, $n$ es el instante de tiempo actual y $L(v,L_n)$ es una funci\'on que devuelve el conjunto de todas las poblaciones que intentan expandirse hacia $v$. Esta nueva probabilidad de transici\'on satisface la siguiente condici\'on:
+\begin{equation}
+\rho:V(G) \times \mathbb{N} \times L_n^s \rightarrow [0,1]. \label{eq-neww-2} 
+\end{equation}
+El conjunto $L_n^s$ se define como todos los posibles conjuntos de poblaciones que pueden existir en el instante de tiempo $n$ en el aut\'omata celular.
+\end{proposition}
+
+En el marco de nuestro modelo $L(v,L_n)$ es una funci\'on que devuelve el conjunto de los tumores que compiten por expandirse hacia la posici\'on de la c\'elula $v$ y constituye una generalizaci\'on de la idea presentada en la definici\'on~\ref{def-l}.
+
+\begin{definition}
+\label{def-L-2}
+La funci\'on $L(v,L_n)$ devuelve un conjunto compuesto por los conjuntos de c\'elulas pertenecientes a los tumores que compiten por ocupar la posici\'on $v$, es decir:
+\begin{equation}
+L(v,L_n) = \lbrace l~|~l \in L_n~\wedge~\exists w \in l:(w \in \mathcal{N}^n(v)~\wedge~o(w)=o(v)) \rbrace, \label{eq-L-2}
+\end{equation}
+donde $v$ es una c\'elula, $L_n=\lbrace l_1,l_2,\ldots,l_{|L_n|}\rbrace$ es el conjunto de todos los conjuntos de c\'elulas correspondientes con los tumores existentes en el aut\'omata celular en el instante de tiempo $n$ y la condici\'on $o(w)=o(v)$ expresa que solo se tienen en cuenta los tumores del \'organo al que pertenece $v$. Para referirse a los conjuntos $l_i \in L_n$ con $i \in \lbrace 1,2,\ldots,|L_n|\rbrace$ se puede utilizar los t\'erminos tumor y conjunto de c\'elulas tumorales indistintamente.
+\end{definition}
+
+Se reescribe la regla para la divisi\'on celular~(\ref{eq-celldiv-2}) tomando en cuenta la nueva probabilidad de transici\'on alternativa~(\ref{eq-newlocal-func-2}) como:
+\begin{equation}
+s(v,n+1)=\mathcal{R}(S(v,n))=\left\lbrace
+	\begin{array}{lc}
+		\zeta_0(v,n,L(v,L_n))& \textit{si } s(v,n)=0~\wedge~\mathcal{N}_3^n(S(v,n)) > 0 \\
+		\zeta_1(v,n,L(v,L_n))& \textit{si } s(v,n)=1~\wedge~\mathcal{N}_3^n(S(v,n)) > 0 \\
+		\zeta_2(v,n,L(v,L_n))& \textit{si } s(v,n)=2~\wedge~\mathcal{N}_3^n(S(v,n)) > 0 
+	\end{array}
+\right., \label{eq-celldiv-3}
+\end{equation}
+donde la distribuci\'on de probabilidad de las variables aleatorias $\zeta_i(v,n,L(v,L_n)) \in \lbrace i,3 \rbrace$ con $i \in \lbrace 0,1,2 \rbrace$ quedar\'ia como:
+\begin{subequations}
+\begin{equation}
+P(\zeta_i(v,n,L(v,L_n))=i) = 1 - \rho(v,n,L(v,L_n)) \rightarrow 3),
+\end{equation}
+\begin{equation}
+P(\zeta_i(v,n,L(v,L_n))=3) = \rho(v,n,L(v,L_n)) \rightarrow 3).
+\end{equation}
+\end{subequations}
+
+De acuerdo a la hip\'otesis XVI, la probabilidad de transici\'on~(\ref{eq-generaldivrule}) debe depender de las probabilidades de expansi\'on de cada uno de los tumores pertenecientes a $L(v,L_n)$. Como se adopta la norma general que solo se expande el tumor con mayores posibilidades esta probabilidad de transici\'on puede ser escrita, tomando en cuenta la proposi\'on~(\ref{prop-newlocal-func-2}), como:
+\begin{equation}
+\rho(v,n,L(v,L_n) \rightarrow 3) = max(\rho(v,n,l_1 \rightarrow 3),\rho(v,n,l_2 \rightarrow 3),\ldots, \rho(v,n,l_{|L(v,L_n)|} \rightarrow 3)), \label{eq-generaldivrule-2}
+\end{equation}
+donde $l_i \in L(v,L_n)$ con $i \in \lbrace 1,2,\ldots,|L(v,L_n)|\rbrace$ y $\rho(v,n,l_i \rightarrow 3)$ es la aplicaci\'on individual de la probabilidad de transici\'on a cada tumor del conjunto que devuelve la funci\'on $L(v,L_n)$. Se puede apreciar que el valor de la probabilidad de transici\'on global se corresponde con el m\'aximo de las probabilidades de expansi\'on de cada uno de los tumores que compiten por la posici\'on de la c\'elula $v$. La aplicaci\'on particular se escribe a partir de la probabilidad de transici\'on general de la divisi\'on celular~(\ref{eq-generaldivrule}):
+\begin{equation}
+\rho(v,n,l \rightarrow 3) = \left\lbrace
+	\begin{array}{lc}
+		\rho_a(n\Delta t)& \textit{si } |l| \leq P_0^v \\
+		\rho_v(n\Delta t)& \textit{si } |l| > P_0^v
+	\end{array}
+\right.. \label{eq-generaldivrule-3}
+\end{equation}
+
+Continuando con el proceso de incorporaci\'on de nuevas hip\'otesis a la probabilidad de transici\'on general de la divisi\'on celular, la hip\'otesis XVIII indica que la expansi\'on de un tumor tiende a producirse hacia una mayor concentraci\'on de nutrientes. Con el objetivo de simular la variaci\'on de dicha concentraci\'on en el tejido tomando en cuenta la hip\'otesis XVII se define un conjunto de vectores asociados a cada \'organo denotado como $B$, donde $B_j$ es el conjunto de vectores del \'organo $j$. Cada uno de los vectores pertenecientes a $B$ expresa una direcci\'on hacia la cual aumenta el valor de la concentraci\'on de nutrientes. La concentraci\'on de nutrientes es mayor en direcci\'on a los tejidos de sost\'en y a su vasculatura. Por ejemplo en los diagramas izquierdo y centro de los cortes de tejidos mostrados en la figura~\ref{fig-structure} correspondientes con el aparato digestivo y las v\'ias a\'ereas inferiores del sistema respiratorio la variaci\'on de la concentraci\'on de nutrientes se puede representar mediante un vector que parte desde el tejido epitelial y apunta perpendicularmente hacia el estroma. En el caso del diagrama derecho de la figura~(\ref{fig-structure}) correspondiente con el h\'igado no hay necesidad de representar ning\'un vector ya que la vasculatura est\'a presente de manera bastante uniforme en el \'organo haciendo de la concentraci\'on de nutrientes una magnitud homog\'enea. 
+
+Generalmente se utiliza la similitud coseno para determinar el grado de similitud existente entre dos vectores mediante el valor del coseno del menor \'angulo comprendido entre ellos. En el presente trabajo se eval\'uan las similitudes coseno entre todos los vectores del conjunto $B$ que pertenecen al mismo \'organo del tumor y el vector formado entre el centroide del tumor y el v\'ertice $v$ hacia el que se est\'a expandiendo, tomando la mayor similitud como medida. Se interpreta esta medida como un coeficiente de las probabilidades de transici\'on de cada etapa del tumor $\rho_a(n\Delta t)$ y $\rho_v(n\Delta t)$, de manera el crecimiento se ve sesgado hacia la mayor concentraci\'on de nutrientes. Definimos la similitud coseno a continuaci\'on:
+
+\begin{definition}
+\label{def-sim}
+Sean dos vectores $\nu_1$ y $\nu_2$, se define la similitud coseno $sim(\nu_1,\nu_2)$ como el coseno del menor \'angulo, denotado como $\alpha$, comprendido entre ellos y se determina como:
+\begin{equation}
+sim(\nu_1,\nu_2) = cos\,\alpha = \displaystyle\frac{\nu_1 \cdot \nu_2}{|\nu_1| \times| \nu_2|}. \label{eq-sim}
+\end{equation}
+Como siempre toma el menor \'angulo comprendido entre los vectores, el mayor \'angulo comprendido posible es $\pi$ donde la similitud toma valor $-1$, que es el caso donde ambos vectores tienen direcciones opuestas. El menor \'angulo comprendido es $0$ donde la similitud toma valor $1$, correspondiente con el caso donde ambos vectores apuntan hacia la misma direcci\'on. La similitud toma valor $0$ cuando el \'angulo es $\pi /2$. Luego los valores posibles de la similitud coseno son:
+\begin{equation}
+sim(\nu_1,\nu_2) = cos\,\alpha \in \left\lbrace
+	\begin{array}{ll}
+		\left[0,~1\right]& \textit{si } \alpha \in \left[0,\frac{\pi}{2} \right)\\
+		\left[\textit{-}1,0\right]& \textit{si } \alpha \in \left[\frac{\pi}{2}, \pi \right]
+	\end{array}
+\right..
+\end{equation}
+\end{definition}
+
+Como podemos apreciar, el valor de la similitud oscila entre $-1$ y $1$. La interpretaci\'on de los valores negativos puede ser confusa al ser utilizados como un coeficiente de probabilidad. Ser\'ia conveniente que los valores de la similitud pertenecieran al rango $[0,1]$ donde el $1$ se corresponda con el valor de m\'axima similitud, es decir, que ambos vectores apuntan en la misma direcci\'on, y el $0$ se corresponda con el valor de menor similitud, es decir, que ambos vectores poseen direcciones opuestas. Por tanto se define una nueva similitud:
+
+\begin{definition}
+\label{def-simprima}
+Sean dos vectores $\nu_1$ y $\nu_2$, se define la similitud coseno prima $sim'(\nu_1,\nu_2)$ a partir de la similitud coseno $sim(\nu_1,\nu_2)$ como:
+\begin{equation}
+sim'(\nu_1,\nu_2) = \displaystyle{\sqrt{\frac{1+sim(\nu_1,\nu_2)}{2}}} = \displaystyle{\sqrt{\frac{1+\frac{\nu_1 \cdot \nu_2}{|\nu_1| \times| \nu_2|}}{2}}}. \label{eq-simprima}
+\end{equation}
+La expresi\'on que se utiliza para calcular la similitud coseno prima es la de la funci\'on $cos\, (\alpha /2)$ que toma valores en el rango $[0,1]$ cuando $\alpha \in [0, \pi]$.
+\end{definition}
+
+A partir de la expresi\'on para el c\'alculo de la similitud coseno prima se declara el coeficiente de la probabilidad de transici\'on. Este coeficiente es la funci\'on $\beta(v,l)$ definida a continuaci\'on:
+
+\begin{definition}
+\label{def-beta}
+La funci\'on $\beta(v,l)$, que recibe un v\'ertice $v$ y un tumor $l$, devuelve la m\'axima similitud coseno prima entre el vector $\nu_{vl}$ y cada uno de los vectores de concentraci\'on del conjunto $B$ que pertenecen al mismo \'organo que el tumor $l$, es decir:
+\begin{equation}
+\beta(v,l) = max(sim'(b_{1j}, \nu_{vl}),sim'(b_{2j}, \nu_{vl}),\ldots, sim'(b_{|B_j|}, \nu_{vl})), \label{eq-beta}
+\end{equation}
+donde $b_{ij} \in B_j$ con $i \in \lbrace 1,2,\cdots,|B_j|\rbrace$ son los vectores de concentraci\'on del \'organo $j$ al que pertenece el tumor $l$ y $\nu_{vl}$ es el vector formado por el v\'ertice $v$ y el centroide del tumor $l$, donde el centroide constituye el punto de aplicaci\'on y $v$ el extremo del vector. 
+\end{definition}
+
+A continuaci\'on se presentan las expresiones para el c\'alculo del centroide del tumor $l$ y el vector $\nu_{vl}$:
+
+\begin{definition}
+\label{def-centroid}
+Sea $l=\lbrace w_1,w_2,\ldots,w_{|l|}\rbrace$ un conjunto que contiene las c\'elulas pertenecientes a un tumor cualquiera representado en el aut\'omata. El centroide de dicho tumor se denota como $c_l$ y se define como el promedio de las componentes de los v\'ertices del conjunto, es decir:
+\begin{equation}
+c_l = \left(\frac{w_{1x} + w_{2x} + \ldots + w_{|l|x}}{|l|}, \frac{w_{1y} + w_{2y} + \ldots + w_{|l|y}}{|l|},\frac{w_{1z} + w_{2z} + \ldots + w_{|l|z}}{|l|}\right). \label{eq-centroid}
+\end{equation}
+\end{definition}
+
+\begin{definition}
+\label{def-vector}
+Sea el centroide $c_l$ de un tumor cualquiera $l$ y un v\'ertice $v$ hacia el que se est\'a expandiendo dicho tumor. Se define el vector de expansi\'on $\nu_{vl}$ entre el centroide del tumor $c_l$ y el v\'ertice $v$ como:
+\begin{equation}
+\nu_{vl} = \left(v_x - c_{lx}, v_y - c_{ly}, v_z - c_{lz}\right). \label{eq-vector}
+\end{equation}
+\end{definition}
+
+A partir de las expresiones~(\ref{eq-generaldivrule-3},~\ref{eq-beta}) se reescribe la aplicaci\'on particular de la probabilidad de transici\'on general de la divisi\'on celular como:
+\begin{equation}
+\rho(v,n,l \rightarrow 3) = \left\lbrace
+	\begin{array}{lc}
+		\beta(v,l)\,\rho_a(n\Delta t)& \textit{si } |l| \leq P_0^v \\
+		\beta(v,l)\,\rho_v(n\Delta t)& \textit{si } |l| > P_0^v
+	\end{array}
+\right.. \label{eq-generaldivrule-4}
+\end{equation}
+
+Finalmente la probabilidad de transici\'on general para la divisi\'on celular reproduce de forma realista los desplazamientos de las c\'elulas normales de su posici\'on por las c\'elulas cancer\'igenas pertenecientes a la masa tumoral, reproduciendo las distintas situaciones de competencia entre tumores y los sesgos direccionales basados en la concentraci\'on de nutrientes. No obstante esta forma general no describe todav\'ia las mec\'anicas espec\'ificas de expansi\'on tumoral hacia los distintos tipos de tejidos. Es necesario particularizar el c\'alculo de dicha probabilidad seg\'un el tipo de c\'elula normal desplazada.
+
+\subsubsection{Divisi\'on celular: Probabilidades de transici\'on particulares}
+Hasta el momento se ha definido una probabilidad de transici\'on general para la divisi\'on de las c\'elulas cancer\'igenas constituyentes de un tumor, pero es bien conocido que la invasi\'on de distintos tipos de tejidos normales ocurre bajo condiciones espec\'ificas. Dados los distintos tipos de c\'elulas normales representadas en el aut\'omata se deben describir cuales son las condiciones que provocan la penetraci\'on de cada tejido conformado por dichas c\'elulas. Debemos se\~nalar que aunque el lumen del \'organo no es propiamente un tejido, de ahora en adelante es tratado como si fuese uno. 
+
+En la secci\'on~\ref{subsec-macro} se expuso la caracterizaci\'on del c\'ancer en ambas etapas de su desarrollo. El tipo de c\'ancer conocido como carcinoma tiene su origen en las c\'elulas epiteliales. Durante la etapa avascular este tipo de tumor aumenta de tama\~no expandi\'endose dentro del epitelio y hacia el lumen. Es producto de la angiog\'enesis que ocurre la degradaci\'on de la membrana basal y los cambios en la matriz de interacci\'on intercelular que permiten que el tumor desplace los tejidos de sost\'en o estroma. Por tanto durante la etapa vascular se mantiene la expansi\'on del tumor en el epitelio y en el lumen, pero tambi\'en gana la capacidad de invadir el estroma. La tendencia a expandirse preferentemente hacia los tejidos de sost\'en y su expansi\'on limitada en el lumen del \'organo est\'a dada por la presencia de una mayor cantidad de nutrientes en las cercan\'ias de la vasculatura del tejido. Este r\'apido an\'alisis es consecuencia de la adopci\'on de la hip\'otesis II y III que definen el desarrollo tumoral como un proceso idealizado donde la adquisici\'on de las mutaciones caracter\'isticas sigue un orden fijo y ocurre de forma secuencial. Se debe se\~nalar que la invasi\'on de los tejidos de sost\'en no tiene que ocurrir exactamente en el momento que se comienza a desarrollar la angiog\'enesis, pero constituye el caso promedio. En base a lo expuesto se plantean las siguientes hip\'otesis del modelo:
+
+\begin{itemize}
+\item [\textbf{XIX.}] \emph{La expansi\'on del tumor primario durante la etapa avascular solamente ocurre hacia el lumen del \'organo y en el tejido epitelial, estados 0 y 1 del conjunto de estados del aut\'omata.}
+\item [\textbf{XX.}] \emph{La expansi\'on del tumor primario durante la etapa vascular contin\'ua su expansi\'on en el lumen y en el tejido epitelial, pero como consecuencia de los cambios que ocurren producto de la angiog\'enesis el tumor penetra los tejidos de sost\'en del \'organo o estroma, estado 2 del conjunto de estados del aut\'omata. La penetraci\'on de los tejidos de sost\'en del \'organo se conoce propiamente como invasi\'on tumoral.}
+\end{itemize}
+
+En este momento la distribuci\'on de probabilidad de las variables aleatorias $\zeta_0(v,n,L(v,L_n))$, $\zeta_1(v,n,L(v,L_n))$ y $\zeta_2(v,n,L(v,L_n))$ est\'a planteada en funci\'on de la probabilidad de transici\'on general definida en~(\ref{eq-generaldivrule-4}), pero como consecuencia de la adopci\'on de las hip\'otesis XIX y XX es necesario escribir de forma particular cada probabilidad de transici\'on seg\'un el tipo de c\'elula desplazada. Luego la distribuci\'on de probabilidad de estas variables aleatorias quedar\'ia como:
+\begin{subequations}
+\begin{equation}
+P(\zeta_0(v,n,L(v,L_n))=0) = 1 - \rho_0(v,n,L(v,L_n) \rightarrow 3),
+\end{equation}
+\begin{equation}
+P(\zeta_0(v,n,L(v,L_n))=3) = \rho_0(v,n,L(v,L_n) \rightarrow 3),
+\end{equation}
+\begin{equation}
+P(\zeta_1(v,n,L(v,L_n))=1) = 1 - \rho_1(v,n,L(v,L_n) \rightarrow 3),
+\end{equation}
+\begin{equation}
+P(\zeta_1(v,n,L(v,L_n))=3) = \rho_1(v,n,L(v,L_n) \rightarrow 3),
+\end{equation}
+\begin{equation}
+P(\zeta_2(v,n,L(v,L_n))=2) = 1 - \rho_2(v,n,L(v,L_n) \rightarrow 3),
+\end{equation}
+\begin{equation}
+P(\zeta_2(v,n,L(v,L_n))=3) = \rho_2(v,n,L(v,L_n) \rightarrow 3),
+\end{equation}
+\end{subequations}
+donde se expone que la probabilidad de que una c\'elula normal sea desplazada de su posici\'on y tome el estado 3 depende de una probabilidad de transici\'on que constituye una particularizaci\'on de la probabilidad de transici\'on general~(\ref{eq-generaldivrule-4}). Se destaca la probabilidad de transici\'on $\rho_2(v,n,L(v,L_n) \rightarrow 3)$ que es la encargada de describir la invasi\'on tumoral. Tomando en cuenta las hip\'otesis XIX y XX, las probabilidades de transici\'on particulares $\rho_0(v,n,L(v,L_n)) \rightarrow 3)$ y $\rho_1(v,n,L(v,L_n)) \rightarrow 3)$ se reescriben como se muestra a continuaci\'on. Para las c\'elulas con el estado 0 correspondientes con el lumen tenemos:
+\begin{subequations}
+\begin{equation}
+\rho_0(v,n,L(v,L_n) \rightarrow 3) = max(\rho_0(v,n,l_1 \rightarrow 3),\,\rho_0(v,n,l_2 \rightarrow 3),\ldots,\,\rho_0(v,n,l_{|L(v,L_n)|} \rightarrow 3)), 
+\end{equation}
+\begin{equation}
+\rho_0(v,n,l \rightarrow 3) = \left\lbrace
+	\begin{array}{lc}
+		\beta(v,l)\,\rho_a(n\Delta t)& \textit{si } |l| \leq P_0^v \\
+		\beta(v,l)\,\rho_v(n\Delta t)& \textit{si } |l| > P_0^v
+	\end{array}
+\right., \label{eq-rho-0}
+\end{equation}
+\end{subequations}
+y para las c\'elulas con el estado 1 correspondientes con el epitelio tenemos:
+\begin{subequations}
+\begin{equation}
+\rho_1(v,n,L(v,L_n) \rightarrow 3) = max(\rho_1(v,n,l_1 \rightarrow 3),\,\rho_1(v,n,l_2 \rightarrow 3),\ldots,\,\rho_1(v,n,l_{|L(v,L_n)|} \rightarrow 3)), 
+\end{equation}
+\begin{equation}
+\rho_1(v,n,l \rightarrow 3) = \left\lbrace
+	\begin{array}{lc}
+		\beta(v,l)\,\rho_a(n\Delta t)& \textit{si } |l| \leq P_0^v \\
+		\beta(v,l)\,\rho_v(n\Delta t)& \textit{si } |l| > P_0^v
+	\end{array}
+\right.. \label{eq-rho-1}
+\end{equation}
+\end{subequations}
+
+De las expresiones de $\rho_0(v,n,l \rightarrow 3)$~(\ref{eq-rho-0}) y $\rho_1(v,n,l \rightarrow 3)$~(\ref{eq-rho-1}) se infiere que la expansi\'on de la poblaci\'on tumoral ocurre hacia estos dos tejidos durante las etapas avascular y vascular. Tomando en cuenta ambas hip\'otesis nuevamente, la probabilidad de transici\'on particular $\rho_2(v,n,L(v,L_n)) \rightarrow 3)$ se reescribe como se muestra a continuaci\'on. Para las c\'elulas con el estado 2 correspondientes con el estroma tenemos:
+\begin{subequations}
+\begin{equation}
+\rho_2(v,n,L(v,L_n) \rightarrow 3) = max(\rho_2(v,n,l_1 \rightarrow 3),\,\rho_2(v,n,l_2 \rightarrow 3),\ldots,\,\rho_2(v,n,l_{|L(v,L_n)|} \rightarrow 3)), 
+\end{equation}
+\begin{equation}
+\rho_2(v,n,l \rightarrow 3) = \left\lbrace
+	\begin{array}{lc}
+		0& \textit{si } |l| \leq P_0^v \\
+		\beta(v,l)\,\rho_v(n\Delta t)& \textit{si } |l| > P_0^v
+	\end{array}
+\right., \label{eq-rho-2}
+\end{equation}
+\end{subequations}
+donde se infiere de la expresi\'on de $\rho_2(v,n,l \rightarrow 3)$~(\ref{eq-rho-2}) que la expansi\'on de la poblaci\'on tumoral durante la etapa avascular no penetra el tejido de sost\'en, por tanto la probabilidad correspondiente se anula. Las expresiones~(\ref{eq-rho-0},~\ref{eq-rho-1},~\ref{eq-rho-2}) pueden ser escritas de forma m\'as simple si utilizamos una funci\'on tipo Heaviside que devuelva el valor 1 si el tumor $l$ est\'a en etapa avascular, o 0 si est\'a en etapa vascular. Esta funci\'on se define como:
+
+\begin{definition}
+\label{def-heaviside}
+La funci\'on $H(l,P_l)$, que recibe un conjunto $l$ y un valor $P_l$ tal que $0 \leq P_l \leq |l|$, devuelve el valor $1$ si el tama\~no del conjunto $l$ es menor o igual que $P_l$, o $0$ si es mayor estricto que $P_l$, es decir:
+\begin{equation}
+H(l,P_l) = \left\lbrace
+	\begin{array}{lc}
+		1& \textit{si } |l| \leq P_l \\ 
+		0& \textit{si } |l| > P_l
+	\end{array}
+\right.. \label{eq-heaviside}
+\end{equation}
+\end{definition}
+
+Finalmente las probabilidades de transici\'on~(\ref{eq-rho-0},~\ref{eq-rho-1},~\ref{eq-rho-2}) quedan planteadas como:
+\begin{subequations}
+\begin{equation}
+\rho_0(v,n,l \rightarrow 3) = H(l,P_0^v)\,\beta(v,l)\,\rho_a(n\Delta t) + (1-H(l,P_0^v))\,\beta(v,l)\,\rho_v(n\Delta t),
+\end{equation}
+\begin{equation}
+\rho_1(v,n,l \rightarrow 3) = H(l,P_0^v)\,\beta(v,l)\,\rho_a(n\Delta t) + (1-H(l,P_0^v))\,\beta(v,l)\,\rho_v(n\Delta t), 
+\end{equation}
+\begin{equation}
+\rho_2(v,n,l \rightarrow 3) = (1-H(l,P_0^v))\,\beta(v,l)\,\rho_v(n\Delta t). 
+\end{equation}
+\end{subequations}

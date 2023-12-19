@@ -1,0 +1,94 @@
+\documentclass[11pt]{report}
+	\linespread{1.0}
+	\oddsidemargin 0.0cm
+	\headsep -1.0cm
+	\textheight=23cm
+	\textwidth=16cm
+\usepackage[pdftex]{graphics} %entorno grafico
+\usepackage{epsfig} %graficar funciones
+\usepackage[spanish]{babel} %reconocimiento del idioma
+\usepackage{amsmath,amssymb,amsfonts,latexsym} %permite simbolos matematicos especiales AMS
+\usepackage{xcolor} %permite definir colores personalizados
+\usepackage{fancyhdr} %permite personalizar las cabeceras y los pie de pagina
+\usepackage{textcomp} %permite caracteres muy especiales(e.g. simbolo de copyright)
+\usepackage[pdftex]{hyperref} %permite resaltar texto
+\hypersetup{colorlinks,citecolor=black,filecolor=black,linkcolor=black,urlcolor=black} %setup de hyperref
+\usepackage[latin1]{inputenc} %acentos desde el teclado
+\usepackage[ruled,vlined,lined,linesnumbered,portuguese]{algorithm2e} %permite escribir pseudocodigo
+	\setcounter{secnumdepth}{3}
+	\setcounter{tocdepth}{3}
+	\numberwithin{equation}{chapter} 
+\bibliographystyle{unsrt}
+\usepackage{wrapfig}
+\usepackage{subfigure}
+\usepackage{supertabular}
+\newtheorem{definition}{Definici\'on}[chapter]
+\newtheorem{proposition}{Proposici\'on}[chapter]
+\hyphenation{Es-ta-dos}
+\hyphenation{Uni-dos}
+
+\begin{document}
+\input{txt/titlepage}
+
+\newpage
+\input{txt/acknowledgements}
+
+\newpage
+\input{txt/abstract}
+
+\newpage
+\tableofcontents
+
+\newpage
+\listoffigures
+\listoftables
+
+%\newpage
+%\input{txt/symbols}
+
+\newpage
+\input{txt/intro}
+
+\newpage
+\input{txt/cancer}
+
+\newpage
+\input{txt/model}
+
+\input{txt/general-transition}
+
+\input{txt/inert-transition}
+
+\input{txt/division-transition}
+
+\input{txt/migration-transition}
+
+\input{txt/dormancy-transition}
+
+%\newpage
+%\input{txt/resume}
+
+\newpage
+\input{txt/simulation}
+
+\newpage
+\input{txt/results}
+
+%\newpage
+%\input{txt/validation}
+
+\newpage
+\input{txt/conclusions}
+
+\newpage
+\input{txt/recommendations}
+
+\newpage
+\bibliography{darien-tesis}
+
+\newpage
+\input{txt/appendixes}
+
+%\input{txt/symbolsforlabels}
+
+\end{document}

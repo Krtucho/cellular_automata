@@ -1,0 +1,60 @@
+\select@language {spanish}
+\contentsline {chapter}{\numberline {1}Introducci\'on}{12}{chapter.1}
+\contentsline {section}{\numberline {1.1}Antecedentes}{13}{section.1.1}
+\contentsline {section}{\numberline {1.2}Motivaci\'on}{14}{section.1.2}
+\contentsline {section}{\numberline {1.3}Objetivos y contribuciones}{15}{section.1.3}
+\contentsline {chapter}{\numberline {2}Bases biol\'ogicas del c\'ancer}{17}{chapter.2}
+\contentsline {section}{\numberline {2.1}La c\'elula cancer\'igena}{17}{section.2.1}
+\contentsline {section}{\numberline {2.2}Inmortalidad replicativa}{18}{section.2.2}
+\contentsline {section}{\numberline {2.3}Oncogenes}{19}{section.2.3}
+\contentsline {section}{\numberline {2.4}Genes supresores de tumores}{20}{section.2.4}
+\contentsline {section}{\numberline {2.5}Apoptosis}{21}{section.2.5}
+\contentsline {section}{\numberline {2.6}Angiog\'enesis}{22}{section.2.6}
+\contentsline {section}{\numberline {2.7}Met\'astasis}{23}{section.2.7}
+\contentsline {paragraph}{Invasi\'on local:}{23}{section*.8}
+\contentsline {paragraph}{Met\'astasis:}{23}{section*.9}
+\contentsline {section}{\numberline {2.8}Evoluci\'on macrosc\'opica del c\'ancer}{26}{section.2.8}
+\contentsline {chapter}{\numberline {3}Definici\'on del modelo}{28}{chapter.3}
+\contentsline {section}{\numberline {3.1}Hip\'otesis del modelo}{28}{section.3.1}
+\contentsline {section}{\numberline {3.2}Funci\'on de vecindad}{30}{section.3.2}
+\contentsline {section}{\numberline {3.3}Conjunto de c\'elulas: modelo Watts-Strogatz}{33}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Implementaci\'on del modelo Watts-Strogatz}{34}{subsection.3.3.1}
+\contentsline {paragraph}{Declaraci\'on de los conjuntos que componen el grafo $G$ ($1$-$4$):}{36}{section*.10}
+\contentsline {paragraph}{Crear v\'ertices ($5$-$11$):}{36}{section*.11}
+\contentsline {paragraph}{A\~nadir aristas inmediatas ($12$-$16$):}{36}{section*.12}
+\contentsline {paragraph}{Reconexi\'on de las aristas ($17$-$26$):}{37}{section*.13}
+\contentsline {subsection}{\numberline {3.3.2}Propiedades del grafo resultante del modelo Watts-Strogatz}{37}{subsection.3.3.2}
+\contentsline {section}{\numberline {3.4}Conjunto de estados}{39}{section.3.4}
+\contentsline {section}{\numberline {3.5}Funci\'on de transici\'on general}{42}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Reglas de la conservaci\'on del estado de las c\'elulas normales y tumorales}{43}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}Reglas del crecimiento tumoral}{44}{subsection.3.5.2}
+\contentsline {subsubsection}{\numberline {3.5.2.1}Proceso de inferencia de la regla}{48}{subsubsection.3.5.2.1}
+\contentsline {subsubsection}{\numberline {3.5.2.2}Inclusi\'on de nuevas hip\'otesis}{51}{subsubsection.3.5.2.2}
+\contentsline {subsubsection}{\numberline {3.5.2.3}Probabilidades de transici\'on particulares}{58}{subsubsection.3.5.2.3}
+\contentsline {subsection}{\numberline {3.5.3}Regla del surgimiento de c\'elulas migratorias}{60}{subsection.3.5.3}
+\contentsline {subsection}{\numberline {3.5.4}Reglas de la migraci\'on}{62}{subsection.3.5.4}
+\contentsline {subsection}{\numberline {3.5.5}Regla de la met\'astasis}{69}{subsection.3.5.5}
+\contentsline {subsection}{\numberline {3.5.6}Reglas del crecimiento de una micromet\'astasis}{73}{subsection.3.5.6}
+\contentsline {subsection}{\numberline {3.5.7}Reglas de la dormancia de una micromet\'astasis}{76}{subsection.3.5.7}
+\contentsline {chapter}{\numberline {4}Par\'ametros relacionados con la simulaci\'on computacional}{79}{chapter.4}
+\contentsline {section}{\numberline {4.1}Par\'ametros de la construcci\'on de la red y de la ley de crecimiento log\'istico}{79}{section.4.1}
+\contentsline {section}{\numberline {4.2}Par\'ametros de la asignaci\'on de estados iniciales y de los vectores de nutrientes}{83}{section.4.2}
+\contentsline {section}{\numberline {4.3}Par\'ametros del modelo relacionados con la migraci\'on, invasi\'on y met\'astasis}{85}{section.4.3}
+\contentsline {section}{\numberline {4.4}Escala de la simulaci\'on}{88}{section.4.4}
+\contentsline {chapter}{\numberline {5}Resultados computacionales}{91}{chapter.5}
+\contentsline {section}{\numberline {5.1}Crecimiento avascular}{91}{section.5.1}
+\contentsline {section}{\numberline {5.2}Crecimiento vascular}{95}{section.5.2}
+\contentsline {section}{\numberline {5.3}Validaci\'on del crecimiento tumoral}{98}{section.5.3}
+\contentsline {section}{\numberline {5.4}Aparici\'on de c\'elulas migratorias}{100}{section.5.4}
+\contentsline {section}{\numberline {5.5}Migraci\'on}{102}{section.5.5}
+\contentsline {section}{\numberline {5.6}Discusi\'on de la migraci\'on}{106}{section.5.6}
+\contentsline {section}{\numberline {5.7}Met\'astasis}{110}{section.5.7}
+\contentsline {section}{\numberline {5.8}Discusi\'on de la met\'astasis}{112}{section.5.8}
+\contentsline {chapter}{\numberline {6}Conclusiones}{118}{chapter.6}
+\contentsline {chapter}{\numberline {7}Recomendaciones}{121}{chapter.7}
+\contentsline {chapter}{\numberline {8}Ap\'endices}{127}{chapter.8}
+\contentsline {section}{\numberline {8.1}Ap\'endice A: Soluci\'on de la ecuaci\'on de crecimiento log\'istico sujeta a las condiciones iniciales}{127}{section.8.1}
+\contentsline {section}{\numberline {8.2}Ap\'endice B: Derivaci\'on de la funci\'on P(t) para su utilizaci\'on como funci\'on de probabilidad}{128}{section.8.2}
+\contentsline {section}{\numberline {8.3}Ap\'endice C: Derivaci\'on de la funci\'on P'(t) para la b\'usqueda de sus puntos estacionarios}{128}{section.8.3}
+\contentsline {section}{\numberline {8.4}Ap\'endice D: Diversos tipos de epitelios del organismo}{129}{section.8.4}
+\contentsline {section}{\numberline {8.5}Ap\'endice E: Simulaci\'on del ciclo vital del c\'ancer para un tumor primario con un alto potencial metast\'asico en el interior de un ducto mamario}{130}{section.8.5}

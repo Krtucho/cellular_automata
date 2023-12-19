@@ -1,0 +1,355 @@
+\begin{thebibliography}{10}
+
+\bibitem{bellomo}
+Nicola Bellomo.
+\newblock On the foundations of cancer modelling: selected topics,
+  speculations, and perspectives.
+\newblock {\em Mathematical Models and Methods in Applied Sciences},
+  18(4):593--646, 2008.
+
+\bibitem{ariel}
+Ariel~Ram\'irez Torres.
+\newblock {\em Modelaci\'on del crecimiento de un tumor dentro del rango de la
+  mec\'anica de medios continuos}.
+\newblock PhD thesis, Universidad de la Habana, 2015.
+
+\bibitem{robins}
+Vinay Kumar, Abdul~K. Abbas, and Jon~C. Aster.
+\newblock {\em Robbins and Cotran Pathologic Basis of Disease}.
+\newblock Saunders Elsevier Inc., 2015.
+
+\bibitem{oportunism}
+Michael Kraus and Bernhard Wolf.
+\newblock Emergence of self-organization in tumor-cells: Relevance for
+  diagnosis and therapy.
+\newblock {\em Tumor Biology}, 14:338--353, 1993.
+
+\bibitem{kansal}
+A.~Kansal and Salvatore Torquato.
+\newblock Simulated brain tumor growth dynamics using a three-dimentional
+  cellular automaton.
+\newblock {\em Journal of Theoretical Biology}, 203:367--382, 2000.
+
+\bibitem{book}
+Andreas Deutsch, Philip~K. Maini, and Sabine Dormann.
+\newblock {\em Cellular Automaton Modelling of Biological Pattern Formation:
+  Characterization, Applications, and Analysis}.
+\newblock Birkhuser Boston, 2007.
+
+\bibitem{gompertz}
+Miljenko Maru\^si\'c.
+\newblock Mathematical models of tumor growth.
+\newblock {\em Mathematical Colloquium}, pages 175--192, 1996.
+
+\bibitem{preziosi}
+H.~Byrne and L.~Preziosi.
+\newblock Modelling solid tumour growth using the theory of mixtures.
+\newblock {\em Math Med Biol}, 20(4):341--366, 2003.
+
+\bibitem{preziosi2}
+L.~Preziosi and G.~Vitale.
+\newblock A multiphase model of tumor and tissue growth including cell adhesion
+  and plastic reorganization.
+\newblock {\em Math Models Methods Appl Sci}, 21(9):1901--1932, 2011.
+\newblock DOI:10.1142/s0218202511005593.
+
+\bibitem{fernando2}
+Fernando~Vald\'es Ravelo, Ariel Ram\'irez-Torres, Reinaldo Rodr\'iguez-Ramos,
+  Juli\'an Bravo-Castillero, Ra\'ul Guinovart-D\'iaz, Jos\'e Merodio, Raimondo
+  Penta, Aura Conci, Federico~J. Sabina, and Catherine Garc\'ia-Reimbert.
+\newblock Mathematical modelling of the interplay between stress and
+  anisotropic growth of avascular tumors.
+\newblock {\em Journal of Mechanics in Medicine and Biology}, 18(1), 2018.
+\newblock DOI:10.1142/S0219519418500069.
+
+\bibitem{ariel2}
+A.~Ram\'irez Torres, R.~Rodr\'iguez Ramos, J.~Merodio, R.~Penta, J.~Bravo
+  Castillero, R.~Guinovart D\'iaz, F.~J. Sabina, C.~Garc\'ia Reimbert, and
+  A.~Conci.
+\newblock The influence of anisotropic growth and geometry on the stress of
+  solid tumors.
+\newblock {\em International Journal of Engineering Science}, 119:40--19, 2017.
+\newblock DOI:10.1016/j.ijengsci.2017.06.011.
+
+\bibitem{ariel3}
+S.~Di Stefano, A.~Ram\'irez Torres, R.~Penta, and A.~Grillo.
+\newblock Self-influenced growth through evolving material inhomogeneities.
+\newblock {\em International Journal of Non-Linear Mechanics}, 2018.
+\newblock DOI:10.1016/j.ijnonlinmec.2018.08.003.
+
+\bibitem{guinot}
+Vincent Guinot.
+\newblock Modelling using stochastic, finite state cellular automata: rule
+  inference from continuum models.
+\newblock {\em Applied Mathematical Modelling}, 26:701--714, 2002.
+
+\bibitem{ruben}
+Ruben Interian, Reinaldo Rodr\'iguez-Ramos, Fernando~Vald\'es Ravelo,
+  Ariel~Ram\'irez Torres, Celso~C. Ribeiro, and Aura Conci.
+\newblock Tumor growth modelling by cellular automata.
+\newblock {\em Mathematics and Mechanics of Complex Systems}, 5(3-4):239--259,
+  2017.
+
+\bibitem{fernando}
+Ariel~Ram\'irez Torres, Fernando~Vald\'es Ravelo, Reinaldo~Rodr\'iguez Ramos,
+  Juli\'an~Bravo Castillero, Raul~Guinovart D\'iaz, and Federico~J. Sabina.
+\newblock Modelling avascular tumor growth via linear elasticity.
+\newblock {\em Proceedings of the 24th International Congress of Theoretical
+  and Applied Mechanics}, ICTAM2016.
+
+\bibitem{dormann}
+Sabine Dormann and Andreas Deutsch.
+\newblock Modelling of self-organized avascular tumor growth with a hybrid
+  cellular automaton.
+\newblock {\em In Silico Biology}, 3:393--406, 2002.
+
+\bibitem{kansal2}
+A.~Kansal and Salvatore Torquato.
+\newblock Emergence of a subpopulation in a computational model of tumor
+  growth.
+\newblock {\em Journal of Theoretical Biology}, 207:431--441, 2000.
+
+\bibitem{anderson}
+A.~Anderson and K.~Rejniak.
+\newblock Microenvironment driven invasion: a multiscale multimodel
+  investigation.
+\newblock {\em Journal of Mathematical Biology}, 58:579--624, 2009.
+
+\bibitem{rejniak}
+K.~Rejniak and L.~McCawley.
+\newblock Current trends in mathematical modelling of tumor-microenvironment
+  interactions: a survey of tools and applications.
+\newblock {\em Experimental Biology and Medicine}, 235:411--423, 2010.
+
+\bibitem{kansal3}
+Yang Jiao and Salvatore Torquato.
+\newblock Emergent behaviors from a cellular automaton model for invasive tumor
+  growth in heterogeneous microenvironments.
+\newblock {\em Comput Biol}, 7(12), 2011.
+\newblock DOI:10.1371/journal.pcbi.1002314.
+
+\bibitem{complexnetworks}
+R.~Albert and A.~L\'aszl\'o Barab\'asi.
+\newblock Statistical mechanics of complex networks.
+\newblock {\em Reviews of modern physics}, 74, 2002.
+
+\bibitem{hanahan}
+Douglas Hanahan and Robert Weinberg.
+\newblock Hallmarks of cancer.
+\newblock {\em Cell}, 100:57--70, 2000.
+
+\bibitem{invasion}
+Tracey~A. Martin, Lin Ye, Andrew~J. Sanders, Jane Lane, and Wen~G. Jiang.
+\newblock Cancer invasion and metastasis: Molecular and cellular perspective.
+\newblock {\em Landes Bioscience}, 2013.
+
+\bibitem{cancerbook}
+Steven~A. Frank.
+\newblock {\em Dynamics of Cancer}.
+\newblock Princeton University Press, 2007.
+
+\bibitem{migration}
+Pahini Pandya, Jose~L. Orgaz, and Victoria Sanz-Moreno.
+\newblock Modes of invasion during tumour dissemination.
+\newblock {\em Molecular Oncology}, 11:5--27, 2016.
+\newblock DOI:10.1002/1878-0261.12019.
+
+\bibitem{pubmed}
+P.~S. Steeg.
+\newblock Tumor metastasis: mechanistic insights and clinical challenges.
+\newblock {\em Nat Med}, 12:895--905, 2006.
+
+\bibitem{paget}
+Stephen Paget.
+\newblock The distribution of secondary growths in cancer of the breast.
+\newblock {\em The Lancet}, 1:571--573, 1889.
+
+\bibitem{metastasis}
+M.~Bacac and I.~Stamenkovic.
+\newblock Metastatic cancer cell.
+\newblock {\em Annu Rev Pathol}, 3:221--247, 2008.
+
+\bibitem{circulating}
+K.~Pantel and M.~Speicher.
+\newblock The biology of circulating tumor cells.
+\newblock {\em Oncogene}, 35:1216, 2016.
+
+\bibitem{vascular}
+Cosmina~S. Hogea, Bruce~T. Murray, and James~A. Sethian.
+\newblock Simulating complex tumor dynamics from avascular to vascular growth
+  using a general level-set method.
+\newblock {\em Journal of Mathematical Biology}, 53:86--134, 2006.
+
+\bibitem{watts}
+Duncan~J. Watts and Steven~H. Strogatz.
+\newblock Collective dynamics of small-world networks.
+\newblock {\em Nature}, 393:440--442, 1998.
+
+\bibitem{stomach}
+Dorothy~A. Shead, Lacey Marlow, Susan Kidney, Laura~J. Hanisch, and Rachael
+  Clark.
+\newblock {\em NCCN Guidelines for Patients: Stomach Cancer}.
+\newblock National Comprehensive Cancer Network, 2016.
+
+\bibitem{lung}
+LUNGevity patient~education series.
+\newblock Squamous cell lung cancer, February 2016.
+
+\bibitem{liver}
+Daniela Sia, Augusto Villanueva, Scott~L. Friedman, and Josep~M. Llovet.
+\newblock Liver cancer cell of origin, molecular class, and effects on patient
+  prognosis.
+\newblock {\em Gastroenterology}, 152:745--761, 2017.
+
+\bibitem{breast}
+Olivia~Jane Scully, Boon-Huat Bay, George Yip, and Yingnan Yu.
+\newblock Breast cancer metastasis.
+\newblock {\em Cancer Genomics and Proteomics}, 9:311--320, 2012.
+
+\bibitem{verhulst}
+{Pierre F.} Verhulst.
+\newblock Notice sur la loi que la population poursuit dans son accroissement.
+\newblock {\em Correspondance math\'ematique et physique}, 10:113--121.
+
+\bibitem{ruanxiaoca}
+Huricha Ruanxiaogang.
+\newblock A simple cellular automaton model for tumor-immunity system.
+\newblock In {\em Proceedings of the 2003 IEEE}, 2003.
+
+\bibitem{ruanxiaodiff}
+Huricha Ruanxiaogang.
+\newblock Differential equation and cellular automata model.
+\newblock In {\em Proceedings of the 2003 IEEE}, 2003.
+
+\bibitem{perumpanani}
+A.~J. Perumpanani and H.~M. Byrne.
+\newblock Extracellular matrix concentration exerts selection pressure on
+  invasive cells.
+\newblock {\em Euro Journal Cancer}, 35:1274--1280, 1999.
+
+\bibitem{perumpanani2}
+A.~J. Perumpanani, J.~A. Sherratt, J.~Norbury, and H.~M. Byrne.
+\newblock A two parameter family of traveling waves with a single barrier
+  arising from the modelling of extracellular matrix mediated cellular
+  invasion.
+\newblock {\em Physica D}, 126:145--159, 1999.
+
+\bibitem{nutrients}
+J.~A. Lawrence and P.~S. Steeg.
+\newblock Mechanisms of tumor invasion and metastasis.
+\newblock {\em World J Urol}, 14:124--130, 1996.
+
+\bibitem{breastdata}
+D.~v.~Fournier, E.~Weber, W.~Hoeffken, M.~Bauer, F.~Kubli, and V.~Barth.
+\newblock Growth rate of 147 mammary carcinoma.
+\newblock {\em Cancer}, 8:2198--2207, 1980.
+
+\bibitem{chile}
+Jos\'e Roberto~Rivas Amaya, Humberto~Alcides Urbina, Mario Vicente~Serpas
+  Montoya, Ena~Concepci\'on Garc\'ia, and Judith~Z\'arate de~L\'opez.
+\newblock {\em Gu\'ia t\'ecnica de prevenci\'on y control del c\'ancer de
+  mama}.
+\newblock Ministerio de Salud P\'ublica y Asistencia Social, 2006.
+
+\bibitem{vajtai}
+R.~Vajtai.
+\newblock {\em Springer handbook of nanomaterials}.
+\newblock Springer Science and Business Media, 2013.
+
+\bibitem{wisconsin}
+O.~L. Mangasarian and W.~H. Wolberg.
+\newblock Cancer diagnosis via linear programming.
+\newblock {\em SIAM News}, 23(5):1--18, 1990.
+
+\bibitem{nurmenniemi}
+S.~Nurmenniemi, T.~Sinikumpu, I.~Alahuhta, S.~Salo, M.~Sutinen, M.~Santala,
+  J.~Risteli, P.~Nyberg, and T.~Salo.
+\newblock A novel organotypic model mimics the tumor microenvironment.
+\newblock {\em Am J Pathol}, 175(3):1281--1291, 2009.
+
+\bibitem{chaplain}
+A.~Anderson, M.~Chaplain, E.~Newman, R.~Steele, and A.~Thompson.
+\newblock Mathematical modelling of tumour invasion and metastasis.
+\newblock {\em Comput Math Methods Med}, 2:129--154, 2000.
+
+\bibitem{luzzi}
+KJ. Luzzi, IC. MacDonald, EE. Schmidt, N.~Kerkvliet, VL. Morris, AF. Chambers,
+  and AC. Groom.
+\newblock Multistep nature of metastatic inefficiency: dormancy of solitary
+  cells after successful extravasation and limited survival of early
+  micrometastases.
+\newblock {\em Am J Pathol}, 153(3):865--873, 1998.
+
+\bibitem{aceto}
+N.~Aceto, A.~Bardia, DT. Miyamoto, MC. Donaldson, BS. Wittner, JA. Spencer,
+  M.~Yu, A.~Pely, A.~Engstrom, and H.~Zhu.
+\newblock Circulating tumor cell clusters are oligoclonal precursors of breast
+  cancer metastasis.
+\newblock {\em Cell}, 158(5):1110--1122, 2014.
+
+\bibitem{kuhn}
+Kuhn Laboratory.
+\newblock Breast cancer progression models, 2017.
+
+\bibitem{isogenic}
+T.~Paul, Jr. Winnard, C.~Zhang, F.~Vesunal, J.~Woong Kang, J.~Garryl, R.~Rao
+  Dasari, I.~Barman, and V.~Raman.
+\newblock Organ-specific isogenic metastatic breast cancer cell lines exhibit
+  distinct raman spectral signatures and metabolomes.
+\newblock {\em Oncotarget}, 8(12):20266--20287, 2017.
+
+\bibitem{nakashima}
+K.~Nakashima, T.~Uematsu, and K.~Takahashi.
+\newblock Does breast cancer growth rate really depend on tumor subtype?
+  measurement of tumor doubling time using serial ultrasonography between
+  diagnosis and surgery.
+\newblock {\em Breast Cancer}, 2018.
+\newblock DOI:10.1007/s12282-018-0914-0.
+
+\bibitem{leekim}
+SH. Lee, YS. Kim, and W.~Han.
+\newblock Tumor growth rate of invasive breast cancers during wait times for
+  surgery assessed by ultrasonography.
+\newblock {\em Medicine(Baltimore)}, 95(37), 2016.
+\newblock DOI:10.1097/MD.0000000000004874.
+
+\bibitem{sopik}
+V.~Sopik and S.~Narod.
+\newblock The relationship between tumour size, nodal status and distant
+  metastases: on the origins of breast cancer.
+\newblock {\em Breast Cancer Research and Treatment}, 170(3):647--656, 2018.
+\newblock DOI:10.1007/s10549-018-4796-9.
+
+\bibitem{wisconsindata}
+University of~Wisconsin~Hospitals.
+\newblock Wisconsin breast cancer database, 1991.
+
+\bibitem{helmlinger}
+G.~Helmlinger et~al.
+\newblock The solid stress-induced growth inhibition of tumor spheroids is
+  accompanied by an increased cellular density and reduced apoptotic rate.
+\newblock In {\em 45th annual meeting of the radiation research society}, 1997.
+
+\bibitem{saidel}
+L.~A. Liotta, G.~Saidel, J.~Kleinerman, T.~Foukakis, M.~Clements, J.~Adolfsson,
+  P.~Hall, and K.~Czene.
+\newblock The significance of hematogenous tumor cell clumps in the metastatic
+  process.
+\newblock {\em Cancer Res}, 110(36):889--894, 1976.
+
+\bibitem{metastasisdata}
+E.~Colzani, A.~L.~V. Johansson, L.~Liljegren, T.~Foukakis, M.~Clements,
+  J.~Adolfsson, P.~Hall, and K.~Czene.
+\newblock Time-dependent risk of developing distant metastasis in breast cancer
+  patients according to treatment, age and tumour characteristics.
+\newblock {\em British Journal of Cancer}, 110(5):1378--1384, 2014.
+\newblock DOI:10.1038/bjc.2014.5.
+
+\bibitem{angiogenesis}
+A.~St\'ephanou, A.C. Lesart, J.~Deverchere, A.~Juhem, A.~Popov, and
+  F.~Est\'eve.
+\newblock How tumour-induced vascular changes alter angiogenesis: Insights from
+  a computational model.
+\newblock {\em Journal of Theoretical Biology}, 419:211--226, 2017.
+
+\end{thebibliography}

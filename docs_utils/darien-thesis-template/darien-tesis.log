@@ -1,0 +1,2273 @@
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2019.7.5)  6 OCT 2022 18:38
+entering extended mode
+**D:/Escuela/Computer*Science/3er*anno/Tesis_Final/darien-thesis-template/darie
+n-tesis.tex
+
+("D:/Escuela/Computer Science/3er anno/Tesis_Final/darien-thesis-template/darie
+n-tesis.tex"
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2009-06-19, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, lao, latin, lat
+vian, lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerm
+an, ngerman-x-2009-06-19, nynorsk, oriya, panjabi, pinyin, polish, portuguese, 
+romanian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swis
+sgerman, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, u
+senglishmax, welsh, loaded.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\report.cls"
+Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size11.clo"
+File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/message (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/04/18 v1.20 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count88
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\epsfig.sty"
+Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+\epsfxsize=\dimen105
+\epsfysize=\dimen106
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.sty"
+Package: babel 2008/07/08 v3.8m The Babel package
+
+*************************************
+* Local config file bblopts.cfg used
+*
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
+File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\spanish.ldf"
+Language: spanish.ldf 2009/01/02 v5.0h Spanish support from the babel system
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.def"
+File: babel.def 2008/07/08 v3.8m Babel common definitions
+\babel@savecnt=\count89
+\U@D=\dimen107
+)
+\es@datefmt=\count90
+\es@quottoks=\toks15
+\es@quotdepth=\count91
+Package babel Info: Making " an active character on input line 492.
+Package babel Info: Making . an active character on input line 585.
+Package babel Info: Making < an active character on input line 630.
+Package babel Info: Making > an active character on input line 630.
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ams\math\amsmath.sty"
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ams\math\amstext.sty"
+Package: amstext 2000/06/29 v2.01
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ams\math\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks16
+\ex@=\dimen108
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ams\math\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen109
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ams\math\amsopn.sty"
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count92
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count93
+\leftroot@=\count94
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count95
+\DOTSCASE@=\count96
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen110
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count97
+\c@MaxMatrixCols=\count98
+\dotsspace@=\muskip10
+\c@parentequation=\count99
+\dspbrk@lvl=\count100
+\tag@help=\toks17
+\row@=\count101
+\column@=\count102
+\maxfields@=\count103
+\andhelp@=\toks18
+\eqnshift@=\dimen111
+\alignsep@=\dimen112
+\tagshift@=\dimen113
+\tagwidth@=\dimen114
+\totwidth@=\dimen115
+\lineht@=\dimen116
+\@envbody=\toks19
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
+Package: amssymb 2009/06/22 v3.00
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\latexsym.sty"
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 47.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty"
+\fancy@headwidth=\skip46
+\f@ncyO@elh=\skip47
+\f@ncyO@erh=\skip48
+\f@ncyO@olh=\skip49
+\f@ncyO@orh=\skip50
+\f@ncyO@elf=\skip51
+\f@ncyO@erf=\skip52
+\f@ncyO@olf=\skip53
+\f@ncyO@orf=\skip54
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\textcomp.sty"
+Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 71.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1enc.def"
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+)
+LaTeX Info: Redefining \oldstylenums on input line 266.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 281.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 282.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 283.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 284.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 285.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 286.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 287.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 288.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 289.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 290.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 291.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 292.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 293.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 294.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 295.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 296.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 297.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 298.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 299.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 300.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 301.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 302.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 303.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 304.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 305.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 306.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 307.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 308.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 309.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 310.
+Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 311.
+Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 312.
+Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 313.
+Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 314.
+Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 315.
+Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 316.
+Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 317.
+Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 318.
+Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 319.
+Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 320.
+Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 321.
+Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 322.
+Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 323.
+Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 324.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 325.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 326.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 327.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 328.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 329.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 330.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 331.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 332.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 333.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 334.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 335.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 336.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 337.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 338.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 339.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 340.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
+Package: hyperref 2011/08/19 v6.82h Hypertext links for LaTeX
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
+Package: hobsub-hyperref 2011/04/23 v1.4 Bundle oberdiek, subset hyperref (HO)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty"
+Package: hobsub-generic 2011/04/23 v1.4 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2011/04/23 v1.4 Subsetting bundle oberdiek (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package: ifvtex 2010/03/01 v1.5 Switches for detecting VTeX and its modes (HO)
+Package ifvtex Info: VTeX not detected.
+Package: intcalc 2007/09/27 v1.1 Expandable integer calculations (HO)
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+Package: etexcmds 2011/02/16 v1.5 Prefix for e-TeX command names (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2011/04/07 v1.13 Key value parser (HO)
+Package: kvdefinekeys 2011/04/07 v1.3 Defining keys (HO)
+Package: pdftexcmds 2011/04/22 v0.16 Utilities of pdfTeX for LuaTeX (HO)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2011/04/04 v1.12 Provides string conversions (HO)
+Package: bigintcalc 2011/01/30 v1.2 Expandable big integer calculations (HO)
+Package: bitset 2011/01/30 v1.1 Data type bit set (HO)
+Package: uniquecounter 2011/01/30 v1.2 Provides unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
+Package: hopatch 2011/01/30 v1.0 Wrapper for package hooks (HO)
+Package: xcolor-patch 2011/01/30 xcolor patch
+Package: atveryend 2011/04/23 v1.7 Hooks at very end of document (HO)
+Package: atbegshi 2011/01/30 v1.15 At begin shipout hook (HO)
+Package: refcount 2010/12/01 v3.2 Data extraction from references (HO)
+Package: hycolor 2011/01/30 v1.7 Color options of hyperref/bookmark (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+Package: kvoptions 2010/12/23 v3.10 Keyval support for LaTeX options (HO)
+)
+\@linkdim=\dimen117
+\Hy@linkcounter=\count104
+\Hy@pagecounter=\count105
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
+File: pd1enc.def 2011/08/19 v6.82h Hyperref: PDFDocEncoding definition (HO)
+)
+\Hy@SavedSpaceFactor=\count106
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4053.
+Package hyperref Info: Link nesting OFF on input line 4058.
+Package hyperref Info: Hyper index ON on input line 4061.
+Package hyperref Info: Plain pages OFF on input line 4068.
+Package hyperref Info: Backreferencing OFF on input line 4073.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4291.
+\c@Hy@tempcnt=\count107
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ltxmisc\url.sty"
+\Urlmuskip=\muskip11
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4644.
+\Fld@menulength=\count108
+\Field@Width=\dimen118
+\Fld@charsize=\dimen119
+Package hyperref Info: Hyper figures OFF on input line 5730.
+Package hyperref Info: Link nesting OFF on input line 5735.
+Package hyperref Info: Hyper index ON on input line 5738.
+Package hyperref Info: backreferencing OFF on input line 5745.
+Package hyperref Info: Link coloring OFF on input line 5750.
+Package hyperref Info: Link coloring with OCG OFF on input line 5755.
+Package hyperref Info: PDF/A mode OFF on input line 5760.
+LaTeX Info: Redefining \ref on input line 5800.
+LaTeX Info: Redefining \pageref on input line 5804.
+\Hy@abspage=\count109
+\c@Item=\count110
+\c@Hfootnote=\count111
+)
+
+Package hyperref Message: Driver: hpdftex.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
+File: hpdftex.def 2011/08/19 v6.82h Hyperref driver for pdfTeX
+\Fld@listcount=\count112
+\c@bookmark@seq@number=\count113
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
+Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip55
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 15.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+Package: inputenc 2008/03/30 v1.1d Input encoding file
+\inpenc@prehook=\toks21
+\inpenc@posthook=\toks22
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\latin1.def"
+File: latin1.def 2008/03/30 v1.1d Input encoding file
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\algorithm2e\algorithm2e.sty"
+Package: algorithm2e 2008/00/00 v3.10 algorithms environments
+\c@AlgoLine=\count114
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\xspace.sty"
+Package: xspace 2009/10/20 v1.13 Space after command names (DPC,MH)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ltxmisc\relsize.sty"
+Package: relsize 2003/07/04 ver 3.1
+)
+********************************************************
+Package `algorithm2e' Release 4.01 -- december 14 2009 --
+- algorithm2e-announce@lirmm.fr mailing list for announcement about releases
+- algorithm2e-discussion@lirmm.fr mailing list for discussion about package
+subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
+- Author: Christophe Fiorio (fiorio@lirmm.fr)
+********************************************************
+\skiptotal=\skip56
+\skiplinenumber=\skip57
+\skiprule=\skip58
+\skiphlne=\skip59
+\skiptext=\skip60
+\skiplength=\skip61
+\algomargin=\skip62
+\skipalgocfslide=\skip63
+\algowidth=\dimen120
+\inoutsize=\dimen121
+\inoutline=\dimen122
+\interspacetitleruled=\dimen123
+\interspacealgoruled=\dimen124
+\interspacetitleboxruled=\dimen125
+\algocf@inoutbox=\box28
+\algocf@inputbox=\box29
+\AlCapSkip=\skip64
+\AlCapHSkip=\skip65
+\algocf@nlbox=\box30
+\algocf@hangingbox=\box31
+\algocf@capbox=\box32
+\algoheightruledefault=\skip66
+\algoheightrule=\skip67
+\algotitleheightruledefault=\skip68
+\algotitleheightrule=\skip69
+\c@algocfline=\count115
+\c@algocfproc=\count116
+\c@algocf=\count117
+\algocf@algoframe=\box33
+\algocf@algobox=\box34
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\wrapfig\wrapfig.sty"
+\wrapoverhang=\dimen126
+\WF@size=\dimen127
+\c@WF@wrappedlines=\count118
+\WF@box=\box35
+\WF@everypar=\toks23
+Package: wrapfig 2003/01/31  v 3.6
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\subfigure\subfigure.sty"
+Package: subfigure 2002/07/30 v2.1.4 subfigure package
+\subfigtopskip=\skip70
+\subfigcapskip=\skip71
+\subfigcaptopadj=\dimen128
+\subfigbottomskip=\skip72
+\subfigcapmargin=\dimen129
+\subfiglabelskip=\skip73
+\c@subfigure=\count119
+\c@lofdepth=\count120
+\c@subtable=\count121
+\c@lotdepth=\count122
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\subfigure\subfigure.cfg")
+\subfig@top=\skip74
+\subfig@bottom=\skip75
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\supertabular\supertabular.sty"
+Package: supertabular 2004/02/20 v4.1e the supertabular environment
+\c@tracingst=\count123
+\ST@wd=\dimen130
+\ST@rightskip=\skip76
+\ST@leftskip=\skip77
+\ST@parfillskip=\skip78
+\ST@pageleft=\dimen131
+\ST@headht=\dimen132
+\ST@tailht=\dimen133
+\ST@pagesofar=\dimen134
+\ST@pboxht=\dimen135
+\ST@lineht=\dimen136
+\ST@stretchht=\dimen137
+\ST@prevht=\dimen138
+\ST@toadd=\dimen139
+\ST@dimen=\dimen140
+\ST@pbox=\box36
+)
+\c@definition=\count124
+\c@proposition=\count125
+
+("D:\Escuela\Computer Science\3er anno\Tesis_Final\darien-thesis-template\darie
+n-tesis.aux")
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 30.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 30.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
+File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count126
+\scratchdimen=\dimen141
+\scratchbox=\box37
+\nofMPsegments=\count127
+\nofMParguments=\count128
+\everyMPshowfont=\toks24
+\MPscratchCnt=\count129
+\MPscratchDim=\dimen142
+\MPnumerator=\count130
+\makeMPintoPDFobject=\count131
+\everyMPtoPDFconversion=\toks25
+)
+\AtBeginShipoutBox=\box38
+Package hyperref Info: Link coloring ON on input line 30.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
+Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
+Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
+)
+\c@section@level=\count132
+)
+LaTeX Info: Redefining \ref on input line 30.
+LaTeX Info: Redefining \pageref on input line 30.
+LaTeX Info: Redefining \nameref on input line 30.
+
+("D:\Escuela\Computer Science\3er anno\Tesis_Final\darien-thesis-template\darie
+n-tesis.out")
+("D:\Escuela\Computer Science\3er anno\Tesis_Final\darien-thesis-template\darie
+n-tesis.out")
+\@outlinefile=\write3
+
+("D:\Escuela\Computer Science\3er anno\Tesis_Final\darien-thesis-template\txt/t
+itlepage.tex" <img/uhshield.png, id=215, 174.6525pt x 221.32687pt>
+File: img/uhshield.png Graphic file (type png)
+
+<use img/uhshield.png>
+Package pdftex.def Info: img/uhshield.png used on input line 2.
+(pdftex.def)             Requested size: 104.7923pt x 132.79713pt.
+LaTeX Font Info:    Try loading font information for U+msa on input line 17.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2009/06/22 v3.00 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 17.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for U+lasy on input line 17.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ulasy.fd"
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)) [1
+
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <D:/Escuela/Computer Scien
+ce/3er anno/Tesis_Final/darien-thesis-template/img/uhshield.png>]
+("D:\Escuela\Computer Science\3er anno\Tesis_Final\darien-thesis-template\txt/a
+cknowledgements.tex") [2]
+("D:\Escuela\Computer Science\3er anno\Tesis_Final\darien-thesis-template\txt/a
+bstract.tex" [3]) [4]
+("D:\Escuela\Computer Science\3er anno\Tesis_Final\darien-thesis-template\darie
+n-tesis.toc" [5
+
+])
+\tf@toc=\write4
+ [6]
+("D:\Escuela\Computer Science\3er anno\Tesis_Final\darien-thesis-template\darie
+n-tesis.lof" [7
+
+])
+\tf@lof=\write5
+ [8] [9]
+("D:\Escuela\Computer Science\3er anno\Tesis_Final\darien-thesis-template\darie
+n-tesis.lot" [10
+
+])
+\tf@lot=\write6
+ [11]
+("D:\Escuela\Computer Science\3er anno\Tesis_Final\darien-thesis-template\txt/i
+ntro.tex"
+Cap\'{\i }tulo 1.
+[12
+
+] [13] [14] [15]) [16]
+("D:\Escuela\Computer Science\3er anno\Tesis_Final\darien-thesis-template\txt/c
+ancer.tex"
+Cap\'{\i }tulo 2.
+[17
+
+] <img/fig-evolution.png, id=615, 462.97969pt x 143.03438pt>
+File: img/fig-evolution.png Graphic file (type png)
+
+<use img/fig-evolution.png>
+Package pdftex.def Info: img/fig-evolution.png used on input line 13.
+(pdftex.def)             Requested size: 462.97855pt x 143.03401pt.
+ [18 <D:/Escuela/Computer Science/3er anno/Tesis_Final/darien-thesis-template/i
+mg/fig-evolution.png>]
+<img/fig-telomero.png, id=630, 455.45157pt x 122.70844pt>
+File: img/fig-telomero.png Graphic file (type png)
+
+<use img/fig-telomero.png>
+Package pdftex.def Info: img/fig-telomero.png used on input line 29.
+(pdftex.def)             Requested size: 455.45045pt x 122.70813pt.
+ [19 <D:/Escuela/Computer Science/3er anno/Tesis_Final/darien-thesis-template/i
+mg/fig-telomero.png>]
+<img/fig-growth-factor.png, id=649, 583.42969pt x 274.77657pt>
+File: img/fig-growth-factor.png Graphic file (type png)
+
+<use img/fig-growth-factor.png>
+Package pdftex.def Info: img/fig-growth-factor.png used on input line 49.
+(pdftex.def)             Requested size: 583.42825pt x 274.77588pt.
+ [20 <D:/Escuela/Computer Science/3er anno/Tesis_Final/darien-thesis-template/i
+mg/fig-growth-factor.png>] [21]
+<img/fig-apoptosis.png, id=679, 417.81094pt x 149.8097pt>
+File: img/fig-apoptosis.png Graphic file (type png)
+
+<use img/fig-apoptosis.png>
+Package pdftex.def Info: img/fig-apoptosis.png used on input line 75.
+(pdftex.def)             Requested size: 417.80992pt x 149.80931pt.
+ [22 <D:/Escuela/Computer Science/3er anno/Tesis_Final/darien-thesis-template/i
+mg/fig-apoptosis.png>] [23] [24] [25]
+<img/fig-epitelium.png, id=737, 246.1697pt x 97.86563pt>
+File: img/fig-epitelium.png Graphic file (type png)
+
+<use img/fig-epitelium.png>
+Package pdftex.def Info: img/fig-epitelium.png used on input line 155.
+(pdftex.def)             Requested size: 246.16908pt x 97.86537pt.
+
+<img/fig-epitelium-2-horizontal.png, id=745, 652.68843pt x 274.02374pt>
+File: img/fig-epitelium-2-horizontal.png Graphic file (type png)
+
+<use img/fig-epitelium-2-horizontal.png>
+Package pdftex.def Info: img/fig-epitelium-2-horizontal.png used on input line 
+167.
+(pdftex.def)             Requested size: 652.68684pt x 274.02307pt.
+
+<img/fig-epitelium-3-horizontal.png, id=746, 654.94687pt x 279.29344pt>
+File: img/fig-epitelium-3-horizontal.png Graphic file (type png)
+
+<use img/fig-epitelium-3-horizontal.png>
+Package pdftex.def Info: img/fig-epitelium-3-horizontal.png used on input line 
+175.
+(pdftex.def)             Requested size: 654.94528pt x 279.29276pt.
+) [26 <D:/Escuela/Computer Science/3er anno/Tesis_Final/darien-thesis-template/
+img/fig-epitelium.png>] [27 <D:/Escuela/Computer Science/3er anno/Tesis_Final/d
+arien-thesis-template/img/fig-epitelium-2-horizontal.png> <D:/Escuela/Computer 
+Science/3er anno/Tesis_Final/darien-thesis-template/img/fig-epitelium-3-horizon
+tal.png>]
+("D:\Escuela\Computer Science\3er anno\Tesis_Final\darien-thesis-template\txt/m
+odel.tex"
+Cap\'{\i }tulo 3.
+[28
+
+] [29] <img/circulatory-system.png, id=780, 422.32782pt x 251.43938pt>
+File: img/circulatory-system.png Graphic file (type png)
+
+<use img/circulatory-system.png>
+Package pdftex.def Info: img/circulatory-system.png used on input line 58.
+(pdftex.def)             Requested size: 422.32678pt x 251.43875pt.
+
+<img/fig-invasion.png, id=781, 696.35156pt x 182.93344pt>
+File: img/fig-invasion.png Graphic file (type png)
+
+<use img/fig-invasion.png>
+Package pdftex.def Info: img/fig-invasion.png used on input line 64.
+(pdftex.def)             Requested size: 696.34985pt x 182.93298pt.
+ [30] [31 <D:/Escuela/Computer Science/3er anno/Tesis_Final/darien-thesis-templ
+ate/img/circulatory-system.png> <D:/Escuela/Computer Science/3er anno/Tesis_Fin
+al/darien-thesis-template/img/fig-invasion.png>]
+[32] [33] <img/fig-relations.png, id=842, 500.62032pt x 198.7425pt>
+File: img/fig-relations.png Graphic file (type png)
+
+<use img/fig-relations.png>
+Package pdftex.def Info: img/fig-relations.png used on input line 195.
+(pdftex.def)             Requested size: 500.6191pt x 198.742pt.
+
+<img/fig-grid-2D-initial.png, id=846, 610.53094pt x 188.95593pt>
+File: img/fig-grid-2D-initial.png Graphic file (type png)
+
+<use img/fig-grid-2D-initial.png>
+Package pdftex.def Info: img/fig-grid-2D-initial.png used on input line 207.
+(pdftex.def)             Requested size: 610.52945pt x 188.95546pt.
+ [34 <D:/Escuela/Computer Science/3er anno/Tesis_Final/darien-thesis-template/i
+mg/fig-relations.png> <D:/Escuela/Computer Science/3er anno/Tesis_Final/darien-
+thesis-template/img/fig-grid-2D-initial.png>]
+<img/fig-neighbour-R-1.png, id=853, 204.01219pt x 228.855pt>
+File: img/fig-neighbour-R-1.png Graphic file (type png)
+
+<use img/fig-neighbour-R-1.png>
+Package pdftex.def Info: img/fig-neighbour-R-1.png used on input line 233.
+(pdftex.def)             Requested size: 204.01169pt x 228.85443pt.
+
+<img/fig-neighbour-R-sqrt(2).png, id=854, 205.5178pt x 233.37187pt>
+File: img/fig-neighbour-R-sqrt(2).png Graphic file (type png)
+
+<use img/fig-neighbour-R-sqrt(2).png>
+Package pdftex.def Info: img/fig-neighbour-R-sqrt(2).png used on input line 234
+.
+(pdftex.def)             Requested size: 205.5173pt x 233.37129pt.
+
+<img/fig-neighbour-R-2.png, id=855, 202.50656pt x 228.10219pt>
+File: img/fig-neighbour-R-2.png Graphic file (type png)
+
+<use img/fig-neighbour-R-2.png>
+Package pdftex.def Info: img/fig-neighbour-R-2.png used on input line 235.
+(pdftex.def)             Requested size: 202.50604pt x 228.10161pt.
+
+<img/fig-neighbour-R-sqrt(5).png, id=856, 202.50656pt x 231.86626pt>
+File: img/fig-neighbour-R-sqrt(5).png Graphic file (type png)
+
+<use img/fig-neighbour-R-sqrt(5).png>
+Package pdftex.def Info: img/fig-neighbour-R-sqrt(5).png used on input line 236
+.
+(pdftex.def)             Requested size: 202.50604pt x 231.86568pt.
+ [35 <D:/Escuela/Computer Science/3er anno/Tesis_Final/darien-thesis-template/i
+mg/fig-neighbour-R-1.png> <D:/Escuela/Computer Science/3er anno/Tesis_Final/dar
+ien-thesis-template/img/fig-neighbour-R-sqrt(2).png> <D:/Escuela/Computer Scien
+ce/3er anno/Tesis_Final/darien-thesis-template/img/fig-neighbour-R-2.png> <D:/E
+scuela/Computer Science/3er anno/Tesis_Final/darien-thesis-template/img/fig-nei
+ghbour-R-sqrt(5).png>] [36]
+<img/fig-grid-2D-reconected.png, id=905, 642.90187pt x 206.27063pt>
+File: img/fig-grid-2D-reconected.png Graphic file (type png)
+
+<use img/fig-grid-2D-reconected.png>
+Package pdftex.def Info: img/fig-grid-2D-reconected.png used on input line 286.
+
+(pdftex.def)             Requested size: 642.9003pt x 206.27011pt.
+ [37 <D:/Escuela/Computer Science/3er anno/Tesis_Final/darien-thesis-template/i
+mg/fig-grid-2D-reconected.png>] [38]
+<img/fig-structure.png, id=925, 563.85657pt x 234.8775pt>
+File: img/fig-structure.png Graphic file (type png)
+
+<use img/fig-structure.png>
+Package pdftex.def Info: img/fig-structure.png used on input line 353.
+(pdftex.def)             Requested size: 563.8552pt x 234.87692pt.
+ [39] [40 <D:/Escuela/Computer Science/3er anno/Tesis_Final/darien-thesis-templ
+ate/img/fig-structure.png>])
+("D:\Escuela\Computer Science\3er anno\Tesis_Final\darien-thesis-template\txt/g
+eneral-transition.tex" [41] [42])
+("D:\Escuela\Computer Science\3er anno\Tesis_Final\darien-thesis-template\txt/i
+nert-transition.tex" [43])
+("D:\Escuela\Computer Science\3er anno\Tesis_Final\darien-thesis-template\txt/d
+ivision-transition.tex" [44] [45]
+<img/fig-tumor-progresion-2.png, id=1020, 473.51906pt x 339.51843pt>
+File: img/fig-tumor-progresion-2.png Graphic file (type png)
+
+<use img/fig-tumor-progresion-2.png>
+Package pdftex.def Info: img/fig-tumor-progresion-2.png used on input line 30.
+(pdftex.def)             Requested size: 473.51788pt x 339.5176pt.
+ [46 <D:/Escuela/Computer Science/3er anno/Tesis_Final/darien-thesis-template/i
+mg/fig-tumor-progresion-2.png>] [47]
+[48] [49] [50]
+<img/fig-expansion-velocity.png, id=1118, 507.39563pt x 243.15843pt>
+File: img/fig-expansion-velocity.png Graphic file (type png)
+
+<use img/fig-expansion-velocity.png>
+Package pdftex.def Info: img/fig-expansion-velocity.png used on input line 207.
+
+(pdftex.def)             Requested size: 507.3944pt x 243.15784pt.
+ [51] [52 <D:/Escuela/Computer Science/3er anno/Tesis_Final/darien-thesis-templ
+ate/img/fig-expansion-velocity.png>]
+[53] [54] [55] [56] [57] [58] [59])
+("D:\Escuela\Computer Science\3er anno\Tesis_Final\darien-thesis-template\txt/m
+igration-transition.tex" [60] [61] [62] [63] [64] [65] [66] [67] [68]
+<img/fig-metastasis-vias.png, id=1420, 589.4522pt x 316.18124pt>
+File: img/fig-metastasis-vias.png Graphic file (type png)
+
+<use img/fig-metastasis-vias.png>
+Package pdftex.def Info: img/fig-metastasis-vias.png used on input line 247.
+(pdftex.def)             Requested size: 589.45076pt x 316.18047pt.
+ [69] [70 <D:/Escuela/Computer Science/3er anno/Tesis_Final/darien-thesis-templ
+ate/img/fig-metastasis-vias.png>] [71]
+[72])
+("D:\Escuela\Computer Science\3er anno\Tesis_Final\darien-thesis-template\txt/d
+ormancy-transition.tex" [73] [74] [75] [76] [77]) [78]
+("D:\Escuela\Computer Science\3er anno\Tesis_Final\darien-thesis-template\txt/s
+imulation.tex"
+Cap\'{\i }tulo 4.
+[79
+
+] <img/transformation.png, id=1613, 580.41844pt x 260.47313pt>
+File: img/transformation.png Graphic file (type png)
+
+<use img/transformation.png>
+Package pdftex.def Info: img/transformation.png used on input line 43.
+(pdftex.def)             Requested size: 580.41702pt x 260.47249pt.
+ [80] [81 <D:/Escuela/Computer Science/3er anno/Tesis_Final/darien-thesis-templ
+ate/img/transformation.png>]
+<img/graphs/graph-prob-avascular-3x4.png, id=1639, 253.69781pt x 217.5628pt>
+File: img/graphs/graph-prob-avascular-3x4.png Graphic file (type png)
+
+<use img/graphs/graph-prob-avascular-3x4.png>
+Package pdftex.def Info: img/graphs/graph-prob-avascular-3x4.png used on input 
+line 95.
+(pdftex.def)             Requested size: 253.69719pt x 217.56227pt.
+
+<img/graphs/graph-prob-vascular-3x4.png, id=1640, 253.69781pt x 217.5628pt>
+File: img/graphs/graph-prob-vascular-3x4.png Graphic file (type png)
+
+<use img/graphs/graph-prob-vascular-3x4.png>
+Package pdftex.def Info: img/graphs/graph-prob-vascular-3x4.png used on input l
+ine 96.
+(pdftex.def)             Requested size: 253.69719pt x 217.56227pt.
+ [82 <D:/Escuela/Computer Science/3er anno/Tesis_Final/darien-thesis-template/i
+mg/graphs/graph-prob-avascular-3x4.png> <D:/Escuela/Computer Science/3er anno/T
+esis_Final/darien-thesis-template/img/graphs/graph-prob-vascular-3x4.png>]
+<img/fig-initial-states-diagrams.png, id=1653, 583.42969pt x 188.95593pt>
+File: img/fig-initial-states-diagrams.png Graphic file (type png)
+
+<use img/fig-initial-states-diagrams.png>
+Package pdftex.def Info: img/fig-initial-states-diagrams.png used on input line
+ 110.
+(pdftex.def)             Requested size: 583.42825pt x 188.95546pt.
+ [83 <D:/Escuela/Computer Science/3er anno/Tesis_Final/darien-thesis-template/i
+mg/fig-initial-states-diagrams.png>]
+[84]
+<img/fig-initial-states-nutrients.png, id=1670, 552.56438pt x 322.20375pt>
+File: img/fig-initial-states-nutrients.png Graphic file (type png)
+
+<use img/fig-initial-states-nutrients.png>
+Package pdftex.def Info: img/fig-initial-states-nutrients.png used on input lin
+e 157.
+(pdftex.def)             Requested size: 552.56302pt x 322.20296pt.
+ [85 <D:/Escuela/Computer Science/3er anno/Tesis_Final/darien-thesis-template/i
+mg/fig-initial-states-nutrients.png>] [86]
+<img/graphs/graph-prob-aparition-1.png, id=1700, 253.69781pt x 217.5628pt>
+File: img/graphs/graph-prob-aparition-1.png Graphic file (type png)
+
+<use img/graphs/graph-prob-aparition-1.png>
+Package pdftex.def Info: img/graphs/graph-prob-aparition-1.png used on input li
+ne 195.
+(pdftex.def)             Requested size: 253.69719pt x 217.56227pt.
+
+<img/graphs/graph-prob-aparition-2.png, id=1701, 253.69781pt x 217.5628pt>
+File: img/graphs/graph-prob-aparition-2.png Graphic file (type png)
+
+<use img/graphs/graph-prob-aparition-2.png>
+Package pdftex.def Info: img/graphs/graph-prob-aparition-2.png used on input li
+ne 196.
+(pdftex.def)             Requested size: 253.69719pt x 217.56227pt.
+
+<img/graphs/graph-prob-aparition-3.png, id=1702, 253.69781pt x 217.5628pt>
+File: img/graphs/graph-prob-aparition-3.png Graphic file (type png)
+
+<use img/graphs/graph-prob-aparition-3.png>
+Package pdftex.def Info: img/graphs/graph-prob-aparition-3.png used on input li
+ne 197.
+(pdftex.def)             Requested size: 253.69719pt x 217.56227pt.
+
+<img/graphs/graph-prob-aparition-4.png, id=1703, 253.69781pt x 217.5628pt>
+File: img/graphs/graph-prob-aparition-4.png Graphic file (type png)
+
+<use img/graphs/graph-prob-aparition-4.png>
+Package pdftex.def Info: img/graphs/graph-prob-aparition-4.png used on input li
+ne 198.
+(pdftex.def)             Requested size: 253.69719pt x 217.56227pt.
+ [87 <D:/Escuela/Computer Science/3er anno/Tesis_Final/darien-thesis-template/i
+mg/graphs/graph-prob-aparition-1.png> <D:/Escuela/Computer Science/3er anno/Tes
+is_Final/darien-thesis-template/img/graphs/graph-prob-aparition-2.png> <D:/Escu
+ela/Computer Science/3er anno/Tesis_Final/darien-thesis-template/img/graphs/gra
+ph-prob-aparition-3.png> <D:/Escuela/Computer Science/3er anno/Tesis_Final/dari
+en-thesis-template/img/graphs/graph-prob-aparition-4.png>]
+<img/graphs/graph-prob-migrant-1.png, id=1714, 253.69781pt x 217.5628pt>
+File: img/graphs/graph-prob-migrant-1.png Graphic file (type png)
+
+<use img/graphs/graph-prob-migrant-1.png>
+Package pdftex.def Info: img/graphs/graph-prob-migrant-1.png used on input line
+ 208.
+(pdftex.def)             Requested size: 253.69719pt x 217.56227pt.
+
+<img/graphs/graph-prob-migrant-2.png, id=1715, 253.69781pt x 217.5628pt>
+File: img/graphs/graph-prob-migrant-2.png Graphic file (type png)
+
+<use img/graphs/graph-prob-migrant-2.png>
+Package pdftex.def Info: img/graphs/graph-prob-migrant-2.png used on input line
+ 209.
+(pdftex.def)             Requested size: 253.69719pt x 217.56227pt.
+ [88 <D:/Escuela/Computer Science/3er anno/Tesis_Final/darien-thesis-template/i
+mg/graphs/graph-prob-migrant-1.png> <D:/Escuela/Computer Science/3er anno/Tesis
+_Final/darien-thesis-template/img/graphs/graph-prob-migrant-2.png>]
+<img/fig-scales.png, id=1726, 148.30406pt x 146.04562pt>
+File: img/fig-scales.png Graphic file (type png)
+
+<use img/fig-scales.png>
+Package pdftex.def Info: img/fig-scales.png used on input line 223.
+(pdftex.def)             Requested size: 148.30368pt x 146.04524pt.
+
+<img/fig-scales-1.png, id=1727, 147.55125pt x 145.29282pt>
+File: img/fig-scales-1.png Graphic file (type png)
+
+<use img/fig-scales-1.png>
+Package pdftex.def Info: img/fig-scales-1.png used on input line 224.
+(pdftex.def)             Requested size: 147.55087pt x 145.29245pt.
+
+<img/fig-scales-2.png, id=1728, 147.55125pt x 146.04562pt>
+File: img/fig-scales-2.png Graphic file (type png)
+
+<use img/fig-scales-2.png>
+Package pdftex.def Info: img/fig-scales-2.png used on input line 225.
+(pdftex.def)             Requested size: 147.55087pt x 146.04524pt.
+) [89 <D:/Escuela/Computer Science/3er anno/Tesis_Final/darien-thesis-template/
+img/fig-scales.png> <D:/Escuela/Computer Science/3er anno/Tesis_Final/darien-th
+esis-template/img/fig-scales-1.png> <D:/Escuela/Computer Science/3er anno/Tesis
+_Final/darien-thesis-template/img/fig-scales-2.png>]
+[90]
+("D:\Escuela\Computer Science\3er anno\Tesis_Final\darien-thesis-template\txt/r
+esults.tex"
+Cap\'{\i }tulo 5.
+[91
+
+]
+<img/graphs/graph-avascular-simulations-min.png, id=1759, 253.69781pt x 217.562
+8pt>
+File: img/graphs/graph-avascular-simulations-min.png Graphic file (type png)
+ <use img/graphs/graph-avascular-simulations-min.png>
+Package pdftex.def Info: img/graphs/graph-avascular-simulations-min.png used on
+ input line 37.
+(pdftex.def)             Requested size: 253.69719pt x 217.56227pt.
+
+<img/graphs/graph-avascular-simulations-min-r.png, id=1760, 253.69781pt x 217.5
+628pt>
+File: img/graphs/graph-avascular-simulations-min-r.png Graphic file (type png)
+ <use img/graphs/graph-avascular-simulations-min-r.png>
+Package pdftex.def Info: img/graphs/graph-avascular-simulations-min-r.png used 
+on input line 37.
+(pdftex.def)             Requested size: 253.69719pt x 217.56227pt.
+
+<img/graphs/graph-avascular-simulations-pro.png, id=1761, 253.69781pt x 217.562
+8pt>
+File: img/graphs/graph-avascular-simulations-pro.png Graphic file (type png)
+ <use img/graphs/graph-avascular-simulations-pro.png>
+Package pdftex.def Info: img/graphs/graph-avascular-simulations-pro.png used on
+ input line 39.
+(pdftex.def)             Requested size: 253.69719pt x 217.56227pt.
+
+<img/graphs/graph-avascular-simulations-pro-r.png, id=1762, 253.69781pt x 217.5
+628pt>
+File: img/graphs/graph-avascular-simulations-pro-r.png Graphic file (type png)
+ <use img/graphs/graph-avascular-simulations-pro-r.png>
+Package pdftex.def Info: img/graphs/graph-avascular-simulations-pro-r.png used 
+on input line 39.
+(pdftex.def)             Requested size: 253.69719pt x 217.56227pt.
+
+<img/graphs/graph-avascular-simulations-max.png, id=1763, 253.69781pt x 217.562
+8pt>
+File: img/graphs/graph-avascular-simulations-max.png Graphic file (type png)
+ <use img/graphs/graph-avascular-simulations-max.png>
+Package pdftex.def Info: img/graphs/graph-avascular-simulations-max.png used on
+ input line 41.
+(pdftex.def)             Requested size: 253.69719pt x 217.56227pt.
+
+<img/graphs/graph-avascular-simulations-max-r.png, id=1764, 253.69781pt x 217.5
+628pt>
+File: img/graphs/graph-avascular-simulations-max-r.png Graphic file (type png)
+ <use img/graphs/graph-avascular-simulations-max-r.png>
+Package pdftex.def Info: img/graphs/graph-avascular-simulations-max-r.png used 
+on input line 41.
+(pdftex.def)             Requested size: 253.69719pt x 217.56227pt.
+
+<img/graphs/graph-avascular-simulations-min-1.png, id=1771, 251.43938pt x 217.5
+628pt>
+File: img/graphs/graph-avascular-simulations-min-1.png Graphic file (type png)
+ <use img/graphs/graph-avascular-simulations-min-1.png>
+Package pdftex.def Info: img/graphs/graph-avascular-simulations-min-1.png used 
+on input line 63.
+(pdftex.def)             Requested size: 251.43875pt x 217.56227pt.
+
+<img/graphs/graph-avascular-simulations-min-r-1.png, id=1772, 253.69781pt x 217
+.5628pt>
+File: img/graphs/graph-avascular-simulations-min-r-1.png Graphic file (type png
+)
+ <use img/graphs/graph-avascular-simulations-min-r-1.png>
+Package pdftex.def Info: img/graphs/graph-avascular-simulations-min-r-1.png use
+d on input line 63.
+(pdftex.def)             Requested size: 253.69719pt x 217.56227pt.
+
+<img/graphs/graph-avascular-simulations-pro-1.png, id=1773, 253.69781pt x 217.5
+628pt>
+File: img/graphs/graph-avascular-simulations-pro-1.png Graphic file (type png)
+ <use img/graphs/graph-avascular-simulations-pro-1.png>
+Package pdftex.def Info: img/graphs/graph-avascular-simulations-pro-1.png used 
+on input line 65.
+(pdftex.def)             Requested size: 253.69719pt x 217.56227pt.
+
+<img/graphs/graph-avascular-simulations-pro-r-1.png, id=1774, 253.69781pt x 217
+.5628pt>
+File: img/graphs/graph-avascular-simulations-pro-r-1.png Graphic file (type png
+)
+ <use img/graphs/graph-avascular-simulations-pro-r-1.png>
+Package pdftex.def Info: img/graphs/graph-avascular-simulations-pro-r-1.png use
+d on input line 65.
+(pdftex.def)             Requested size: 253.69719pt x 217.56227pt.
+
+<img/graphs/graph-avascular-simulations-max-1.png, id=1775, 253.69781pt x 217.5
+628pt>
+File: img/graphs/graph-avascular-simulations-max-1.png Graphic file (type png)
+ <use img/graphs/graph-avascular-simulations-max-1.png>
+Package pdftex.def Info: img/graphs/graph-avascular-simulations-max-1.png used 
+on input line 67.
+(pdftex.def)             Requested size: 253.69719pt x 217.56227pt.
+
+<img/graphs/graph-avascular-simulations-max-r-1.png, id=1776, 253.69781pt x 217
+.5628pt>
+File: img/graphs/graph-avascular-simulations-max-r-1.png Graphic file (type png
+)
+ <use img/graphs/graph-avascular-simulations-max-r-1.png>
+Package pdftex.def Info: img/graphs/graph-avascular-simulations-max-r-1.png use
+d on input line 67.
+(pdftex.def)             Requested size: 253.69719pt x 217.56227pt.
+
+<img/automata/2019519191641-0.png, id=1781, 451.6875pt x 451.6875pt>
+File: img/automata/2019519191641-0.png Graphic file (type png)
+
+<use img/automata/2019519191641-0.png>
+Package pdftex.def Info: img/automata/2019519191641-0.png used on input line 76
+.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/2019519191641-4.png, id=1783, 451.6875pt x 451.6875pt>
+File: img/automata/2019519191641-4.png Graphic file (type png)
+
+<use img/automata/2019519191641-4.png>
+Package pdftex.def Info: img/automata/2019519191641-4.png used on input line 77
+.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/2019519191641-8.png, id=1784, 451.6875pt x 451.6875pt>
+File: img/automata/2019519191641-8.png Graphic file (type png)
+
+<use img/automata/2019519191641-8.png>
+Package pdftex.def Info: img/automata/2019519191641-8.png used on input line 78
+.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/2019519191641-12.png, id=1785, 451.6875pt x 451.6875pt>
+File: img/automata/2019519191641-12.png Graphic file (type png)
+
+<use img/automata/2019519191641-12.png>
+Package pdftex.def Info: img/automata/2019519191641-12.png used on input line 7
+9.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/2019519191641-16.png, id=1786, 451.6875pt x 451.6875pt>
+File: img/automata/2019519191641-16.png Graphic file (type png)
+
+<use img/automata/2019519191641-16.png>
+Package pdftex.def Info: img/automata/2019519191641-16.png used on input line 8
+0.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/2019519191641-20.png, id=1787, 451.6875pt x 451.6875pt>
+File: img/automata/2019519191641-20.png Graphic file (type png)
+
+<use img/automata/2019519191641-20.png>
+Package pdftex.def Info: img/automata/2019519191641-20.png used on input line 8
+1.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+ [92] [93 <D:/Escuela/Computer Science/3er anno/Tesis_Final/darien-thesis-templ
+ate/img/graphs/graph-avascular-simulations-min.png> <D:/Escuela/Computer Scienc
+e/3er anno/Tesis_Final/darien-thesis-template/img/graphs/graph-avascular-simula
+tions-min-r.png> <D:/Escuela/Computer Science/3er anno/Tesis_Final/darien-thesi
+s-template/img/graphs/graph-avascular-simulations-pro.png> <D:/Escuela/Computer
+ Science/3er anno/Tesis_Final/darien-thesis-template/img/graphs/graph-avascular
+-simulations-pro-r.png> <D:/Escuela/Computer Science/3er anno/Tesis_Final/darie
+n-thesis-template/img/graphs/graph-avascular-simulations-max.png> <D:/Escuela/C
+omputer Science/3er anno/Tesis_Final/darien-thesis-template/img/graphs/graph-av
+ascular-simulations-max-r.png>] [94 <D:/Escuela/Computer Science/3er anno/Tesis
+_Final/darien-thesis-template/img/graphs/graph-avascular-simulations-min-1.png>
+ <D:/Escuela/Computer Science/3er anno/Tesis_Final/darien-thesis-template/img/g
+raphs/graph-avascular-simulations-min-r-1.png> <D:/Escuela/Computer Science/3er
+ anno/Tesis_Final/darien-thesis-template/img/graphs/graph-avascular-simulations
+-pro-1.png> <D:/Escuela/Computer Science/3er anno/Tesis_Final/darien-thesis-tem
+plate/img/graphs/graph-avascular-simulations-pro-r-1.png> <D:/Escuela/Computer 
+Science/3er anno/Tesis_Final/darien-thesis-template/img/graphs/graph-avascular-
+simulations-max-1.png> <D:/Escuela/Computer Science/3er anno/Tesis_Final/darien
+-thesis-template/img/graphs/graph-avascular-simulations-max-r-1.png>]
+<img/graphs/graph-vascular-simulations-min.png, id=1812, 254.45062pt x 217.5628
+pt>
+File: img/graphs/graph-vascular-simulations-min.png Graphic file (type png)
+ <use img/graphs/graph-vascular-simulations-min.png>
+Package pdftex.def Info: img/graphs/graph-vascular-simulations-min.png used on 
+input line 105.
+(pdftex.def)             Requested size: 254.45pt x 217.56227pt.
+
+<img/graphs/graph-vascular-simulations-min-r.png, id=1813, 253.69781pt x 217.56
+28pt>
+File: img/graphs/graph-vascular-simulations-min-r.png Graphic file (type png)
+ <use img/graphs/graph-vascular-simulations-min-r.png>
+Package pdftex.def Info: img/graphs/graph-vascular-simulations-min-r.png used o
+n input line 105.
+(pdftex.def)             Requested size: 253.69719pt x 217.56227pt.
+
+<img/graphs/graph-vascular-simulations-pro.png, id=1814, 253.69781pt x 217.5628
+pt>
+File: img/graphs/graph-vascular-simulations-pro.png Graphic file (type png)
+ <use img/graphs/graph-vascular-simulations-pro.png>
+Package pdftex.def Info: img/graphs/graph-vascular-simulations-pro.png used on 
+input line 107.
+(pdftex.def)             Requested size: 253.69719pt x 217.56227pt.
+
+<img/graphs/graph-vascular-simulations-pro-r.png, id=1815, 253.69781pt x 217.56
+28pt>
+File: img/graphs/graph-vascular-simulations-pro-r.png Graphic file (type png)
+ <use img/graphs/graph-vascular-simulations-pro-r.png>
+Package pdftex.def Info: img/graphs/graph-vascular-simulations-pro-r.png used o
+n input line 107.
+(pdftex.def)             Requested size: 253.69719pt x 217.56227pt.
+
+<img/graphs/graph-vascular-simulations-max.png, id=1816, 252.945pt x 217.5628pt
+>
+File: img/graphs/graph-vascular-simulations-max.png Graphic file (type png)
+ <use img/graphs/graph-vascular-simulations-max.png>
+Package pdftex.def Info: img/graphs/graph-vascular-simulations-max.png used on 
+input line 109.
+(pdftex.def)             Requested size: 252.94438pt x 217.56227pt.
+
+<img/graphs/graph-vascular-simulations-max-r.png, id=1817, 253.69781pt x 217.56
+28pt>
+File: img/graphs/graph-vascular-simulations-max-r.png Graphic file (type png)
+ <use img/graphs/graph-vascular-simulations-max-r.png>
+Package pdftex.def Info: img/graphs/graph-vascular-simulations-max-r.png used o
+n input line 109.
+(pdftex.def)             Requested size: 253.69719pt x 217.56227pt.
+
+<img/graphs/graph-vascular-simulations-min-1.png, id=1820, 254.45062pt x 217.56
+28pt>
+File: img/graphs/graph-vascular-simulations-min-1.png Graphic file (type png)
+ <use img/graphs/graph-vascular-simulations-min-1.png>
+Package pdftex.def Info: img/graphs/graph-vascular-simulations-min-1.png used o
+n input line 118.
+(pdftex.def)             Requested size: 254.45pt x 217.56227pt.
+
+<img/graphs/graph-vascular-simulations-min-r-1.png, id=1821, 253.69781pt x 217.
+5628pt>
+File: img/graphs/graph-vascular-simulations-min-r-1.png Graphic file (type png)
+
+ <use img/graphs/graph-vascular-simulations-min-r-1.png>
+Package pdftex.def Info: img/graphs/graph-vascular-simulations-min-r-1.png used
+ on input line 118.
+(pdftex.def)             Requested size: 253.69719pt x 217.56227pt.
+
+<img/graphs/graph-vascular-simulations-pro-1.png, id=1822, 253.69781pt x 217.56
+28pt>
+File: img/graphs/graph-vascular-simulations-pro-1.png Graphic file (type png)
+ <use img/graphs/graph-vascular-simulations-pro-1.png>
+Package pdftex.def Info: img/graphs/graph-vascular-simulations-pro-1.png used o
+n input line 120.
+(pdftex.def)             Requested size: 253.69719pt x 217.56227pt.
+
+<img/graphs/graph-vascular-simulations-pro-r-1.png, id=1823, 253.69781pt x 217.
+5628pt>
+File: img/graphs/graph-vascular-simulations-pro-r-1.png Graphic file (type png)
+
+ <use img/graphs/graph-vascular-simulations-pro-r-1.png>
+Package pdftex.def Info: img/graphs/graph-vascular-simulations-pro-r-1.png used
+ on input line 120.
+(pdftex.def)             Requested size: 253.69719pt x 217.56227pt.
+
+<img/graphs/graph-vascular-simulations-max-1.png, id=1824, 253.69781pt x 217.56
+28pt>
+File: img/graphs/graph-vascular-simulations-max-1.png Graphic file (type png)
+ <use img/graphs/graph-vascular-simulations-max-1.png>
+Package pdftex.def Info: img/graphs/graph-vascular-simulations-max-1.png used o
+n input line 122.
+(pdftex.def)             Requested size: 253.69719pt x 217.56227pt.
+
+<img/graphs/graph-vascular-simulations-max-r-1.png, id=1825, 253.69781pt x 217.
+5628pt>
+File: img/graphs/graph-vascular-simulations-max-r-1.png Graphic file (type png)
+
+ <use img/graphs/graph-vascular-simulations-max-r-1.png>
+Package pdftex.def Info: img/graphs/graph-vascular-simulations-max-r-1.png used
+ on input line 122.
+(pdftex.def)             Requested size: 253.69719pt x 217.56227pt.
+ [95 <D:/Escuela/Computer Science/3er anno/Tesis_Final/darien-thesis-template/i
+mg/automata/2019519191641-0.png> <D:/Escuela/Computer Science/3er anno/Tesis_Fi
+nal/darien-thesis-template/img/automata/2019519191641-4.png> <D:/Escuela/Comput
+er Science/3er anno/Tesis_Final/darien-thesis-template/img/automata/20195191916
+41-8.png> <D:/Escuela/Computer Science/3er anno/Tesis_Final/darien-thesis-templ
+ate/img/automata/2019519191641-12.png> <D:/Escuela/Computer Science/3er anno/Te
+sis_Final/darien-thesis-template/img/automata/2019519191641-16.png> <D:/Escuela
+/Computer Science/3er anno/Tesis_Final/darien-thesis-template/img/automata/2019
+519191641-20.png>] [96 <D:/Escuela/Computer Science/3er anno/Tesis_Final/darien
+-thesis-template/img/graphs/graph-vascular-simulations-min.png> <D:/Escuela/Com
+puter Science/3er anno/Tesis_Final/darien-thesis-template/img/graphs/graph-vasc
+ular-simulations-min-r.png> <D:/Escuela/Computer Science/3er anno/Tesis_Final/d
+arien-thesis-template/img/graphs/graph-vascular-simulations-pro.png> <D:/Escuel
+a/Computer Science/3er anno/Tesis_Final/darien-thesis-template/img/graphs/graph
+-vascular-simulations-pro-r.png> <D:/Escuela/Computer Science/3er anno/Tesis_Fi
+nal/darien-thesis-template/img/graphs/graph-vascular-simulations-max.png> <D:/E
+scuela/Computer Science/3er anno/Tesis_Final/darien-thesis-template/img/graphs/
+graph-vascular-simulations-max-r.png>] [97 <D:/Escuela/Computer Science/3er ann
+o/Tesis_Final/darien-thesis-template/img/graphs/graph-vascular-simulations-min-
+1.png> <D:/Escuela/Computer Science/3er anno/Tesis_Final/darien-thesis-template
+/img/graphs/graph-vascular-simulations-min-r-1.png> <D:/Escuela/Computer Scienc
+e/3er anno/Tesis_Final/darien-thesis-template/img/graphs/graph-vascular-simulat
+ions-pro-1.png> <D:/Escuela/Computer Science/3er anno/Tesis_Final/darien-thesis
+-template/img/graphs/graph-vascular-simulations-pro-r-1.png> <D:/Escuela/Comput
+er Science/3er anno/Tesis_Final/darien-thesis-template/img/graphs/graph-vascula
+r-simulations-max-1.png> <D:/Escuela/Computer Science/3er anno/Tesis_Final/dari
+en-thesis-template/img/graphs/graph-vascular-simulations-max-r-1.png>]
+<img/automata/201951822631-22.png, id=1864, 451.6875pt x 451.6875pt>
+File: img/automata/201951822631-22.png Graphic file (type png)
+
+<use img/automata/201951822631-22.png>
+Package pdftex.def Info: img/automata/201951822631-22.png used on input line 14
+4.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/201951822631-62.png, id=1865, 451.6875pt x 451.6875pt>
+File: img/automata/201951822631-62.png Graphic file (type png)
+
+<use img/automata/201951822631-62.png>
+Package pdftex.def Info: img/automata/201951822631-62.png used on input line 14
+5.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/201951822631-102.png, id=1866, 451.6875pt x 451.6875pt>
+File: img/automata/201951822631-102.png Graphic file (type png)
+
+<use img/automata/201951822631-102.png>
+Package pdftex.def Info: img/automata/201951822631-102.png used on input line 1
+46.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/201951822631-142.png, id=1867, 451.6875pt x 451.6875pt>
+File: img/automata/201951822631-142.png Graphic file (type png)
+
+<use img/automata/201951822631-142.png>
+Package pdftex.def Info: img/automata/201951822631-142.png used on input line 1
+47.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/201951822631-182.png, id=1868, 451.6875pt x 451.6875pt>
+File: img/automata/201951822631-182.png Graphic file (type png)
+
+<use img/automata/201951822631-182.png>
+Package pdftex.def Info: img/automata/201951822631-182.png used on input line 1
+48.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/201951822631-221.png, id=1869, 451.6875pt x 451.6875pt>
+File: img/automata/201951822631-221.png Graphic file (type png)
+
+<use img/automata/201951822631-221.png>
+Package pdftex.def Info: img/automata/201951822631-221.png used on input line 1
+49.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+ [98] [99 <D:/Escuela/Computer Science/3er anno/Tesis_Final/darien-thesis-templ
+ate/img/automata/201951822631-22.png> <D:/Escuela/Computer Science/3er anno/Tes
+is_Final/darien-thesis-template/img/automata/201951822631-62.png> <D:/Escuela/C
+omputer Science/3er anno/Tesis_Final/darien-thesis-template/img/automata/201951
+822631-102.png> <D:/Escuela/Computer Science/3er anno/Tesis_Final/darien-thesis
+-template/img/automata/201951822631-142.png> <D:/Escuela/Computer Science/3er a
+nno/Tesis_Final/darien-thesis-template/img/automata/201951822631-182.png> <D:/E
+scuela/Computer Science/3er anno/Tesis_Final/darien-thesis-template/img/automat
+a/201951822631-221.png>]
+<img/graphs/graph-validation-1.png, id=1909, 253.69781pt x 217.5628pt>
+File: img/graphs/graph-validation-1.png Graphic file (type png)
+
+<use img/graphs/graph-validation-1.png>
+Package pdftex.def Info: img/graphs/graph-validation-1.png used on input line 1
+65.
+(pdftex.def)             Requested size: 253.69719pt x 217.56227pt.
+
+<img/graphs/graph-validation-2.png, id=1910, 253.69781pt x 217.5628pt>
+File: img/graphs/graph-validation-2.png Graphic file (type png)
+
+<use img/graphs/graph-validation-2.png>
+Package pdftex.def Info: img/graphs/graph-validation-2.png used on input line 1
+66.
+(pdftex.def)             Requested size: 253.69719pt x 217.56227pt.
+
+<img/graphs/graph-validation-3.png, id=1911, 252.945pt x 217.5628pt>
+File: img/graphs/graph-validation-3.png Graphic file (type png)
+
+<use img/graphs/graph-validation-3.png>
+Package pdftex.def Info: img/graphs/graph-validation-3.png used on input line 1
+67.
+(pdftex.def)             Requested size: 252.94438pt x 217.56227pt.
+
+<img/graphs/graph-validation-4.png, id=1912, 253.69781pt x 217.5628pt>
+File: img/graphs/graph-validation-4.png Graphic file (type png)
+
+<use img/graphs/graph-validation-4.png>
+Package pdftex.def Info: img/graphs/graph-validation-4.png used on input line 1
+68.
+(pdftex.def)             Requested size: 253.69719pt x 217.56227pt.
+
+<img/graphs/graph-validation-5.png, id=1913, 253.69781pt x 217.5628pt>
+File: img/graphs/graph-validation-5.png Graphic file (type png)
+
+<use img/graphs/graph-validation-5.png>
+Package pdftex.def Info: img/graphs/graph-validation-5.png used on input line 1
+69.
+(pdftex.def)             Requested size: 253.69719pt x 217.56227pt.
+
+<img/graphs/graph-validation-6.png, id=1914, 253.69781pt x 217.5628pt>
+File: img/graphs/graph-validation-6.png Graphic file (type png)
+
+<use img/graphs/graph-validation-6.png>
+Package pdftex.def Info: img/graphs/graph-validation-6.png used on input line 1
+70.
+(pdftex.def)             Requested size: 253.69719pt x 217.56227pt.
+ [100] [101 <D:/Escuela/Computer Science/3er anno/Tesis_Final/darien-thesis-tem
+plate/img/graphs/graph-validation-1.png> <D:/Escuela/Computer Science/3er anno/
+Tesis_Final/darien-thesis-template/img/graphs/graph-validation-2.png> <D:/Escue
+la/Computer Science/3er anno/Tesis_Final/darien-thesis-template/img/graphs/grap
+h-validation-3.png> <D:/Escuela/Computer Science/3er anno/Tesis_Final/darien-th
+esis-template/img/graphs/graph-validation-4.png> <D:/Escuela/Computer Science/3
+er anno/Tesis_Final/darien-thesis-template/img/graphs/graph-validation-5.png> <
+D:/Escuela/Computer Science/3er anno/Tesis_Final/darien-thesis-template/img/gra
+phs/graph-validation-6.png>]
+<img/graphs/graph-migra-app.png, id=1954, 253.69781pt x 217.5628pt>
+File: img/graphs/graph-migra-app.png Graphic file (type png)
+
+<use img/graphs/graph-migra-app.png>
+Package pdftex.def Info: img/graphs/graph-migra-app.png used on input line 195.
+
+(pdftex.def)             Requested size: 253.69719pt x 217.56227pt.
+
+<img/graphs/graph-migra-act.png, id=1955, 253.69781pt x 217.5628pt>
+File: img/graphs/graph-migra-act.png Graphic file (type png)
+
+<use img/graphs/graph-migra-act.png>
+Package pdftex.def Info: img/graphs/graph-migra-act.png used on input line 196.
+
+(pdftex.def)             Requested size: 253.69719pt x 217.56227pt.
+
+<img/automata/2019519174453-23.png, id=1958, 451.6875pt x 451.6875pt>
+File: img/automata/2019519174453-23.png Graphic file (type png)
+
+<use img/automata/2019519174453-23.png>
+Package pdftex.def Info: img/automata/2019519174453-23.png used on input line 2
+04.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/2019519174453-82.png, id=1959, 451.6875pt x 451.6875pt>
+File: img/automata/2019519174453-82.png Graphic file (type png)
+
+<use img/automata/2019519174453-82.png>
+Package pdftex.def Info: img/automata/2019519174453-82.png used on input line 2
+05.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/2019519174453-141.png, id=1960, 451.6875pt x 451.6875pt>
+File: img/automata/2019519174453-141.png Graphic file (type png)
+
+<use img/automata/2019519174453-141.png>
+Package pdftex.def Info: img/automata/2019519174453-141.png used on input line 
+206.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/2019519174453-200.png, id=1961, 451.6875pt x 451.6875pt>
+File: img/automata/2019519174453-200.png Graphic file (type png)
+
+<use img/automata/2019519174453-200.png>
+Package pdftex.def Info: img/automata/2019519174453-200.png used on input line 
+207.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/2019519174453-259.png, id=1962, 451.6875pt x 451.6875pt>
+File: img/automata/2019519174453-259.png Graphic file (type png)
+
+<use img/automata/2019519174453-259.png>
+Package pdftex.def Info: img/automata/2019519174453-259.png used on input line 
+208.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/2019519174453-318.png, id=1963, 451.6875pt x 451.6875pt>
+File: img/automata/2019519174453-318.png Graphic file (type png)
+
+<use img/automata/2019519174453-318.png>
+Package pdftex.def Info: img/automata/2019519174453-318.png used on input line 
+209.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/graphs/graph-migra-app-1.png, id=1969, 253.69781pt x 217.5628pt>
+File: img/graphs/graph-migra-app-1.png Graphic file (type png)
+
+<use img/graphs/graph-migra-app-1.png>
+Package pdftex.def Info: img/graphs/graph-migra-app-1.png used on input line 22
+8.
+(pdftex.def)             Requested size: 253.69719pt x 217.56227pt.
+
+<img/graphs/graph-migra-act-1.png, id=1970, 253.69781pt x 217.5628pt>
+File: img/graphs/graph-migra-act-1.png Graphic file (type png)
+
+<use img/graphs/graph-migra-act-1.png>
+Package pdftex.def Info: img/graphs/graph-migra-act-1.png used on input line 22
+9.
+(pdftex.def)             Requested size: 253.69719pt x 217.56227pt.
+
+<img/automata/201951919754-99.png, id=1973, 451.6875pt x 451.6875pt>
+File: img/automata/201951919754-99.png Graphic file (type png)
+
+<use img/automata/201951919754-99.png>
+Package pdftex.def Info: img/automata/201951919754-99.png used on input line 23
+7.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/201951919754-143.png, id=1974, 451.6875pt x 451.6875pt>
+File: img/automata/201951919754-143.png Graphic file (type png)
+
+<use img/automata/201951919754-143.png>
+Package pdftex.def Info: img/automata/201951919754-143.png used on input line 2
+38.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/201951919754-187.png, id=1975, 451.6875pt x 451.6875pt>
+File: img/automata/201951919754-187.png Graphic file (type png)
+
+<use img/automata/201951919754-187.png>
+Package pdftex.def Info: img/automata/201951919754-187.png used on input line 2
+39.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/201951919754-231.png, id=1976, 451.6875pt x 451.6875pt>
+File: img/automata/201951919754-231.png Graphic file (type png)
+
+<use img/automata/201951919754-231.png>
+Package pdftex.def Info: img/automata/201951919754-231.png used on input line 2
+40.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/201951919754-275.png, id=1977, 451.6875pt x 451.6875pt>
+File: img/automata/201951919754-275.png Graphic file (type png)
+
+<use img/automata/201951919754-275.png>
+Package pdftex.def Info: img/automata/201951919754-275.png used on input line 2
+41.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/201951919754-319.png, id=1978, 451.6875pt x 451.6875pt>
+File: img/automata/201951919754-319.png Graphic file (type png)
+
+<use img/automata/201951919754-319.png>
+Package pdftex.def Info: img/automata/201951919754-319.png used on input line 2
+42.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/graphs/graph-migra-desp-death.png, id=1985, 253.69781pt x 217.5628pt>
+File: img/graphs/graph-migra-desp-death.png Graphic file (type png)
+
+<use img/graphs/graph-migra-desp-death.png>
+Package pdftex.def Info: img/graphs/graph-migra-desp-death.png used on input li
+ne 264.
+(pdftex.def)             Requested size: 253.69719pt x 217.56227pt.
+
+<img/graphs/graph-migra-desp-metas.png, id=1986, 253.69781pt x 217.5628pt>
+File: img/graphs/graph-migra-desp-metas.png Graphic file (type png)
+
+<use img/graphs/graph-migra-desp-metas.png>
+Package pdftex.def Info: img/graphs/graph-migra-desp-metas.png used on input li
+ne 264.
+(pdftex.def)             Requested size: 253.69719pt x 217.56227pt.
+
+<img/graphs/graph-migra-desp-death-1.png, id=1987, 253.69781pt x 217.5628pt>
+File: img/graphs/graph-migra-desp-death-1.png Graphic file (type png)
+
+<use img/graphs/graph-migra-desp-death-1.png>
+Package pdftex.def Info: img/graphs/graph-migra-desp-death-1.png used on input 
+line 266.
+(pdftex.def)             Requested size: 253.69719pt x 217.56227pt.
+
+<img/graphs/graph-migra-desp-metas-1.png, id=1988, 253.69781pt x 217.5628pt>
+File: img/graphs/graph-migra-desp-metas-1.png Graphic file (type png)
+
+<use img/graphs/graph-migra-desp-metas-1.png>
+Package pdftex.def Info: img/graphs/graph-migra-desp-metas-1.png used on input 
+line 266.
+(pdftex.def)             Requested size: 253.69719pt x 217.56227pt.
+
+<img/graphs/graph-migra-desp-death-2.png, id=1989, 253.69781pt x 217.5628pt>
+File: img/graphs/graph-migra-desp-death-2.png Graphic file (type png)
+
+<use img/graphs/graph-migra-desp-death-2.png>
+Package pdftex.def Info: img/graphs/graph-migra-desp-death-2.png used on input 
+line 268.
+(pdftex.def)             Requested size: 253.69719pt x 217.56227pt.
+
+<img/graphs/graph-migra-desp-metas-2.png, id=1990, 253.69781pt x 217.5628pt>
+File: img/graphs/graph-migra-desp-metas-2.png Graphic file (type png)
+
+<use img/graphs/graph-migra-desp-metas-2.png>
+Package pdftex.def Info: img/graphs/graph-migra-desp-metas-2.png used on input 
+line 268.
+(pdftex.def)             Requested size: 253.69719pt x 217.56227pt.
+
+<img/automata/201952101815-320.png, id=1993, 451.6875pt x 451.6875pt>
+File: img/automata/201952101815-320.png Graphic file (type png)
+
+<use img/automata/201952101815-320.png>
+Package pdftex.def Info: img/automata/201952101815-320.png used on input line 2
+76.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/20195212856-320.png, id=1994, 451.6875pt x 451.6875pt>
+File: img/automata/20195212856-320.png Graphic file (type png)
+
+<use img/automata/20195212856-320.png>
+Package pdftex.def Info: img/automata/20195212856-320.png used on input line 27
+7.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/201952111416-320.png, id=1995, 451.6875pt x 451.6875pt>
+File: img/automata/201952111416-320.png Graphic file (type png)
+
+<use img/automata/201952111416-320.png>
+Package pdftex.def Info: img/automata/201952111416-320.png used on input line 2
+78.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+File: img/automata/2019519174453-318.png Graphic file (type png)
+
+<use img/automata/2019519174453-318.png>
+Package pdftex.def Info: img/automata/2019519174453-318.png used on input line 
+289.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/fig-kansal3-mets.png, id=2002, 318.43968pt x 275.52937pt>
+File: img/fig-kansal3-mets.png Graphic file (type png)
+
+<use img/fig-kansal3-mets.png>
+Package pdftex.def Info: img/fig-kansal3-mets.png used on input line 290.
+(pdftex.def)             Requested size: 318.4389pt x 275.52869pt.
+ [102] [103 <D:/Escuela/Computer Science/3er anno/Tesis_Final/darien-thesis-tem
+plate/img/graphs/graph-migra-app.png> <D:/Escuela/Computer Science/3er anno/Tes
+is_Final/darien-thesis-template/img/graphs/graph-migra-act.png> <D:/Escuela/Com
+puter Science/3er anno/Tesis_Final/darien-thesis-template/img/automata/20195191
+74453-23.png> <D:/Escuela/Computer Science/3er anno/Tesis_Final/darien-thesis-t
+emplate/img/automata/2019519174453-82.png> <D:/Escuela/Computer Science/3er ann
+o/Tesis_Final/darien-thesis-template/img/automata/2019519174453-141.png> <D:/Es
+cuela/Computer Science/3er anno/Tesis_Final/darien-thesis-template/img/automata
+/2019519174453-200.png> <D:/Escuela/Computer Science/3er anno/Tesis_Final/darie
+n-thesis-template/img/automata/2019519174453-259.png> <D:/Escuela/Computer Scie
+nce/3er anno/Tesis_Final/darien-thesis-template/img/automata/2019519174453-318.
+png>] [104 <D:/Escuela/Computer Science/3er anno/Tesis_Final/darien-thesis-temp
+late/img/graphs/graph-migra-app-1.png> <D:/Escuela/Computer Science/3er anno/Te
+sis_Final/darien-thesis-template/img/graphs/graph-migra-act-1.png> <D:/Escuela/
+Computer Science/3er anno/Tesis_Final/darien-thesis-template/img/automata/20195
+1919754-99.png> <D:/Escuela/Computer Science/3er anno/Tesis_Final/darien-thesis
+-template/img/automata/201951919754-143.png> <D:/Escuela/Computer Science/3er a
+nno/Tesis_Final/darien-thesis-template/img/automata/201951919754-187.png> <D:/E
+scuela/Computer Science/3er anno/Tesis_Final/darien-thesis-template/img/automat
+a/201951919754-231.png> <D:/Escuela/Computer Science/3er anno/Tesis_Final/darie
+n-thesis-template/img/automata/201951919754-275.png> <D:/Escuela/Computer Scien
+ce/3er anno/Tesis_Final/darien-thesis-template/img/automata/201951919754-319.pn
+g>] [105 <D:/Escuela/Computer Science/3er anno/Tesis_Final/darien-thesis-templa
+te/img/graphs/graph-migra-desp-death.png> <D:/Escuela/Computer Science/3er anno
+/Tesis_Final/darien-thesis-template/img/graphs/graph-migra-desp-metas.png> <D:/
+Escuela/Computer Science/3er anno/Tesis_Final/darien-thesis-template/img/graphs
+/graph-migra-desp-death-1.png> <D:/Escuela/Computer Science/3er anno/Tesis_Fina
+l/darien-thesis-template/img/graphs/graph-migra-desp-metas-1.png> <D:/Escuela/C
+omputer Science/3er anno/Tesis_Final/darien-thesis-template/img/graphs/graph-mi
+gra-desp-death-2.png> <D:/Escuela/Computer Science/3er anno/Tesis_Final/darien-
+thesis-template/img/graphs/graph-migra-desp-metas-2.png>] [106 <D:/Escuela/Comp
+uter Science/3er anno/Tesis_Final/darien-thesis-template/img/automata/201952101
+815-320.png> <D:/Escuela/Computer Science/3er anno/Tesis_Final/darien-thesis-te
+mplate/img/automata/20195212856-320.png> <D:/Escuela/Computer Science/3er anno/
+Tesis_Final/darien-thesis-template/img/automata/201952111416-320.png> <D:/Escue
+la/Computer Science/3er anno/Tesis_Final/darien-thesis-template/img/fig-kansal3
+-mets.png>]
+<img/graphs/graph-superior-app.png, id=2071, 253.69781pt x 217.5628pt>
+File: img/graphs/graph-superior-app.png Graphic file (type png)
+
+<use img/graphs/graph-superior-app.png>
+Package pdftex.def Info: img/graphs/graph-superior-app.png used on input line 3
+02.
+(pdftex.def)             Requested size: 253.69719pt x 217.56227pt.
+
+<img/graphs/graph-superior-act.png, id=2072, 253.69781pt x 217.5628pt>
+File: img/graphs/graph-superior-act.png Graphic file (type png)
+
+<use img/graphs/graph-superior-act.png>
+Package pdftex.def Info: img/graphs/graph-superior-act.png used on input line 3
+03.
+(pdftex.def)             Requested size: 253.69719pt x 217.56227pt.
+
+<img/automata/300-20195291739-Primary.png, id=2073, 451.6875pt x 451.6875pt>
+File: img/automata/300-20195291739-Primary.png Graphic file (type png)
+
+<use img/automata/300-20195291739-Primary.png>
+Package pdftex.def Info: img/automata/300-20195291739-Primary.png used on input
+ line 311.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/400-20195291739-Primary.png, id=2074, 451.6875pt x 451.6875pt>
+File: img/automata/400-20195291739-Primary.png Graphic file (type png)
+
+<use img/automata/400-20195291739-Primary.png>
+Package pdftex.def Info: img/automata/400-20195291739-Primary.png used on input
+ line 312.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/500-20195291739-Primary.png, id=2075, 451.6875pt x 451.6875pt>
+File: img/automata/500-20195291739-Primary.png Graphic file (type png)
+
+<use img/automata/500-20195291739-Primary.png>
+Package pdftex.def Info: img/automata/500-20195291739-Primary.png used on input
+ line 313.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/600-20195291739-Primary.png, id=2076, 451.6875pt x 451.6875pt>
+File: img/automata/600-20195291739-Primary.png Graphic file (type png)
+
+<use img/automata/600-20195291739-Primary.png>
+Package pdftex.def Info: img/automata/600-20195291739-Primary.png used on input
+ line 314.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/700-20195291739-Primary.png, id=2077, 451.6875pt x 451.6875pt>
+File: img/automata/700-20195291739-Primary.png Graphic file (type png)
+
+<use img/automata/700-20195291739-Primary.png>
+Package pdftex.def Info: img/automata/700-20195291739-Primary.png used on input
+ line 315.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/800-20195291739-Primary.png, id=2078, 451.6875pt x 451.6875pt>
+File: img/automata/800-20195291739-Primary.png Graphic file (type png)
+
+<use img/automata/800-20195291739-Primary.png>
+Package pdftex.def Info: img/automata/800-20195291739-Primary.png used on input
+ line 316.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/2019519174453-320-inc.png, id=2084, 451.6875pt x 451.6875pt>
+File: img/automata/2019519174453-320-inc.png Graphic file (type png)
+
+<use img/automata/2019519174453-320-inc.png>
+Package pdftex.def Info: img/automata/2019519174453-320-inc.png used on input l
+ine 327.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/2019519185337-316-inc.png, id=2085, 451.6875pt x 451.6875pt>
+File: img/automata/2019519185337-316-inc.png Graphic file (type png)
+
+<use img/automata/2019519185337-316-inc.png>
+Package pdftex.def Info: img/automata/2019519185337-316-inc.png used on input l
+ine 328.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+ [107] [108 <D:/Escuela/Computer Science/3er anno/Tesis_Final/darien-thesis-tem
+plate/img/graphs/graph-superior-app.png> <D:/Escuela/Computer Science/3er anno/
+Tesis_Final/darien-thesis-template/img/graphs/graph-superior-act.png> <D:/Escue
+la/Computer Science/3er anno/Tesis_Final/darien-thesis-template/img/automata/30
+0-20195291739-Primary.png> <D:/Escuela/Computer Science/3er anno/Tesis_Final/da
+rien-thesis-template/img/automata/400-20195291739-Primary.png> <D:/Escuela/Comp
+uter Science/3er anno/Tesis_Final/darien-thesis-template/img/automata/500-20195
+291739-Primary.png> <D:/Escuela/Computer Science/3er anno/Tesis_Final/darien-th
+esis-template/img/automata/600-20195291739-Primary.png> <D:/Escuela/Computer Sc
+ience/3er anno/Tesis_Final/darien-thesis-template/img/automata/700-20195291739-
+Primary.png> <D:/Escuela/Computer Science/3er anno/Tesis_Final/darien-thesis-te
+mplate/img/automata/800-20195291739-Primary.png>] <img/fig-sun.png, id=2116, 40
+1.24907pt x 242.40562pt>
+File: img/fig-sun.png Graphic file (type png)
+
+<use img/fig-sun.png>
+Package pdftex.def Info: img/fig-sun.png used on input line 337.
+(pdftex.def)             Requested size: 401.24808pt x 242.40501pt.
+ [109 <D:/Escuela/Computer Science/3er anno/Tesis_Final/darien-thesis-template/
+img/automata/2019519174453-320-inc.png> <D:/Escuela/Computer Science/3er anno/T
+esis_Final/darien-thesis-template/img/automata/2019519185337-316-inc.png>] [110
+ <D:/Escuela/Computer Science/3er anno/Tesis_Final/darien-thesis-template/img/f
+ig-sun.png>]
+<img/graphs/graph-cells-blood.png, id=2143, 252.945pt x 216.81pt>
+File: img/graphs/graph-cells-blood.png Graphic file (type png)
+
+<use img/graphs/graph-cells-blood.png>
+Package pdftex.def Info: img/graphs/graph-cells-blood.png used on input line 38
+2.
+(pdftex.def)             Requested size: 252.94438pt x 216.80946pt.
+
+<img/graphs/graph-cells-blood-1.png, id=2144, 253.69781pt x 217.5628pt>
+File: img/graphs/graph-cells-blood-1.png Graphic file (type png)
+
+<use img/graphs/graph-cells-blood-1.png>
+Package pdftex.def Info: img/graphs/graph-cells-blood-1.png used on input line 
+383.
+(pdftex.def)             Requested size: 253.69719pt x 217.56227pt.
+ [111]
+<img/graphs/graph-high-meta-bones-1.png, id=2153, 253.69781pt x 217.5628pt>
+File: img/graphs/graph-high-meta-bones-1.png Graphic file (type png)
+
+<use img/graphs/graph-high-meta-bones-1.png>
+Package pdftex.def Info: img/graphs/graph-high-meta-bones-1.png used on input l
+ine 392.
+(pdftex.def)             Requested size: 253.69719pt x 217.56227pt.
+
+<img/graphs/graph-high-meta-bones-0.png, id=2154, 254.45062pt x 217.5628pt>
+File: img/graphs/graph-high-meta-bones-0.png Graphic file (type png)
+
+<use img/graphs/graph-high-meta-bones-0.png>
+Package pdftex.def Info: img/graphs/graph-high-meta-bones-0.png used on input l
+ine 392.
+(pdftex.def)             Requested size: 254.45pt x 217.56227pt.
+
+<img/graphs/graph-high-meta-lungs-1.png, id=2155, 253.69781pt x 217.5628pt>
+File: img/graphs/graph-high-meta-lungs-1.png Graphic file (type png)
+
+<use img/graphs/graph-high-meta-lungs-1.png>
+Package pdftex.def Info: img/graphs/graph-high-meta-lungs-1.png used on input l
+ine 394.
+(pdftex.def)             Requested size: 253.69719pt x 217.56227pt.
+
+<img/graphs/graph-high-meta-lungs-0.png, id=2156, 254.45062pt x 217.5628pt>
+File: img/graphs/graph-high-meta-lungs-0.png Graphic file (type png)
+
+<use img/graphs/graph-high-meta-lungs-0.png>
+Package pdftex.def Info: img/graphs/graph-high-meta-lungs-0.png used on input l
+ine 394.
+(pdftex.def)             Requested size: 254.45pt x 217.56227pt.
+
+<img/graphs/graph-high-meta-liver-1.png, id=2157, 252.945pt x 217.5628pt>
+File: img/graphs/graph-high-meta-liver-1.png Graphic file (type png)
+
+<use img/graphs/graph-high-meta-liver-1.png>
+Package pdftex.def Info: img/graphs/graph-high-meta-liver-1.png used on input l
+ine 396.
+(pdftex.def)             Requested size: 252.94438pt x 217.56227pt.
+
+<img/graphs/graph-high-meta-liver-0.png, id=2158, 252.945pt x 217.5628pt>
+File: img/graphs/graph-high-meta-liver-0.png Graphic file (type png)
+
+<use img/graphs/graph-high-meta-liver-0.png>
+Package pdftex.def Info: img/graphs/graph-high-meta-liver-0.png used on input l
+ine 396.
+(pdftex.def)             Requested size: 252.94438pt x 217.56227pt.
+
+<img/graphs/graph-low-meta-bones-1.png, id=2163, 253.69781pt x 217.5628pt>
+File: img/graphs/graph-low-meta-bones-1.png Graphic file (type png)
+
+<use img/graphs/graph-low-meta-bones-1.png>
+Package pdftex.def Info: img/graphs/graph-low-meta-bones-1.png used on input li
+ne 405.
+(pdftex.def)             Requested size: 253.69719pt x 217.56227pt.
+
+<img/graphs/graph-low-meta-bones-0.png, id=2164, 252.945pt x 217.5628pt>
+File: img/graphs/graph-low-meta-bones-0.png Graphic file (type png)
+
+<use img/graphs/graph-low-meta-bones-0.png>
+Package pdftex.def Info: img/graphs/graph-low-meta-bones-0.png used on input li
+ne 405.
+(pdftex.def)             Requested size: 252.94438pt x 217.56227pt.
+
+<img/graphs/graph-low-meta-lungs-1.png, id=2165, 253.69781pt x 217.5628pt>
+File: img/graphs/graph-low-meta-lungs-1.png Graphic file (type png)
+
+<use img/graphs/graph-low-meta-lungs-1.png>
+Package pdftex.def Info: img/graphs/graph-low-meta-lungs-1.png used on input li
+ne 407.
+(pdftex.def)             Requested size: 253.69719pt x 217.56227pt.
+
+<img/graphs/graph-low-meta-lungs-0.png, id=2166, 254.45062pt x 217.5628pt>
+File: img/graphs/graph-low-meta-lungs-0.png Graphic file (type png)
+
+<use img/graphs/graph-low-meta-lungs-0.png>
+Package pdftex.def Info: img/graphs/graph-low-meta-lungs-0.png used on input li
+ne 407.
+(pdftex.def)             Requested size: 254.45pt x 217.56227pt.
+
+<img/graphs/graph-low-meta-liver-1.png, id=2167, 253.69781pt x 217.5628pt>
+File: img/graphs/graph-low-meta-liver-1.png Graphic file (type png)
+
+<use img/graphs/graph-low-meta-liver-1.png>
+Package pdftex.def Info: img/graphs/graph-low-meta-liver-1.png used on input li
+ne 409.
+(pdftex.def)             Requested size: 253.69719pt x 217.56227pt.
+
+<img/graphs/graph-low-meta-liver-0.png, id=2168, 252.945pt x 217.5628pt>
+File: img/graphs/graph-low-meta-liver-0.png Graphic file (type png)
+
+<use img/graphs/graph-low-meta-liver-0.png>
+Package pdftex.def Info: img/graphs/graph-low-meta-liver-0.png used on input li
+ne 409.
+(pdftex.def)             Requested size: 252.94438pt x 217.56227pt.
+ [112 <D:/Escuela/Computer Science/3er anno/Tesis_Final/darien-thesis-template/
+img/graphs/graph-cells-blood.png> <D:/Escuela/Computer Science/3er anno/Tesis_F
+inal/darien-thesis-template/img/graphs/graph-cells-blood-1.png>] [113 <D:/Escue
+la/Computer Science/3er anno/Tesis_Final/darien-thesis-template/img/graphs/grap
+h-high-meta-bones-1.png> <D:/Escuela/Computer Science/3er anno/Tesis_Final/dari
+en-thesis-template/img/graphs/graph-high-meta-bones-0.png> <D:/Escuela/Computer
+ Science/3er anno/Tesis_Final/darien-thesis-template/img/graphs/graph-high-meta
+-lungs-1.png> <D:/Escuela/Computer Science/3er anno/Tesis_Final/darien-thesis-t
+emplate/img/graphs/graph-high-meta-lungs-0.png> <D:/Escuela/Computer Science/3e
+r anno/Tesis_Final/darien-thesis-template/img/graphs/graph-high-meta-liver-1.pn
+g> <D:/Escuela/Computer Science/3er anno/Tesis_Final/darien-thesis-template/img
+/graphs/graph-high-meta-liver-0.png>] [114 <D:/Escuela/Computer Science/3er ann
+o/Tesis_Final/darien-thesis-template/img/graphs/graph-low-meta-bones-1.png> <D:
+/Escuela/Computer Science/3er anno/Tesis_Final/darien-thesis-template/img/graph
+s/graph-low-meta-bones-0.png> <D:/Escuela/Computer Science/3er anno/Tesis_Final
+/darien-thesis-template/img/graphs/graph-low-meta-lungs-1.png> <D:/Escuela/Comp
+uter Science/3er anno/Tesis_Final/darien-thesis-template/img/graphs/graph-low-m
+eta-lungs-0.png> <D:/Escuela/Computer Science/3er anno/Tesis_Final/darien-thesi
+s-template/img/graphs/graph-low-meta-liver-1.png> <D:/Escuela/Computer Science/
+3er anno/Tesis_Final/darien-thesis-template/img/graphs/graph-low-meta-liver-0.p
+ng>]
+<img/automata/meta/201952320435-125-Primary.png, id=2199, 451.6875pt x 451.6875
+pt>
+File: img/automata/meta/201952320435-125-Primary.png Graphic file (type png)
+ <use img/automata/meta/201952320435-125-Primary.png>
+Package pdftex.def Info: img/automata/meta/201952320435-125-Primary.png used on
+ input line 437.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/meta/201952320435-125-Secondary.png, id=2200, 451.6875pt x 451.68
+75pt>
+File: img/automata/meta/201952320435-125-Secondary.png Graphic file (type png)
+ <use img/automata/meta/201952320435-125-Secondary.png>
+Package pdftex.def Info: img/automata/meta/201952320435-125-Secondary.png used 
+on input line 437.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/meta/201952320435-150-Primary.png, id=2201, 451.6875pt x 451.6875
+pt>
+File: img/automata/meta/201952320435-150-Primary.png Graphic file (type png)
+ <use img/automata/meta/201952320435-150-Primary.png>
+Package pdftex.def Info: img/automata/meta/201952320435-150-Primary.png used on
+ input line 439.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/meta/201952320435-150-Secondary.png, id=2202, 451.6875pt x 451.68
+75pt>
+File: img/automata/meta/201952320435-150-Secondary.png Graphic file (type png)
+ <use img/automata/meta/201952320435-150-Secondary.png>
+Package pdftex.def Info: img/automata/meta/201952320435-150-Secondary.png used 
+on input line 439.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/meta/201952320435-175-Primary.png, id=2203, 451.6875pt x 451.6875
+pt>
+File: img/automata/meta/201952320435-175-Primary.png Graphic file (type png)
+ <use img/automata/meta/201952320435-175-Primary.png>
+Package pdftex.def Info: img/automata/meta/201952320435-175-Primary.png used on
+ input line 442.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/meta/201952320435-175-Secondary.png, id=2204, 451.6875pt x 451.68
+75pt>
+File: img/automata/meta/201952320435-175-Secondary.png Graphic file (type png)
+ <use img/automata/meta/201952320435-175-Secondary.png>
+Package pdftex.def Info: img/automata/meta/201952320435-175-Secondary.png used 
+on input line 442.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/meta/201952320435-200-Primary.png, id=2205, 451.6875pt x 451.6875
+pt>
+File: img/automata/meta/201952320435-200-Primary.png Graphic file (type png)
+ <use img/automata/meta/201952320435-200-Primary.png>
+Package pdftex.def Info: img/automata/meta/201952320435-200-Primary.png used on
+ input line 444.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/meta/201952320435-200-Secondary.png, id=2206, 451.6875pt x 451.68
+75pt>
+File: img/automata/meta/201952320435-200-Secondary.png Graphic file (type png)
+ <use img/automata/meta/201952320435-200-Secondary.png>
+Package pdftex.def Info: img/automata/meta/201952320435-200-Secondary.png used 
+on input line 444.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/meta/201952320435-225-Primary.png, id=2207, 451.6875pt x 451.6875
+pt>
+File: img/automata/meta/201952320435-225-Primary.png Graphic file (type png)
+ <use img/automata/meta/201952320435-225-Primary.png>
+Package pdftex.def Info: img/automata/meta/201952320435-225-Primary.png used on
+ input line 447.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/meta/201952320435-225-Secondary.png, id=2208, 451.6875pt x 451.68
+75pt>
+File: img/automata/meta/201952320435-225-Secondary.png Graphic file (type png)
+ <use img/automata/meta/201952320435-225-Secondary.png>
+Package pdftex.def Info: img/automata/meta/201952320435-225-Secondary.png used 
+on input line 447.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/meta/201952320435-250-Primary.png, id=2209, 451.6875pt x 451.6875
+pt>
+File: img/automata/meta/201952320435-250-Primary.png Graphic file (type png)
+ <use img/automata/meta/201952320435-250-Primary.png>
+Package pdftex.def Info: img/automata/meta/201952320435-250-Primary.png used on
+ input line 449.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/meta/201952320435-250-Secondary.png, id=2210, 451.6875pt x 451.68
+75pt>
+File: img/automata/meta/201952320435-250-Secondary.png Graphic file (type png)
+ <use img/automata/meta/201952320435-250-Secondary.png>
+Package pdftex.def Info: img/automata/meta/201952320435-250-Secondary.png used 
+on input line 449.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/meta/201952320435-275-Primary.png, id=2211, 451.6875pt x 451.6875
+pt>
+File: img/automata/meta/201952320435-275-Primary.png Graphic file (type png)
+ <use img/automata/meta/201952320435-275-Primary.png>
+Package pdftex.def Info: img/automata/meta/201952320435-275-Primary.png used on
+ input line 452.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/meta/201952320435-275-Secondary.png, id=2212, 451.6875pt x 451.68
+75pt>
+File: img/automata/meta/201952320435-275-Secondary.png Graphic file (type png)
+ <use img/automata/meta/201952320435-275-Secondary.png>
+Package pdftex.def Info: img/automata/meta/201952320435-275-Secondary.png used 
+on input line 452.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/meta/201952320435-300-Primary.png, id=2213, 451.6875pt x 451.6875
+pt>
+File: img/automata/meta/201952320435-300-Primary.png Graphic file (type png)
+ <use img/automata/meta/201952320435-300-Primary.png>
+Package pdftex.def Info: img/automata/meta/201952320435-300-Primary.png used on
+ input line 454.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/meta/201952320435-300-Secondary.png, id=2214, 451.6875pt x 451.68
+75pt>
+File: img/automata/meta/201952320435-300-Secondary.png Graphic file (type png)
+ <use img/automata/meta/201952320435-300-Secondary.png>
+Package pdftex.def Info: img/automata/meta/201952320435-300-Secondary.png used 
+on input line 454.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+ [115] [116 <D:/Escuela/Computer Science/3er anno/Tesis_Final/darien-thesis-tem
+plate/img/automata/meta/201952320435-125-Primary.png> <D:/Escuela/Computer Scie
+nce/3er anno/Tesis_Final/darien-thesis-template/img/automata/meta/201952320435-
+125-Secondary.png> <D:/Escuela/Computer Science/3er anno/Tesis_Final/darien-the
+sis-template/img/automata/meta/201952320435-150-Primary.png> <D:/Escuela/Comput
+er Science/3er anno/Tesis_Final/darien-thesis-template/img/automata/meta/201952
+320435-150-Secondary.png> <D:/Escuela/Computer Science/3er anno/Tesis_Final/dar
+ien-thesis-template/img/automata/meta/201952320435-175-Primary.png> <D:/Escuela
+/Computer Science/3er anno/Tesis_Final/darien-thesis-template/img/automata/meta
+/201952320435-175-Secondary.png> <D:/Escuela/Computer Science/3er anno/Tesis_Fi
+nal/darien-thesis-template/img/automata/meta/201952320435-200-Primary.png> <D:/
+Escuela/Computer Science/3er anno/Tesis_Final/darien-thesis-template/img/automa
+ta/meta/201952320435-200-Secondary.png> <D:/Escuela/Computer Science/3er anno/T
+esis_Final/darien-thesis-template/img/automata/meta/201952320435-225-Primary.pn
+g> <D:/Escuela/Computer Science/3er anno/Tesis_Final/darien-thesis-template/img
+/automata/meta/201952320435-225-Secondary.png> <D:/Escuela/Computer Science/3er
+ anno/Tesis_Final/darien-thesis-template/img/automata/meta/201952320435-250-Pri
+mary.png> <D:/Escuela/Computer Science/3er anno/Tesis_Final/darien-thesis-templ
+ate/img/automata/meta/201952320435-250-Secondary.png> <D:/Escuela/Computer Scie
+nce/3er anno/Tesis_Final/darien-thesis-template/img/automata/meta/201952320435-
+275-Primary.png> <D:/Escuela/Computer Science/3er anno/Tesis_Final/darien-thesi
+s-template/img/automata/meta/201952320435-275-Secondary.png> <D:/Escuela/Comput
+er Science/3er anno/Tesis_Final/darien-thesis-template/img/automata/meta/201952
+320435-300-Primary.png> <D:/Escuela/Computer Science/3er anno/Tesis_Final/darie
+n-thesis-template/img/automata/meta/201952320435-300-Secondary.png>]) [117]
+("D:\Escuela\Computer Science\3er anno\Tesis_Final\darien-thesis-template\txt/c
+onclusions.tex"
+Cap\'{\i }tulo 6.
+[118
+
+] [119]) [120]
+("D:\Escuela\Computer Science\3er anno\Tesis_Final\darien-thesis-template\txt/r
+ecommendations.tex"
+Cap\'{\i }tulo 7.
+[121
+
+]) [122]
+("D:\Escuela\Computer Science\3er anno\Tesis_Final\darien-thesis-template\darie
+n-tesis.bbl" [123
+
+] [124] [125]) [126]
+("D:\Escuela\Computer Science\3er anno\Tesis_Final\darien-thesis-template\txt/a
+ppendixes.tex"
+Cap\'{\i }tulo 8.
+[127
+
+] [128] [129]
+<img/fig-epitheliums.png, id=2347, 747.54282pt x 237.13594pt>
+File: img/fig-epitheliums.png Graphic file (type png)
+
+<use img/fig-epitheliums.png>
+Package pdftex.def Info: img/fig-epitheliums.png used on input line 121.
+(pdftex.def)             Requested size: 747.541pt x 237.13535pt.
+
+<img/automata/apendix/0-201952918297-Primary.png, id=2350, 451.6875pt x 451.687
+5pt>
+File: img/automata/apendix/0-201952918297-Primary.png Graphic file (type png)
+ <use img/automata/apendix/0-201952918297-Primary.png>
+Package pdftex.def Info: img/automata/apendix/0-201952918297-Primary.png used o
+n input line 151.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/apendix/4-201952918297-Primary.png, id=2351, 451.6875pt x 451.687
+5pt>
+File: img/automata/apendix/4-201952918297-Primary.png Graphic file (type png)
+ <use img/automata/apendix/4-201952918297-Primary.png>
+Package pdftex.def Info: img/automata/apendix/4-201952918297-Primary.png used o
+n input line 152.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/apendix/8-201952918297-Primary.png, id=2352, 451.6875pt x 451.687
+5pt>
+File: img/automata/apendix/8-201952918297-Primary.png Graphic file (type png)
+ <use img/automata/apendix/8-201952918297-Primary.png>
+Package pdftex.def Info: img/automata/apendix/8-201952918297-Primary.png used o
+n input line 153.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/apendix/12-201952918297-Primary.png, id=2353, 451.6875pt x 451.68
+75pt>
+File: img/automata/apendix/12-201952918297-Primary.png Graphic file (type png)
+ <use img/automata/apendix/12-201952918297-Primary.png>
+Package pdftex.def Info: img/automata/apendix/12-201952918297-Primary.png used 
+on input line 154.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/apendix/16-201952918297-Primary.png, id=2354, 451.6875pt x 451.68
+75pt>
+File: img/automata/apendix/16-201952918297-Primary.png Graphic file (type png)
+ <use img/automata/apendix/16-201952918297-Primary.png>
+Package pdftex.def Info: img/automata/apendix/16-201952918297-Primary.png used 
+on input line 155.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/apendix/20-201952918297-Primary.png, id=2355, 451.6875pt x 451.68
+75pt>
+File: img/automata/apendix/20-201952918297-Primary.png Graphic file (type png)
+ <use img/automata/apendix/20-201952918297-Primary.png>
+Package pdftex.def Info: img/automata/apendix/20-201952918297-Primary.png used 
+on input line 156.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/apendix/99-201952918297-Primary.png, id=2356, 451.6875pt x 451.68
+75pt>
+File: img/automata/apendix/99-201952918297-Primary.png Graphic file (type png)
+ <use img/automata/apendix/99-201952918297-Primary.png>
+Package pdftex.def Info: img/automata/apendix/99-201952918297-Primary.png used 
+on input line 164.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/apendix/99-201952918297-Secondary.png, id=2357, 451.6875pt x 451.
+6875pt>
+File: img/automata/apendix/99-201952918297-Secondary.png Graphic file (type png
+)
+ <use img/automata/apendix/99-201952918297-Secondary.png>
+Package pdftex.def Info: img/automata/apendix/99-201952918297-Secondary.png use
+d on input line 164.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/apendix/132-201952918297-Primary.png, id=2358, 451.6875pt x 451.6
+875pt>
+File: img/automata/apendix/132-201952918297-Primary.png Graphic file (type png)
+
+ <use img/automata/apendix/132-201952918297-Primary.png>
+Package pdftex.def Info: img/automata/apendix/132-201952918297-Primary.png used
+ on input line 166.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/apendix/132-201952918297-Secondary.png, id=2359, 451.6875pt x 451
+.6875pt>
+File: img/automata/apendix/132-201952918297-Secondary.png Graphic file (type pn
+g)
+ <use img/automata/apendix/132-201952918297-Secondary.png>
+Package pdftex.def Info: img/automata/apendix/132-201952918297-Secondary.png us
+ed on input line 166.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/apendix/165-201952918297-Primary.png, id=2360, 451.6875pt x 451.6
+875pt>
+File: img/automata/apendix/165-201952918297-Primary.png Graphic file (type png)
+
+ <use img/automata/apendix/165-201952918297-Primary.png>
+Package pdftex.def Info: img/automata/apendix/165-201952918297-Primary.png used
+ on input line 169.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/apendix/165-201952918297-Secondary.png, id=2361, 451.6875pt x 451
+.6875pt>
+File: img/automata/apendix/165-201952918297-Secondary.png Graphic file (type pn
+g)
+ <use img/automata/apendix/165-201952918297-Secondary.png>
+Package pdftex.def Info: img/automata/apendix/165-201952918297-Secondary.png us
+ed on input line 169.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/apendix/198-201952918297-Primary.png, id=2362, 451.6875pt x 451.6
+875pt>
+File: img/automata/apendix/198-201952918297-Primary.png Graphic file (type png)
+
+ <use img/automata/apendix/198-201952918297-Primary.png>
+Package pdftex.def Info: img/automata/apendix/198-201952918297-Primary.png used
+ on input line 171.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/apendix/198-201952918297-Secondary.png, id=2363, 451.6875pt x 451
+.6875pt>
+File: img/automata/apendix/198-201952918297-Secondary.png Graphic file (type pn
+g)
+ <use img/automata/apendix/198-201952918297-Secondary.png>
+Package pdftex.def Info: img/automata/apendix/198-201952918297-Secondary.png us
+ed on input line 171.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/apendix/231-201952918297-Primary.png, id=2364, 451.6875pt x 451.6
+875pt>
+File: img/automata/apendix/231-201952918297-Primary.png Graphic file (type png)
+
+ <use img/automata/apendix/231-201952918297-Primary.png>
+Package pdftex.def Info: img/automata/apendix/231-201952918297-Primary.png used
+ on input line 174.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/apendix/231-201952918297-Secondary.png, id=2365, 451.6875pt x 451
+.6875pt>
+File: img/automata/apendix/231-201952918297-Secondary.png Graphic file (type pn
+g)
+ <use img/automata/apendix/231-201952918297-Secondary.png>
+Package pdftex.def Info: img/automata/apendix/231-201952918297-Secondary.png us
+ed on input line 174.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/apendix/264-201952918297-Primary.png, id=2366, 451.6875pt x 451.6
+875pt>
+File: img/automata/apendix/264-201952918297-Primary.png Graphic file (type png)
+
+ <use img/automata/apendix/264-201952918297-Primary.png>
+Package pdftex.def Info: img/automata/apendix/264-201952918297-Primary.png used
+ on input line 176.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/apendix/264-201952918297-Secondary.png, id=2367, 451.6875pt x 451
+.6875pt>
+File: img/automata/apendix/264-201952918297-Secondary.png Graphic file (type pn
+g)
+ <use img/automata/apendix/264-201952918297-Secondary.png>
+Package pdftex.def Info: img/automata/apendix/264-201952918297-Secondary.png us
+ed on input line 176.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/apendix/297-201952918297-Primary.png, id=2368, 451.6875pt x 451.6
+875pt>
+File: img/automata/apendix/297-201952918297-Primary.png Graphic file (type png)
+
+ <use img/automata/apendix/297-201952918297-Primary.png>
+Package pdftex.def Info: img/automata/apendix/297-201952918297-Primary.png used
+ on input line 179.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/apendix/297-201952918297-Secondary.png, id=2369, 451.6875pt x 451
+.6875pt>
+File: img/automata/apendix/297-201952918297-Secondary.png Graphic file (type pn
+g)
+ <use img/automata/apendix/297-201952918297-Secondary.png>
+Package pdftex.def Info: img/automata/apendix/297-201952918297-Secondary.png us
+ed on input line 179.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/apendix/321-201952918297-Primary.png, id=2370, 451.6875pt x 451.6
+875pt>
+File: img/automata/apendix/321-201952918297-Primary.png Graphic file (type png)
+
+ <use img/automata/apendix/321-201952918297-Primary.png>
+Package pdftex.def Info: img/automata/apendix/321-201952918297-Primary.png used
+ on input line 181.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+
+<img/automata/apendix/321-201952918297-Secondary.png, id=2371, 451.6875pt x 451
+.6875pt>
+File: img/automata/apendix/321-201952918297-Secondary.png Graphic file (type pn
+g)
+ <use img/automata/apendix/321-201952918297-Secondary.png>
+Package pdftex.def Info: img/automata/apendix/321-201952918297-Secondary.png us
+ed on input line 181.
+(pdftex.def)             Requested size: 451.68639pt x 451.68639pt.
+)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 94.
+ [130 <D:/Escuela/Computer Science/3er anno/Tesis_Final/darien-thesis-template/
+img/fig-epitheliums.png>] [131 <D:/Escuela/Computer Science/3er anno/Tesis_Fina
+l/darien-thesis-template/img/automata/apendix/0-201952918297-Primary.png> <D:/E
+scuela/Computer Science/3er anno/Tesis_Final/darien-thesis-template/img/automat
+a/apendix/4-201952918297-Primary.png> <D:/Escuela/Computer Science/3er anno/Tes
+is_Final/darien-thesis-template/img/automata/apendix/8-201952918297-Primary.png
+> <D:/Escuela/Computer Science/3er anno/Tesis_Final/darien-thesis-template/img/
+automata/apendix/12-201952918297-Primary.png> <D:/Escuela/Computer Science/3er 
+anno/Tesis_Final/darien-thesis-template/img/automata/apendix/16-201952918297-Pr
+imary.png> <D:/Escuela/Computer Science/3er anno/Tesis_Final/darien-thesis-temp
+late/img/automata/apendix/20-201952918297-Primary.png>] [132 <D:/Escuela/Comput
+er Science/3er anno/Tesis_Final/darien-thesis-template/img/automata/apendix/99-
+201952918297-Primary.png> <D:/Escuela/Computer Science/3er anno/Tesis_Final/dar
+ien-thesis-template/img/automata/apendix/99-201952918297-Secondary.png> <D:/Esc
+uela/Computer Science/3er anno/Tesis_Final/darien-thesis-template/img/automata/
+apendix/132-201952918297-Primary.png> <D:/Escuela/Computer Science/3er anno/Tes
+is_Final/darien-thesis-template/img/automata/apendix/132-201952918297-Secondary
+.png> <D:/Escuela/Computer Science/3er anno/Tesis_Final/darien-thesis-template/
+img/automata/apendix/165-201952918297-Primary.png> <D:/Escuela/Computer Science
+/3er anno/Tesis_Final/darien-thesis-template/img/automata/apendix/165-201952918
+297-Secondary.png> <D:/Escuela/Computer Science/3er anno/Tesis_Final/darien-the
+sis-template/img/automata/apendix/198-201952918297-Primary.png> <D:/Escuela/Com
+puter Science/3er anno/Tesis_Final/darien-thesis-template/img/automata/apendix/
+198-201952918297-Secondary.png> <D:/Escuela/Computer Science/3er anno/Tesis_Fin
+al/darien-thesis-template/img/automata/apendix/231-201952918297-Primary.png> <D
+:/Escuela/Computer Science/3er anno/Tesis_Final/darien-thesis-template/img/auto
+mata/apendix/231-201952918297-Secondary.png> <D:/Escuela/Computer Science/3er a
+nno/Tesis_Final/darien-thesis-template/img/automata/apendix/264-201952918297-Pr
+imary.png> <D:/Escuela/Computer Science/3er anno/Tesis_Final/darien-thesis-temp
+late/img/automata/apendix/264-201952918297-Secondary.png> <D:/Escuela/Computer 
+Science/3er anno/Tesis_Final/darien-thesis-template/img/automata/apendix/297-20
+1952918297-Primary.png> <D:/Escuela/Computer Science/3er anno/Tesis_Final/darie
+n-thesis-template/img/automata/apendix/297-201952918297-Secondary.png> <D:/Escu
+ela/Computer Science/3er anno/Tesis_Final/darien-thesis-template/img/automata/a
+pendix/321-201952918297-Primary.png> <D:/Escuela/Computer Science/3er anno/Tesi
+s_Final/darien-thesis-template/img/automata/apendix/321-201952918297-Secondary.
+png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 94.
+
+("D:\Escuela\Computer Science\3er anno\Tesis_Final\darien-thesis-template\darie
+n-tesis.aux")
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 94.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 94.
+Package rerunfilecheck Info: File `darien-tesis.out' has not changed.
+(rerunfilecheck)             Checksum: AAFD7140F87C1479652331EE4C316FB7;4645.
+ ) 
+Here is how much of TeX's memory you used:
+ 10947 strings out of 494045
+ 176522 string characters out of 3145964
+ 319567 words of memory out of 3000000
+ 13102 multiletter control sequences out of 15000+200000
+ 15696 words of font info for 61 fonts, out of 3000000 for 9000
+ 717 hyphenation exceptions out of 8191
+ 30i,25n,43p,2885b,580s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C
+:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/P
+rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Pr
+ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Prog
+ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Progra
+m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program F
+iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program File
+s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Program Files (
+x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86
+)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files (x86)/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmsy9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmti10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/
+public/amsfonts/symbols/msbm10.pfb>
+Output written on darien-tesis.pdf (132 pages, 2905804 bytes).
+PDF statistics:
+ 2642 PDF objects out of 2984 (max. 8388607)
+ 779 named destinations out of 1000 (max. 500000)
+ 1260 words of extra memory for PDF output out of 10000 (max. 10000000)
+

@@ -1,0 +1,30 @@
+\select@language {spanish}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {3.1}{\ignorespaces Datos de las pruebas realizadas para verificar el impacto de las distintas configuraciones de vecindad y de la inclusi\'on de aristas peri\'odicas en las propiedades del grafo}}{38}{table.3.1}
+\contentsline {table}{\numberline {3.2}{\ignorespaces Comparaci\'on entre los dos tipos de tumores representados tomando en cuenta sus caracter\'isticas durante ambas etapas de su desarrollo}}{46}{table.3.2}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {4.1}{\ignorespaces Par\'ametros de la construcci\'on de la red utilizados por el modelo Watts-Strogatz}}{79}{table.4.1}
+\contentsline {table}{\numberline {4.2}{\ignorespaces Par\'ametros correspondientes con la ley de crecimiento log\'istico}}{80}{table.4.2}
+\contentsline {table}{\numberline {4.3}{\ignorespaces Datos de las caracter\'isticas f\'isicas como el radio y vol\'umen de la c\'elula cancer\'igena, de un tumor en etapa avascular y vascular, y de la superficie que ocupa un corte transversal de los mismos}}{81}{table.4.3}
+\contentsline {table}{\numberline {4.4}{\ignorespaces Par\'ametros utilizados en la asignaci\'on de los estados iniciales a las c\'elulas del aut\'omata seg\'un el primer esquema}}{84}{table.4.4}
+\contentsline {table}{\numberline {4.5}{\ignorespaces Par\'ametros utilizados en la asignaci\'on de los estados iniciales a las c\'elulas del aut\'omata seg\'un el segundo esquema}}{84}{table.4.5}
+\contentsline {table}{\numberline {4.6}{\ignorespaces Par\'ametros utilizados en el procedimiento de actualizaci\'on y en el ajuste de las reglas del aut\'omata celular}}{86}{table.4.6}
+\contentsline {table}{\numberline {4.7}{\ignorespaces Escalas consideradas para su utilizaci\'on en el aut\'omata celular}}{90}{table.4.7}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {5.1}{\ignorespaces Valores de los par\'ametros de construcci\'on de la red, de la asignaci\'on de estados iniciales y de las regiones y vectores de nutrientes}}{91}{table.5.1}
+\contentsline {table}{\numberline {5.2}{\ignorespaces Par\'ametros del desarrollo de un carcinoma ductal infiltrante de crecimiento r\'apido durante la etapa avascular}}{92}{table.5.2}
+\contentsline {table}{\numberline {5.3}{\ignorespaces Par\'ametros del desarrollo de un carcinoma ductal infiltrante de crecimiento lento durante la etapa avascular}}{92}{table.5.3}
+\contentsline {table}{\numberline {5.4}{\ignorespaces Par\'ametros del desarrollo de un carcinoma ductal infiltrante de crecimiento r\'apido durante la etapa vascular}}{95}{table.5.4}
+\contentsline {table}{\numberline {5.5}{\ignorespaces Par\'ametros del desarrollo de un carcinoma ductal infiltrante de crecimiento lento durante la etapa vascular}}{98}{table.5.5}
+\contentsline {table}{\numberline {5.6}{\ignorespaces Par\'ametros de la regla de la aparici\'on de c\'elulas migratorias de un carcinoma ductal infiltrante con alta tasa de producci\'on y aparici\'on temprana}}{102}{table.5.6}
+\contentsline {table}{\numberline {5.7}{\ignorespaces Par\'ametros de la regla de la aparici\'on de c\'elulas migratorias de un carcinoma ductal infiltrante con una baja tasa de producci\'on y aparici\'on tard\'ia}}{102}{table.5.7}
+\contentsline {table}{\numberline {5.8}{\ignorespaces Par\'ametros de la regla de la migraci\'on de c\'elulas cancer\'igenas de un carcinoma ductal infiltrante}}{106}{table.5.8}
+\contentsline {table}{\numberline {5.9}{\ignorespaces Par\'ametros para la obtenci\'on de datos de un carcinoma ductal infiltrante con alto potencial metast\'asico}}{111}{table.5.9}
+\contentsline {table}{\numberline {5.10}{\ignorespaces Par\'ametros para la obtenci\'on de datos de un carcinoma ductal infiltrante con bajo potencial metast\'asico}}{111}{table.5.10}
+\contentsline {table}{\numberline {5.11}{\ignorespaces Par\'ametros de colonizaci\'on y dormancia de nuevas micromet\'astasis para cada \'organo destino}}{111}{table.5.11}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {8.1}{\ignorespaces Ap\'endice E: par\'ametros de la simulaci\'on}}{131}{table.8.1}
