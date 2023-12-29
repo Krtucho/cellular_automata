@@ -1,1 +1,94 @@
 \chapter{Definici\'on del modelo}\label{chapter:proposal}
+
+\section{Regla del surgimiento de c\'elulas migratorias}
+ A lo largo de esta seccion se presentan reglas que comprenden el comportamiento de las celulas cancerigenas migratorias, desde las condiciones de su surgimiento hata su desplazamiento a traves de la ECM del tejido de sosten. Es posible que una celula se mueva gracias a los cambios de la matriz de interaccion provocados por las proteinas involucradas en el control de la movilidad y la supresion de reguladores de la migracion. En (2.7) se expusieron los cambios que debe sufrir una celula cancerigena tumoral para que se transforme en una celula migratoria y consisten en la perdida de la capacidad de adhesion celular y alteraciones de la matriz de interaccion intercelular(Cambiar esta oracion).
+
+Una celula tumoral al llevar a cabo su division tiene la posibilidad de generar un descendiente que presente las mutaciones relacionadas con la migracion, y de acuerdo a la localizacion donde surgen existen dos rutas fundamentales que pueden tomar para dar continuidad de forma satisfactoria a la cascada metastasica.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Aut\'omata Celular}
+
+En esta secci\'on se concibe el modelo de aut\'omatas celulares que se presenta en este trabajo. Se comienza definiendo formalmente un aut\'omata celular~\cite{7}.
+
+Un aut\'omata celular es una tupla $(\mathcal{L}; \mathcal{N}; \mathcal{E}; \mathcal{R})$ que se compone de los siguientes elementos representativos ~\cite{2}:
+\begin{itemize}
+\item [$\mathcal{L}$:] Es un conjunto potencialmente infinito de c\'elulas.
+\item [$\mathcal{N}$:] $\mathcal{L} \times \mathcal{L} \rightarrow \lbrace 0,1 \rbrace$ es una funci\'on de vecindad, que puede ser vista como una relaci\'on, usualmente reflexiva y sim\'etrica, entre las c\'elulas. Esta funci\'on muestra qu\'e pares de c\'elulas son vecinas, o sea, la geometr\'ia de la organizaci\'on celular.
+\item [$\mathcal{E}$:]  Es un conjunto de estados. A cada c\'elula del conjunto $\mathcal{L}$ se le asigna un estado asociado en cada instante de tiempo.
+\item [$\mathcal{R}$:] $\mathcal{E}^{|\mathcal{N}(v)|} \rightarrow \mathcal{E}$ es una funci\'on de transici\'on definida localmente. Esta funci\'on es el n\'ucleo de la din\'amica de un aut\'omata celular, y com\'unmente se expresa mediante reglas que definen el estado de la c\'elula en el siguiente instante de tiempo a partir del estado de las c\'elulas vecinas. El conjunto que contiene el estado de las c\'elulas vecinas se obtiene mediante la funci\'on $\mathcal{N}(v)$, que se define en breve.
+\end{itemize}
+
+Los conjuntos $A^n(G)$ y $A^d(G)$ agrupan las aristas del grafo que corresponden a conexiones inmediatas y distantes, respectivamente. Estos conjuntos cumplen con las siguientes propiedades:
+\begin{subequations}
+\begin{equation}
+A^n(G) \cup A^d(G) = A(G),
+\end{equation}
+\begin{equation}
+A^n(G) \cap A^d(G) = \emptyset.
+\end{equation}
+\end{subequations}
+Estas propiedades indican que los subconjuntos de aristas $A^n(G)$ y $A^d(G)$ constituyen una partición del conjunto de aristas $A(G)$.
+
+En base a los conjuntos de vértices $V(G)$ y de aristas $A(G)$,se definen los elementos representativos $\mathcal{L}$ y $\mathcal{N}$ del modelo de autómatas celulares de la siguiente manera:
+
+El conjunto de c\'elulas $\mathcal{L}$ se define a partir del conjunto de v\'ertices del grafo  $V(G)$:
+\begin{align}
+\boxed{\mathcal{L} = V(G)}~. \label{eq-L}
+\end{align}
+
+La funci\'on de vecindad $\mathcal{N}$ se define a partir del conjunto de aristas del grafo $A(G)$ como se muestra a continuaci\'on:
+\begin{subequations}
+\begin{equation}
+\boxed{\mathcal{N} : V(G) \times V(G) \rightarrow \lbrace 0,1 \rbrace}~, \label{eq-N}
+\end{equation}
+\begin{equation}
+\boxed{\mathcal{N}(v,w) = \left\lbrace
+	\begin{array}{lr}
+		0& \textit{si } \lbrace v,w \rbrace \notin A(G)\\
+		1& \textit{si } \lbrace v,w \rbrace \in A(G)
+	\end{array}
+\right.}~, \label{eq-N-2}
+\end{equation}
+\end{subequations}
+o sea, los v\'ertices $v \in V(G)$ Y $w \in V(G)$  son vecinos en el aut\'omata celular si existe una arista en $G$ que los conecta.
+
+Se define a partir de la funci\'on de vecindad $\mathcal{N}(v,w)$ la vecindad del v\'ertice $v \in V(G)$ como el conjunto de v\'ertices $\mathcal{N}(v)$ que poseen aristas con el v\'ertice $v$, es decir:
+\begin{align} 
+\mathcal{N}(v) = \lbrace w~|~\mathcal{N}(v,w)=1 \rbrace. \label{eq-neighbourhood}
+\end{align}
+\\
+\section{Conjunto de c\'elulas: modelo Watts-Strogatz}
+
+En el estudio presentado, se define un tejido blando como un conjunto de células que presenta dos tipos de conexiones: entre células vecinas cercanas y entre células distantes. Para representar estos tipos de conexiones, se utiliza un modelo de autómatas celulares basado en una red de grafos. En~\cite{9}, Duncan J. Watts Y Steven H. Strogatz mostraron que existen muchas redes biol´ogicas, tecnol´ogicas y sociales que yacen entre las redes regulares y las aleatorias que tradicionalmente han sido utilizadas para modelar distintos tipos de sistemas din\'amicos.
+
+Sea $v$ un v\'ertice del grafo que posee $k_v$ aristas que lo conectan a $k_v$ v\'ertices. El valor entre el n\'umero de aristas $K_v$ que existen en realidad entre estos $k_v$ v\'ertices y el n\'umero m\'aximo de aristas posibles\footnote{El n\'umero m\'aximo de aristas posibles se alcanza cuando los $k_v$ vecinos del v\'ertice $v$ pertenecen a un clique. Un clique en un grafo no dirigido es un conjunto de v\'ertices tal que para todo par de v\'ertices, existe una arista que los conecta.} $k_v(k_v-1)/2$ es el coeficiente de agrupamiento del v\'ertice $v$ y se determina como~\cite{7}:
+\begin{align}
+C_v = \displaystyle\frac{2K_v}{k_v(k_v-1)}. \label{eq-clustering}
+\end{align}
+
+El coeficiente de agrupamiento global del grafo $C_G$ es el promedio de todos los coeficientes de agrupamiento individuales $C_v$, es decir~\cite{7}:
+\begin{align}
+C_G = \displaystyle\frac{1}{|V(G)|}\sum _{v=1} ^{|V(G)|} C_v. \label{eq-global-clustering}
+\end{align}
+
+La longitud promedio del camino es la media de las distancias entre todo par de v\'ertices pertenecientes al grafo y se denota como $\ell_G$. Se observa que debido a la existencia de numerosas conexiones distantes a través del sistema circulatorio, la longitud promedio del camino en la red de células es relativamente pequeña.
+
+Por tanto, se hipotetiza que un tejido vivo posee un alto coeficiente de agrupamiento y una pequeña longitud promedio del camino. Estas características son propias de las redes de mundo pequeño, por lo que se utilizan para representar un tejido vivo. Para generar redes de mundo pequeño con estas características, se utiliza el modelo de Watts y Strogatz~\cite{9}. Este modelo comienza con un grafo con $q$ vértices, cada uno conectado a $k$ vecinos inmediatos, y luego reconecta de manera aleatoria cada arista del grafo con una probabilidad $p$, introduciendo aristas que conectan vértices distantes.\\
+\\
+\section{Marching Cubes}
+
+La técnica de Marching Cubes es un algoritmo de gráficos por computadora que se usa para extraer una malla poligonal de una isosuperficie de un campo escalar discreto tridimensional, como lo son los datos de imágenes de tomografías computarizadas (CT) y resonancias magnéticas (MRI) ~\cite{5}. En el contexto de este proyecto, se utiliza para la representación tridimensional de los tumores, proporcionando una visualización detallada y precisa.Ver en Anexo \ref{fig:tumor}
+
+Este algoritmo trabaja procesando las celdas de los datos de volumen (también conocidas como vóxeles), verificando la intersección entre sus respectivas aristas y la isosuperficie. Los valores de cada vértice de las celdas se comparan con un valor isosuperficial dado, y estos vértices se clasifican como "dentro"  o  "fuera" de la isosuperficie. Una vez definido el tipo de intersección, se realiza una aproximación de la isosuperficie contenida en la celda construyendo triángulos~\cite{1}.
+
+La visualización resultante puede proporcionar una comprensión valiosa de cómo se desarrolla y se propaga el cáncer. Al visualizar el crecimiento del tumor en tres dimensiones, los médicos y científicos pueden obtener una mejor comprensión de la evolución del tumor y cómo puede afectar a los tejidos circundantes. Esta información puede ser esencial para el desarrollo de terapias y tratamientos efectivos para el cáncer.
+
+Debido a que es muy costoso representar y aplicar el algoritmo de Marching Cubes para modelos tan realistas que contengan millones de c\'elulas, en este trabajo se lleva a cabo la implementaci\'on de un escalado del modelo que permite reducir el tama\~no de las dimensiones de nuestro modelo original de aut\'omata celular. Para hacer semejante reducci\'on se procede de la siguiente forma:
+\begin{itemize}
+    \item Se agrupan las c\'elulas por cuadrantes de dimensi\'on proporcionada por el usuario.
+    \item Se buscan los estados de todas las c\'elulas pertenecientes al cuadrante.
+    \item El cuadrante adoptar\'a el estado que m\'as se repita entre las c\'elulas que pertenezcan al mismo.
+    \item Luego de hacer esto por varios cuadrantes, cada uno reducir\'a su tama\~no desde $(n x m x l)$ a $(1 x 1 x 1)$, siendo $n \leq S_{x} ,m \leq S_{y},l \leq S_{z}$. 
+\end{itemize}
+
+En resumen, la técnica de Marching Cubes es una herramienta potente para la visualización tridimensional de datos médicos. En el contexto de la investigación del cáncer, puede proporcionar una representación detallada y precisa del crecimiento de los tumores, lo que puede contribuir significativamente a nuestra comprensión de esta enfermedad y al desarrollo de terapias y tratamientos efectivos.\\

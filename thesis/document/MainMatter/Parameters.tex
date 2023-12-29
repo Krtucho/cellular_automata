@@ -1,1 +1,47 @@
 \chapter{Par\'ametros de la Simulaci\'on}\label{chapter:proposal}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Configuraciones y Par\'ametros de la simulaci\'on.}
+
+Algunos de los par\'ametros y configuraciones que se pueden modificar son:
+\begin{itemize}
+    \item $S_{x}$ - Dimensi\'on del espacio declarado en el eje de las $x$.
+    \item $S_{y}$ - Dimensi\'on del espacio declarado en el eje de las $y$.
+    \item $S_{z}$ -Dimensi\'on del espacio declarado en el eje de las $z$. ~\cite{7}.Los rangos de valores de las componentes espaciales de los vértices del grafo son los siguientes: $0 \leq x \leq S_{x}$, $0 \leq y \leq S_{y}$ y $0 \leq z \leq S_{z}$.
+    \item p - Probabilidad de reconexi\'on del modelo Watts-Strogatz.
+    \item $P_0^a$, $P_0^v$ - Poblaciones iniciales de las etapas avascular y vascular respectivamente~\cite{7}.
+    \item Par\'ametros correspondientes a la cantidad de estados que pueden tener las celdas del automata y descripciones de los mismos.
+    \item Par\'ametros de posibles transiciones entre los estados del automata.
+    \item Par\'ametros de probabilidades para que ocurran las transiciones entre los estados. Al incluir par\'ametros para el c\'alculo de ciertas probabilidades, se puede tener en cuenta el c\'alculo de la probabilidad de la interacci\'on de las c\'elulas tumorales con el sistema inmune, como se hace en~\cite{6}.
+    \item Par\'ametros correspondientes con la forma de los \'organos donde se desarrollara la simulaci\'on. Ver en Anexo %\ref{fig:organ_config}
+    \item Par\'ametros para describir el esquema de los \'organos donde se llevar\'a a cabo la simulaci\'on. De esta forma podemos tener en cuenta las caracter\'isticas de cada \'organo por separado y realizar una simulaci\'on m\'as realista.
+\end{itemize}
+
+Existen muchos otros par\'ametros que son configurables.\\
+
+\section{Manejo de la informaci\'on y detalles de la simulaci\'on.}
+Para manejar de manera eficiente la informaci\'on se hace uso de diferentes t\'ecnicas y herramientas:
+\begin{itemize}
+    \item Uso de archivos .json para manejar la información y los parámetros a asignar. Ver en Anexo %\ref{fig:json}
+    \item Uso de lenguajes de programación rápidos y eficientes como C\# para el manejo de memoria y guardado de gran cantidad de información en memoria o disco.
+    \item Empleo de matrices, grafos y estructuras similares.
+    \item Empleo de estructuras que manejen búsquedas rápidas como diccionarios o tablas de hash.
+\end{itemize}
+
+En cuanto a la simulaci\'on se destacan los siguientes aspectos:
+\begin{itemize}
+    \item Se lleva a cabo la implementación de un motor eficiente que nos permita simular cualquier tumor que se origine en el tejido epitelial de cualquier órgano.
+    \item Para trabajar con grandes cantidades de datos se realiza el análisis región por región del órgano que se esté analizando.
+    \item El rendimiento, la velocidad y el alcance dependerán de los recursos con los que cuente el ordenador en el que se esté ejecutando la simulación.
+\end{itemize}
+
+\section{Herramientas computacionales utilizadas}
+
+Para desarrollar este trabajo se utilizaron las siguientes herramientas:
+\begin{itemize}
+    \item En la parte de la generaci\'on de la simulaci\'on, C\# en su versi\'on de .net7.0.
+    \item En la parte visual para visualizar las c\'elulas y sus conexiones en determinadas regiones Python en su versi\'on 3.11 con Streamlit y otras dependencias.
+    \item En la parte visual para renderizar el tumor, Unity en su versi\'on 2021.3.28f1.
+\end{itemize}
