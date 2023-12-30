@@ -1,5 +1,61 @@
 \chapter{Definici\'on del modelo}\label{chapter:proposal}
 
+Hipotesis del Modelo
+{{\it C\'elulas inmunitarias: }} Consideramos a diferentes c\'elulas inmunitarias, como B, T, APC, PLB,\footnote{{\it C\'elula B:} se le llaman linfocitos B que se forman a partir de las c\'elulas madre en la m\'edula \'osea. Estas c\'elulas se activan y maduran a c\'elulas plasm\'aticas, las cuales producen y liberan anticuerpos que con sus mol\'eculas efectoras.\\ {\it C\'elula T:} es otro tipo de linfocito que se desarrolla a partir de c\'elulas progenitoras de la m\'edula \'osea que viajan hasta el timo.\\ {\it C\'elula APC:} c\'elulas presentadoras de ant\'igenos.\\ {\it C\'elula LBP:} prote\'ina de uni\'on a lipopolisac\'arido. El lipopolisac\'arido desempe\~na una importante funci\'on en la activaci\'on del sistema inmune al constituir el ant\'igeno superficial m\'as importante de este tipo de bacterias} en el sistema de inmunidad tumoral como componente \'unico celular "c\'elulas de inmunidad".
+
+{\it Entidades del modelo:} Las entidades biol\'ogicas presentes en el modelo se componen \'unicamente de los tipos de c\'elulas definidos en el conjunto de estados del aut\'omata celular, el cual est\'a compuesto por tres poblaciones celulares: c\'elulas normales, c\'elulas tumorales y c\'elulas de inmunidad.
+
+{\it Interacciones entre las c\'elulas:} Las interacciones entre las distintas c\'elulas del modelo se componen solamente por las reglas definidas en la funci\'on de transici\'on del aut\'omata. Hay tipos de acciones celular que son respecto al movimiento celular: proliferaci\'on celular y dos tipos de interacciones en el sistema del modelo, entre las c\'elulas normales y las c\'elulas tumorales, y entre las c\'elulas tumorales y c\'elulas inmunitarias.
+
+
+Conjunto de estados
+
+s($v$, $n$) = 6: El v\'ertice $v$ representa una c\'elula inmune en el instante de tiempo $n$.
+s($v$, $n$) = 7: El v\'ertice $v$ representa una c\'elula en estado intermedio en el instante de tiempo $n$.
+
+\section{Reglas de las c\'elulas inmunológicas}
+
+Se especifica en las reglas sobre la conservaci\'on del estado de las c\'elulas normales del aut\'omata (poner referencia) que dichas c\'elulas no cambian de estado salvo que se encuentren en presencia de c\'elulas cancerígenas, luego se definen las reglas relacionadas con el comportamiento de las c\'elulas oncol\'ogicas, pero nunca tenemos en cuenta la interacci\'on de las mismas con el sistema inmunológico. En esta sección analizaremos el comportamiento de los diferentes tipos de c\'elulas antes mencionados con las inmunológicas.
+
+\subsection{Reglas de la conservaci\'on del estado de c\'elulas normales, inmunes y tumorales}
+
+Las c\'elulas normales se mantienen est\'aticamente y su estado no var\'ia a menos que exista la presencia de c\'elulas cancer\'igenas o de inmunidad en su vecindad.\\
+Las c\'elulas de inmunidad solo cambian a una posici\'on espec\'ifica cuando existe la presencia de c\'elulas cancer\'igenas en su vecindad.\\
+Las c\'elulas inmunitarias se mueven libremente hacia las c\'elulas normales.
+Al comienzo de cada instante de tiempo las c\'elulas de inmunidad seleccionan una de las posibles vecinas inmediatas para desplazarse. Si la probabilidad de moverse hacia un vecino $w$ es menor que un valor $th$, la c\'elula de inmunidad mantiene su posici\'on inicial. Formulamos la regla de la siguiente forma:\\
+%$L(t+T) \xrightarrow{P_{w}} w \xrightarrow{P_m} \displaystyle \left\{ {L(t) \hspace{1cm} P_w<th \atop L(t + 1) \hspace{.5cm} P_w \geq th } \right\},$\\
+$L(t+T) \xrightarrow{P_{w}} w  \displaystyle \left\{ {L(t) \hspace{1cm} P_w<th \atop L(t + 1) \hspace{.5cm} P_w \geq th } \right\},$\\
+
+donde:\\
+ $L(t):$ es la posici\'on de la celda;  $th:$ es el valor del umbral de movimiento;
+ $P_{w}:$ es la probabilidad de moverse hacia el vecino $w$. 
+ %$P_m:$ es la probabilidad de moverse o no hacia la posici\'on correspondiente.\\
+
+
+\subsection{Regla de Inmunoreacci\'on}
+Cuando las c\'elulas tumorales aparecen en la vecindad inmediata de las c\'elulas de inmunidad, las c\'elulas inmunes invaden la posici\'on de la c\'elula tumoral. En estos momentos decimos que ocurre inmunoreacci\'on. Luego ambas c\'elulas comienzan a combatir y se pueden dar 3 situaciones como resultado:
+\begin{itemize}
+\item La c\'elula de inmunidad mata a la c\'elula tumoral y la c\'elula se recupera, quedando en esta posici\'on una c\'elula normal.
+\item La c\'elula tumoral vence a la c\'elula inmune y contin\'ua infectando y proliferando las c\'elulas normales.
+\item Ambas c\'elulas no son lo suficientemente fuertes para derrotar a su rival, entonces la posici\'on donde estaba la c\'elula tumoral pasa a un estado intermedio, el cual puede cambiar al estado de c\'elula normal o tumoral, en dependencia de la cantidad de c\'elulas inmunes ,normales y tumorales que se encuentren en su vecindad inmediata.
+\end{itemize}
+$$Tc + Ic \xrightarrow{P_{I}} \displaystyle \left\{ \begin{tabular}{r l}
+$Nc$ & $P_{I} < Th$ \\
+$Mc$ & $P_{I} = Th$ \\
+$Tc$ & $P_{I} > Th$ \\
+\end{tabular} \right\} $$
+
+ $Ic$: c\'elula inmune; $Nc$: c\'elula normal;  $Mc$: c\'elula en etapa intermedia;  $Tc$: c\'elula tumoral; $Th$: valor del umbral de inmunoreacci\'on; $p$: probabilidad de inmunoreacci\'on.
+
+\subsection{Regla del Estado Intermedio}
+Cuando las c\'elulas de inmunidad y las c\'elulas tumorales interact\'uan entre s\'i, uno de los resultados es que aparecen c\'elulas en etapa intermedia en el sistema. Si la suma de las c\'elulas normales y c\'elulas inmunes es mas que el 60\% de las c\'elulas vecinas, entonces las c\'elulas en un estado intermedio pasan a convertirse a c\'elulas normales. En caso de tener m\'as del 30\% de sus c\'elulas vecinas siendo tumorales, la c\'elula en estado intermedio pasar\'ia se convertir\'ia en una c\'elula tumoral.\\
+$$Tc + Ic \xrightarrow \displaystyle \left\{ 
+\begin{tabular}{r l}
+$Nc$ & $Nc + Ic > 60\%$ \\
+$Tc$ & $Tc > 30\%$ \\
+\end{tabular} \right\} $$
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \section{Regla del surgimiento de c\'elulas migratorias}
  A lo largo de esta seccion se presentan reglas que comprenden el comportamiento de las celulas cancerigenas migratorias, desde las condiciones de su surgimiento hata su desplazamiento a traves de la ECM del tejido de sosten. Es posible que una celula se mueva gracias a los cambios de la matriz de interaccion provocados por las proteinas involucradas en el control de la movilidad y la supresion de reguladores de la migracion. En (2.7) se expusieron los cambios que debe sufrir una celula cancerigena tumoral para que se transforme en una celula migratoria y consisten en la perdida de la capacidad de adhesion celular y alteraciones de la matriz de interaccion intercelular(Cambiar esta oracion).
 
