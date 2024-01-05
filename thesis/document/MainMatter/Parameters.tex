@@ -1,8 +1,8 @@
-\chapter{Par\'ametros de la Simulaci\'on}\label{chapter:proposal}
+\chapter{Par\'ametros de la simulaci\'on}\label{chapter:proposal}
 
-La validación se encarga de verificar la precisión del modelo en su representación del sistema real. Algunas de las cuestiones que deben abordarse en esta sección son el análisis de los valores asignados a los parámetros del modelo y las consecuencias de sus posibles variaciones. La comparación de los resultados numéricos y visuales obtenidos con datos de distintas investigaciones in vitro, in vivo y estudios clínicos encontrados en la literatura se llevará a cabo en la sección 5. Tambien se deben precisar detalles especificos de la implementacion del modelo y la herramienta desarrollada, funciones especiales del mismo, como la carga y guardado de datos y par\'ametros. Es relevante destacar que el modelo en su totalidad está diseñado para simular el desarrollo de cualquier tipo de carcinoma. Sin embargo, como se podrá observar en las secciones siguientes, nos enfocamos en el carcinoma ductal infiltrante, que es el caso más común de cáncer de mama. Las razones detrás de esta elección incluyen la abundancia de información y datos disponibles sobre este tipo de cáncer.(Change)
+La validación se encarga de verificar la precisión del modelo en su representación del sistema real. Algunas de las cuestiones que deben abordarse en esta sección son el análisis de los valores asignados a los parámetros del modelo y las consecuencias de sus posibles variaciones. La comparación de los resultados numéricos y visuales obtenidos con datos de distintas investigaciones in vitro, in vivo y estudios clínicos encontrados en la literatura se llevará a cabo en la sección 5. Tambi\'en se deben precisar detalles espec\'ificos de la implementaci\'on del modelo y la herramienta desarrollada, funciones especiales del mismo, como la carga y guardado de datos y par\'ametros. Es relevante destacar que el modelo en su totalidad está diseñado para simular el desarrollo de cualquier tipo de carcinoma. Sin embargo, como se podrá observar en las secciones siguientes, nos enfocamos en el carcinoma ductal infiltrante, que es el caso más común de cáncer de mama. Las razones detrás de esta elección incluyen la abundancia de información y datos disponibles sobre este tipo de cáncer.(Change)
 
-\subsection{Par\'ametros de la construcci\'on de la red y de la ley de crecimiento log\'istico}
+\section{Par\'ametros de la construcci\'on de la red y de la ley de crecimiento log\'istico}
 \label{subsec-network-param}
 Los par\'ametros de construcci\'on de la red se corresponden con los argumentos del algoritmo~\ref{alg-watts} mostrado en la secci\'on~\ref{subsec-watts-2}, y determinan el tama\~no del espacio que se utiliza para representar las localizaciones donde se desarrolla el c\'ancer. Se presentan en el cuadro~\ref{table-network-params} que aparece a continuaci\'on para una r\'apida referencia. Los par\'ametros de la ley de crecimiento log\'istico se utilizan para reproducir el crecimiento tumoral, espec\'ificamente en las reglas presentadas en las secciones~\ref{subsec-celldiv} y \ref{subsec-micrometastasis} obtenidas a trav\'es de un proceso de inferencia de la regla a partir de dicha ley continua. Se presentan en el cuadro~\ref{table-logistic-params} para una r\'apida referencia.
 
@@ -29,7 +29,7 @@ Los par\'ametros de construcci\'on de la red se corresponden con los argumentos 
         $Th$		& Valor del umbral de inmunoreacci\'on     & 0.43			\\ \hline
         $th$		& Valor del umbral de movimiento           & 0.5 			\\ \hline
         \end{tabular}
-    \caption{Par\'ametros utilizados en la inmunoreacci\'on. \label{fig:inmune_param}\ref{subsec:funcion de transicion}}
+    \caption{Par\'ametros utilizados en la inmunorreacci\'on. \label{fig:inmune_param}\ref{subsec:funcion de transicion}}
     \end{center}
     \end{figure}
 
@@ -81,18 +81,18 @@ Las localizaciones donde se reproduce el ciclo vital tumoral deben poseer el esp
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Configuraciones y Par\'ametros de la simulaci\'on.}
+\section{Configuraciones y par\'ametros de la simulaci\'on.}
 
-Ademas de los parametros antes mencionados, algunos de los par\'ametros y configuraciones que se pueden modificar son:
+Adem\'as de los par\'ametros antes mencionados, algunos de los par\'ametros y configuraciones que se pueden modificar son:
 \begin{itemize}
     % \item $S_{x}$ - Dimensi\'on del espacio declarado en el eje de las $x$.
     % \item $S_{y}$ - Dimensi\'on del espacio declarado en el eje de las $y$.
     % \item $S_{z}$ -Dimensi\'on del espacio declarado en el eje de las $z$. ~\cite{7}.Los rangos de valores de las componentes espaciales de los vértices del grafo son los siguientes: $0 \leq x \leq S_{x}$, $0 \leq y \leq S_{y}$ y $0 \leq z \leq S_{z}$.
     % \item p - Probabilidad de reconexi\'on del modelo Watts-Strogatz.
     % \item $P_0^a$, $P_0^v$ - Poblaciones iniciales de las etapas avascular y vascular respectivamente~\cite{7}.
-    \item Par\'ametros correspondientes a la cantidad de estados que pueden tener las celdas del automata y descripciones de los mismos.
+    \item Par\'ametros correspondientes a la cantidad de estados que pueden tener las celdas del aut\'omata y descripciones de los mismos.
     \item Par\'ametros de posibles transiciones entre los estados del automata.
-    \item Par\'ametros de probabilidades para que ocurran las transiciones entre los estados. Al incluir par\'ametros para el c\'alculo de ciertas probabilidades, se puede tener en cuenta el c\'alculo de la probabilidad de la interacci\'on de las c\'elulas tumorales con el sistema inmune, como se hace en~\cite{6}.
+    \item Par\'ametros de probabilidades para que ocurran las transiciones entre los estados. Al incluir par\'ametros para el c\'alculo de ciertas probabilidades, se puede tener en cuenta el c\'alculo de la probabilidad de la interacci\'on de las c\'elulas tumorales con el sistema inmune, como se hace en~\cite{ruanxiaoca}.
     \item Par\'ametros correspondientes con la forma de los \'organos donde se desarrollara la simulaci\'on. Ver en Anexo %\ref{fig:organ_config}
     \item Par\'ametros para describir el esquema de los \'organos donde se llevar\'a a cabo la simulaci\'on. De esta forma podemos tener en cuenta las caracter\'isticas de cada \'organo por separado y realizar una simulaci\'on m\'as realista.
 \end{itemize}

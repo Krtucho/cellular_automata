@@ -1,3 +1,24 @@
 \begin{conclusions}
-    Conclusiones
+
+En este estudio, se diseñó un modelo para imitar los comportamientos más agresivos del cáncer, utilizando autómatas celulares como medio de representación. Como se demostró en la sección 5, este modelo puede generar una variedad de estos comportamientos utilizando diferentes conjuntos de parámetros. Las reglas, junto con el proceso de actualización, se diseñaron cuidadosamente y representan un enfoque innovador para la modelación de fenómenos complejos en las ciencias biológicas, químicas y físicas utilizando autómatas celulares. Estos elementos capturan los pasos fundamentales en el crecimiento, invasión, migración y metástasis del cáncer, que según la literatura consultada, no han sido completamente descritos en ningún modelo anterior. Este modelo permite modelar estos comportamientos a nivel macroscópico a partir de parámetros que son principalmente a nivel microscópico. Al revisar los objetivos establecidos en la introducción, podemos verificar si se lograron satisfactoriamente:
+
+\begin{itemize}
+    \item Se definió una red de mundo pequeño mediante el modelo Watts-Strogatz.
+    \item Se definió el conjunto de c\'elulas y la funci\'on de vecindad del aut\'omata a partir de la red creada haciendo uso de conexiones entre las c\'elulas.
+    \item Se definieron un conjunto de estados para las c\'elulas del aut\'omata que permitan representar las distintas entidades biol\'ogicas que se tienen en cuenta en el modelo, entre las cuales est\'an presentes las c\'elulas normales, cancer\'igenas y las inmunol\'ogicas.
+    \item Se definió una funci\'on de transición que, siguiendo ciertas reglas, permita describir: la evoluci\'on tumoral durante las etapas de su desarrollo, como afecta el tumor a los tejidos sanos, la interacci\'on del tumor con el sistema inmunol\'ogico, la migraci\'on de c\'elulas cancer\'igenas a trav\'es de los tejidos sanos y, finalmente, la met\'astasis.
+    \item Se establecieron comparaciones entre los resultados obtenidos y datos y evidencias experimentales existentes en la literatura mostrando que el modelo se comporta de forma realista
+    \item Se representaron gr\'aficamente los procesos presentes en la simulaci\'on.
+    \item Se desarrolló un modelo din\'amico en cuanto a los par\'ametros y factores que influyen en la simulaci\'on para obtener resultados m\'as realistas.
+    \item Se implementaron algoritmos eficientes para procesar grandes cantidades de células y sus conexiones.
+\end{itemize}
+
+Es importante destacar que el modelo, como herramienta generadora de hipótesis, cumple su función pues propone varias suposiciones que podrían orientar a los profesionales de la salud y a los investigadores clínicos a llevar a cabo experimentos para su confirmación, contribuyendo así a una mejor comprensión del cáncer. Estas hipótesis incluyen:
+
+\begin{itemize}
+    \item En presencia de dos tumores con la misma capacidad para generar células migratorias, identificadas por sus marcadores genéticos y con la misma velocidad de migración, uno con un crecimiento rápido y el otro con un crecimiento lento, se esperaría que el tumor de crecimiento lento tenga una migración significativamente mayor que el de crecimiento rápido.
+    \item los tumores que presentan una forma irregular pueden ser interpretados en algunos casos como metástasis que crece de manera próxima tanto en tumores secundarios como en primarios. Lo que sugiere que una combinación de este factor con las tensiones ejercidas por medios adyacentes son los causantes de la morfología tumoral.
+    \item La eliminación de una subpoblación dentro de un tumor puede corresponderse con un conjunto de células cancerígenas débilmente establecidas, como es una micrometástasis latente~\cite{robins}.
+\end{itemize}
+
 \end{conclusions}

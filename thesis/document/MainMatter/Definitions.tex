@@ -1,10 +1,10 @@
 \chapter{Definici\'on del modelo}\label{chapter:proposal}
 
-\section{Aut\'omata Celular}
+\section{Aut\'omata celular}
 
-En esta secci\'on se concibe el modelo de aut\'omatas celulares que se presenta en este trabajo. Se comienza definiendo formalmente un aut\'omata celular~\cite{7}.
+En esta secci\'on se concibe el modelo de aut\'omatas celulares que se presenta en este trabajo. Se comienza definiendo formalmente un aut\'omata celular \cite{viabarre2019}.
 
-Un aut\'omata celular es una tupla $(\mathcal{L}; \mathcal{N}; \mathcal{E}; \mathcal{R})$ que se compone de los siguientes elementos representativos ~\cite{2}:
+Un aut\'omata celular es una tupla $(\mathcal{L}; \mathcal{N}; \mathcal{E}; \mathcal{R})$ que se compone de los siguientes elementos representativos \cite{ariel}:
 \begin{itemize}
 \item [$\mathcal{L}$:] Es un conjunto potencialmente infinito de c\'elulas.
 \item [$\mathcal{N}$:] $\mathcal{L} \times \mathcal{L} \rightarrow \lbrace 0,1 \rbrace$ es una funci\'on de vecindad, que puede ser vista como una relaci\'on, usualmente reflexiva y sim\'etrica, entre las c\'elulas. Esta funci\'on muestra qu\'e pares de c\'elulas son vecinas, o sea, la geometr\'ia de la organizaci\'on celular.
@@ -19,7 +19,7 @@ En el presente trabajo se utiliza la notaci\'on empleada en~\cite[p\'aginas 59-1
 \label{subsec-hipo}
 El c\'ancer es una enfermedad extremadamente compleja compuesta por una gran cantidad de procesos, interacciones celulares y factores. Como parte del proceso de modelación es necesario lograr una simplificación del problema para hacerlo tratable, a partir de la reducción de la realidad a un conjunto de hipótesis.
 
-El modelo de autómata celular presentado en este trabajo se basa en ciertas hipótesis generales que se presentarán a continuación. En secciones siguientes se harán suposiciones más específicas a medida que se profundice en los distintos temas. Este modelo se enfoca en el tipo de cáncer conocido como carcinoma o cáncer de células epiteliales
+El modelo de autómata celular presentado en este trabajo se basa en ciertas hipótesis generales que se presentarán a continuación. En secciones siguientes se harán suposiciones más específicas a medida que se profundice en los distintos temas. Este modelo se enfoca en el tipo de cáncer conocido como carcinoma o cáncer de células epiteliales.
 
 \begin{enumerate}
 \item [{I.}] \textbf{Progresi\'on idealizada del desarrollo tumoral}: \emph{Se asume que el desarrollo tumoral sigue una progresi\'on idealizada dividida en las etapas avascular y vascular, donde el comportamiento macrosc\'opico del tumor est\'a definido por las mutaciones que expresan las c\'elulas cancer\'igenas.} \label{I}
@@ -93,7 +93,7 @@ V_1(G) \cap V_2(G) = \emptyset.
 \end{subequations}
 \end{definition}
 
-Los subconjuntos que se definen en~\ref{def-vertex-partition} se refieren a 'órganos', también conocidos como localizaciones. Estos órganos corresponden con el órgano primario donde se origina el cáncer y un órgano preferente de metástasis, es decir, un órgano que es comúnmente colonizado por el tipo de cáncer que surgió en el órgano primario. Es importante destacar que estas localizaciones pueden referirse al mismo órgano pero a dos porciones distintas de tejido. Para indicar el subconjunto al que pertenece v\'ertice $v$ determinado se utiliza la notaci\'on $V_v(G)$.
+Los subconjuntos que se definen en~\ref{def-vertex-partition} se refieren a órganos, también conocidos como localizaciones. Estos órganos se corresponden con el órgano primario donde se origina el cáncer y un órgano preferente de metástasis, es decir, un órgano que es comúnmente colonizado por el tipo de cáncer que surgió en el órgano primario. Es importante destacar que estas localizaciones pueden referirse al mismo órgano pero a dos porciones distintas de tejido. Para indicar el subconjunto al que pertenece v\'ertice $v$ determinado se utiliza la notaci\'on $V_v(G)$.
 
 \begin{definition}
 \label{def-edge-partition}
@@ -163,11 +163,11 @@ Se define a partir del conjunto $\mathcal{N}(v)$ que contiene a los v\'ertices v
 
 \section{Conjunto de c\'elulas: modelo Watts-Strogatz}
 
-En el estudio presentado, se define un tejido blando como un conjunto de células que presenta dos tipos de conexiones: entre células vecinas cercanas y entre células distantes. Para representar estos tipos de conexiones, se utiliza un modelo de autómatas celulares basado en una red de grafos. En~\cite{9}, Duncan J. Watts Y Steven H. Strogatz mostraron que existen muchas redes biol´ogicas, tecnol´ogicas y sociales que yacen entre las redes regulares y las aleatorias que tradicionalmente han sido utilizadas para modelar distintos tipos de sistemas din\'amicos. La clasificaci\'on y diferenciaci\'on de estas redes se lleva a cabo mediante los valores del coeficiente de agrupamiento~(\emph{clustering coefficient}) y la longitud promedio del camino~(\emph{average path length}). 
+En el estudio presentado, se define un tejido blando como un conjunto de células que presenta dos tipos de conexiones: entre células vecinas cercanas y entre células distantes. Para representar estos tipos de conexiones, se utiliza un modelo de autómatas celulares basado en una red de grafos. En~\cite{watts}, Duncan J. Watts Y Steven H. Strogatz mostraron que existen muchas redes biol\'ogicas, tecnol\'ogicas y sociales que yacen entre las redes regulares y las aleatorias que tradicionalmente han sido utilizadas para modelar distintos tipos de sistemas din\'amicos. La clasificaci\'on y diferenciaci\'on de estas redes se lleva a cabo mediante los valores del coeficiente de agrupamiento~(\emph{clustering coefficient}) y la longitud promedio del camino~(\emph{average path length}). 
 
 \begin{definition} 
 \label{def-clustering}
-Sea $v$ un v\'ertice del grafo que posee $k_v$ aristas que lo conectan a $k_v$ v\'ertices. El valor entre el n\'umero de aristas $K_v$ que existen en realidad entre estos $k_v$ v\'ertices y el n\'umero m\'aximo de aristas posibles\footnote{El n\'umero m\'aximo de aristas posibles se alcanza cuando los $k_v$ vecinos del v\'ertice $v$ pertenecen a un clique. Un clique en un grafo no dirigido es un conjunto de v\'ertices tal que para todo par de v\'ertices, existe una arista que los conecta.} $k_v(k_v-1)/2$ es el coeficiente de agrupamiento del v\'ertice $v$ y se determina como~\cite{7}:
+Sea $v$ un v\'ertice del grafo que posee $k_v$ aristas que lo conectan a $k_v$ v\'ertices. El valor entre el n\'umero de aristas $K_v$ que existen en realidad entre estos $k_v$ v\'ertices y el n\'umero m\'aximo de aristas posibles\footnote{El n\'umero m\'aximo de aristas posibles se alcanza cuando los $k_v$ vecinos del v\'ertice $v$ pertenecen a un clique. Un clique en un grafo no dirigido es un conjunto de v\'ertices tal que para todo par de v\'ertices, existe una arista que los conecta.} $k_v(k_v-1)/2$ es el coeficiente de agrupamiento del v\'ertice $v$ y se determina como~\cite{viabarre2019}:
 \begin{align}
 C_v = \displaystyle\frac{2K_v}{k_v(k_v-1)}. \label{eq-clustering}
 \end{align}
@@ -175,17 +175,17 @@ C_v = \displaystyle\frac{2K_v}{k_v(k_v-1)}. \label{eq-clustering}
 
 \begin{definition}
 \label{def-global-clustering}
-El coeficiente de agrupamiento global del grafo $C_G$ es el promedio de todos los coeficientes de agrupamiento individuales $C_v$, es decir~\cite{7}:
+El coeficiente de agrupamiento global del grafo $C_G$ es el promedio de todos los coeficientes de agrupamiento individuales $C_v$, es decir~\cite{viabarre2019}:
 \begin{align}
 C_G = \displaystyle\frac{1}{|V(G)|}\sum _{v=1} ^{|V(G)|} C_v. \label{eq-global-clustering}
 \end{align}
 \end{definition}
 
-Si examinamos la figura~\ref{fig-circulatory}, podemos ver que las células que componen el tejido están conectadas con muchas células vecinas inmediatas, que a su vez están conectadas entre sí. De acuerdo con la ecuación que determina el coeficiente de agrupamiento~(\ref{eq-clustering}), y teniendo en cuenta la elevada interconectividad existente, podemos concluir que la mayoría de las células que componen el tejido tienen un alto coeficiente de agrupamiento. Por lo tanto, el coeficiente de agrupamiento global~(\ref{eq-global-clustering}) de la red también tiene un valor alto
+Si examinamos la figura~\ref{fig-circulatory}, podemos ver que las células que componen el tejido están conectadas con muchas células vecinas inmediatas, que a su vez están conectadas entre sí. De acuerdo con la ecuación que determina el coeficiente de agrupamiento~(\ref{eq-clustering}), y teniendo en cuenta la elevada interconectividad existente, podemos concluir que la mayoría de las células que componen el tejido tienen un alto coeficiente de agrupamiento. Por lo tanto, el coeficiente de agrupamiento global~(\ref{eq-global-clustering}) de la red también tiene un valor alto.
 
 En un grafo, la distancia entre dos v\'ertices es el menor n\'umero de aristas de un camino entre ellos. La longitud promedio del camino es la media de las distancias entre todo par de v\'ertices pertenecientes al grafo y se denota como $\ell_G$. Se observa que debido a la existencia de numerosas conexiones distantes a través del sistema circulatorio, la longitud promedio del camino en la red de células es relativamente pequeña.
 
-Por tanto, se hipotetiza que un tejido vivo posee un alto coeficiente de agrupamiento y una pequeña longitud promedio del camino. Estas características son propias de las redes de mundo pequeño, por lo que se utilizan para representar un tejido vivo. Para generar redes de mundo pequeño con estas características, se utiliza el modelo de Watts y Strogatz~\cite{9}. Los autores proponen un modelo de un solo par\'ametro que devuelve una red de mundo peque\~no, ubicada entre un grafo regular y un grafo aleatorio. El algoritmo propuesto por el modelo, que es utilizado para generar las redes de mundo peque\~no usadas en el presente trabajo, es el siguiente~\cite{complexnetworks}:
+Por tanto, se hipotetiza que un tejido vivo posee un alto coeficiente de agrupamiento y una pequeña longitud promedio del camino. Estas características son propias de las redes de mundo pequeño, por lo que se utilizan para representar un tejido vivo. Para generar redes de mundo pequeño con estas características, se utiliza el modelo de Watts y Strogatz~\cite{watts}. Los autores proponen un modelo de un solo par\'ametro que devuelve una red de mundo peque\~no, ubicada entre un grafo regular y un grafo aleatorio. El algoritmo propuesto por el modelo, que es utilizado para generar las redes de mundo peque\~no usadas en el presente trabajo, es el siguiente~\cite{complexnetworks}:
 
 \begin{enumerate}
 \item [(1)] \emph{Inicio:} Comenzamos con un grafo con $q$ v\'ertices, e.g. un anillo o una malla, en los que cada v\'ertice est\'a conectado a $k$ vecinos inmediatos. 
@@ -203,23 +203,23 @@ Por tanto, se hipotetiza que un tejido vivo posee un alto coeficiente de agrupam
 
 \subsection{Implementaci\'on del modelo Watts-Strogatz}
 \label{subsec-watts-2}
-El modelo Watts-Strogatz, teniendo en cuenta la hipótesis XII para representar el tejido, comienza con un grafo en el que cada vértice está conectado a un número de sus vecinos inmediatos. Las aristas que forman el grafo son sometidas a un proceso de reconexión, donde se cambia uno de los extremos de la arista. El nuevo extremo se selecciona de manera aleatoria entre los vértices restantes del grafo. Para el proceso de construcción, se considera una cuadrícula que divide el plano en secciones iguales, donde cada celda corresponde a un vértice del grafo (Fig.~\ref{fig-grid-2D-initial}). (revisar poner una imagen de 3d)
+El modelo Watts-Strogatz, teniendo en cuenta la hipótesis XII para representar el tejido, comienza con un grafo en el que cada vértice está conectado a un número de sus vecinos inmediatos. Las aristas que forman el grafo son sometidas a un proceso de reconexión, donde se cambia uno de los extremos de la arista. El nuevo extremo se selecciona de manera aleatoria entre los vértices restantes del grafo. Para el proceso de construcción, se considera una cuadrícula que divide la rejilla(\textit{grid}) en secciones iguales, donde cada celda corresponde a un vértice del grafo. (Fig.~\ref{fig-grid-3D-initial}). (revisar poner una imagen de 3d)
 
 \begin{figure}[!ht]
 \begin{center}
-\scalebox{0.7}{\includegraphics{img/fig-grid-2D-initial.png}}
+\scalebox{0.7}{\includegraphics{img/fig-grid-3D-initial.png}}
 \end{center}\vspace*{-0.6cm}
-\caption[Disposici\'on espacial de los v\'ertices del grafo]{Disposici\'on espacial de los v\'ertices del grafo determinados mediante la cuadr\'icula que se muestra en la imagen izquierda, y que divide el plano en partes iguales para un total de $q = s_x \times s_y = 12 \times 8 = 96$ v\'ertices como se muestra en la imagen derecha.}
-\label{fig-grid-2D-initial}
+\caption[Disposici\'on espacial de los v\'ertices del grafo]{Disposici\'on espacial de los v\'ertices del grafo determinados mediante la grilla.}
+\label{fig-grid-3D-initial}
 \end{figure}
 
-Como se explicó en la definición~\ref{def-neighbourhoods}, este modelo de autómatas celulares emplea los conjuntos de aristas del grafo $A^n(G)$ y $A^d(G)$ , que representan conexiones inmediatas y distantes, respectivamente. La idea central del modelo Watts-Strogatz para la construcción del grafo es agregar todas las aristas inmediatas al conjunto $A^n(G)$, y a medida que sean reconectadas, son eliminadas de este conjunto y añadidas a $A^d(G)$. Hay diversas opciones para seleccionar las conexiones inmediatas de cada vértice, y cada una de ellas tiene un impacto significativo en las propiedades de la red. En la Figura~\ref{fig-neighbour} se pueden observar algunos ejemplos de posibles configuraciones de vecindad. Inicialmente, definimos la distancia euclidiana para luego establecer una función que permite identificar la vecindad inmediata de un vértice
+Como se explicó en la definición~\ref{def-neighbourhoods}, este modelo de autómatas celulares emplea los conjuntos de aristas del grafo $A^n(G)$ y $A^d(G)$ , que representan conexiones inmediatas y distantes, respectivamente. La idea central del modelo Watts-Strogatz para la construcción del grafo es agregar todas las aristas inmediatas al conjunto $A^n(G)$, y a medida que sean reconectadas, son eliminadas de este conjunto y añadidas a $A^d(G)$. Hay diversas opciones para seleccionar las conexiones inmediatas de cada vértice, y cada una de ellas tiene un impacto significativo en las propiedades de la red. En \cite{viabarre2019} se lleva a cabo un an\'alisis del uso de la distancia euclidiana en dos dimenciones(2D) para identificar los vecinos inmediatos de cada v\'ertice, en este documento se har\'a una extensi\'on a 3D, luego se obtienen resultados an\'alogos al caso de 2D. En la Figura~\ref{fig-neighbour} se pueden observar algunos ejemplos de posibles configuraciones de vecindad. Inicialmente, definimos la distancia euclidiana para luego establecer una función que permite identificar la vecindad inmediata de un vértice.
  
 \begin{definition}
 \label{def-euclidean-distance}
 La funci\'on $d_E(v,w)$, que recibe dos v\'ertices $v \in V(G)$ y $w \in V(G)$, se corresponde con la distancia euclidiana entre los dos puntos del espacio que ocupan dichos v\'ertices y se determina como:
 \begin{equation}
-d_E(v,w)=\sqrt{(v_x-w_x)^2 + (v_y-w_y)^2}.
+d_E(v,w)=\sqrt{(v_x-w_x)^2 + (v_y-w_y)^2 + (v_z-w_z)^2}.
 \end{equation}
 \end{definition}
 
@@ -238,7 +238,7 @@ Dado un v\'ertice $v$ en el sistema de coordenadas cartesianas que se utiliz\'o 
 \scalebox{0.5}{\includegraphics{img/fig-neighbour-R-2.png}}
 \scalebox{0.5}{\includegraphics{img/fig-neighbour-R-sqrt(5).png}}
 \end{center}\vspace*{-0.6cm}
-\caption[Configuraciones de vecindad obtenidas mediante la variaci\'on de $R$]{Configuraciones de vecindad obtenidas mediante la variaci\'on de $R$. En todos los diagramas el v\'ertice $v=(0,0)$ es el centro de la configuraci\'on y se muestra en cada uno el valor de $R$ utilizado para generarla.}
+\caption[Configuraciones de vecindad obtenidas mediante la variaci\'on de $R$]{Configuraciones de vecindad obtenidas mediante la variaci\'on de $R$. En todos los diagramas el v\'ertice $v=(0,0)$ es el centro de la configuraci\'on y se muestra en cada uno el valor de $R$ utilizado para generarla \cite{viabarre2019}.}
 \label{fig-neighbour}
 \end{figure}
 
@@ -278,24 +278,31 @@ $G=(V,A)$\;
 
 \paragraph{Declaraci\'on de los conjuntos que componen el grafo $G$ ($1$-$4$):} Se declaran los conjuntos $V_1$, $V_2$, $A_n$ y $A_d$, inicialmente vac\'ios, correspondientes con los v\'ertices de las localizaciones primaria y secundaria, y las conexiones inmediatas y distantes respectivamente. 
 
-\paragraph{Crear v\'ertices ($5$-$11$):} Se a\~naden a los conjuntos $V_1$ y $V_2$ los v\'ertices que conforman el grafo. Cada v\'ertice $v$ de coordenadas $(v_x,v_y, v_z)$ se corresponde con una celda de la malla. Los valores $s_x$, $s_y$ y $s_z$ son las cantidades de v\'ertices del grafo por cada una de las componentes del plano respectivamente~(Fig.~\ref{fig-grid-2D-initial}). Cada v\'ertice se a\~nade al conjunto $V_1$ o $V_2$ correspondiente, que se determina a partir del par\'ametro $s_o$ con $0 \leq s_o < s_x$ que indica la divisi\'on del grafo entre una localizaci\'on y la otra. 
+\paragraph{Crear v\'ertices ($5$-$14$):} Se a\~naden a los conjuntos $V_1$ y $V_2$ los v\'ertices que conforman el grafo. Cada v\'ertice $v$ de coordenadas $(v_x,v_y, v_z)$ se corresponde con una celda de la malla. Los valores $s_x$, $s_y$ y $s_z$ son las cantidades de v\'ertices del grafo por cada una de las componentes del plano respectivamente~(Fig.~\ref{fig-grid-2D-initial}). Cada v\'ertice se a\~nade al conjunto $V_1$ o $V_2$ correspondiente, que se determina a partir del par\'ametro $s_o$ con $0 \leq s_o < s_x$ que indica la divisi\'on del grafo entre una localizaci\'on y la otra. 
 
-\paragraph{A\~nadir aristas inmediatas ($12$-$16$):} Se itera por todos los v\'ertices del grafo resultado de la uni\'on de los conjuntos $V_1$ y $V_2$. Por cada v\'ertice $v \in V$ se obtiene su vecindad inmediata $N_I(v,R)$ y se itera por todos los v\'ertices vecinos. Se crea una arista entre $v$ y cada v\'ertice vecino $w$ y se a\~nade al conjunto de aristas inmediatas $A^n$. Dado que la uni\'on entre conjuntos da como resultado un conjunto donde no existen elementos repetidos, no es necesario verificar si una nueva arista ya pertenece al conjunto $A^n$ antes de ser a\~nadida.
+\paragraph{A\~nadir aristas inmediatas ($15$-$21$):} Se itera por todos los v\'ertices del grafo resultado de la uni\'on de los conjuntos $V_1$ y $V_2$. Por cada v\'ertice $v \in V$ se obtiene su vecindad inmediata $N_I(v,R)$ y se itera por todos los v\'ertices vecinos. Se crea una arista entre $v$ y cada v\'ertice vecino $w$ y se a\~nade al conjunto de aristas inmediatas $A^n$. Dado que la uni\'on entre conjuntos da como resultado un conjunto donde no existen elementos repetidos, no es necesario verificar si una nueva arista ya pertenece al conjunto $A^n$ antes de ser a\~nadida.
 
-\paragraph{Reconexi\'on de las aristas ($17$-$26$):} Se itera por cada arista $a$ del grafo y con probabilidad $p$ se reconecta el v\'ertice destino de la arista. La generaci\'on del valor aleatorio que se compara con $p$ para el c\'alculo de la probabilidad sigue una distribuci\'on uniforme en $(0,1)$. La arista $\lbrace v,w \rbrace$ seleccionada para su reconexi\'on se elimina del conjunto $A^n$ y se procede a encontrar el nuevo v\'ertice destino. El nuevo v\'ertice destino $w'$ se elige de entre todos los v\'ertices del grafo, pero no puede ser el origen de la arista porque no se permiten bucles, y la nueva arista formada no puede existir en el grafo ya que no se permiten duplicados. La nueva arista $\lbrace v,w' \rbrace$ se a\~nade al conjunto $A^d$, identificando satisfactoriamente la nueva conexi\'on como distante. Finalmente, se realiza la uni\'on de los conjuntos $A^n$ y $A^d$, y se declara el grafo $G$ que se retorna como resultado del algoritmo. En la figura~\ref{fig-grid-2D-reconected} se puede apreciar la disposici\'on de los v\'ertices de las caras externas y las conexiones distantes una vez concluido el procedimiento.
+\paragraph{Reconexi\'on de las aristas ($22$-$33$):} Se itera por cada arista $a$ del grafo y con probabilidad $p$ se reconecta el v\'ertice destino de la arista. La generaci\'on del valor aleatorio que se compara con $p$ para el c\'alculo de la probabilidad sigue una distribuci\'on uniforme en $(0,1)$. La arista $\lbrace v,w \rbrace$ seleccionada para su reconexi\'on se elimina del conjunto $A^n$ y se procede a encontrar el nuevo v\'ertice destino. El nuevo v\'ertice destino $w'$ se elige de entre todos los v\'ertices del grafo, pero no puede ser el origen de la arista porque no se permiten bucles, y la nueva arista formada no puede existir en el grafo ya que no se permiten duplicados. La nueva arista $\lbrace v,w' \rbrace$ se a\~nade al conjunto $A^d$, identificando satisfactoriamente la nueva conexi\'on como distante. Finalmente, se realiza la uni\'on de los conjuntos $A^n$ y $A^d$, y se declara el grafo $G$ que se retorna como resultado del algoritmo. En la figura~\ref{fig-grid-3D-reconected} se puede apreciar la disposici\'on de los v\'ertices de las caras externas y las conexiones distantes una vez concluido el procedimiento, para una mejor comprensión visual se analiza en 2 dimensiones en la figura~\ref{fig-grid-2D-reconected}.
+
+\begin{figure}[!ht]
+	\begin{center}
+	\scalebox{0.65}{\includegraphics[scale=0.5]{img/fig-grid-3D-reconected.png}}
+	\end{center}\vspace*{-0.6cm}
+	\caption[Detalles de la disposici\'on de las aristas inmediatas y reconectadas en el grafo]{Detalles de la disposici\'on de las aristas inmediatas y reconectadas en un grafo.}
+	\label{fig-grid-3D-reconected}
+	\end{figure}
 
 \begin{figure}[!ht]
 \begin{center}
 \scalebox{0.65}{\includegraphics{img/fig-grid-2D-reconected.png}}
 \end{center}\vspace*{-0.6cm}
-\caption[Detalles de la disposici\'on de las aristas inmediatas y reconectadas en el grafo]{Detalles de la disposici\'on de las aristas inmediatas y reconectadas en el grafo presentado en la figura~\ref{fig-grid-2D-initial}. En el diagrama izquierdo se muestra el grafo construido utilizando la configuraci\'on de vecindad generada con $R=2$, y en el derecho se muestra el grafo una vez concluido el proceso de reconexi\'on de las aristas.}
+\caption[Detalles de la disposici\'on de las aristas inmediatas y reconectadas en el grafo]{Detalles de la disposici\'on de las aristas inmediatas y reconectadas en un grafo. En el diagrama izquierdo se muestra el grafo construido utilizando la configuraci\'on de vecindad generada con $R=2$, y en el derecho se muestra el grafo una vez concluido el proceso de reconexi\'on de las aristas \cite{viabarre2019}.}
 \label{fig-grid-2D-reconected}
 \end{figure}
 
 \subsection{Propiedades del grafo resultante del modelo Watts-Strogatz}
 \label{subsec-R-periodic}
-En esta sección, proponemos analizar estadísticamente cómo influye la ausencia o presencia de estas aristas en conjunto con varios valores de $R$ en el coeficiente de agrupamiento global de la red y la longitud promedio del camino. El algoritmo~\ref{alg-watts} puede alternar entre la inclusión o exclusión de las aristas periódicas para llevar a cabo esta prueba. Si consideramos que la distancia euclidiana entre dos vértices, 
-, que se encuentran en extremos opuestos del grafo $v$ y $w$ es igual a $1$~(siendo $R=1$ el menor valor de radio de la vecindad concebido) entonces la arista peri\'odica entre $v$ y $w$ estar\'a contenida en las vecindades inmediatas de estos v\'ertices. La implementación de esta condición permite alternar entre la inclusión o exclusión de aristas periódicas al grafo resultante.
+En esta sección, proponemos analizar estadísticamente cómo influye la ausencia o presencia de estas aristas en conjunto con varios valores de $R$ en el coeficiente de agrupamiento global de la red y la longitud promedio del camino. El algoritmo~\ref{alg-watts} puede alternar entre la inclusión o exclusión de las aristas periódicas para llevar a cabo esta prueba. Si consideramos que la distancia euclidiana entre dos vértices que se encuentran en extremos opuestos del grafo $v$ y $w$ es igual a $1$~(siendo $R=1$ el menor valor de radio de la vecindad concebido) entonces la arista peri\'odica entre $v$ y $w$ estar\'a contenida en las vecindades inmediatas de estos v\'ertices. La implementación de esta condición permite alternar entre la inclusión o exclusión de aristas periódicas al grafo resultante.
 
 Para verificar el impacto de las distintas configuraciones de vecindad inmediatas y de la inclusi\'on o no de aristas peri\'odicas en los valores del coeficiente de agrupamiento $C_G$ y de la longitud promedio del camino de la red $\ell_G$ se realizaron diversas pruebas mediante la construcci\'on de distintas redes con una cantidad total de $q = s_x \times s_y = 40 \times 20 = 800$ v\'ertices y alternando distintos valores de $R$ y $p$ con la inclusi\'on o no de aristas peri\'odicas. Cada uno de los valores de $C_G$ y $\ell_G$, mostrados en el cuadro~\ref{table-network-data}, fueron obtenidos promediando los resultados provenientes de la realizaci\'on de $30$ ejecuciones. 
 \begin{table}[!ht]
@@ -348,15 +355,40 @@ Adem\'as se cumple para toda combinaci\'on de $R$ y $p$ que la ausencia de arist
 
 Dado que la presencia de aristas peri\'odicas carece de una interpretaci\'on natural como se mencion\'o en la secci\'on~\ref{subsec-watts-2}, y que no afectan de forma negativa las propiedades deseadas del grafo resultante como se expuso en el texto anterior, se decide no incluirlas. Se elige la configuraci\'on de vecindad generada con $R=\sqrt{2}$ ya que los grafos construidos con este valor poseen coeficientes de agrupamiento altos y longitudes promedio del camino relativamente peque\~nas. Adem\'as constituye la configuraci\'on de vecindad m\'as sencilla que posee las caracter\'isticas mencionadas ya que provee de una interpretaci\'on natural para las conexiones inmediatas correspondientes con la cercan\'ia f\'isica a diferencia de otras vecindades generadas con valores mayores de $R$; e.g. para $R=2$ se tienen v\'ertices vecinos a distancia $2$ del v\'ertice central. En cuanto a la probabilidad de reconexi\'on esta se encuentra entre los valores $p \in \lbrace 10^{-3}, 10^{-2} \rbrace$ en los que ocurre un r\'apido descenso en el valor de la longitud promedio del camino mientras que el coeficiente de agrupamiento se mantiene casi invariante con un valor cercano a $C_G=0$.$45$ para $R=\sqrt{2}$, que si atendemos lo planteado en~\cite{complexnetworks} constituye un valor alto.
 %%% Revisar todo el tema de las aristas periodicas
-A partir de estudios realizados anteriormente (tesis de darien) se llega a la conclusión de no incluir las aristas periódicas pues carecen de una interpretación natural y no afectan de forma negativa las propiedades deseadas del grafo. %%%%%%%%%
+A partir de estudios realizados anteriormente \cite{viabarre2019} se llega a la conclusión de no incluir las aristas periódicas pues carecen de una interpretación natural y no afectan de forma negativa las propiedades deseadas del grafo. %%%%%%%%%
 
 \section{Marching Cubes}
 
-La técnica de Marching Cubes es un algoritmo de gráficos por computadora que se usa para extraer una malla poligonal de una isosuperficie de un campo escalar discreto tridimensional, como lo son los datos de imágenes de tomografías computarizadas (CT) y resonancias magnéticas (MRI) ~\cite{5}. En el contexto de este proyecto, se utiliza para la representación tridimensional de los tumores, proporcionando una visualización detallada y precisa.Ver en Anexo \ref{fig:tumor}
+La técnica de Marching Cubes es un algoritmo de gráficos por computadora que se usa para extraer una malla poligonal de una isosuperficie de un campo escalar discreto tridimensional, como lo son los datos de imágenes de tomografías computarizadas (CT) y resonancias magnéticas (MRI) ~\cite{lorensen1987}. En el contexto de este proyecto, se utiliza para la representación tridimensional de los tumores, proporcionando una visualización detallada y precisa.Ver en Anexo \ref{fig:tumor}
 
-Este algoritmo trabaja procesando las celdas de los datos de volumen (también conocidas como vóxeles), verificando la intersección entre sus respectivas aristas y la isosuperficie. Los valores de cada vértice de las celdas se comparan con un valor isosuperficial dado, y estos vértices se clasifican como "dentro"  o  "fuera" de la isosuperficie. Una vez definido el tipo de intersección, se realiza una aproximación de la isosuperficie contenida en la celda construyendo triángulos~\cite{1}.
+Este algoritmo trabaja procesando las celdas de los datos de volumen (también conocidas como vóxeles), verificando la intersección entre sus respectivas aristas y la isosuperficie. Los valores de cada vértice de las celdas se comparan con un valor isosuperficial dado, y estos vértices se clasifican como ``dentro``  o ``fuera`` de la isosuperficie. Una vez definido el tipo de intersección, se realiza una aproximación de la isosuperficie contenida en la celda construyendo triángulos~\cite{cirne2013}.
+
+\begin{figure}[!ht]
+	\begin{center}
+	\scalebox{0.65}{\includegraphics{img/fig-marching-cubes1.png}}
+	\end{center}\vspace*{-0.6cm}
+	\caption[Ilustración de Marching Cubes]{Ilustración de los 15 casos básicos del método de Marching Cubes. Los vértices verdes son aquellos que se clasifican como ``dentro`` de las isosuperficies, mientras que el resto se clasifica como ``fuera`` de ellas.}
+	\label{fig-marching-cubes1}
+	\end{figure}
 
 La visualización resultante puede proporcionar una comprensión valiosa de cómo se desarrolla y se propaga el cáncer. Al visualizar el crecimiento del tumor en tres dimensiones, los médicos y científicos pueden obtener una mejor comprensión de la evolución del tumor y cómo puede afectar a los tejidos circundantes. Esta información puede ser esencial para el desarrollo de terapias y tratamientos efectivos para el cáncer.
+
+\begin{figure}[!ht]
+	\begin{center}
+	\scalebox{0.65}{\includegraphics{img/fig-marching-cubes2.png}}
+	\end{center}\vspace*{-0.6cm}
+	\caption[Ilustración de Marching Cubes]{Renderizado de volumen de un conjunto de datos de cabeza masculina utilizando cubos de marcha con diferentes valores de isovalor: (a) 30, (b) 50, (c) 75, (d) 100.}
+	\label{fig-marching-cubes1}
+	\end{figure}
+
+
+\begin{figure}[!ht]
+	\begin{center}
+	\scalebox{0.65}{\includegraphics{img/fig-marching-cubes3.png}}
+	\end{center}\vspace*{-0.6cm}
+	\caption[Ilustración de Marching Cubes]{Ejemplo de renderizado de un polígono 3D utilizando la técnica de Marching Cubes.}
+	\label{fig-marching-cubes1}
+	\end{figure}
 
 Debido a que es muy costoso representar y aplicar el algoritmo de Marching Cubes para modelos tan realistas que contengan millones de c\'elulas, en este trabajo se lleva a cabo la implementaci\'on de un escalado del modelo que permite reducir el tama\~no de las dimensiones de nuestro modelo original de aut\'omata celular. Para hacer semejante reducci\'on se procede de la siguiente forma:
 \begin{itemize}
@@ -366,9 +398,7 @@ Debido a que es muy costoso representar y aplicar el algoritmo de Marching Cubes
     \item Luego de hacer esto por varios cuadrantes, cada uno reducir\'a su tama\~no desde $(n x m x l)$ a $(1 x 1 x 1)$, siendo $n \leq S_{x} ,m \leq S_{y},l \leq S_{z}$. 
 \end{itemize}
 
-En resumen, la técnica de Marching Cubes es una herramienta potente para la visualización tridimensional de datos médicos. En el contexto de la investigación del cáncer, puede proporcionar una representación detallada y precisa del crecimiento de los tumores, lo que puede contribuir significativamente a nuestra comprensión de esta enfermedad y al desarrollo de terapias y tratamientos efectivos.\\
-
-section{Conjunto de estados}
+\section{Conjunto de estados}
 \label{subsec-states}
 En la teoría de autómata celulares, un estado es un valor numérico asignado inicialmente a cada célula y que puede variar durante la ejecución. En este modelo, el estado representa el tipo de célula biológica presente. Un corte transversal del tejido muestra que está estructurado en capas, cada una con una función específica dentro del órgano (Fig.\ref{fig-structure}). El crecimiento macroscópico de un tumor depende en gran medida de las interacciones progresivas entre la masa de las células cancerígenas y cada una de estas capas de tejidos. En épocas anteriores de la histología, cada capa del tejido se clasificaba como parte del parénquima o del estroma. El parénquima es el tejido que desempeña la función principal de un órgano específico, mientras que las capas de tejido que proporcionan soporte y apoyo al tejido funcional se denominan estroma. Generalmente, el parénquima está compuesto por el epitelio de un órgano. En la sección\ref{subsec-macro} se presentó el desarrollo idealizado de un tumor que se origina en células de tipo epitelial o carcinoma, y su expansión a través de las distintas capas de tejidos. Por lo tanto, inicialmente, se requiere un estado para las células del tejido epitelial.
 
@@ -383,7 +413,7 @@ En la teoría de autómata celulares, un estado es un valor numérico asignado i
 \label{fig-structure}
 \end{figure}
 
-Se ha avanzado en el conocimiento de las interacciones complejas entre el tumor y el tejido saludable del cuerpo humano, particularmente aquellas que dan lugar a los comportamientos invasivos y migratorios del cáncer. Sin embargo, aún existen muchos mecanismos que no se comprenden completamente o que son completamente desconocidos hasta la fecha~\cite{kansal3}. A pesar de esto, se pueden identificar varios procesos que contribuyen a la invasión y migración: la degradación de la membrana basal que ocurre durante la angiogénesis, la deformación y movimiento del estroma debido a las fuerzas generadas por la expansión del tumor y la degradación de la matriz extracelular~\cite{kansal3}. El tipo de célula cancerosa que entra en contacto con el estroma determina qué proceso se llevará a cabo. La invasión es llevada a cabo por células cancerosas que pertenecen a la masa del tumor una vez que se ha degradado la membrana basal, y la migración por células cancerosas que poseen las mutaciones para moverse a través del estroma mediante la degradación de la ECM.
+Se ha avanzado en el conocimiento de las interacciones complejas entre el tumor y el tejido saludable del cuerpo humano, particularmente aquellas que dan lugar a los comportamientos invasivos y migratorios del cáncer. Sin embargo, aún existen muchos mecanismos que no se comprenden del todo o que son completamente desconocidos hasta la fecha~\cite{kansal3}. A pesar de esto, se pueden identificar varios procesos que contribuyen a la invasión y migración: la degradación de la membrana basal que ocurre durante la angiogénesis, la deformación y movimiento del estroma debido a las fuerzas generadas por la expansión del tumor y la degradación de la matriz extracelular~\cite{kansal3}. El tipo de célula cancerosa que entra en contacto con el estroma determina qué proceso se llevará a cabo. La invasión es llevada a cabo por células cancerosas que pertenecen a la masa del tumor una vez que se ha degradado la membrana basal, y la migración por células cancerosas que poseen las mutaciones para moverse a través del estroma mediante la degradación de la ECM.
 
 A pesar de la variedad de tejidos que componen el estroma, las interacciones entre todos los tejidos de sostén y las células cancerosas conducen a uno de estos dos procesos: invasión o migración. Por lo tanto, no es necesario diferenciar entre las distintas capas de tejidos de sostén en el autómata celular si solo se consideran estas interacciones fundamentales. Posteriormente, se introduce una nueva hipótesis en el modelo que simplifica la dinámica del autómata celular, representando los diversos tipos de tejidos de sostén simplemente como estroma. Las células del autómata correspondientes a este tejido se corresponden entonces con células biológicas reales o con clústeres de macromoléculas presentes en la ECM.
 
@@ -442,7 +472,7 @@ Inicialmente se asigna a cada c\'elula el estado correspondiente a partir de su 
 
 \section{Funci\'on de transici\'on general}
 \label{subsec-function}
-La dinámica de un autómata se describe mediante una regla de transición local, donde el estado futuro de una célula se deduce de su estado actual y su vecindario. Esta función es espacialmente homogénea, lo que significa que no depende de la ubicación espacial de la célula, aunque puede ser extendida para incluir dependencias temporales o espaciales~\cite{book}. En cuanto a la naturaleza de la regla, esta puede ser determinista o estocástica. En un modelo determinista, la aplicación de la regla a una célula devuelve un único estado en el siguiente instante de tiempo. Por otro lado, en un modelo estocástico, la aplicación de la regla a una célula está condicionada por el valor de una variable aleatoria. Esta variable aleatoria determina la probabilidad de la transición en función del estado anterior de la célula y su vecindario~\cite{book}
+La dinámica de un autómata se describe mediante una regla de transición local, donde el estado futuro de una célula se deduce de su estado actual y su vecindario. Esta función es espacialmente homogénea, lo que significa que no depende de la ubicación espacial de la célula, aunque puede ser extendida para incluir dependencias temporales o espaciales~\cite{book}. En cuanto a la naturaleza de la regla, esta puede ser determinista o estocástica. En un modelo determinista, la aplicación de la regla a una célula devuelve un único estado en el siguiente instante de tiempo. Por otro lado, en un modelo estocástico, la aplicación de la regla a una célula está condicionada por el valor de una variable aleatoria. Esta variable aleatoria determina la probabilidad de la transición en función del estado anterior de la célula y su vecindad~\cite{book}
 
 Se mencion\'o en la secci\'on introductoria las ventajas de los aut\'omatas celulares para razonar en t\'erminos de individuos, por lo que est\'an mejor ajustados al problema de modelar poblaciones. Sin embargo, el enfoque tradicional en las distintas ramas de la ciencia es utilizar modelos basados en variables continuas, lo que provoca que la inferencia de la funci\'on de transici\'on de estos modelos continuos sea un paso importante a resolver. Comenzamos con las definiciones de configuraci\'on global, configuraci\'on local, funci\'on de transici\'on global y funci\'on de transici\'on local:
 
@@ -600,7 +630,7 @@ El cáncer representado en el modelo se conoce como carcinoma y tiene su origen 
 \begin{center}
 \scalebox{0.8}{\includegraphics{img/fig-tumor-progresion-2.png}}
 \end{center}\vspace*{-0.6cm}
-\caption[Ciclo vital del c\'ancer representado por el modelo]{Ciclo vital del c\'ancer representado por el modelo. Como se puede apreciar la \'unica diferencia existente en el modelo entre un tumor primario y uno secundario es su comportamiento durante la etapa avascular, ya que se asume que un tumor primario siempre sobrevive y se desarrolla de forma satisfactoria en su entorno, mientras que una micromet\'astasis puede fallar en colonizar su nuevo entorno o ser destruida por el sistema inmunitario.}
+\caption[Ciclo vital del c\'ancer representado por el modelo]{Ciclo vital del c\'ancer representado por el modelo. Como se puede apreciar la \'unica diferencia existente en el modelo entre un tumor primario y uno secundario es su comportamiento durante la etapa avascular, ya que se asume que un tumor primario siempre sobrevive y se desarrolla de forma satisfactoria en su entorno, mientras que una micromet\'astasis puede fallar en colonizar su nuevo entorno o ser destruida por el sistema inmunitario \cite{viabarre2019}.}
 \label{fig-tumor-progresion}
 \end{figure}
 
@@ -852,9 +882,9 @@ Continuando con el proceso de incorporaci\'on de nuevas hip\'otesis a la probabi
 \label{def-regions}
 Una regi\'on se define como:
 \begin{equation}
-R_i = \lbrace v~|~v \in V(G) : (x_{min} \leq v_x < x_{max})~\wedge~(y_{min} \leq v_y < y_{max}) \rbrace,
+R_i = \lbrace v~|~v \in V(G) : (x_{min} \leq v_x < x_{max})~\wedge~(y_{min} \leq v_y < y_{max}) ~\wedge~(z_{min} \leq v_z < z_{max}) \rbrace,
 \end{equation}
-donde $x_{min}$ y $y_{min}$ son los valores extremos inferiores de la regi\'on definida, mientras que $x_{max}$ y $y_{max}$ son los valores extremos superiores de la regi\'on definida. Las regiones definidas constituyen una partici\'on del conjunto de v\'ertices del grafo $V(G)$.
+donde $x_{min}$, $y_{min}$ y $z_{min}$ son los valores extremos inferiores de la regi\'on definida, mientras que $x_{max}$, $y_{max}$ y $z_{max}$ son los valores extremos superiores de la regi\'on definida. Las regiones definidas constituyen una partici\'on del conjunto de v\'ertices del grafo $V(G)$.
 \end{definition}
 
 \begin{definition}
@@ -870,7 +900,7 @@ Generalmente se utiliza la similitud coseno para determinar el grado de similitu
 \label{def-general-vector}
 Sean dos c\'elulas $v$ y $w$ del conjunto $V(G)$. Un vector $\overrightarrow{\nu_{vw}}$ entre las c\'elulas $v$ y $w$ se define como:
 \begin{equation}
-\overrightarrow{\nu_{vw}} = \left(v_x - w_x, v_y - w_y \right). \label{eq-general-vector}
+\overrightarrow{\nu_{vw}} = \left(v_x - w_x, v_y - w_y, v_z - w_z \right). \label{eq-general-vector}
 \end{equation}
 \end{definition}
 
@@ -919,7 +949,7 @@ Las definiciones de un vector de expansi\'on y del centroide del tumor se presen
 \label{def-centroid}
 Sea $l=\lbrace w_1,w_2,\ldots,w_{m}\rbrace$ con $m=|l|$ un conjunto que contiene las c\'elulas pertenecientes a un tumor cualquiera representado en el aut\'omata. El centroide de dicho tumor se denota como $c_l$ y se define como el promedio de las componentes de las c\'elulas del conjunto, es decir:
 \begin{equation}
-c_l = \left(\frac{w_{1x} + w_{2x} + \ldots + w_{mx}}{m}, \frac{w_{1y} + w_{2y} + \ldots + w_{my}}{m} \right). \label{eq-centroid}
+c_l = \left(\frac{w_{1x} + w_{2x} + \ldots + w_{mx}}{m}, \frac{w_{1y} + w_{2y} + \ldots + w_{my}}{m}, \frac{w_{1z} + w_{2z} + \ldots + w_{mz}}{m} \right). \label{eq-centroid}
 \end{equation}
 \end{definition}
 
@@ -927,7 +957,7 @@ c_l = \left(\frac{w_{1x} + w_{2x} + \ldots + w_{mx}}{m}, \frac{w_{1y} + w_{2y} +
 \label{def-exp-vector}
 Sea el centroide $c_l$ de un tumor cualquiera $l$ y una c\'elula $v$ hacia el que se est\'a expandiendo dicho tumor. A partir de la expresi\'on~(\ref{eq-general-vector}) se define el vector de expansi\'on $\overrightarrow{\nu_{vl}}$ entre el centroide del tumor $c_l$ y la c\'elula $v$ como:
 \begin{equation}
-\overrightarrow{\nu_{vl}} = \left(v_x - c_{lx}, v_y - c_{ly} \right). \label{eq-exp-vector}
+\overrightarrow{\nu_{vl}} = \left(v_x - c_{lx}, v_y - c_{lz}, v_z - c_{lz} \right). \label{eq-exp-vector}
 \end{equation}
 \end{definition}
 
@@ -1106,7 +1136,7 @@ Finalmente las probabilidades de transici\'on $\rho_0(v,n_i,l_i \rightarrow 3)$,
 
 \subsection{Regla del surgimiento de c\'elulas migratorias}
 \label{subsec-migrant}
-A lo largo de esta seccion se presentan reglas que comprenden el comportamiento de las celulas cancerigenas migratorias, desde las condiciones de su surgimiento hata su desplazamiento a traves de la ECM del tejido de sosten. Es posible que una celula se mueva gracias a los cambios de la matriz de interaccion provocados por las proteinas involucradas en el control de la movilidad y la supresion de reguladores de la migracion. En (2.7) se expusieron los cambios que debe sufrir una celula cancerigena tumoral para que se transforme en una celula migratoria y consisten en la perdida de la capacidad de adhesion celular y alteraciones de la matriz de interaccion intercelular(Cambiar esta oracion).
+A lo largo de esta secci\'on se presentan reglas que comprenden el comportamiento de las c\'elulas cancer\'igenas migratorias, desde las condiciones de su surgimiento hata su desplazamiento a trav\'es de la ECM del tejido de sost\'en. Es posible que una c\'elula se mueva gracias a los cambios de la matriz de interacci\'on provocados por las prote\'inas involucradas en el control de la movilidad y la supresi\'on de reguladores de la migraci\'on. En (2.7) se expusieron los cambios que debe sufrir una c\'elula cancer\'igena tumoral para que se transforme en una c\'elula migratoria y consisten en la p\'erdida de la capacidad de adhesi\'on celular y alteraciones de la matriz de interacci\'on intercelular \cite{viabarre2019}.
 %Las reglas que se presentan en esta sección abordan el comportamiento de las células cancerosas migratorias, desde su surgimiento hasta su desplazamiento a través de la ECM del tejido de soporte. En la sección~\ref{subsec-meta} se menciona que una célula cancerosa tumoral debe perder la capacidad de adhesión celular y experimentar cambios en la matriz de interacción intercelular para convertirse en una célula migratoria. El movimiento es posible debido a los cambios en la matriz de interacción que resultan en la expresión de proteínas implicadas en el control de la movilidad y la supresión de reguladores de la migración. En esta sección se definen las reglas relacionadas con el surgimiento de estas células para definir en secciones posteriores el proceso de migración y metástasis.
 
 La metástasis es la última característica distintiva del cáncer en adquirirse, según la hipótesis II sobre las mutaciones de las células cancerosas, y solo ocurre cuando el tumor ya ha llevado a cabo la angiogénesis y su desarrollo está avanzado. En este modelo, se considera que una célula tumoral al dividirse tiene la posibilidad de generar un descendiente que presente las mutaciones relacionadas con la migración, y dependiendo de dónde surja, hay dos rutas principales que puede seguir para continuar la cascada metastásica. La primera ocurre cuando la célula progenitora surge en el borde del tumor, lo que causa su separación de la masa neoplásica y su avance a través de la ECM con el objetivo de encontrar un posible punto de penetración del sistema circulatorio. La segunda ocurre cuando la célula migratoria surge en el interior del tumor cerca de un capilar sanguíneo, lo que le permite penetrar directamente el sistema circulatorio sin necesidad de migración.Como la segunda situaci\'on parte directamente de la intravasaci\'on es conveniente concebirla en la secci\'on relacionada con la met\'astasis, una vez que se exponga la representaci\'on del transporte de estas c\'elulas a trav\'es del sistema circulatorio.
@@ -1632,7 +1662,7 @@ Como se puede apreciar en las expresiones~\ref{eq-rho-5-sur} y~\ref{eq-rho-5-col
 
 Se especifica en las reglas sobre la conservaci\'on del estado de las c\'elulas normales del aut\'omata (poner referencia) que dichas c\'elulas no cambian de estado salvo que se encuentren en presencia de c\'elulas cancerígenas, luego se definen las reglas relacionadas con el comportamiento de las c\'elulas oncol\'ogicas, pero nunca tenemos en cuenta la interacci\'on de las mismas con el sistema inmunológico. En esta sección analizaremos el comportamiento de los diferentes tipos de c\'elulas antes mencionados con las inmunitarias.
 
-Luego agregamos la hipotesis numero XXIV:
+Luego agregamos la hip\'otesis numero XXIV:
 
 \begin{itemize}
     \item [XXIV.] \textbf{C\'elulas inmunitarias}: \emph{Cada \'organo representado est\'a vinculado con el otro a trav\'es de las conexiones distantes existentes en el grafo subyacente. Se asume que una c\'elula que penetre el sistema circulatorio en un punto dado lo abandonar\'a en una posici\'on predeterminada, correspondientes con los destinos de las conexiones mencionadas.} \label{XXIV}
@@ -1641,9 +1671,12 @@ Luego agregamos la hipotesis numero XXIV:
 
 \subsection{Reglas de la conservaci\'on del estado de c\'elulas normales, inmunes y tumorales}
 
-Las c\'elulas normales se mantienen est\'aticamente y su estado no var\'ia a menos que exista la presencia de c\'elulas cancer\'igenas o de inmunidad en su vecindad.\\
-Las c\'elulas de inmunidad solo cambian a una posici\'on espec\'ifica cuando existe la presencia de c\'elulas cancer\'igenas en su vecindad.\\
-Las c\'elulas inmunitarias se mueven libremente hacia las c\'elulas normales.
+\begin{enumerate}
+	\item Las c\'elulas normales se mantienen est\'aticamente y su estado no var\'ia a menos que exista la presencia de c\'elulas cancer\'igenas o de inmunidad en su vecindad.
+	\item Las c\'elulas de inmunidad solo cambian a una posici\'on espec\'ifica cuando existe la presencia de c\'elulas cancer\'igenas en su vecindad.
+	\item Las c\'elulas inmunitarias se mueven libremente hacia las c\'elulas normales.
+\end{enumerate}
+
 Al comienzo de cada instante de tiempo las c\'elulas de inmunidad seleccionan una de las posibles vecinas inmediatas para desplazarse. Si la probabilidad de moverse hacia un vecino $w$ es menor que un valor $th$, la c\'elula de inmunidad mantiene su posici\'on inicial. Formulamos la regla de la siguiente forma:\\
 %$L(t+T) \xrightarrow{P_{w}} w \xrightarrow{P_m} \displaystyle \left\{ {L(t) \hspace{1cm} P_w<th \atop L(t + 1) \hspace{.5cm} P_w \geq th } \right\},$\\
 $L(t+T) \xrightarrow{P_{w}} w  \displaystyle \left\{ {L(t) \hspace{1cm} P_w<th \atop L(t + 1) \hspace{.5cm} P_w \geq th } \right\},$\\
@@ -1654,8 +1687,8 @@ donde:\\
  %$P_m:$ es la probabilidad de moverse o no hacia la posici\'on correspondiente.\\
 
 
-\subsection{Regla de Inmunoreacci\'on}
-Cuando las c\'elulas tumorales aparecen en la vecindad inmediata de las c\'elulas de inmunidad, las c\'elulas inmunes invaden la posici\'on de la c\'elula tumoral. En estos momentos decimos que ocurre inmunoreacci\'on. Luego ambas c\'elulas comienzan a combatir y se pueden dar 3 situaciones como resultado:
+\subsection{Regla de inmunorreacci\'on}
+Cuando las c\'elulas tumorales aparecen en la vecindad inmediata de las c\'elulas de inmunidad, las c\'elulas inmunes invaden la posici\'on de la c\'elula tumoral. En estos momentos decimos que ocurre inmunorreacci\'on. Luego ambas c\'elulas comienzan a combatir y se pueden dar 3 situaciones como resultado:
 \begin{itemize}
 \item La c\'elula de inmunidad mata a la c\'elula tumoral y la c\'elula se recupera, quedando en esta posici\'on una c\'elula normal.
 \item La c\'elula tumoral vence a la c\'elula inmune y contin\'ua infectando y proliferando las c\'elulas normales.
@@ -1669,8 +1702,8 @@ $Tc$ & $P_{I} > Th$ \\
 
  $Ic$: c\'elula inmune; $Nc$: c\'elula normal;  $Mc$: c\'elula en etapa intermedia;  $Tc$: c\'elula tumoral; $Th$: valor del umbral de inmunoreacci\'on; $p$: probabilidad de inmunoreacci\'on.
 
-\subsection{Regla del Estado Intermedio}
-Cuando las c\'elulas de inmunidad y las c\'elulas tumorales interact\'uan entre s\'i, uno de los resultados es que aparecen c\'elulas en etapa intermedia en el sistema. Si la suma de las c\'elulas normales y c\'elulas inmunes es mas que el 60\% de las c\'elulas vecinas, entonces las c\'elulas en un estado intermedio pasan a convertirse a c\'elulas normales. En caso de tener m\'as del 30\% de sus c\'elulas vecinas siendo tumorales, la c\'elula en estado intermedio pasar\'ia se convertir\'ia en una c\'elula tumoral.\\
+\subsection{Regla del estado intermedio}
+Cuando las c\'elulas de inmunidad y las c\'elulas tumorales interact\'uan entre s\'i, uno de los resultados es que aparecen c\'elulas en etapa intermedia en el sistema. Si la suma de las c\'elulas normales y c\'elulas inmunes es mayor que el 60\% de las c\'elulas vecinas, entonces las c\'elulas en un estado intermedio pasan a convertirse a c\'elulas normales. En caso de tener m\'as del 30\% de sus c\'elulas vecinas siendo tumorales, la c\'elula en estado intermedio se convertir\'ia en una c\'elula tumoral.\\
 $$Tc + Ic \xrightarrow \displaystyle \left\{ 
 \begin{tabular}{r l}
 $Nc$ & $Nc + Ic > 60\%$ \\
