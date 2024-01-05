@@ -189,6 +189,12 @@
    \addcontentsline{toc}{chapter}{Recomendaciones}%
     \chapter*{Recomendaciones}}%
   {}
+  \newenvironment{appendixes}%
+  {\cleardoublepage%
+   \phantomsection%
+   \addcontentsline{toc}{chapter}{Ap\'endices}%
+    \chapter*{Ap\'endices}}%
+  {}
 \newenvironment{dedication}%
   {\cleardoublepage%
    \thispagestyle{empty}%

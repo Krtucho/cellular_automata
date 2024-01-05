@@ -1,0 +1,125 @@
+\chapter{Par\'ametros de la simulaci\'on}\label{chapter:proposal}
+
+La validación se encarga de verificar la precisión del modelo en su representación del sistema real. Algunas de las cuestiones que deben abordarse en esta sección son el análisis de los valores asignados a los parámetros del modelo y las consecuencias de sus posibles variaciones. La comparación de los resultados numéricos y visuales obtenidos con datos de distintas investigaciones in vitro, in vivo y estudios clínicos encontrados en la literatura se llevará a cabo en la sección 5. Tambi\'en se deben precisar detalles espec\'ificos de la implementaci\'on del modelo y la herramienta desarrollada, funciones especiales del mismo, como la carga y guardado de datos y par\'ametros. Es relevante destacar que el modelo en su totalidad está diseñado para simular el desarrollo de cualquier tipo de carcinoma. Sin embargo, como se podrá observar en las secciones siguientes, nos enfocamos en el carcinoma ductal infiltrante, que es el caso más común de cáncer de mama. Las razones detrás de esta elección incluyen la abundancia de información y datos disponibles sobre este tipo de cáncer.(Change)
+
+\section{Par\'ametros de la construcci\'on de la red y de la ley de crecimiento log\'istico}
+\label{subsec-network-param}
+Los par\'ametros de construcci\'on de la red se corresponden con los argumentos del algoritmo~\ref{alg-watts} mostrado en la secci\'on~\ref{subsec-watts-2}, y determinan el tama\~no del espacio que se utiliza para representar las localizaciones donde se desarrolla el c\'ancer. Se presentan en el cuadro~\ref{table-network-params} que aparece a continuaci\'on para una r\'apida referencia. Los par\'ametros de la ley de crecimiento log\'istico se utilizan para reproducir el crecimiento tumoral, espec\'ificamente en las reglas presentadas en las secciones~\ref{subsec-celldiv} y \ref{subsec-micrometastasis} obtenidas a trav\'es de un proceso de inferencia de la regla a partir de dicha ley continua. Se presentan en el cuadro~\ref{table-logistic-params} para una r\'apida referencia.
+
+\begin{table}[!ht]
+\begin{center}
+\scalebox{0.9}{\begin{tabular}{|p{2cm}|p{14.5cm}|} \hline
+\emph{Par\'ametro} & \emph{Descripci\'on} \\\hline
+\multicolumn{1}{|c|}{$s_x$, $s_y$} & Dimensiones del espacio declarado. Las componentes espaciales de los v\'ertices del grafo poseen los siguientes rangos de valores: $0 \leq x < s_x$ y $0 \leq y < s_y$. \\\hline
+% \multicolumn{1}{|c|}{$s_o$} & Valor que marca la divisi\'on de la red entre un \'organo y el otro. Posee el siguiente rango de valores: $0 \leq s_o < s_x$. Generalmente toma valor $s_o = s_x / 2$. \\\hline
+\multicolumn{1}{|c|}{$p$} & Probabilidad de reconexi\'on del modelo Watts-Strogatz. \\\hline
+\end{tabular}}\vspace*{-0.5cm}
+\end{center}
+\caption[Par\'ametros de la construcci\'on de la red utilizados por el modelo Watts-Strogatz]{Par\'ametros de la construcci\'on de la red utilizados por el modelo Watts-Strogatz.}
+\label{table-network-params}
+\end{table}
+
+\begin{figure}[h!]%
+    \begin{center}
+        \begin{tabular}{|c|c|c|} \hline
+        Par\'ametro & Descripci\'on  	                       & Valor 	\\ \hline
+        %$P_m$       & Probabilidad de moverse o no &$0 \leq P_m  < 1  $			\\ \hline
+        $P_w$       & Probabilidad de movimiento hacia el vecino w&$0 \leq P_w  < 1  $			\\ \hline
+        $P_I$ 	    & Probabilidad de inmunoreacci\'on         &$0 \leq P_I  < 1  $			\\ \hline
+        $Th$		& Valor del umbral de inmunoreacci\'on     & 0.43			\\ \hline
+        $th$		& Valor del umbral de movimiento           & 0.5 			\\ \hline
+        \end{tabular}
+    \caption{Par\'ametros utilizados en la inmunorreacci\'on. \label{fig:inmune_param}\ref{subsec:funcion de transicion}}
+    \end{center}
+    \end{figure}
+
+\begin{table}[!ht]
+\begin{center}
+\scalebox{0.9}{\begin{tabular}{|p{2cm}|p{14.5cm}|} \hline
+\emph{Par\'ametro} & \emph{Descripci\'on} \\\hline
+\multicolumn{1}{|c|}{$P_0^a$, $P_0^v$} & Poblaciones iniciales de las etapas avascular y vascular respectivamente. \\\hline
+\multicolumn{1}{|c|}{$r_a$, $r_v$} & Ritmos de proliferaci\'on de las etapas avascular y vascular respectivamente. \\\hline
+\multicolumn{1}{|c|}{$K_a$, $K_v$} & Capacidad de carga de las etapas avascular y vascular respectivamente. \\\hline
+\multicolumn{1}{|c|}{$\Delta t$} & Tiempo transcurrido entre los instantes de tiempo $n$ y $n+1$. \\\hline
+\multicolumn{1}{|c|}{$n_a$} & Tiempo que permanece un tumor en etapa avascular. \\\hline
+\end{tabular}}\vspace*{-0.5cm}
+\end{center}
+\caption[Par\'ametros correspondientes con la ley de crecimiento log\'istico]{Par\'ametros correspondientes con la ley de crecimiento log\'istico.}
+\label{table-logistic-params}
+\end{table}
+
+En la secci\'on~\ref{subsec-macro} se expuso que un tumor avascular solo puede crecer hasta un radio de $R_a \in [0$.$5, 1]mm$. Asumiendo que un tumor tiene forma esf\'erica se estima que el volumen ocupado por el mismo durante la etapa avascular posee un valor perteneciente al intervalo $V_a \in [0$.$5236, 4$.$189]mm^3$. En~\cite{breastdata,chile} se estima que el radio de un tumor vascular correspondiente con un carcinoma ductal infiltrante puede tener valores de $R_v \in [10, 15]mm$. Siguiendo la idea anterior se estima que el volumen ocupado por un tumor vascular de estas dimensiones posee un valor perteneciente al intervalo $V_v \in [4$.$189 \times 10^3, 1$.$414 \times 10^4]mm^3$. El radio de una c\'elula cancer\'igena toma un valor del siguiente intervalo $R_c \in [1$.$5 \times 10^{-2}, 2$.$0 \times 10^{-2}]mm$ tomando en cuenta los tipos m\'as comunes de carcinomas~\cite{kansal3,breastdata,vajtai}. En~\cite{wisconsin} este valor se estima en $R_c \approx 17$.$46 \mu m$, utilizando en el c\'alculo $212$ muestras de c\'elulas obtenidas de tumores del tipo carcinoma ductal infiltrante, que constituye la forma m\'as com\'un de c\'ancer de mama. Asumiendo que una c\'elula tiene forma esf\'erica se determina su volumen aproximado como $V_{c} \in [1$.$414 \times 10^{-5}, 3$.$351 \times 10^{-5}]mm^3$. Utilizando los intervalos de valores del volumen de la c\'elula cancer\'igena y de un tumor durante las etapas avascular y vascular se pueden determinar las capacidades de carga del entorno para ambas etapas, devolviendo los siguientes intervalos $K_a \in [1$.$563 \times 10^4, 2$.$963 \times 10^5]$ y $K_v \in [1$.$25 \times 10^8, 1$.$0 \times 10^9]$.
+
+\begin{table}[!ht]
+\begin{center}
+\scalebox{0.9}{\begin{tabular}{|c|c|c|c|c|} \hline
+\multicolumn{2}{|c|}{\emph{Datos}} & \multicolumn{1}{|l|}{\emph{M\'inimo}} & \multicolumn{1}{|l|}{\emph{M\'aximo}} & \multicolumn{1}{|l|}{\emph{Promedio}}\\\hline
+
+    & \multicolumn{1}{|l|}{$R_c(mm)$} & \multicolumn{1}{|c|}{$1$.$5 \times 10^{-2}$} & \multicolumn{1}{|c|}{$2$.$0 \times 10^{-2}$} & \multicolumn{1}{|c|}{$1$.$75 \times 10^{-2}$} \\\cline{2-5}                              
+\emph{C\'elula cancer\'igena} & \multicolumn{1}{|l|}{$V_c(mm^3)$} & \multicolumn{1}{|c|}{$1$.$414 \times 10^{-5}$} & \multicolumn{1}{|c|}{$3$.$351 \times 10^{-5}$} & \multicolumn{1}{|c|}{$2$.$2244 \times 10^{-5}$} \\\cline{2-5} 
+    & \multicolumn{1}{|l|}{$A_c(mm^2)$} & \multicolumn{1}{|c|}{$7$.$069 \times 10^{-4}$} & \multicolumn{1}{|c|}{$1$.$257 \times 10^{-3}$} & \multicolumn{1}{|c|}{$9$.$621 \times 10^{-4}$} \\\hline
+                                
+    & \multicolumn{1}{|l|}{$R_a(mm)$} & \multicolumn{1}{|c|}{$0$.$5$} & \multicolumn{1}{|c|}{$1$} & \multicolumn{1}{|c|}{$7$.$5 \times 10^{-1}$} \\\cline{2-5}
+    & \multicolumn{1}{|l|}{$V_a(mm^3)$} & \multicolumn{1}{|c|}{$5$.$236 \times 10^{-1}$} & \multicolumn{1}{|c|}{$4$.$189$} & \multicolumn{1}{|c|}{$1$.$767$} \\\cline{2-5} 
+\emph{Tumor avascular} & \multicolumn{1}{|l|}{$K_a$*} & \multicolumn{1}{|c|}{$1$.$563 \times 10^4$} & \multicolumn{1}{|c|}{$2$.$963 \times 10^5$} & \multicolumn{1}{|c|}{$7$.$872 \times 10^4$} \\\cline{2-5} 
+    & \multicolumn{1}{|l|}{$A_a(mm^2)$} & \multicolumn{1}{|c|}{$7$.$854 \times 10^{-1}$} & \multicolumn{1}{|c|}{$3$.$142$} & \multicolumn{1}{|c|}{$1.767$} \\\cline{2-5} 
+    & \multicolumn{1}{|l|}{$K_a$**} & \multicolumn{1}{|c|}{$6$.$25 \times 10^2$} & \multicolumn{1}{|c|}{$4$.$444 \times 10^3$} & \multicolumn{1}{|c|}{$1$.$837 \times 10^3$} \\\hline
+                        
+    & \multicolumn{1}{|l|}{$R_v(mm)$} & \multicolumn{1}{|c|}{$1$.$0 \times 10^1$} & \multicolumn{1}{|c|}{$1$.$5 \times 10^1$} & \multicolumn{1}{|c|}{$1$.$25 \times 10^1$} \\\cline{2-5}
+    & \multicolumn{1}{|l|}{$V_v(mm^3)$} & \multicolumn{1}{|c|}{$4$.$189 \times 10^3$} & \multicolumn{1}{|c|}{$1$.$414 \times 10^4$} & \multicolumn{1}{|c|}{$8$.$181 \times 10^3$} \\\cline{2-5} 
+\emph{Tumor vascular} & \multicolumn{1}{|l|}{$K_v$*} & \multicolumn{1}{|c|}{$1$.$25 \times 10^8$} & \multicolumn{1}{|c|}{$1$.$0 \times 10^9$}& \multicolumn{1}{|c|}{$3$.$644 \times 10^8$} \\\cline{2-5} 
+    & \multicolumn{1}{|l|}{$A_v(mm^2)$} & \multicolumn{1}{|c|}{$3$.$142 \times 10^2$} & \multicolumn{1}{|c|}{$7$.$069 \times 10^2$} & \multicolumn{1}{|c|}{$4$.$909 \times 10^2$}\\\cline{2-5} 
+    & \multicolumn{1}{|l|}{$K_v$**} & \multicolumn{1}{|c|}{$2$.$5 \times 10^5$} & \multicolumn{1}{|c|}{$1$.$0 \times 10^6$} & \multicolumn{1}{|c|}{$5$.$102 \times 10^5$}\\\hline
+\end{tabular}}\vspace*{-0.5cm}
+\end{center}
+\caption[Datos de las caracter\'isticas f\'isicas como el radio y vol\'umen de la c\'elula cancer\'igena, de un tumor en etapa avascular y vascular, y de la superficie que ocupa un corte transversal de los mismos]{Datos de las caracter\'isticas f\'isicas como el radio y vol\'umen de la c\'elula cancer\'igena, de un tumor en etapa avascular y vascular, y de la superficie que ocupa un corte transversal de los mismos, correspondientes con el tipo de c\'ancer de mama conocido como carcinoma ductal infiltrante. \emph{En el cuadro:} (*) Capacidad de carga con respecto al volumen; (**) Capacidad de carga con respecto a la superficie ocupada por el corte transversal.}
+\label{table-original-values}
+\end{table}
+    
+Las localizaciones donde se reproduce el ciclo vital tumoral deben poseer el espacio suficiente para contener varias lesiones neopl\'asicas, motivo por el que se representa un corte de tejido de dimensiones $[0,10]cm \times [0,5]cm$, donde las porciones $[0,5]cm \times [0,5]cm$ y $[5,10]cm \times [0,5]cm$ se corresponden con el \'organo primario y secundario respectivamente. Las dimensiones de este espacio con respecto al n\'umero de c\'elulas contenidas se estima mediante el radio promedio de una c\'elula cancer\'igena $R_c$, quedando un espacio de dimensiones $[0, 3000] \times [0, 1500]$ aproximadamente, para un total de $4$.$5 \times 10^6$ c\'elulas. Por tanto, los par\'ametros de construcci\'on de la red de las dimensiones del espacio declarado poseen los siguientes valores $s_x = 3000$ y $s_y = 1500$, mientras que la divisi\'on entre los \'organos es $s_o = 1500$. Como se expuso en la secci\'on~\ref{subsec-watts-2} la probabilidad de reconexi\'on de la red posee el siguiente rango de valores $p \in [10^{-3},10^{-2}]$.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Configuraciones y par\'ametros de la simulaci\'on.}
+
+Adem\'as de los par\'ametros antes mencionados, algunos de los par\'ametros y configuraciones que se pueden modificar son:
+\begin{itemize}
+    % \item $S_{x}$ - Dimensi\'on del espacio declarado en el eje de las $x$.
+    % \item $S_{y}$ - Dimensi\'on del espacio declarado en el eje de las $y$.
+    % \item $S_{z}$ -Dimensi\'on del espacio declarado en el eje de las $z$. ~\cite{7}.Los rangos de valores de las componentes espaciales de los vértices del grafo son los siguientes: $0 \leq x \leq S_{x}$, $0 \leq y \leq S_{y}$ y $0 \leq z \leq S_{z}$.
+    % \item p - Probabilidad de reconexi\'on del modelo Watts-Strogatz.
+    % \item $P_0^a$, $P_0^v$ - Poblaciones iniciales de las etapas avascular y vascular respectivamente~\cite{7}.
+    \item Par\'ametros correspondientes a la cantidad de estados que pueden tener las celdas del aut\'omata y descripciones de los mismos.
+    \item Par\'ametros de posibles transiciones entre los estados del automata.
+    \item Par\'ametros de probabilidades para que ocurran las transiciones entre los estados. Al incluir par\'ametros para el c\'alculo de ciertas probabilidades, se puede tener en cuenta el c\'alculo de la probabilidad de la interacci\'on de las c\'elulas tumorales con el sistema inmune, como se hace en~\cite{ruanxiaoca}.
+    \item Par\'ametros correspondientes con la forma de los \'organos donde se desarrollara la simulaci\'on. Ver en Anexo %\ref{fig:organ_config}
+    \item Par\'ametros para describir el esquema de los \'organos donde se llevar\'a a cabo la simulaci\'on. De esta forma podemos tener en cuenta las caracter\'isticas de cada \'organo por separado y realizar una simulaci\'on m\'as realista.
+\end{itemize}
+
+Existen muchos otros par\'ametros que son configurables.\\
+
+\section{Manejo de la informaci\'on y detalles de la simulaci\'on.}
+Para manejar de manera eficiente la informaci\'on se hace uso de diferentes t\'ecnicas y herramientas:
+\begin{itemize}
+    \item Uso de archivos .json para manejar la información y los parámetros a asignar. Ver en Anexo %\ref{fig:json}
+    \item Uso de lenguajes de programación rápidos y eficientes como C\# para el manejo de memoria y guardado de gran cantidad de información en memoria o disco.
+    \item Empleo de matrices, grafos y estructuras similares.
+    \item Empleo de estructuras que manejen búsquedas rápidas como diccionarios o tablas de hash.
+\end{itemize}
+
+En cuanto a la simulaci\'on se destacan los siguientes aspectos:
+\begin{itemize}
+    \item Se lleva a cabo la implementación de un motor eficiente que nos permita simular cualquier tumor que se origine en el tejido epitelial de cualquier órgano.
+    \item Para trabajar con grandes cantidades de datos se realiza el análisis región por región del órgano que se esté analizando.
+    \item El rendimiento, la velocidad y el alcance dependerán de los recursos con los que cuente el ordenador en el que se esté ejecutando la simulación.
+\end{itemize}
+
+\section{Herramientas computacionales utilizadas}
+
+Para desarrollar este trabajo se utilizaron las siguientes herramientas:
+\begin{itemize}
+    \item En la parte de la generaci\'on de la simulaci\'on, C\# en su versi\'on de .net7.0.
+    \item En la parte visual para visualizar las c\'elulas y sus conexiones en determinadas regiones Python en su versi\'on 3.11 con Streamlit y otras dependencias.
+    \item En la parte visual para renderizar el tumor, Unity en su versi\'on 2021.3.28f1.
+\end{itemize}
