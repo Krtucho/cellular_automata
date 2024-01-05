@@ -361,13 +361,13 @@ A partir de estudios realizados anteriormente \cite{viabarre2019} se llega a la 
 
 La técnica de Marching Cubes es un algoritmo de gráficos por computadora que se usa para extraer una malla poligonal de una isosuperficie de un campo escalar discreto tridimensional, como lo son los datos de imágenes de tomografías computarizadas (CT) y resonancias magnéticas (MRI) ~\cite{lorensen1987}. En el contexto de este proyecto, se utiliza para la representación tridimensional de los tumores, proporcionando una visualización detallada y precisa.Ver en Anexo \ref{fig:tumor}
 
-Este algoritmo trabaja procesando las celdas de los datos de volumen (también conocidas como vóxeles), verificando la intersección entre sus respectivas aristas y la isosuperficie. Los valores de cada vértice de las celdas se comparan con un valor isosuperficial dado, y estos vértices se clasifican como ``dentro``  o ``fuera`` de la isosuperficie. Una vez definido el tipo de intersección, se realiza una aproximación de la isosuperficie contenida en la celda construyendo triángulos~\cite{cirne2013}.
+Este algoritmo trabaja procesando las celdas de los datos de volumen (también conocidas como vóxeles), verificando la intersección entre sus respectivas aristas y la isosuperficie. Los valores de cada vértice de las celdas se comparan con un valor isosuperficial dado, y estos vértices se clasifican como ``dentro''  o ``fuera'' de la isosuperficie. Una vez definido el tipo de intersección, se realiza una aproximación de la isosuperficie contenida en la celda construyendo triángulos~\cite{cirne2013}.
 
 \begin{figure}[!ht]
 	\begin{center}
 	\scalebox{0.65}{\includegraphics{img/fig-marching-cubes1.png}}
 	\end{center}\vspace*{-0.6cm}
-	\caption[Ilustración de Marching Cubes]{Ilustración de los 15 casos básicos del método de Marching Cubes. Los vértices verdes son aquellos que se clasifican como ``dentro`` de las isosuperficies, mientras que el resto se clasifica como ``fuera`` de ellas.}
+	\caption[Ilustración de Marching Cubes]{Ilustración de los 15 casos básicos del método de Marching Cubes. Los vértices verdes son aquellos que se clasifican como ``dentro'' de las isosuperficies, mientras que el resto se clasifica como ``fuera'' de ellas.}
 	\label{fig-marching-cubes1}
 	\end{figure}
 
@@ -398,7 +398,6 @@ Debido a que es muy costoso representar y aplicar el algoritmo de Marching Cubes
     \item Luego de hacer esto por varios cuadrantes, cada uno reducir\'a su tama\~no desde $(n x m x l)$ a $(1 x 1 x 1)$, siendo $n \leq S_{x} ,m \leq S_{y},l \leq S_{z}$. 
 \end{itemize}
 
-En \cite{viabarre2019} Se brinda una explicaci\'on ampliada sobre el escaladoo llevado a cabo en la simulaci\'on y su influencia en cuanto al tiempo 
 \section{Conjunto de estados}
 \label{subsec-states}
 En la teoría de autómata celulares, un estado es un valor numérico asignado inicialmente a cada célula y que puede variar durante la ejecución. En este modelo, el estado representa el tipo de célula biológica presente. Un corte transversal del tejido muestra que está estructurado en capas, cada una con una función específica dentro del órgano (Fig.\ref{fig-structure}). El crecimiento macroscópico de un tumor depende en gran medida de las interacciones progresivas entre la masa de las células cancerígenas y cada una de estas capas de tejidos. En épocas anteriores de la histología, cada capa del tejido se clasificaba como parte del parénquima o del estroma. El parénquima es el tejido que desempeña la función principal de un órgano específico, mientras que las capas de tejido que proporcionan soporte y apoyo al tejido funcional se denominan estroma. Generalmente, el parénquima está compuesto por el epitelio de un órgano. En la sección\ref{subsec-macro} se presentó el desarrollo idealizado de un tumor que se origina en células de tipo epitelial o carcinoma, y su expansión a través de las distintas capas de tejidos. Por lo tanto, inicialmente, se requiere un estado para las células del tejido epitelial.
