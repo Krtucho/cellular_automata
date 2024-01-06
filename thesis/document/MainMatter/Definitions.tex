@@ -278,7 +278,7 @@ $G=(V,A)$\;
 
 \paragraph{Declaraci\'on de los conjuntos que componen el grafo $G$ ($1$-$4$):} Se declaran los conjuntos $V_1$, $V_2$, $A_n$ y $A_d$, inicialmente vac\'ios, correspondientes con los v\'ertices de las localizaciones primaria y secundaria, y las conexiones inmediatas y distantes respectivamente. 
 
-\paragraph{Crear v\'ertices ($5$-$14$):} Se a\~naden a los conjuntos $V_1$ y $V_2$ los v\'ertices que conforman el grafo. Cada v\'ertice $v$ de coordenadas $(v_x,v_y, v_z)$ se corresponde con una celda de la malla. Los valores $s_x$, $s_y$ y $s_z$ son las cantidades de v\'ertices del grafo por cada una de las componentes del plano respectivamente~(Fig.~\ref{fig-grid-2D-initial}). Cada v\'ertice se a\~nade al conjunto $V_1$ o $V_2$ correspondiente, que se determina a partir del par\'ametro $s_o$ con $0 \leq s_o < s_x$ que indica la divisi\'on del grafo entre una localizaci\'on y la otra. 
+\paragraph{Crear v\'ertices ($5$-$14$):} Se a\~naden a los conjuntos $V_1$ y $V_2$ los v\'ertices que conforman el grafo. Cada v\'ertice $v$ de coordenadas $(v_x,v_y, v_z)$ se corresponde con una celda de la malla. Los valores $s_x$, $s_y$ y $s_z$ son las cantidades de v\'ertices del grafo por cada una de las componentes del espacio respectivamente. Cada v\'ertice se a\~nade al conjunto $V_1$ o $V_2$ correspondiente, que se determina a partir del par\'ametro $s_o$ con $0 \leq s_o < s_x$ que indica la divisi\'on del grafo entre una localizaci\'on y la otra. 
 
 \paragraph{A\~nadir aristas inmediatas ($15$-$21$):} Se itera por todos los v\'ertices del grafo resultado de la uni\'on de los conjuntos $V_1$ y $V_2$. Por cada v\'ertice $v \in V$ se obtiene su vecindad inmediata $N_I(v,R)$ y se itera por todos los v\'ertices vecinos. Se crea una arista entre $v$ y cada v\'ertice vecino $w$ y se a\~nade al conjunto de aristas inmediatas $A^n$. Dado que la uni\'on entre conjuntos da como resultado un conjunto donde no existen elementos repetidos, no es necesario verificar si una nueva arista ya pertenece al conjunto $A^n$ antes de ser a\~nadida.
 
@@ -398,9 +398,21 @@ Debido a que es muy costoso representar y aplicar el algoritmo de Marching Cubes
     \item Luego de hacer esto por varios cuadrantes, cada uno reducir\'a su tama\~no desde $(n x m x l)$ a $(1 x 1 x 1)$, siendo $n \leq S_{x} ,m \leq S_{y},l \leq S_{z}$. 
 \end{itemize}
 
+En \cite{viabarre2019} se amplia sobre este proceso de escalado para 2 dimensiones y su influencia en la velocidad de expansi\'on tumoral, provacando as\'i una modificaci\'on en la cantidad de d\'ias que representa una iteraci\'on. Como representación visual para un mayor entendimiento (Fig.\ref{fig-scales-1}) .
+
+\begin{figure}[!ht]
+\begin{center}
+\subfigure[Escala $1:1$]{\scalebox{0.67}{\includegraphics{img/fig-scales.png}}}
+\subfigure[Escala $1:2$]{\scalebox{0.67}{\includegraphics{img/fig-scales-1.png}}}
+\subfigure[Escala $1:3$]{\scalebox{0.67}{\includegraphics{img/fig-scales-2.png}}}
+\end{center}\vspace*{-0.5cm}
+\caption[Representaci\'on de distintas escalas del aut\'omata celular]{Representaci\'on de distintas escalas del aut\'omata celular y de los lapsos de tiempo necesarios para que un tumor se expanda satisfactoriamente a trav\'es del espacio mostrado. La celda $v$ representa una c\'elula tumoral que intenta expandirse a las celdas restantes. Las \'areas sombreadas muestran el tiempo m\'inimo necesario para que el tumor ocupe dichas c\'elulas seg\'un la escala utilizada. El color rojo se corresponde con $24$ horas, el color azul con $48$ horas y el negro con $72$ horas. (a) Las dimensiones de una celda del aut\'omata equivalen al de una c\'elula cancer\'igena $3$.$5 \times 10^{-2}mm$. (b) Las dimensiones de una celda del aut\'omata es el doble de una c\'elula cancer\'igena $7$.$0 \times 10^{-2}mm$ por lo que cada celda contiene $4$ c\'elulas. (c) Las dimensiones de una celda del aut\'omata es el triple de una c\'elula cancer\'igena $1$.$05 \times 10^{-1}mm$ por lo que cada celda contiene $9$ c\'elulas. Im\'agenes extra\'idas de \cite{viabarre2019}}
+\label{fig-scales-1}
+\end{figure}
+
 \section{Conjunto de estados}
 \label{subsec-states}
-En la teoría de autómata celulares, un estado es un valor numérico asignado inicialmente a cada célula y que puede variar durante la ejecución. En este modelo, el estado representa el tipo de célula biológica presente. Un corte transversal del tejido muestra que está estructurado en capas, cada una con una función específica dentro del órgano (Fig.\ref{fig-structure}). El crecimiento macroscópico de un tumor depende en gran medida de las interacciones progresivas entre la masa de las células cancerígenas y cada una de estas capas de tejidos. En épocas anteriores de la histología, cada capa del tejido se clasificaba como parte del parénquima o del estroma. El parénquima es el tejido que desempeña la función principal de un órgano específico, mientras que las capas de tejido que proporcionan soporte y apoyo al tejido funcional se denominan estroma. Generalmente, el parénquima está compuesto por el epitelio de un órgano. En la sección\ref{subsec-macro} se presentó el desarrollo idealizado de un tumor que se origina en células de tipo epitelial o carcinoma, y su expansión a través de las distintas capas de tejidos. Por lo tanto, inicialmente, se requiere un estado para las células del tejido epitelial.
+En la teoría de autómata celulares, un estado es un valor numérico asignado inicialmente a cada célula y que puede variar durante la ejecución. En este modelo, el estado representa el tipo de célula biológica presente. Un corte transversal del tejido muestra que está estructurado en capas, cada una con una función específica dentro del órgano (Fig.\ref{fig-structure}). El crecimiento macroscópico de un tumor depende en gran medida de las interacciones progresivas entre la masa de las células cancerígenas y cada una de estas capas de tejidos. En épocas anteriores de la histología, cada capa del tejido se clasificaba como parte del parénquima o del estroma. El parénquima es el tejido que desempeña la función principal de un órgano específico, mientras que las capas de tejido que proporcionan soporte y apoyo al tejido funcional se denominan estroma. Generalmente, el parénquima está compuesto por el epitelio de un órgano. Inicialmente, se requiere un estado para las células del tejido epitelial.
 
 \begin{figure}[!ht]
 \begin{center}
@@ -457,7 +469,7 @@ En cuanto a las c\'elulas cancer\'igenas se distinguen tres estados fundamentale
 \item $s(v,n)=5$: El v\'ertice $v$ representa una c\'elula micrometast\'asica en el instante de tiempo $n$, es decir, efectuaron la cascada metast\'a\-sica satisfactoriamente y est\'an colonizando la nueva localizaci\'on, pero pueden ser destruidas por el sistema inmunitario o fallar en dicha colonizaci\'on. 
 \end{itemize}
 
-Por ultimo, los estados de las celulas inmunologicas:
+Por ultimo, los estados de las celulas inmunol\'ogicas:
 \begin{itemize}
     \item $s(v, n) = 6$: El v\'ertice $v$ representa una c\'elula inmune en el instante de tiempo $n$.
     \item $s(v, n) = 7$: El v\'ertice $v$ representa una c\'elula en estado intermedio en el instante de tiempo $n$.
@@ -622,7 +634,7 @@ El cáncer representado en el modelo se conoce como carcinoma y tiene su origen 
 \end{tabular}}
 %\scalebox{0.85}{\includegraphics{img/table-comparison.png}}
 \end{center}\vspace*{-0.6cm}
-\caption[Comparaci\'on entre los dos tipos de tumores representados tomando en cuenta sus caracter\'isticas durante ambas etapas de su desarrollo]{Comparaci\'on entre los dos tipos de tumores representados tomando en cuenta sus caracter\'isticas durante ambas etapas de su desarrollo. \emph{En el cuadro:} (*) Un tumor secundario en etapa avascular se corresponde con una micromet\'astasis.}
+\caption[Comparaci\'on entre los dos tipos de tumores representados tomando en cuenta sus caracter\'isticas durante ambas etapas de su desarrollo]{Comparaci\'on entre los dos tipos de tumores representados tomando en cuenta sus caracter\'isticas durante ambas etapas de su desarrollo. \emph{En el cuadro:} (*) Un tumor secundario en etapa avascular se corresponde con una micromet\'astasis \cite{viabarre2019}.}
 \label{table-comparison}
 \end{table}
 
@@ -1643,8 +1655,6 @@ Las probabilidades de transici\'on $\rho_5(n_r,r \rightarrow 2)$ y $\rho_5(n_r,r
 Como se puede apreciar en las expresiones~\ref{eq-rho-5-sur} y~\ref{eq-rho-5-col} los valores de $n_r$, $r$, $\xi$ y $\psi$ son los mismos para todas las c\'elulas de una misma micromet\'astasis ya que se determinan a priori en los algoritmos de actualizaci\'on correspondientes, logrando que todas cambien al mismo estado final. Habiendo culminado el proceso de concepci\'on del conjunto de reglas, en la secci\'on~\ref{sec-validation} se exponen los procedimientos que se llevan a cabo para determinar los par\'ametros del modelo de aut\'omatas celulares que se presenta en este manuscrito. 
 
 
-(Dar breve introducción sobre las celulas inmunológicas)
-
 % Hipotesis del Modelo
 
 
@@ -1677,13 +1687,14 @@ Luego agregamos la hip\'otesis numero XXIV:
 	\item Las c\'elulas inmunitarias se mueven libremente hacia las c\'elulas normales.
 \end{enumerate}
 
-Al comienzo de cada instante de tiempo las c\'elulas de inmunidad seleccionan una de las posibles vecinas inmediatas para desplazarse. Si la probabilidad de moverse hacia un vecino $w$ es menor que un valor $th$, la c\'elula de inmunidad mantiene su posici\'on inicial. Formulamos la regla de la siguiente forma:\\
+Al comienzo de cada instante de tiempo las c\'elulas de inmunidad seleccionan una de las posibles vecinas inmediatas para desplazarse. Si la probabilidad de moverse hacia un vecino $w$ es menor que un valor $th$, la c\'elula de inmunidad mantiene su posici\'on inicial. Formulamos la regla de la siguiente forma:
 %$L(t+T) \xrightarrow{P_{w}} w \xrightarrow{P_m} \displaystyle \left\{ {L(t) \hspace{1cm} P_w<th \atop L(t + 1) \hspace{.5cm} P_w \geq th } \right\},$\\
-$L(t+T) \xrightarrow{P_{w}} w  \displaystyle \left\{ {L(t) \hspace{1cm} P_w<th \atop L(t + 1) \hspace{.5cm} P_w \geq th } \right\},$\\
 
-donde:\\
- $L(t):$ es la posici\'on de la celda;  $th:$ es el valor del umbral de movimiento;
- $P_{w}:$ es la probabilidad de moverse hacia el vecino $w$. Existira igual probabilidad de moverse a sus vecinos, tanto los m\'as cercanos como los que se encuentren m\'as distantes. Una simulación m\'as realista de este proceso se escapa de los enfoques de esta tesis.
+$$L(t+T) \xrightarrow{P_{w}} w  \displaystyle \left\{ {L(t) \hspace{1cm} P_w<th \atop L(t + 1) \hspace{.5cm} P_w \geq th } \right\},$$
+
+donde
+ $L(t)$ es la posici\'on de la celda;  $th$ es el valor del umbral de movimiento;
+ $P_{w}$ es la probabilidad de moverse hacia el vecino $w$. Existira igual probabilidad de moverse a sus vecinos, tanto los m\'as cercanos como los que se encuentren m\'as distantes. Una simulación m\'as realista de este proceso se escapa de los enfoques de esta tesis.
  %$P_m:$ es la probabilidad de moverse o no hacia la posici\'on correspondiente.\\
 
 
