@@ -128,11 +128,11 @@
     \begin{table}[!ht]
     \begin{center}
     \scalebox{0.9}{\begin{tabular}{|p{2.5cm}|p{14cm}|}\hline
-    \emph{Red} & $s_x=1000$; $s_y=500$; $s_o=500$; $p = 0$.$01$. \\\hline
+        \emph{Red} & $s_x=200$; $s_y=100$; $s_z=100$; $s_o=100$; $p = 0$.$01$. \\\hline
     
-    \emph{Estados} & Para el \'organo primario correspondiente con la mama -- Esquema 2: $o_d=250$, $o_e=1$, $R^d=5$, $v_x^t=250$, $v_y^t=250$. Para el \'organo secundario correspondiente con los huesos -- Esquema 3: $o_s=500$.\\\hline 
+    \emph{Estados} & Para el \'organo primario correspondiente con la mama -- Esquema I: $v_x^t=50$, $v_y^t=50$, $v_z^t=50$. Para el \'organo secundario correspondiente con el pulm\'on -- Esquema I: $o_s=100$.\\\hline 
     
-    \emph{Nutrientes} & Para el \'organo primario -- $R_1 = \lbrace v~|~v \in V(G) : (0 \leq v_x < 500) \wedge (0 \leq v_y < 219) \rbrace$, $R_2 = \lbrace v~|~v \in V(G) : (0 \leq v_x < 500) \wedge (219 \leq v_y < 250) \rbrace$, $B_{02}=\lbrace \overrightarrow{\nu_{((0,1),(0,0))}} \rbrace$, $R_3 = \lbrace v~|~v \in V(G) : (0 \leq v_x < 500) \wedge (250 \leq v_y < 281) \rbrace$, $B_{03}=\lbrace \overrightarrow{\nu_{((0,0),(0,1))}} \rbrace$, $R_4 = \lbrace v~|~v \in V(G) : (0 \leq v_x < 500) \wedge (281 \leq v_y < 500) \rbrace$. Para el \'organo secundario -- $R_5 = \lbrace v~|~v \in V(G) : (500 \leq v_x < 1000) \wedge (0 \leq v_y < 500) \rbrace$.\\\hline
+    \emph{Nutrientes} & Para el \'organo primario -- $R_1 = \lbrace v~|~v \in V(G) : (0 \leq v_x < 100) \wedge (0 \leq v_y < 50) \wedge (0 \leq v_z < 50) \rbrace$, $B_{01}=\lbrace \overrightarrow{\nu_{((0,0),(0,1))}} \rbrace$, $R_2 = \lbrace v~|~v \in V(G) : (0 \leq v_x < 100) \wedge (50 \leq v_y < 100) \wedge (50 \leq v_z < 100) \rbrace$. Para el \'organo secundario -- $R_3 = \lbrace v~|~v \in V(G) : (100 \leq v_x < 200) \wedge (0 \leq v_y < 100) \wedge (0 \leq v_z < 100) \rbrace$.\\\hline
     
     \emph{Crecimiento} & Avascular -- $P_0^a=1$, $K_a=2$.$222 \times 10^2$, $r_a=1$.$802 \times 10^{-2}$, $\Delta t=2$.$996 \times 10^1$, $n_a=20$, generaciones del aut\'omata: $21$~($63$ d\'ias). Vascular -- $P_0^v=2$.$222 \times 10^2$, $K_v=5$.$556 \times 10^4$, $r_v=7$.$199 \times 10^{-5}$, $\Delta t=7$.$665 \times 10^2$, generaciones del aut\'omata: $321$~($963$ d\'ias).\\\hline
     
