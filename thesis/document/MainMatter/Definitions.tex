@@ -203,7 +203,7 @@ Por tanto, se hipotetiza que un tejido vivo posee un alto coeficiente de agrupam
 
 \subsection{Implementaci\'on del modelo Watts-Strogatz}
 \label{subsec-watts-2}
-El modelo Watts-Strogatz, teniendo en cuenta la hipótesis XII para representar el tejido, comienza con un grafo en el que cada vértice está conectado a un número de sus vecinos inmediatos. Las aristas que forman el grafo son sometidas a un proceso de reconexión, donde se cambia uno de los extremos de la arista. El nuevo extremo se selecciona de manera aleatoria entre los vértices restantes del grafo. Para el proceso de construcción, se considera una cuadrícula que divide la rejilla(\textit{grid}) en secciones iguales, donde cada celda corresponde a un vértice del grafo. (Fig.~\ref{fig-grid-3D-initial}). (revisar poner una imagen de 3d)
+El modelo Watts-Strogatz, teniendo en cuenta la hipótesis XII para representar el tejido, comienza con un grafo en el que cada vértice está conectado a un número de sus vecinos inmediatos. Las aristas que forman el grafo son sometidas a un proceso de reconexión, donde se cambia uno de los extremos de la arista. El nuevo extremo se selecciona de manera aleatoria entre los vértices restantes del grafo. Para el proceso de construcción, se considera una cuadrícula que divide la rejilla(\textit{grid}) en secciones iguales, donde cada celda corresponde a un vértice del grafo. (Fig.~\ref{fig-grid-3D-initial}).
 
 \begin{figure}[!ht]
 \begin{center}
@@ -359,7 +359,7 @@ A partir de estudios realizados anteriormente \cite{viabarre2019} se llega a la 
 
 \section{Marching Cubes}
 
-La técnica de Marching Cubes es un algoritmo de gráficos por computadora que se usa para extraer una malla poligonal de una isosuperficie de un campo escalar discreto tridimensional, como lo son los datos de imágenes de tomografías computarizadas (CT) y resonancias magnéticas (MRI) ~\cite{lorensen1987}. En el contexto de este proyecto, se utiliza para la representación tridimensional de los tumores, proporcionando una visualización detallada y precisa.Ver en Anexo \ref{fig:tumor}
+La técnica de Marching Cubes es un algoritmo de gráficos por computadora que se usa para extraer una malla poligonal de una isosuperficie de un campo escalar discreto tridimensional, como lo son los datos de imágenes de tomografías computarizadas (CT) y resonancias magnéticas (MRI) ~\cite{lorensen1987}. En el contexto de este proyecto, se utiliza para la representación tridimensional de los tumores, proporcionando una visualización detallada y precisa.
 
 Este algoritmo trabaja procesando las celdas de los datos de volumen (también conocidas como vóxeles), verificando la intersección entre sus respectivas aristas y la isosuperficie. Los valores de cada vértice de las celdas se comparan con un valor isosuperficial dado, y estos vértices se clasifican como ``dentro''  o ``fuera'' de la isosuperficie. Una vez definido el tipo de intersección, se realiza una aproximación de la isosuperficie contenida en la celda construyendo triángulos~\cite{cirne2013}.
 
@@ -377,7 +377,7 @@ La visualización resultante puede proporcionar una comprensión valiosa de cóm
 	\begin{center}
 	\scalebox{0.65}{\includegraphics{img/fig-marching-cubes2.png}}
 	\end{center}\vspace*{-0.6cm}
-	\caption[Ilustración de Marching Cubes]{Renderizado de volumen de un conjunto de datos de cabeza masculina utilizando cubos de marcha con diferentes valores de isovalor: (a) 30, (b) 50, (c) 75, (d) 100.}
+	\caption[Ilustración de Marching Cubes]{Renderizado de volumen de un conjunto de datos de cabeza masculina utilizando Marching Cubes con diferentes valores de isovalor: (a) 30, (b) 50, (c) 75, (d) 100.}
 	\label{fig-marching-cubes1}
 	\end{figure}
 
@@ -1675,9 +1675,9 @@ Se especifica en las reglas sobre la conservaci\'on del estado de las c\'elulas 
 Luego agregamos la hip\'otesis numero XXIV:
 
 \begin{itemize}
-    \item [XXIV.] \textbf{C\'elulas inmunitarias}: \emph{Cada \'organo representado est\'a vinculado con el otro a trav\'es de las conexiones distantes existentes en el grafo subyacente. Se asume que una c\'elula que penetre el sistema circulatorio en un punto dado lo abandonar\'a en una posici\'on predeterminada, correspondientes con los destinos de las conexiones mencionadas.} \label{XXIV}
-    \end{itemize}
-% {{\it C\'elulas inmunitarias: }} Consideramos a diferentes c\'elulas inmunitarias, como B, T, APC, PLB,\footnote{{\it C\'elula B:} se le llaman linfocitos B que se forman a partir de las c\'elulas madre en la m\'edula \'osea. Estas c\'elulas se activan y maduran a c\'elulas plasm\'aticas, las cuales producen y liberan anticuerpos que con sus mol\'eculas efectoras.\\ {\it C\'elula T:} es otro tipo de linfocito que se desarrolla a partir de c\'elulas progenitoras de la m\'edula \'osea que viajan hasta el timo.\\ {\it C\'elula APC:} c\'elulas presentadoras de ant\'igenos.\\ {\it C\'elula LBP:} prote\'ina de uni\'on a lipopolisac\'arido. El lipopolisac\'arido desempe\~na una importante funci\'on en la activaci\'on del sistema inmune al constituir el ant\'igeno superficial m\'as importante de este tipo de bacterias} en el sistema de inmunidad tumoral como componente \'unico celular "c\'elulas de inmunidad".
+	\item [XXIV.] {\textbf{ C\'elulas inmunitarias: }} \emph{Consideramos a diferentes c\'elulas inmunitarias, como B, T, APC, PLB,\footnote{{\it C\'elula B:} se le llaman linfocitos B que se forman a partir de las c\'elulas madre en la m\'edula \'osea. Estas c\'elulas se activan y maduran a c\'elulas plasm\'aticas, las cuales producen y liberan anticuerpos que con sus mol\'eculas efectoras.\\ {\it C\'elula T:} es otro tipo de linfocito que se desarrolla a partir de c\'elulas progenitoras de la m\'edula \'osea que viajan hasta el timo.\\ {\it C\'elula APC:} c\'elulas presentadoras de ant\'igenos.\\ {\it C\'elula LBP:} prote\'ina de uni\'on a lipopolisac\'arido. El lipopolisac\'arido desempe\~na una importante funci\'on en la activaci\'on del sistema inmune al constituir el ant\'igeno superficial m\'as importante de este tipo de bacterias} en el sistema de inmunidad tumoral como componente \'unico celular "c\'elulas de inmunidad".}
+    %\item [XXIV.] \textbf{C\'elulas inmunitarias}: \emph{Cada \'organo representado est\'a vinculado con el otro a trav\'es de las conexiones distantes existentes en el grafo subyacente. Se asume que una c\'elula que penetre el sistema circulatorio en un punto dado lo abandonar\'a en una posici\'on predeterminada, correspondientes con los destinos de las conexiones mencionadas.} \label{XXIV}
+\end{itemize}
 
 \subsection{Reglas de la conservaci\'on del estado de c\'elulas normales, inmunes y tumorales}
 
